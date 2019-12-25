@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)"
+   height="480"
+   width="480"
+   sodipodi:docname="favicon.svg"
+   id="svg493"
+   viewBox="-60 0 480 480"
+   version="1.1">
+  <metadata
+     id="metadata499">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs497" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg493"
+     inkscape:window-maximized="1"
+     inkscape:window-y="23"
+     inkscape:window-x="0"
+     inkscape:cy="326.20321"
+     inkscape:cx="-281.71123"
+     inkscape:zoom="0.374"
+     showgrid="false"
+     id="namedview495"
+     inkscape:window-height="1081"
+     inkscape:window-width="2048"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <rect
+     y="2.6737969"
+     x="-62.673798"
+     height="478.60962"
+     width="489.30481"
+     id="rect501"
+     style="fill:#feeec9;fill-opacity:1;stroke:#000000;stroke-width:0.188976" />
+  <g
+     id="g491"
+     transform="matrix(1,0,0,-1,125.3476,290.6952)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path489"
+       d="M -50,-135 C 13,-134 63,-72 50,0 45,30 31,68 0,100 36,141 50,189 50,250 109,150 150,95 150,-1 150,-123 31,-178 -50,-135 Z"
+       fill="currentColor" />
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="utf8"/>
+    <title>رنا كوفی</title>
+    <style type="text/css">
+      * {
+        font-family: Mada;
+        font-size: 12pt;
+        direction: rtl;
+      }
+      canvas {
+        outline: none;
+      }
+      input#fontFeatures {
+        text-align: left;
+        direction: ltr;
+      }
+      button.feature {
+        font-family: monospace;
+        font-size 14pt;
+      }
+      .documentName {
+	text-align: center;
+      }
+    </style>
+    <link rel="shortcut icon" href="favicon.svg"/>
+  </head>
+  <body>
+    <p class="documentName">
+      <input type="text" class="documentName" id="documentName" value="document">
+    </p>
+    <p>
+      <button id="open">افتح</button>
+      <button id="save">احفظ</button>
+      <button id="export">صدر</button>
+      <br/>
+      <input type="number"   class="opts" id="fontSize" min="10" max="500" value="100">حجم الخط
+      <input type="checkbox" class="opts" id="adjustDots">اضبط النقاط
+    </p>
+    <p>
+      <canvas tabindex="0" id="canvas"></canvas>
+    </p>
+    <p id="alternates"></p>
+    <script src="hb.js"></script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
