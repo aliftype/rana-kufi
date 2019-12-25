@@ -15,19 +15,20 @@
 
 import sys
 
-from fontTools.ttLib import TTFont, newTable, getTableModule
 from fontTools.fontBuilder import FontBuilder
+from fontTools.misc.transform import Transform
 from fontTools.pens.pointPen import PointToSegmentPen
 from fontTools.pens.reverseContourPen import ReverseContourPen
 from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.pens.transformPen import TransformPen
-from glyphsLib import GSFont
+from fontTools.ttLib import TTFont, newTable, getTableModule
+from glyphsLib import GSFont, GSAnchor
 
 
 DEFAULT_TRANSFORM = [1, 0, 0, 1, 0, 0]
 
 
-def draw(layer, layerName, pen=None):
+def draw(layer, instance, pen=None):
     font = layer.parent.parent
     width = layer.width
     if pen is None:
@@ -55,11 +56,7 @@ def draw(layer, layerName, pen=None):
         pen.endPath();
 
     for component in layer.components:
-        componentGlyph = font.glyphs[component.componentName]
-        componentLayer = componentGlyph.layers[0]
-        for layer in componentGlyph.layers:
-            if layer.name == layerName:
-                componentLayer = layer
+        componentLayer = getLayer(component.component, instance)
         transform = component.transform.value
         componentPen = pen.pen
         if transform != DEFAULT_TRANSFORM:
@@ -67,15 +64,211 @@ def draw(layer, layerName, pen=None):
             xx, xy, yx, yy = transform[:4]
             if xx * yy - xy * yx < 0:
                 componentPen = ReverseContourPen(componentPen)
-        draw(componentLayer, layerName, componentPen)
+        draw(componentLayer, instance, componentPen)
 
     return pen.pen
+
+
+def makeKerning(font, master):
+    fea = ""
+
+    groups = {}
+    for glyph in font.glyphs:
+        if glyph.leftKerningGroup:
+            group = f"@MMK_R_{glyph.leftKerningGroup}"
+            if group not in groups:
+                groups[group] = []
+            groups[group].append(glyph.name)
+        if glyph.rightKerningGroup:
+            group = f"@MMK_L_{glyph.rightKerningGroup}"
+            if group not in groups:
+                groups[group] = []
+            groups[group].append(glyph.name)
+    for group, glyphs in groups.items():
+        fea += f"{group} = [{' '.join(glyphs)}];\n"
+
+    kerning = font.kerning[master.id]
+    pairs = ""
+    classes = "";
+    for left in kerning:
+        for right in kerning[left]:
+            value = kerning[left][right]
+            if not value:
+                continue
+            code = f"pos {left} {right} <{value} 0 {value} 0>;\n" 
+            if left.startswith("@") or right.startswith("@"):
+                classes += code
+            else:
+                pairs += code
+
+    fea += f"""
+feature kern {{
+lookupflag IgnoreMarks;
+{pairs}
+subtable;
+{classes}
+}} kern;
+"""
+
+    return fea
+
+
+def getLayer(glyph, instance):
+    for layer in glyph.layers:
+        if layer.name == f"{{{instance.weightValue}}}":
+            return layer
+    return glyph.layers[0]
+
+
+def makeMark(instance):
+    font = instance.parent
+
+    fea = ""
+    mark = ""
+    curs = ""
+    liga = ""
+
+    exit = {}
+    entry = {}
+    lig = {}
+
+    for glyph in font.glyphs:
+        if not glyph.export:
+            continue
+
+        layer = getLayer(glyph, instance)
+        for anchor in layer.anchors:
+            name, x, y = anchor.name, anchor.position.x, anchor.position.y
+            if name.startswith("_"):
+                fea += f"markClass {glyph.name} <anchor {x} {y}> @mark_{name[1:]};\n"
+            elif name.startswith("caret_"):
+                pass
+            elif "_" in name:
+                name, index = name.split("_")
+                if glyph.name not in lig:
+                    lig[glyph.name] = {}
+                if index not in lig[glyph.name]:
+                    lig[glyph.name][index] = []
+                lig[glyph.name][index].append((name, (x, y)))
+            elif name == "exit":
+                exit[glyph.name] = (x, y)
+            elif name == "entry":
+                entry[glyph.name] = (x, y)
+            else:
+                mark += f"pos base {glyph.name} <anchor {x} {y}> mark @mark_{name};\n"
+
+    for name, components in lig.items():
+        mark += f"pos ligature {name}"
+        for component, anchors in components.items():
+            if component != "1":
+                mark += " ligComponent"
+            for anchor, (x, y) in anchors:
+                mark += f" <anchor {x} {y}> mark @mark_{anchor}"
+        mark += ";\n"
+
+    for glyph in font.glyphs:
+        if glyph.name in exit or glyph.name in entry:
+            pos1 = entry.get(glyph.name)
+            pos2 = exit.get(glyph.name)
+            anchor1 = pos1 and f"{pos1[0]} {pos1[1]}" or "NULL"
+            anchor2 = pos2 and f"{pos2[0]} {pos2[1]}" or "NULL"
+            curs += f"pos cursive {glyph.name} <anchor {anchor1}> <anchor {anchor2}>;\n"
+
+    fea += f"""
+feature curs {{
+lookupflag IgnoreMarks RightToLeft;
+{curs}
+}} curs;
+feature mark {{
+{mark}
+}} mark;
+"""
+
+    return fea
+
+
+def makeFeatures(instance, master):
+    font = instance.parent
+
+    fea = ""
+    for gclass in font.classes:
+        if gclass.disabled:
+            continue
+        fea += f"@{gclass.name} = [{gclass.code}];\n"
+
+    for prefix in font.featurePrefixes:
+        if prefix.disabled:
+            continue
+        fea += prefix.code
+
+    for feature in font.features:
+        if feature.disabled:
+            continue
+        if feature.name == "mark":
+            fea += makeMark(instance)
+
+        fea += f"""
+            feature {feature.name} {{
+            {feature.code}
+            }} {feature.name};
+        """
+        if feature.name == "kern":
+            fea += makeKerning(font, master)
+
+    marks = set()
+    carets = ""
+    for glyph in font.glyphs:
+        if not glyph.export:
+            continue
+
+        if glyph.category and glyph.subCategory:
+            if glyph.category == "Mark" and glyph.subCategory == "Nonspacing":
+                marks.add(glyph.name)
+        else:
+            layer = getLayer(glyph, instance)
+            caret = ""
+            for anchor in layer.anchors:
+                if anchor.name.startswith("_"):
+                    marks.add(glyph.name)
+                elif anchor.name.startswith("caret_"):
+                    _, index = anchor.name.split("_")
+                    if not caret:
+                        caret = f"LigatureCaretByPos {glyph.name}"
+                    caret += f" {anchor.position.x}"
+            if caret:
+                carets += f"{caret};\n"
+
+    fea += f"""
+@MARK = [{" ".join(sorted(marks))}];
+table GDEF {{
+ GlyphClassDef , , @MARK, ;
+{carets}
+}} GDEF;
+"""
+
+    with open(f"{instance.fontName}.fea", "w") as f:
+        f.write(fea)
+    return fea
+
+
+def calcFsSelection(instance):
+    font = instance.parent
+    fsSelection = 0
+    if font.customParameters["Use Typo Metrics"]:
+        fsSelection |= (1 << 7)
+    if instance.isItalic:
+        fsSelection |= (1 << 1)
+    if instance.isBold:
+        fsSelection |= (1 << 5)
+    if not (instance.isItalic or instance.isBold):
+        fsSelection |= (1 << 6)
+
+    return fsSelection
 
 
 def build(instance):
     font = instance.parent
     master = font.masters[0]
-    layerName = f"{{{instance.weightValue}}}"
 
     glyphOrder = []
     advanceWidths = {}
@@ -85,14 +278,10 @@ def build(instance):
     for glyph in font.glyphs:
         if not glyph.export:
             continue
-
-        name = glyph.name.replace("-", "")
-        layer = glyph.layers[0]
-        for l in glyph.layers:
-            if l.name == layerName:
-                layer = l
-            if l.name.startswith("Color "):
-                _, index = l.name.split(" ")
+        name = glyph.name
+        for layer in glyph.layers:
+            if layer.name.startswith("Color "):
+                _, index = layer.name.split(" ")
                 if name not in colorLayers:
                     colorLayers[name] = []
                 colorLayers[name].append((name, int(index)))
@@ -101,7 +290,8 @@ def build(instance):
         if glyph.unicode:
             characterMap[int(glyph.unicode, 16)] = name
 
-        charStrings[name] = draw(layer, layerName).getCharString()
+        layer = getLayer(glyph, instance)
+        charStrings[name] = draw(layer, instance).getCharString()
         advanceWidths[name] = layer.width
 
     # XXX
@@ -134,6 +324,7 @@ def build(instance):
     fb.updateHead(fontRevision=version)
     fb.setupGlyphOrder(glyphOrder)
     fb.setupCharacterMap(characterMap)
+    fb.setupNameTable(names, mac=False)
     fb.setupHorizontalHeader(ascent=master.ascender, descent=master.descender,
                              lineGap=master.customParameters['hheaLineGap'])
 
@@ -147,31 +338,24 @@ def build(instance):
     fb.setupCFF(names["psName"], {}, charStrings, privateDict)
 
     metrics = {}
-    for name, advanceWidth in advanceWidths.items():
+    for name, width in advanceWidths.items():
         bounds = charStrings[name].calcBounds(None) or [0]
-        metrics[name] = (advanceWidth, bounds[0])
+        metrics[name] = (width, bounds[0])
     fb.setupHorizontalMetrics(metrics)
 
-    fb.setupNameTable(names, mac=False)
-    
-    fsType = font.customParameters["fsType"] or 0 # XXX
-    fsSelection = 0
-    if font.customParameters["Use Typo Metrics"]:
-        fsSelection = fsSelection | (1 << 7)
-    if instance.isItalic:
-        fsSelection = fsSelection | (1 << 1)
-    if instance.isBold:
-        fsSelection = fsSelection | (1 << 5)
-    if not (instance.isItalic or instance.isBold):
-        fsSelection = fsSelection | (1 << 6)
-    fb.setupOS2(version=4, sTypoAscender=master.ascender,
-                sTypoDescender=master.descender,
-                sTypoLineGap=master.customParameters['typoLineGap'],
-                usWinAscent=master.ascender, usWinDescent=-master.descender,
-                sxHeight=master.xHeight, sCapHeight=master.capHeight,
-                achVendID=vendor, fsType=fsType, fsSelection=fsSelection)
+   #fsType = font.customParameters["fsType"] or 0 # XXX
+   #fb.setupOS2(version=4, sTypoAscender=master.ascender,
+   #            sTypoDescender=master.descender,
+   #            sTypoLineGap=master.customParameters['typoLineGap'],
+   #            usWinAscent=master.ascender, usWinDescent=-master.descender,
+   #            sxHeight=master.xHeight, sCapHeight=master.capHeight,
+   #            achVendID=vendor, fsType=fsType,
+   #            fsSelection=calcFsSelection(instance))
 
     fb.setupPost()
+
+    fea = makeFeatures(instance, master)
+    fb.addOpenTypeFeatures(fea)
 
     palettes = master.customParameters["Color Palettes"]
     CPAL = newTable("CPAL")
@@ -195,15 +379,55 @@ def build(instance):
         COLR[name] = [LayerRecord(name=l[0], colorID=l[1]) for l in layers]
     fb.font["COLR"] = COLR
 
-    fb.save(f"test{instance.name}.otf")
-    f = TTFont(f"test{instance.name}.otf")
-    f.saveXML(f"test{instance.name}.ttx")
+    return fb.font
+
+
+def propogateAnchors(glyph):
+    for layer in glyph.layers:
+        for component in layer.components:
+            for anchor in (component.layer or component.component.layers[0]).anchors:
+                name = anchor.name
+                if name.startswith("_") or name in layer.anchors:
+                    continue
+                x, y = anchor.position.x, anchor.position.y
+                if component.transform != DEFAULT_TRANSFORM:
+                    t = Transform(*component.transform.value)
+                    x, y = t.transformPoint((x, y))
+                new = GSAnchor(name)
+                new.position.x, new.position.y = (x, y)
+                layer.anchors[name] = new
+
+
+def prepare(font):
+    for glyph in font.glyphs:
+        if not glyph.export:
+            continue
+        propogateAnchors(glyph)
+
+
+def rename(otf):
+    import tempfile
+    with tempfile.TemporaryFile() as fp:
+        otf.save(fp)
+        otf = TTFont(fp)
+        otf.setGlyphOrder([n.replace("-", "") for n in otf.getGlyphOrder()])
+        cff = otf["CFF "].cff.topDictIndex[0]
+        char_strings = cff.CharStrings.charStrings
+        cff.CharStrings.charStrings = {
+            n.replace("-", ""): v for n, v in char_strings.items()
+        }
+        cff.charset = [n.replace("-", "") for n in cff.charset]
+    return otf
 
 
 def main():
     font = GSFont(sys.argv[1])
+    prepare(font)
     for instance in font.instances:
         if instance.active:
-            build(instance)
+            print(f" FNT\t{instance.fontName}.otf")
+            otf = build(instance)
+            otf = rename(otf)
+            otf.save(f"{instance.fontName}.otf")
 
 main()
