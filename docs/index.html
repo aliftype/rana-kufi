@@ -11,16 +11,26 @@
       canvas {
         outline: none;
       }
-      input#fontFeatures {
-        text-align: left;
-        direction: ltr;
+      .feature {
+        background-color: #D9D9D9;
+        border: none;
+        padding: 5px;
+        margin: 2px;
+        display: inline-block;
+        opacity: 0.7;
+        transition: 0.3s;
       }
-      button.feature {
-        font-family: monospace;
-        font-size 14pt;
+      .feature.selected {
+        background-color: #4CAF50;
+      }
+      .feature:hover {
+        opacity: 1;
+      }
+      .feature img {
+        opacity: 1;
       }
       .documentName {
-	text-align: center;
+        text-align: center;
       }
     </style>
     <link rel="shortcut icon" href="favicon.svg"/>

@@ -7,12 +7,264 @@ function TAG(tag) {
   return (c1&0xFF) << 24 | (c2&0xFF) << 16 | (c3&0xFF) << 8 | c4&0xFF;
 }
 
-function UNTAG(tag) {
-  let c1 = (tag>>24)&0xFF
-  let c2 = (tag>>16)&0xFF
-  let c3 = (tag>>8)&0xFF
-  let c4 = tag&0xFF;
-  return String.fromCodePoint(c1, c2, c3, c4);
+class Stream {
+  constructor(bytes) {
+    this.bytes = bytes;
+    this.start = 0;
+    this.end = bytes.length;
+    this.pos = this.start;
+  }
+
+  skip(length) {
+    this.pos += length;
+  }
+
+  skipTo(pos) {
+    this.pos = pos;
+  }
+
+  readByte(pos) {
+    if (pos !== undefined)
+      this.skipTo(pos)
+    return this.bytes[this.pos++];
+  }
+
+  readUInt16(pos) {
+    let b0 = this.readByte(pos);
+    let b1 = this.readByte();
+    return (b0 << 8) + b1;
+  }
+
+  readInt16(pos) {
+    let v = this.readUInt16(pos);
+    return (v << 16) >> 16;
+  }
+
+  readUInt32(pos) {
+    let b0 = this.readByte(pos);
+    let b1 = this.readByte();
+    let b2 = this.readByte();
+    let b3 = this.readByte();
+    return (b0 << 24) + (b1 << 16) + (b2 << 8) + b3;
+  }
+
+  readTag(pos) {
+    let b0 = this.readByte(pos);
+    let b1 = this.readByte();
+    let b2 = this.readByte();
+    let b3 = this.readByte();
+    return String.fromCodePoint(b0, b1, b2, b3);
+  }
+}
+
+class Coverage {
+  constructor(stream, offset) {
+    this.glyphs = [];
+
+    let pos = stream.pos;
+
+    let coverageFormat = stream.readUInt16(offset);
+    switch (coverageFormat) {
+      case 1:
+        let glyphCount = stream.readUInt16();
+        for (let i = 0; i < glyphCount; i++)
+          this.glyphs.push(stream.readUInt16());
+        break;
+
+      case 2:
+        let rangeCount = stream.readUInt16();
+        for (let i = 0; i < rangeCount; i++) {
+          let startGlyphID = stream.readUInt16();
+          let endGlyphID = stream.readUInt16();
+          let startCoverageIndex = stream.readUInt16();
+          for (let j = 0; j <= endGlyphID - startGlyphID; j++)
+            this.glyphs[startCoverageIndex + j] = startGlyphID + j;
+        }
+        break;
+
+      default:
+        console.log("Unsupported coverage format:", coverageFormat);
+    }
+
+    stream.pos = pos;
+  }
+}
+
+
+class Lookup {
+  constructor(stream, lookupOffset) {
+    this.mapping = {};
+
+    let pos = stream.pos;
+
+    this.type = stream.readUInt16(lookupOffset);
+    this.flag = stream.readUInt16();
+    let subtableCount = stream.readUInt16();
+
+    let subtableOffsets = []
+    for (let i = 0; i < subtableCount; i++)
+      subtableOffsets.push(lookupOffset + stream.readUInt16());
+
+    if (this.flag & 0x0010)
+      this.markFilteringSet = stream.readUInt16();
+
+    for (const subtableOffset of subtableOffsets) {
+      switch (this.type) {
+        case 1: {
+          let substFormat = stream.readUInt16(subtableOffset);
+          switch (substFormat) {
+            case 1: {
+              let coverage = new Coverage(stream, subtableOffset + stream.readUInt16());
+              let deltaGlyphID = stream.readInt16();
+              for (let glyphID of coverage.glyphs)
+                this.mapping[glyphID] = glyphID + deltaGlyphID;
+            }
+            break;
+
+            case 2: {
+              let coverage = new Coverage(stream, subtableOffset + stream.readUInt16());
+              let glyphCount = stream.readUInt16();
+              let substituteGlyphIDs = [];
+              for (let i = 0; i < glyphCount; i++)
+                this.mapping[coverage.glyphs[i]] = stream.readUInt16();
+            }
+            break;
+
+            default:
+              console.log("Unsupported single substitution subtable format:",
+                          substFormat);
+          }
+        }
+        break;
+
+        case 2: {
+          let substFormat = stream.readUInt16(subtableOffset);
+          switch (substFormat) {
+            case 1: {
+              let coverage = new Coverage(stream, subtableOffset + stream.readUInt16());
+              let sequenceCount = stream.readUInt16();
+              for (let i = 0; i < sequenceCount; i++) {
+                let sequenceOffset = subtableOffset + stream.readUInt16(subtableOffset + 4 + (i * 2));
+                let glyphCount = stream.readUInt16(sequenceOffset);
+                this.mapping[coverage.glyphs[i]] = [];
+                for (let j = 0; j < glyphCount; j++)
+                  this.mapping[coverage.glyphs[i]].push(stream.readUInt16());
+              }
+            }
+            break;
+
+            default:
+              console.log("Unsupported multiple substitution subtable format:",
+                          substFormat);
+          }
+        }
+        break;
+
+        case 4: {
+          let substFormat = stream.readUInt16(subtableOffset);
+          switch (substFormat) {
+            case 1: {
+              let coverage = new Coverage(stream, subtableOffset + stream.readUInt16());
+              let ligatureSetCount = stream.readUInt16();
+              for (let i = 0; i < ligatureSetCount; i++) {
+                let ligatureSetOffset = subtableOffset + stream.readUInt16(subtableOffset + 6 + (i * 2));
+                let ligatureCount = stream.readUInt16(ligatureSetOffset);
+                for (let j = 0; j < ligatureCount; j++) {
+                  let ligatureOffset = ligatureSetOffset + stream.readUInt16(ligatureSetOffset + 2 + (j * 2));
+                  let ligatureGlyph = stream.readUInt16(ligatureOffset);
+                  let componentCount = stream.readUInt16();
+                  let componentGlyphIDs = [coverage.glyphs[i]];
+                  for (let k = 0; k < componentCount - 1; k++)
+                    componentGlyphIDs.push(stream.readUInt16());
+                  this.mapping[componentGlyphIDs] = ligatureGlyph;
+                }
+              }
+            }
+            break;
+
+            default:
+              console.log("Unsupported ligature substitution subtable format:",
+                          substFormat);
+          }
+        }
+        break;
+
+        default:
+          console.log("Unsupported lookup type:", this.type);
+      }
+    }
+
+    stream.pos = pos;
+  }
+}
+
+class GSUB {
+  constructor(data) {
+    this.stream = new Stream(data);
+
+    this.major = this.stream.readUInt16();
+    this.minor = this.stream.readUInt16();
+    this._scriptListOffset = this.stream.readUInt16();
+    this._featureListOffset = this.stream.readUInt16();
+    this._lookupListOffset = this.stream.readUInt16();
+
+    this._scripts = null;
+    this._features = null;
+    this._lookupOffsets = null;
+    this._lookups = [];
+  }
+
+  get features() {
+    if (this._features == null) {
+      let pos = this.stream.pos;
+
+      let featureListOffset = this._featureListOffset;
+
+      let featureCount = this.stream.readUInt16(featureListOffset);
+      let featureOffsets = [];
+      for (let i = 0; i < featureCount; i++) {
+        let featureTag = this.stream.readTag();
+        featureOffsets.push([featureTag, featureListOffset + this.stream.readUInt16()]);
+      }
+
+      let features = {};
+      for (const [featureTag, featureOffset] of featureOffsets) {
+        features[featureTag] = [];
+
+        let featureParams = this.stream.readUInt16(featureOffset);
+        let lookupIndexCount = this.stream.readUInt16();
+        for (let j = 0; j < lookupIndexCount; j++) {
+          let lookupIndex = this.stream.readUInt16();
+          features[featureTag].push(lookupIndex);
+        }
+      }
+      this._features = features;
+
+      this.stream.pos = pos;
+    }
+
+    return this._features;
+  }
+
+  lookup(index) {
+    if (this._lookups[index] == undefined) {
+      if (this._lookupOffsets == null) {
+        let pos = this.stream.pos;
+
+        let lookupListOffset = this._lookupListOffset;
+        let lookupCount = this.stream.readUInt16(lookupListOffset);
+        let lookupOffsets = [];
+        for (let i = 0; i < lookupCount; i++)
+          lookupOffsets.push(lookupListOffset + this.stream.readUInt16());
+
+        this._lookupOffsets = lookupOffsets;
+        this.stream.pos = pos;
+      }
+      this._lookups[index] = new Lookup(this.stream, this._lookupOffsets[index]);
+    }
+
+    return this._lookups[index];
+  }
 }
 
 class Pointer {
@@ -54,8 +306,24 @@ export class Font {
     this._outlines = [];
     this._extents = [];
     this._layers = [];
-    this._gsub_features = null;
-    this._gsub_lookups = [];
+    this._gsub = null;
+  }
+
+  getGlyphExtents(glyph) {
+    if (this._extents[glyph] !== undefined)
+      return this._extents[glyph];
+
+    let extentsPtr = new Pointer(4 * 4);
+    _hb_font_get_glyph_extents(this.ptr, glyph, extentsPtr.ptr);
+
+    let extents = extentsPtr.asInt32Array();
+    this._extents[glyph] = {
+      x_bearing: extents[0],
+      y_bearing: extents[1],
+      width: extents[2],
+      height: extents[3],
+    };
+    return this._extents[glyph];
   }
 
   getGlyphName(glyph) {
@@ -176,54 +444,31 @@ export class Font {
     return this._outlines[glyph];
   }
 
-  getGSUBFeatureTags() {
-    if (this._gsub_features === null) {
-      let nFeaturesPtr = new Pointer(4);
-      nFeaturesPtr.uint32 = 255;
-      let featuresPtr = new Pointer(nFeaturesPtr.uint32 * 4);
-
-      _hb_ot_layout_table_get_feature_tags(this.face, TAG("GSUB"), 0, nFeaturesPtr.ptr, featuresPtr.ptr);
-      this._gsub_features = new Set(featuresPtr.asUint32Array().slice(0, nFeaturesPtr.uint32));
+  get GSUB() {
+    if (this._gsub == null) {
+      let lenPtr = new Pointer(4);
+      let blob = _hb_face_reference_table(this.face, TAG("GSUB"));
+      let data = _hb_blob_get_data(blob, lenPtr.ptr);
+      this._gsub = new GSUB(HEAPU8.slice(data, data + lenPtr.uint32));
     }
-    return this._gsub_features;
+    return this._gsub;
   }
 
-  getGSUBFeatureLookups(feature) {
-    if (this._gsub_lookups[feature] === undefined) {
-      let featuresPtr = new Pointer(new Uint32Array([feature, 0]).buffer);
-      let lookupsPtr = _hb_set_create();
-      _hb_ot_layout_collect_lookups(this.face, TAG("GSUB"), 0, 0, featuresPtr.ptr, lookupsPtr);
-
-      let idxPtr = new Pointer(4);
-      idxPtr.uint32 = 0xFFFFFFFF /*HB_SET_VALUE_INVALID*/;
-      let lookups = []
-      while (_hb_set_next(lookupsPtr, idxPtr.ptr))
-        lookups.push(idxPtr.uint32)
-      this._gsub_lookups[feature] = lookups;
-    }
-    return this._gsub_lookups[feature];
-  }
-
-  _wouldSubstitute(lookup, glyphPtr) {
-    return _hb_ot_layout_lookup_would_substitute(this.face, lookup, glyphPtr.ptr, glyphPtr.byteLength / 4, false);
-  }
-
-  wouldSubstitute(lookup, glyph, prev, next) {
-    let glyphPtr;
-
+  getSubstitute(lookupIndex, glyph, prev, next) {
+    let lookup = this.GSUB.lookup(lookupIndex);
     if (prev) {
-      glyphPtr = new Pointer(new Uint32Array([prev, glyph]).buffer);
-      if (this._wouldSubstitute(lookup, glyphPtr))
-        return true;
+      let res = lookup.mapping[[prev, glyph]];
+      if (res)
+        return res;
     }
 
     if (next) {
-      glyphPtr = new Pointer(new Uint32Array([glyph, next]).buffer);
-      if (this._wouldSubstitute(lookup, glyphPtr))
-        return true;
+      let res = lookup.mapping[[glyph, next]];
+      if (res)
+        return res;
     }
-    glyphPtr = new Pointer(new Uint32Array([glyph]).buffer);
-    return this._wouldSubstitute(lookup, glyphPtr);
+
+    return lookup.mapping[glyph];
   }
 
   get extents() {
@@ -265,23 +510,21 @@ class Glyph {
   }
   get outline() { return this.font.getGlyphOutline(this.index); }
 
-  getFeatures(prev, next) {
+  getSubstitutes(prev, next) {
     if (this._features === null) {
-      let required = [TAG("init"), TAG("medi"), TAG("fina"), TAG("rlig"),
-                      TAG("dist"), TAG("ccmp")];
-      let tags = this.font.getGSUBFeatureTags();
-      let features = new Set();
-      for (const tag of tags) {
+      let required = ["init", "medi", "fina", "rlig", "dist", "ccmp"];
+      let features = this.font.GSUB.features;
+      let result = new Set();
+      for (const [tag, lookups] of Object.entries(features)) {
         if (!required.includes(tag)) {
-          let lookups = this.font.getGSUBFeatureLookups(tag);
           for (const lookup of lookups) {
-            if (this.font.wouldSubstitute(lookup, this.index, prev && prev.index, next && next.index)) {
-              features.add(UNTAG(tag));
-            }
+            let sub = this.font.getSubstitute(lookup, this.index, prev && prev.index, next && next.index);
+            if (sub)
+              result.add([tag, sub]);
           }
         }
       }
-      this._features = features.size && features || undefined;
+      this._features = result.size && result || undefined;
     }
     return this._features;
   }

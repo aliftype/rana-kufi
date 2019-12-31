@@ -11,6 +11,8 @@ class Layout {
     this._svg = null;
     this._height = null;
     this._glyphs = null;
+
+    this._svgs = [];
   }
 
   getWidth(from, to) {
@@ -55,7 +57,7 @@ class Layout {
     let p = this._text[index - 1];
     let n = this._text[index + 1];
     if (c && c.baseGlyph)
-      return c.baseGlyph.getFeatures(p && p.baseGlyph, n && n.baseGlyph);
+      return c.baseGlyph.getSubstitutes(p && p.baseGlyph, n && n.baseGlyph);
   }
 
   posOfIndex(index) {
@@ -79,6 +81,29 @@ class Layout {
     if (x < 0)
       return this._text.length;
     return 0;
+  }
+
+  getGlyphSVG(glyph) {
+    if (this._svgs[glyph] === undefined) {
+      let extents = this._font.getGlyphExtents(glyph)
+      let ns = "http://www.w3.org/2000/svg";
+      let svg = document.createElementNS(ns, "svg");
+      svg.setAttribute("xmlns", ns);
+      svg.setAttributeNS(ns, "version", '1.1');
+      svg.setAttributeNS(ns, "width", extents.width);
+      svg.setAttributeNS(ns, "height", this.height);
+
+      let x = -extents.x_bearing, y = this._font.extents.ascender;
+      let path = document.createElementNS(ns, "path");
+      path.setAttributeNS(ns, "transform", `translate(${x},${y})`);
+      path.setAttributeNS(ns, "d", this._font.getGlyphOutline(glyph));
+      svg.appendChild(path);
+
+      let blob = new Blob([svg.outerHTML], {type: "image/svg+xml"});
+      this._svgs[glyph] = window.URL.createObjectURL(blob);
+    }
+
+    return this._svgs[glyph];
   }
 
   _shape() {
@@ -306,43 +331,40 @@ export class View {
 
   moveCursor(movement) {
     let cursor = this.cursor + movement;
-    if (cursor >= 0 && cursor <= this.text.length) {
+    if (cursor > 0 && cursor <= this.text.length) {
       this.cursor = cursor;
       this.update();
 
-      let c = this.cursor && this.text[this.cursor - 1];
+      let c = this.text[this.cursor - 1];
       let par = document.getElementById("alternates");
       par.innerHTML = "";
       let features = this._layout.featuresOfIndex(this.cursor - 1) || [];
-      let active = new Set(c && c.features || []);
-      for (const feature of features) {
-        let button = document.createElement("button");
+      let active = c.features || []
+      for (const [feature, glyph] of features) {
+        let button = document.createElement("a");
 
+        button.href = "#";
         button.dataset.feature = feature;
-        button.className = "feature";
 
-        let text = document.createTextNode(feature);
-        button.appendChild(text);
-
-      //let img = document.createElement('img');
-      //img.width = 200;
-      //img.src = this._layout.svg;
-      //button.appendChild(img);
+        let img = document.createElement('img');
+        img.height = 70;
+        img.src = this._layout.getGlyphSVG(glyph);
+        button.appendChild(img);
 
         par.appendChild(button);
         this._updateFeatureButtons(active);
 
         button.onclick = e => {
-          if (active.has(feature)) {
-            active.delete(feature);
+          if (active.includes(feature)) {
+            active = active.filter(e => e != feature);
           } else {
             if (e.metaKey)
-              active.add(feature);
+              active.push(feature);
             else
-              active = new Set([feature]);
+              active = [feature];
           }
 
-          c.features = Array.from(active);
+          c.features = active;
           this._updateFeatureButtons(active);
 
           this._invalidate();
@@ -355,10 +377,10 @@ export class View {
   _updateFeatureButtons(active) {
     let par = document.getElementById("alternates");
     for (let child of par.children)
-      if (active.has(child.dataset.feature))
-        child.style = "border-style:inset;";
+      if (active.includes(child.dataset.feature))
+        child.className = "feature selected";
       else
-        child.style = null;
+        child.className = "feature";
   }
 
   setCursorAtPoint(x) {
