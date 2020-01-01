@@ -368,55 +368,60 @@ export class View {
     if (cursor >= 0 && cursor <= this.text.length) {
       this.cursor = cursor;
       this.update();
+      this._updateAlternates();
+    }
+  }
 
-      let alternates = document.getElementById("alternates");
-      alternates.innerHTML = "";
+  _updateAlternates() {
+    let alternates = document.getElementById("alternates");
+    alternates.innerHTML = "";
 
-      if (cursor <= 0)
-        return;
+    if (this.cursor <= 0)
+      return;
 
-      let c = this.text[this.cursor - 1];
-      let features = this._layout.featuresOfIndex(this.cursor - 1) || [];
-      for (const [feature, glyph] of features) {
-        c.features = c.features || [];
+    let c = this.text[this.cursor - 1];
+    let features = this._layout.featuresOfIndex(this.cursor - 1) || [];
+    for (const [feature, glyph] of features) {
+      c.features = c.features || [];
 
-        let button = document.createElement("a");
+      let button = document.createElement("a");
 
-        button.href = "#";
-        if (feature) {
-          button.dataset.feature = feature;
-          button.title = feature;
+      button.href = "#";
+      if (feature) {
+        button.dataset.feature = feature;
+        button.title = feature;
+      }
+
+      let img = document.createElement('img');
+      img.height = 70;
+      img.src = this._layout.getGlyphSVG(glyph);
+      button.appendChild(img);
+
+      alternates.appendChild(button);
+      this._updateFeatureButtons(c.features);
+
+      button.onclick = e => {
+        e.preventDefault();
+
+        let chars = [c];
+        if (feature == "dlig")
+          chars.push(this.text[this.cursor]);
+
+        for (let cc of chars) {
+          cc.features = cc.features || [];
+          if (cc.features.includes("dlig"))
+            cc.features = feature && ["dlig", feature] || ["dlig"];
+          else
+            cc.features = feature && [feature] || [];
         }
 
-        let img = document.createElement('img');
-        img.height = 70;
-        img.src = this._layout.getGlyphSVG(glyph);
-        button.appendChild(img);
-
-        alternates.appendChild(button);
-        this._updateFeatureButtons(c.features);
-
-        button.onclick = e => {
-          e.preventDefault();
-
-          let chars = [c];
-          if (feature == "dlig")
-            chars.push(this.text[this.cursor]);
-
-          for (let cc of chars) {
-            cc.features = cc.features || [];
-            if (cc.features.includes("dlig"))
-              cc.features = feature && ["dlig", feature] || ["dlig"];
-            else
-              cc.features = feature && [feature] || [];
-          }
-
+        this._invalidate();
+        this.update();
+        if (c.features.includes("dlig"))
+          this._updateAlternates();
+        else
           this._updateFeatureButtons(c.features);
-
-          this._invalidate();
-          this.update();
-        };
-      }
+      };
     }
   }
 
