@@ -25,6 +25,7 @@ class Layout {
     this._text = text.map(c => ({...c}));
 
     this._adjustDots = false;
+    this._removeDots = false;
 
     this._svg = null;
     this._height = null;
@@ -49,6 +50,12 @@ class Layout {
     if (v != this._adjustDots)
       this._svg = null;
     this._adjustDots = v;
+  }
+
+  set removeDots(v) {
+    if (v != this._removeDots)
+      this._svg = null;
+    this._removeDots = v;
   }
 
   get svg() {
@@ -185,6 +192,9 @@ class Layout {
     this._svg.setAttributeNS(ns, "height", this.height || 1);
 
     for (const g of this._glyphs) {
+      if (this._removeDots && g.isDot)
+        continue;
+
       if (g.layers.length)
         for (const l of g.layers)
           this._svg.appendChild(this._pathElement(l));
@@ -261,6 +271,9 @@ export class View {
 
     let adjustDots = document.getElementById("adjustDots").checked;
     this._layout.adjustDots = adjustDots;
+
+    let removeDots = document.getElementById("remove-dots").checked;
+    this._layout.removeDots = removeDots;
 
     this._draw();
   }
