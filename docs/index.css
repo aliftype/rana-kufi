@@ -16,6 +16,11 @@
  *
  */
 
+:root {
+  --main-color: #4CAF50;
+  --disabled-color: #D9D9D9;
+}
+
 * {
   font-family: Mada;
   font-size: 12pt;
@@ -31,7 +36,7 @@ canvas {
   float: left;
 }
 .button {
-  background-color: #4CAF50;
+  background-color: var(--main-color);
   border: none;
   display: inline-block;
   cursor: pointer;
@@ -41,7 +46,7 @@ canvas {
   filter: invert(1);
 }
 .feature {
-  background-color: #D9D9D9;
+  background-color: var(--disabled-color);
   border: none;
   padding: 5px;
   margin: 2px;
@@ -50,7 +55,7 @@ canvas {
   transition: 0.3s;
 }
 .feature.selected {
-  background-color: #4CAF50;
+  background-color: var(--main-color);
 }
 .slider:hover,
 .feature:hover {
@@ -62,7 +67,7 @@ canvas {
 .slider {
   -webkit-appearance: none;
   height: 10px;
-  background: #D9D9D9;
+  background: var(--disabled-color);
   outline: none;
   opacity: 0.7;
   transition: .3s;
@@ -72,7 +77,7 @@ canvas {
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
-  background: #4CAF50;
+  background: var(--main-color);
   cursor: pointer;
 }
 .slider::-moz-range-thumb {
@@ -80,7 +85,7 @@ canvas {
   height: 20px;
   border: none;
   border-radius: 0px;
-  background: #4CAF50;
+  background: var(--main-color);
   cursor: pointer;
 }
 #fontSize {
