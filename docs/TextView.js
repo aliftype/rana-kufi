@@ -284,7 +284,7 @@ export class View {
 
   _draw() {
     let canvas = this.backing;
-    let fontSize = document.getElementById("fontSize").value;
+    let fontSize = document.getElementById("font-size").value;
 
     this._scale = fontSize / this.font.upem;
 

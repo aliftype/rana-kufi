@@ -54,8 +54,8 @@ Module["onRuntimeInitialized"] = function() {
     el.addEventListener("change", e => view.update());
   });
 
-  let range = document.getElementById("fontSizeRange");
-  let number = document.getElementById("fontSize");
+  let range = document.getElementById("font-size-range");
+  let number = document.getElementById("font-size");
   range.addEventListener('input', e => number.value = e.target.value);
   number.addEventListener('input', e => range.value = e.target.value);
 };
