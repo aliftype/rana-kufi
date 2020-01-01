@@ -383,8 +383,10 @@ export class View {
         let button = document.createElement("a");
 
         button.href = "#";
-        if (feature)
+        if (feature) {
           button.dataset.feature = feature;
+          button.title = feature;
+        }
 
         let img = document.createElement('img');
         img.height = 70;
