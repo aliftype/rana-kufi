@@ -51,15 +51,11 @@ canvas {
   filter: invert(1);
 }
 
-.toogle {
+input[type=checkbox] {
   display: none;
 }
 
-.toogle#remove-dots + label {
-  background-image: url(remove-dots.svg);
-}
-
-.toogle + label {
+input[type=checkbox] + label {
   display: inline-block;
   cursor: pointer;
   padding: 12px 16px;
@@ -70,10 +66,20 @@ canvas {
   background-size: 50%;
   background-position: center;
   background-color: var(--disabled-color);
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
-.toogle:checked + label {
+input[type=checkbox]:checked + label {
   background-color: var(--main-color);
+}
+
+#remove-dots + label {
+  background-image: url(remove-dots.svg);
+}
+
+#adjust-dots + label {
+  background-image: url(adjust-dots.svg);
 }
 
 .feature {
@@ -95,7 +101,8 @@ canvas {
 }
 
 .slider:hover,
-.feature:hover {
+.feature:hover,
+input[type=checkbox]:hover + label {
   opacity: 1;
 }
 

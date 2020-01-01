@@ -269,7 +269,7 @@ export class View {
       this._layout = new Layout(this.font, this.buffer, this.text);
     }
 
-    let adjustDots = document.getElementById("adjustDots").checked;
+    let adjustDots = document.getElementById("adjust-dots").checked;
     this._layout.adjustDots = adjustDots;
 
     let removeDots = document.getElementById("remove-dots").checked;
