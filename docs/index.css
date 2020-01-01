@@ -26,15 +26,19 @@
   font-size: 12pt;
   direction: rtl;
 }
+
 canvas {
   outline: none;
 }
+
 .menu {
   float: right;
 }
+
 .controls {
   float: left;
 }
+
 .button {
   background-color: var(--main-color);
   border: none;
@@ -42,9 +46,11 @@ canvas {
   cursor: pointer;
   padding: 12px 16px;
 }
+
 .button img {
   filter: invert(1);
 }
+
 .feature {
   background-color: var(--disabled-color);
   border: none;
@@ -54,16 +60,20 @@ canvas {
   opacity: 0.7;
   transition: 0.3s;
 }
+
 .feature.selected {
   background-color: var(--main-color);
 }
+
+.feature img {
+  opacity: 1;
+}
+
 .slider:hover,
 .feature:hover {
   opacity: 1;
 }
-.feature img {
-  opacity: 1;
-}
+
 .slider {
   -webkit-appearance: none;
   height: 10px;
@@ -73,6 +83,7 @@ canvas {
   transition: .3s;
   vertical-align: middle;
 }
+
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
@@ -80,6 +91,7 @@ canvas {
   background: var(--main-color);
   cursor: pointer;
 }
+
 .slider::-moz-range-thumb {
   width: 10px;
   height: 20px;
@@ -88,11 +100,13 @@ canvas {
   background: var(--main-color);
   cursor: pointer;
 }
+
 #fontSize {
   -moz-appearance: textfield;
   appearance: textfield;
   width: 4ch;
 }
+
 #fontSize::-webkit-inner-spin-button,
 #fontSize::-webkit-outer-spin-button {
   -webkit-appearance: none;
