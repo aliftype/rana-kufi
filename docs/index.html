@@ -1,56 +1,39 @@
+<!--
+Copyright (c) 2019 Khaled Hosny
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
 <html>
   <head>
     <meta charset="utf8"/>
     <title>رنا كوفی</title>
-    <style type="text/css">
-      * {
-        font-family: Mada;
-        font-size: 12pt;
-        direction: rtl;
-      }
-      canvas {
-        outline: none;
-      }
-      .feature {
-        background-color: #D9D9D9;
-        border: none;
-        padding: 5px;
-        margin: 2px;
-        display: inline-block;
-        opacity: 0.7;
-        transition: 0.3s;
-      }
-      .feature.selected {
-        background-color: #4CAF50;
-      }
-      .feature:hover {
-        opacity: 1;
-      }
-      .feature img {
-        opacity: 1;
-      }
-      .documentName {
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
     <link rel="shortcut icon" href="favicon.svg"/>
   </head>
   <body>
-    <p class="documentName">
-      <input type="text" class="documentName" id="documentName" value="document">
-    </p>
-    <p>
-      <button id="open">افتح</button>
-      <button id="save">احفظ</button>
-      <button id="export">صدر</button>
-      <br/>
-      <input type="number"   class="opts" id="fontSize" min="10" max="500" value="100">حجم الخط
+    <div class="menu">
+      <button class="button" title="افتح" id="open"><img src="document-open.svg" height="20px"></button>
+      <button class="button" title="احفظ" id="save"><img src="document-save.svg" height="20px"></button>
+      <button class="button" title="صدّر" id="export"><img src="document-export.svg" height="20px"></button>
+    </div>
+    <div class="controls">
       <input type="checkbox" class="opts" id="adjustDots">اضبط النقاط
-    </p>
-    <p>
-      <canvas tabindex="0" id="canvas"></canvas>
-    </p>
-    <p id="alternates"></p>
+      <input type="range"    class="opts slider" id="fontSizeRange" min="10" max="500" value="100">
+      <input type="number"   class="opts" id="fontSize" min="10" max="500" value="100">
+    </div>
+    <div><canvas tabindex="0" id="canvas"></canvas></div>
+    <div id="alternates"></div>
     <script src="hb.js"></script>
     <script src="index.js" type="module"></script>
   </body>

@@ -1,3 +1,21 @@
+/*
+ * Copyright (c) 2019 Khaled Hosny
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ */
+
 import * as HarfBuzz from "./HarfBuzz.js"
 
 class Layout {
@@ -57,7 +75,7 @@ class Layout {
     let p = this._text[index - 1];
     let n = this._text[index + 1];
     if (c && c.baseGlyph)
-      return c.baseGlyph.getSubstitutes(p && p.baseGlyph, n && n.baseGlyph);
+      return c.baseGlyph.getSubstitutes(n && n.baseGlyph);
   }
 
   posOfIndex(index) {
@@ -200,6 +218,22 @@ class Layout {
   }
 }
 
+let sample = `[
+  {"code": 1582}, {"code": 1591, "features": ["cv01"]}, {"code": 32},
+  {"code": 1591, "features": ["cv05"]}, {"code": 1576},
+  {"code": 1575, "features": ["cv06"]}, {"code": 1593},
+  {"code": 1610, "features": ["cv01"]}, {"code": 32},
+  {"code": 1593}, {"code": 1604}, {"code": 1609, "features": ["cv06"]},
+  {"code": 32}, {"code": 1602}, {"code": 1608}, {"code": 1575}, {"code": 1593},
+  {"code": 1583, "features": ["cv13"]}, {"code": 32}, {"code": 1575},
+  {"code": 1604}, {"code": 1582}, {"code": 1591, "features": ["cv01"]},
+  {"code": 32}, {"code": 1575}, {"code": 1604},
+  {"code": 1603, "features": ["cv16"]}, {"code": 1608}, {"code": 1601},
+  {"code": 1610, "features": ["cv05"]}, {"code": 32}, {"code": 1575},
+  {"code": 1604}, {"code": 1601}, {"code": 1575},
+  {"code": 1591, "features": ["cv01"]}, {"code": 1605},
+  {"code": 1610, "features": ["cv04"]}]`;
+
 export class View {
   constructor() {
     this.font = new HarfBuzz.Font(window.devicePixelRatio);
@@ -218,7 +252,7 @@ export class View {
   update() {
     if (this._layout === null) {
       if (this.text === null)
-        this.text = JSON.parse(window.sessionStorage.text || window.localStorage.text || "[]");
+        this.text = JSON.parse(window.sessionStorage.text || window.localStorage.text || sample);
       else
         window.sessionStorage.text = window.localStorage.text = JSON.stringify(this.text);
 
@@ -300,14 +334,14 @@ export class View {
     var link = document.createElement('a');
     let blob = new Blob([JSON.stringify(this.text)], {type: "application/json"});
     link.href = window.URL.createObjectURL(blob);
-    link.download = document.getElementById("documentName").value + ".json";
+    link.download = "document.json";
     link.click();
   }
 
   export() {
     var link = document.createElement('a');
     link.href = this._layout.svg;
-    link.download = document.getElementById("documentName").value + ".svg";
+    link.download = "document.svg";
     link.click();
   }
 
@@ -331,41 +365,51 @@ export class View {
 
   moveCursor(movement) {
     let cursor = this.cursor + movement;
-    if (cursor > 0 && cursor <= this.text.length) {
+    if (cursor >= 0 && cursor <= this.text.length) {
       this.cursor = cursor;
       this.update();
 
+      let alternates = document.getElementById("alternates");
+      alternates.innerHTML = "";
+
+      if (cursor <= 0)
+        return;
+
       let c = this.text[this.cursor - 1];
-      let par = document.getElementById("alternates");
-      par.innerHTML = "";
       let features = this._layout.featuresOfIndex(this.cursor - 1) || [];
-      let active = c.features || []
       for (const [feature, glyph] of features) {
+        c.features = c.features || [];
+
         let button = document.createElement("a");
 
         button.href = "#";
-        button.dataset.feature = feature;
+        if (feature)
+          button.dataset.feature = feature;
 
         let img = document.createElement('img');
         img.height = 70;
         img.src = this._layout.getGlyphSVG(glyph);
         button.appendChild(img);
 
-        par.appendChild(button);
-        this._updateFeatureButtons(active);
+        alternates.appendChild(button);
+        this._updateFeatureButtons(c.features);
 
         button.onclick = e => {
-          if (active.includes(feature)) {
-            active = active.filter(e => e != feature);
-          } else {
-            if (e.metaKey)
-              active.push(feature);
+          e.preventDefault();
+
+          let chars = [c];
+          if (feature == "dlig")
+            chars.push(this.text[this.cursor]);
+
+          for (let cc of chars) {
+            cc.features = cc.features || [];
+            if (cc.features.includes("dlig"))
+              cc.features = feature && ["dlig", feature] || ["dlig"];
             else
-              active = [feature];
+              cc.features = feature && [feature] || [];
           }
 
-          c.features = active;
-          this._updateFeatureButtons(active);
+          this._updateFeatureButtons(c.features);
 
           this._invalidate();
           this.update();
@@ -374,10 +418,18 @@ export class View {
     }
   }
 
-  _updateFeatureButtons(active) {
-    let par = document.getElementById("alternates");
-    for (let child of par.children)
-      if (active.includes(child.dataset.feature))
+  _updateFeatureButtons(features) {
+    let alternates = document.getElementById("alternates");
+
+    let selectbase = false;
+    if (features.length == 0)
+      selectbase = true;
+    else if (features.length == 1 && features[0] == "dlig")
+      selectbase = true;
+
+    for (let child of alternates.children)
+      if (features.includes(child.dataset.feature) ||
+          (selectbase && !child.dataset.feature))
         child.className = "feature selected";
       else
         child.className = "feature";
