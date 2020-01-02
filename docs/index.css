@@ -137,14 +137,14 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer;
 }
 
-#font-size {
+#font-size-number {
   -moz-appearance: textfield;
   appearance: textfield;
   width: 4ch;
 }
 
-#font-size::-webkit-inner-spin-button,
-#font-size::-webkit-outer-spin-button {
+#font-size-number::-webkit-inner-spin-button,
+#font-size-number::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 

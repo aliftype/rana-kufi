@@ -19,7 +19,7 @@
 import * as TextView from "./TextView.js"
 
 window.Module = {
-"onRuntimeInitialized": function() {
+  "onRuntimeInitialized": function() {
     let view = new TextView.View();
     view.update();
 
@@ -53,9 +53,15 @@ window.Module = {
       el.addEventListener("change", e => view.update());
     });
 
-    let range = document.getElementById("font-size-range");
-    let number = document.getElementById("font-size");
-    range.addEventListener('input', e => number.value = e.target.value);
-    number.addEventListener('input', e => range.value = e.target.value);
+    let range = document.getElementById("font-size");
+    let number = document.getElementById("font-size-number");
+    range.addEventListener('input', e => {
+      number.value = e.target.value;
+      view.update()
+    });
+    number.addEventListener('change', e => {
+      range.value = e.target.value;
+      view.update()
+    });
   }
 };
