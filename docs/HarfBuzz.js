@@ -77,7 +77,7 @@ class Pointer {
 
 export class Font {
   constructor(dpr) {
-    this.ptr = _layout_get_font(dpr);
+    this.ptr = _get_font(dpr);
     this.face = _hb_font_get_face(this.ptr);
     this.upem = _hb_face_get_upem(this.face);
 
