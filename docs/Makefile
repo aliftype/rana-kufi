@@ -20,10 +20,6 @@ EM_CFLAGS = \
 	      "_hb_buffer_set_content_type", \
 	      "_hb_buffer_set_direction", \
 	      "_hb_buffer_set_script", \
-	      "_hb_color_get_alpha", \
-	      "_hb_color_get_blue", \
-	      "_hb_color_get_green", \
-	      "_hb_color_get_red", \
 	      "_hb_face_create", \
 	      "_hb_face_get_upem", \
 	      "_hb_face_reference_table", \
@@ -41,7 +37,6 @@ EM_CFLAGS = \
 	      "_hb_ot_glyph_path_destroy", \
 	      "_hb_ot_glyph_path_get_commands", \
 	      "_hb_ot_glyph_path_get_coords", \
-	      "_hb_script_from_iso15924_tag", \
 	      "_hb_shape" ]' \
 	  -DEMSCRIPTEN_HAS_UNBOUND_TYPE_NAMES=0 \
 	  -fno-exceptions -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden \

@@ -138,10 +138,10 @@ export class Font {
       let rgbs = [];
       for (let j = 0; j < nColors; j++) {
         let color = colors[i];
-        let r = _hb_color_get_red(color);
-        let g = _hb_color_get_green(color);
-        let b = _hb_color_get_blue(color);
-        let a = _hb_color_get_alpha(color);
+        let r = (color >> 8) & 0xFF;
+        let g = (color >> 16) & 0xFF;
+        let b = (color >> 24) & 0xFF;
+        let a = color & 0xFF;
         let rgb = `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
         // Inkscape!
         if (a !== 255)
@@ -314,7 +314,7 @@ export class Buffer {
   shape(font, text, useFeatures) {
     _hb_buffer_clear_contents(this.ptr);
     _hb_buffer_set_direction(this.ptr, 5/*rtl*/);
-    _hb_buffer_set_script(this.ptr, _hb_script_from_iso15924_tag(TAG("Arab")));
+    _hb_buffer_set_script(this.ptr, TAG("Arab"));
     _hb_buffer_set_content_type(this.ptr, 1/*unicode*/);
 
     let features = [];
