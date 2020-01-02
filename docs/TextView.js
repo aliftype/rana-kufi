@@ -239,7 +239,7 @@ let sample = `[
   {"code": 1582}, {"code": 1591, "features": ["cv01"]}, {"code": 32},
   {"code": 1591, "features": ["cv05"]}, {"code": 1576},
   {"code": 1575, "features": ["cv06"]}, {"code": 1593},
-  {"code": 1610, "features": ["cv01"]}, {"code": 32},
+  {"code": 1740, "features": ["cv01"]}, {"code": 32},
   {"code": 1593}, {"code": 1604}, {"code": 1609, "features": ["cv06"]},
   {"code": 32}, {"code": 1602}, {"code": 1608}, {"code": 1575}, {"code": 1593},
   {"code": 1583, "features": ["cv13"]}, {"code": 32}, {"code": 1575},
