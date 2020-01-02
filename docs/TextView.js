@@ -26,6 +26,7 @@ class Layout {
 
     this._adjustDots = false;
     this._removeDots = false;
+    this._nocolorDots = false;
 
     this._svg = null;
     this._height = null;
@@ -56,6 +57,12 @@ class Layout {
     if (v != this._removeDots)
       this._svg = null;
     this._removeDots = v;
+  }
+
+  set nocolorDots(v) {
+    if (v != this._nocolorDots)
+      this._svg = null;
+    this._nocolorDots = v;
   }
 
   get svg() {
@@ -195,7 +202,7 @@ class Layout {
       if (this._removeDots && g.isDot)
         continue;
 
-      if (g.layers.length)
+      if (g.layers.length && !(this._nocolorDots && g.isDot))
         for (const l of g.layers)
           this._svg.appendChild(this._pathElement(l));
       else
@@ -274,6 +281,9 @@ export class View {
 
     let removeDots = document.getElementById("remove-dots").checked;
     this._layout.removeDots = removeDots;
+
+    let nocolorDots = document.getElementById("nocolor-dots").checked;
+    this._layout.nocolorDots = nocolorDots;
 
     this._draw();
   }
