@@ -143,3 +143,20 @@ input[type=range]::-moz-range-thumb {
 #font-size::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
+
+body:after{
+  content: "بيتـــــا";
+  position: fixed;
+  width: 80px;
+  height: 20px;
+  background: #e43;
+  top: 10px;
+  right: -20px;
+  text-align: center;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #fff;
+  line-height: 22px;
+  transform:rotate(45deg);
+}
