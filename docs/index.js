@@ -35,15 +35,18 @@ window.Module = {
     });
 
     view.canvas.addEventListener('click', e => view.setCursorAtPoint(e.clientX));
-    view.canvas.addEventListener('keypress', e => view.insert(e.key));
+    view.canvas.addEventListener('keypress', e => {
+      if (e.ctrlKey || e.metaKey)
+        return;
+      view.insert(e.key);
+    });
 
     document.getElementById("open").addEventListener("click", e => view.open(e.value));
     document.getElementById("save").addEventListener("click", e => view.save());
     document.getElementById("export").addEventListener("click", e => view.export());
 
     document.addEventListener('paste', e => {
-      let target = e.explicitOriginalTarget;
-      if (target.id === "canvas") {
+      if (document.activeElement.id === "canvas") {
         let text = (e.clipboardData || window.clipboardData).getData('text');
         view.insert(text);
       }
