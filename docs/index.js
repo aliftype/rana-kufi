@@ -23,34 +23,9 @@ window.Module = {
     let view = new TextView.View();
     view.update();
 
-    view.canvas.addEventListener('keydown', function(e) {
-      if (e.key === "ArrowLeft")
-        view.moveCursor(1);
-      else if (e.key === "ArrowRight")
-        view.moveCursor(-1);
-      else if (e.key === "Backspace") {
-        e.preventDefault();
-        view.backspace();
-      }
-    });
-
-    view.canvas.addEventListener('click', e => view.setCursorAtPoint(e.clientX));
-    view.canvas.addEventListener('keypress', e => {
-      if (e.ctrlKey || e.metaKey)
-        return;
-      view.insert(e.key);
-    });
-
     document.getElementById("open").addEventListener("click", e => view.open(e.value));
     document.getElementById("save").addEventListener("click", e => view.save());
     document.getElementById("export").addEventListener("click", e => view.export());
-
-    document.addEventListener('paste', e => {
-      if (document.activeElement.id === "canvas") {
-        let text = (e.clipboardData || window.clipboardData).getData('text');
-        view.insert(text);
-      }
-    });
 
     [].forEach.call(document.getElementsByClassName("opts"), function(el) {
       el.addEventListener("change", e => view.update());

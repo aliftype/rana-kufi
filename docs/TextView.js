@@ -253,27 +253,35 @@ let sample = `[
 
 export class View {
   constructor() {
-    this.font = new HarfBuzz.Font(window.devicePixelRatio);
-    this.buffer = new HarfBuzz.Buffer();
+    this._font = new HarfBuzz.Font(window.devicePixelRatio);
+    this._buffer = new HarfBuzz.Buffer();
 
-    this.canvas = document.getElementById("canvas");
-    this.backing = document.createElement('canvas');
+    this._canvas = document.getElementById("canvas");
+    this._backing = document.createElement('canvas');
 
-    this.cursor = 0;
-    this.text = null;
+    this._cursor = 0;
+    this._text = null;
     this._layout = null;
 
-    this.canvas.focus();
+    this._canvas.focus();
+    this._canvas.addEventListener('keydown', e => this._keydown(e));
+    this._canvas.addEventListener('keypress', e => this._keypress(e));
+    this._canvas.addEventListener('click', e => this._click(e));
+
+    document.addEventListener('paste', e => {
+      if (document.activeElement === this._canvas)
+        this._insert((e.clipboardData || window.clipboardData).getData('text'));
+    });
   }
 
   update() {
     if (this._layout === null) {
-      if (this.text === null)
-        this.text = JSON.parse(window.sessionStorage.text || window.localStorage.text || sample);
+      if (this._text === null)
+        this._text = JSON.parse(window.sessionStorage.text || window.localStorage.text || sample);
       else
-        window.sessionStorage.text = window.localStorage.text = JSON.stringify(this.text);
+        window.sessionStorage.text = window.localStorage.text = JSON.stringify(this._text);
 
-      this._layout = new Layout(this.font, this.buffer, this.text);
+      this._layout = new Layout(this._font, this._buffer, this._text);
     }
 
     let adjustDots = document.getElementById("adjust-dots").checked;
@@ -293,10 +301,10 @@ export class View {
   }
 
   _draw() {
-    let canvas = this.backing;
+    let canvas = this._backing;
     let fontSize = document.getElementById("font-size").value;
 
-    this._scale = fontSize / this.font.upem;
+    this._scale = fontSize / this._font.upem;
 
     let margin = 40;
     let width = this._layout.width;
@@ -315,13 +323,13 @@ export class View {
     // Draw cursor.
     ctx.save();
     ctx.fillStyle = "#0000003f";
-    let pos = this._layout.posOfIndex(this.cursor - 1);
+    let pos = this._layout.posOfIndex(this._cursor - 1);
     if (pos == null)
       pos = width;
     ctx.fillRect(pos, 0, 100, height);
     ctx.restore();
 
-    let mainCanvas = this.canvas;
+    let mainCanvas = this._canvas;
     let img = new Image;
     img.onload = function() {
       ctx.drawImage(img, 0, 0);
@@ -345,7 +353,7 @@ export class View {
     input.onchange = e => {
       let file = e.target.files[0];
       file.text().then(text => {
-        this.text = JSON.parse(text);
+        this._text = JSON.parse(text);
         this._invalidate();
         this.update();
       });
@@ -355,7 +363,7 @@ export class View {
 
   save() {
     var link = document.createElement('a');
-    let blob = new Blob([JSON.stringify(this.text)], {type: "application/json"});
+    let blob = new Blob([JSON.stringify(this._text)], {type: "application/json"});
     link.href = window.URL.createObjectURL(blob);
     link.download = "document.json";
     link.click();
@@ -368,28 +376,41 @@ export class View {
     link.click();
   }
 
-  insert(text) {
+  _keydown(e) {
+    if (e.key === "ArrowLeft")
+      this._moveCursor(1);
+    else if (e.key === "ArrowRight")
+      this._moveCursor(-1);
+    else if (e.key === "Backspace") {
+      e.preventDefault();
+      this._text.splice(this._cursor - 1, 1);
+      this._invalidate();
+      this._moveCursor(-1);
+    }
+  }
+
+  _keypress(e) {
+    if (e.ctrlKey || e.metaKey)
+      return;
+    this._insert(e.key);
+  }
+
+  _insert(text) {
     let count = 0;
     for (const c of text) {
-      this.text.splice(this.cursor + count, 0, {
+      this._text.splice(this._cursor + count, 0, {
         code: c.codePointAt(0),
       });
       count++;
     }
     this._invalidate();
-    this.moveCursor(count);
+    this._moveCursor(count);
   }
 
-  backspace() {
-    this.text.splice(this.cursor - 1, 1);
-    this._invalidate();
-    this.moveCursor(-1);
-  }
-
-  moveCursor(movement) {
-    let cursor = this.cursor + movement;
-    if (cursor >= 0 && cursor <= this.text.length) {
-      this.cursor = cursor;
+  _moveCursor(movement) {
+    let cursor = this._cursor + movement;
+    if (cursor >= 0 && cursor <= this._text.length) {
+      this._cursor = cursor;
       this.update();
       this._updateAlternates();
     }
@@ -399,11 +420,11 @@ export class View {
     let alternates = document.getElementById("alternates");
     alternates.innerHTML = "";
 
-    if (this.cursor <= 0)
+    if (this._cursor <= 0)
       return;
 
-    let c = this.text[this.cursor - 1];
-    let features = this._layout.featuresOfIndex(this.cursor - 1) || [];
+    let c = this._text[this._cursor - 1];
+    let features = this._layout.featuresOfIndex(this._cursor - 1) || [];
     for (const [feature, glyph] of features) {
       c.features = c.features || [];
 
@@ -428,7 +449,7 @@ export class View {
 
         let chars = [c];
         if (feature == "dlig")
-          chars.push(this.text[this.cursor]);
+          chars.push(this._text[this._cursor]);
 
         for (let cc of chars) {
           cc.features = cc.features || [];
@@ -465,15 +486,15 @@ export class View {
         child.className = "feature";
   }
 
-  setCursorAtPoint(x) {
+  _click(e) {
     if (this._layout === null)
       return;
     let dpr = window.devicePixelRatio;
     let scale = dpr / this._scale;
-    let offsetX = (this.canvas.width - this.backing.width) / dpr;
-    let ex = (x - this.canvas.offsetLeft - offsetX) * scale;
+    let offsetX = (this._canvas.width - this._backing.width) / dpr;
+    let x = (e.clientX - this._canvas.offsetLeft - offsetX) * scale;
 
-    let cursor = this._layout.indexAtPoint(ex) + 1;
-    this.moveCursor(cursor - this.cursor);
+    let cursor = this._layout.indexAtPoint(x) + 1;
+    this._moveCursor(cursor - this._cursor);
   }
 }
