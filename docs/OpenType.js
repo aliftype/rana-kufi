@@ -22,17 +22,9 @@ class Stream {
     this.pos = 0;
   }
 
-  skip(length) {
-    this.pos += length;
-  }
-
-  skipTo(pos) {
-    this.pos = pos;
-  }
-
   readByte(pos) {
     if (pos !== undefined)
-      this.skipTo(pos)
+      this.pos = pos;
     return this.bytes[this.pos++];
   }
 
