@@ -26,7 +26,6 @@ EM_CFLAGS = \
 	      "_hb_font_create", \
 	      "_hb_font_get_face", \
 	      "_hb_font_get_glyph_extents", \
-	      "_hb_font_get_glyph_name", \
 	      "_hb_font_get_h_extents", \
 	      "_hb_font_set_scale", \
 	      "_hb_ot_color_glyph_get_layers", \
@@ -87,6 +86,7 @@ harfbuzz.o: $(HBDIR)/harfbuzz.cc
 	  -DHB_NO_MMAP \
 	  -DHB_NO_MT \
 	  -DHB_NO_OPEN \
+	  -DHB_NO_OT_FONT_GLYPH_NAMES \
 	  -DHB_NO_OT_SHAPE_FRACTIONS \
 	  -DHB_NO_SETLOCALE \
 	  -DHB_NO_STAT \

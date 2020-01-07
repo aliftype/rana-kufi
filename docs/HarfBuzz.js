@@ -107,14 +107,6 @@ export class Font {
     return this._extents[glyph];
   }
 
-  getGlyphName(glyph) {
-    let namePtr = new Pointer(100);
-    if (_hb_font_get_glyph_name(this.ptr, glyph, namePtr.ptr, namePtr.byteLength)) {
-      return UTF8ToString(namePtr.ptr, namePtr.byteLength);
-    }
-    return "";
-  }
-
   getColorPalettes() {
     if (this._palettes !== undefined)
       return this._palettes;
@@ -273,8 +265,8 @@ class Glyph {
   }
 
   get isDot() {
-    let name = this.font.getGlyphName(this.index);
-    return name.includes("dot");
+    let layers = this.font.getGlyphColorLayers(this.index);
+    return layers.length;
   }
   get layers() {
     let layers = this.font.getGlyphColorLayers(this.index);

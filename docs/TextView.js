@@ -204,22 +204,22 @@ class Layout {
 
       if (g.layers.length && !(this._nocolorDots && g.isDot))
         for (const l of g.layers)
-          this._svg.appendChild(this._pathElement(l));
+          this._svg.appendChild(this._pathElement(l, g.isDot));
       else
-        this._svg.appendChild(this._pathElement(g));
+        this._svg.appendChild(this._pathElement(g, g.isDot));
     }
 
     let blob = new Blob([this._svg.outerHTML], {type: "image/svg+xml"});
     this._svgURL = window.URL.createObjectURL(blob);
   }
 
-  _pathElement(g) {
+  _pathElement(g, isDot) {
     let x = g.x;
     let y = g.y;
     let color = g.color
 
     if (this._adjustDots &&
-        g.dy > 0 && g.dy < this._dotMaxY && g.isDot)
+        g.dy > 0 && g.dy < this._dotMaxY && isDot)
       y += g.dy - this._dotMaxY;
 
     if (!g.index && color === undefined)
