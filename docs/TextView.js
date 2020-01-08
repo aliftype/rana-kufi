@@ -29,10 +29,13 @@ class Layout {
     this._nocolorDots = false;
 
     this._svg = null;
+    this._width = null;
     this._height = null;
     this._glyphs = null;
 
     this._svgs = [];
+
+    this._margin = 500;
   }
 
   getWidth(from, to) {
@@ -72,15 +75,12 @@ class Layout {
 
   get width() {
     this._shape();
-    let c = this._text[0];
-    if (c)
-      return c.x + c.ax;
-    return 0;
+    return this._width + (this._margin * 2);
   }
 
   get height() {
     this._shape();
-    return this._height;
+    return this._height + (this._margin * 2);
   }
 
   featuresOfIndex(index) {
@@ -95,8 +95,8 @@ class Layout {
   posOfIndex(index) {
     let c = this._text[index];
     if (c)
-      return c.x;
-    return null;
+      return c.x + this._margin;
+    return this._width + this._margin;
   }
 
   indexAtPoint(x) {
@@ -104,8 +104,8 @@ class Layout {
 
     for (let i = 0; i < this._text.length; i++) {
       let c = this._text[i];
-      let left = c.x;
-      let right = c.x + c.ax;
+      let left = c.x + this._margin;
+      let right = c.x + c.ax + this._margin;
       if (x > left && x < right)
         return i;
     }
@@ -163,6 +163,7 @@ class Layout {
 
     let x = 0, y = this._font.extents.ascender;
     let maxY = Number.NEGATIVE_INFINITY;
+    this._width = 0;
     for (const g of glyphs) {
       let c = this._text[g.cl];
 
@@ -173,6 +174,8 @@ class Layout {
       g.y = y - g.dy;
       x += g.ax;
       y -= g.ay;
+
+      this._width += g.ax;
 
       c.x = Math.min(c.x, g.x);
       if (g.x + g.ax > c.x + c.ax)
@@ -195,8 +198,9 @@ class Layout {
     this._svg = document.createElementNS(ns, "svg");
     this._svg.setAttribute("xmlns", ns);
     this._svg.setAttributeNS(ns, "version", '1.1');
-    this._svg.setAttributeNS(ns, "width", this.width || 1);
-    this._svg.setAttributeNS(ns, "height", this.height || 1);
+    this._svg.setAttributeNS(ns, "width", this.width);
+    this._svg.setAttributeNS(ns, "height", this.height);
+    this._svg.setAttributeNS(ns, "viewBox", `${-this._margin} ${-this._margin} ${this.width} ${this.height}`);
 
     for (const g of this._glyphs) {
       if (this._removeDots && g.isDot)
@@ -306,26 +310,22 @@ export class View {
 
     this._scale = fontSize / this._font.upem;
 
-    let margin = 40;
     let width = this._layout.width;
     let height = this._layout.height;
 
-    canvas.width = width * this._scale + margin;
-    canvas.height = height * this._scale + margin;
+    canvas.width = width * this._scale;
+    canvas.height = height * this._scale;
     canvas.style.width = canvas.width / window.devicePixelRatio;
     canvas.style.height = canvas.height / window.devicePixelRatio;
 
     let ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.translate(margin / 2, margin / 2);
     ctx.scale(this._scale, this._scale);
 
     // Draw cursor.
     ctx.save();
     ctx.fillStyle = "#0000003f";
     let pos = this._layout.posOfIndex(this._cursor - 1);
-    if (pos == null)
-      pos = width;
     ctx.fillRect(pos, 0, 100, height);
     ctx.restore();
 
