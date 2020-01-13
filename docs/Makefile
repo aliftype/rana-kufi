@@ -43,10 +43,12 @@ EM_CFLAGS = \
 
 all: hb.js
 
-RanaKufi-VF.otf: $(FONTDIR)/RanaKufi-Regular.otf $(FONTDIR)/RanaKufi-Short.otf
-	@echo " VF	$@"
-	@make -C $(FONTDIR) $@
-	@cp $(FONTDIR)/$@ $@
+$(FONTDIR)/RanaKufi-VF.otf: $(FONTDIR)/RanaKufi-Regular.otf $(FONTDIR)/RanaKufi-Short.otf
+	@echo " VF	$(@F)"
+	@make -C $(FONTDIR) $(@F)
+
+RanaKufi-VF.otf: $(FONTDIR)/RanaKufi-VF.otf
+	@cp $< $@
 
 RanaKufi.c: RanaKufi-VF.otf
 	@echo " GEN	$@"
