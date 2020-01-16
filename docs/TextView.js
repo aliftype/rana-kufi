@@ -240,7 +240,8 @@ class Layout {
 }
 
 let sample = `
-[{"code":1582,"features":[]},{"code":1591,"features":["cv01"]},{"code":32},{"code":1591,"features":["cv05"]},{"code":1576},{"code":1575,"features":["cv06"]},{"code":1593},{"code":1740,"features":["cv02"]},{"code":32},{"code":1593},{"code":1604,"features":[]},{"code":1609,"features":["cv08"]},{"code":32},{"code":1602,"features":[]},{"code":1608},{"code":1575,"features":[]},{"code":1593},{"code":1583,"features":["cv13"]},{"code":32},{"code":1575,"features":["dlig","cv01"]},{"code":1604,"features":["dlig"]},{"code":1582},{"code":1591,"features":["cv01"]},{"code":32},{"code":1575,"features":["dlig","cv01"]},{"code":1604,"features":["dlig"]},{"code":1603,"features":["cv16"]},{"code":1608},{"code":1601},{"code":1610,"features":["cv06"]},{"code":32},{"code":1575,"features":["dlig","cv01"]},{"code":1604,"features":["dlig"]},{"code":1601},{"code":1575},{"code":1591,"features":["cv01"]},{"code":1605},{"code":1610,"features":["cv10"]}]`;
+[{"code":1575,"features":["dlig","cv10"]},{"code":1604,"features":["dlig"]},{"code":1582},{"code":1591,"features":["cv05"]},{"code":32},{"code":1575,"features":[]},{"code":1604,"features":[]},{"code":1603,"features":["cv05"]},{"code":1608,"features":[]},{"code":1601,"features":[]},{"code":1610,"features":["cv06"]},{"code":32},{"code":1575,"features":["dlig","cv01"]},{"code":1604,"features":["dlig"]},{"code":1601,"features":["cv01"]},{"code":1575,"features":[]},{"code":1591,"features":["cv05"]},{"code":1605,"features":[]},{"code":1610,"features":["cv10"]}]
+`;
 
 export class View {
   constructor() {
