@@ -18,28 +18,34 @@
 
 import * as TextView from "./TextView.js"
 
+let fontFile = "RanaKufi.otf";
+
 window.Module = {
   "onRuntimeInitialized": function() {
-    let view = new TextView.View();
-    view.update();
+    fetch(fontFile).then(function (res) {
+      return res.arrayBuffer();
+    }).then(function (blob) {
+      let view = new TextView.View(blob);
+      view.update();
 
-    document.getElementById("open").addEventListener("click", e => view.open(e.value));
-    document.getElementById("save").addEventListener("click", e => view.save());
-    document.getElementById("export").addEventListener("click", e => view.export());
+      document.getElementById("open").addEventListener("click", e => view.open(e.value));
+      document.getElementById("save").addEventListener("click", e => view.save());
+      document.getElementById("export").addEventListener("click", e => view.export());
 
-    [].forEach.call(document.getElementsByClassName("opts"), function(el) {
-      el.addEventListener("change", e => view.update());
-    });
+      [].forEach.call(document.getElementsByClassName("opts"), function(el) {
+        el.addEventListener("change", e => view.update());
+      });
 
-    let range = document.getElementById("font-size");
-    let number = document.getElementById("font-size-number");
-    range.addEventListener('input', e => {
-      number.value = e.target.value;
-      view.update()
-    });
-    number.addEventListener('change', e => {
-      range.value = e.target.value;
-      view.update()
+      let range = document.getElementById("font-size");
+      let number = document.getElementById("font-size-number");
+      range.addEventListener('input', e => {
+        number.value = e.target.value;
+        view.update()
+      });
+      number.addEventListener('change', e => {
+        range.value = e.target.value;
+        view.update()
+      });
     });
   }
 };

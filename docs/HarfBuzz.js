@@ -76,9 +76,11 @@ class Pointer {
 }
 
 export class Font {
-  constructor(dpr) {
-    this.ptr = _get_font(dpr);
-    this.face = _hb_font_get_face(this.ptr);
+  constructor(data, dpr) {
+    let dataPtr = new Pointer(data);
+    let blob = _hb_blob_create(dataPtr.ptr, dataPtr.byteLength, 2/*writable*/, 0, 0);
+    this.face = _hb_face_create(blob, 0);
+    this.ptr = _hb_font_create(this.face);
     this.upem = _hb_face_get_upem(this.face);
 
     let scale = this.upem * dpr;

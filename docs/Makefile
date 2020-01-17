@@ -1,8 +1,6 @@
 HBDIR = harfbuzz/src
 FONTDIR = ../..
 
-INCLUDES = -I$(HBDIR)
-
 EM_CFLAGS = \
 	  --llvm-lto 1 \
 	  -s ENVIRONMENT=web \
@@ -41,7 +39,7 @@ EM_CFLAGS = \
 	  -fno-exceptions -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden \
 	  -Oz
 
-all: hb.js
+all: hb.js RanaKufi.otf
 
 $(FONTDIR)/RanaKufi.otf: $(FONTDIR)/RanaKufi-Regular.otf $(FONTDIR)/RanaKufi-Short.otf
 	@echo " VF	$(@F)"
@@ -50,23 +48,13 @@ $(FONTDIR)/RanaKufi.otf: $(FONTDIR)/RanaKufi-Regular.otf $(FONTDIR)/RanaKufi-Sho
 RanaKufi.otf: $(FONTDIR)/RanaKufi.otf
 	@cp $< $@
 
-RanaKufi.c: RanaKufi.otf
-	@echo " GEN	$@"
-	@xxd -i $< $@
-	@sed -i -e "s/RanaKufi_otf/RanaKufi/g" $@
-	@sed -i -e "s/unsigned char/const char/g" $@
-
-hb.js: harfbuzz.o font.o
+hb.js: harfbuzz.o
 	@echo " LINK	$@"
 	@emcc $(EM_CFLAGS) -o $@ $^
 
-font.o: font.c RanaKufi.c
-	@echo " CC	$@"
-	@emcc $(EM_CFLAGS) $(INCLUDES) -c $<
-
 harfbuzz.o: $(HBDIR)/harfbuzz.cc
 	@echo " C++	$@"
-	@em++ $(EM_CFLAGS) $(INCLUDES) \
+	@em++ $(EM_CFLAGS) \
 	  -std=c++11 \
 	  -DHB_DISABLE_DEPRECATED \
 	  -DHB_NDEBUG \

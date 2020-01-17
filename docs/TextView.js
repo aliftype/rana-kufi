@@ -244,8 +244,8 @@ let sample = `
 `;
 
 export class View {
-  constructor() {
-    this._font = new HarfBuzz.Font(window.devicePixelRatio);
+  constructor(data) {
+    this._font = new HarfBuzz.Font(data, window.devicePixelRatio);
     this._buffer = new HarfBuzz.Buffer();
 
     this._canvas = document.getElementById("canvas");
