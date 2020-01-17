@@ -4,12 +4,12 @@
   "description": "Rana is a Fatimid kufi typeface that faithfully followed the Fatimid kufi rules established by the ate master of Arabic calligraphy Mohammad Abdul Qadir. The application helps in using the typeface in its full potential.",
   "icons": [
     {
-      "src": "/assets/icon-512.png",
+      "src": "./assets/icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "orientation": "landscape",
   "categories": ["education", "productivity"]
