@@ -1,16 +1,20 @@
 {
-  "short_name": "Rana Kufi",
-  "name": "Rana – Fatimid Kufi",
-  "description": "Rana is a Fatimid kufi typeface that faithfully followed the Fatimid kufi rules established by the ate master of Arabic calligraphy Mohammad Abdul Qadir. The application helps in using the typeface in its full potential.",
+  "short_name": "رنا كوفي",
+  "name": "رنا – خط كوفي فاطمي",
+  "description": "رنا كوفي هو خط كوفي فاطمي يتبع القواعد الفنية الصحيحة للخط الكوفي الفاطمي كما وضعها الأستاذ محمد عبد القادر. ويساعد تطبيق رنا كوفي على استخدام الخط والاستفادة من خصائصه أفضل استفادة.",
+  "lang": "ar",
+  "dir": "rtl",
   "icons": [
     {
-      "src": "./assets/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "./assets/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "480x480"
     }
   ],
   "start_url": "./",
   "display": "standalone",
   "orientation": "landscape",
-  "categories": ["education", "productivity"]
+  "categories": ["education", "productivity"],
+  "background_color": "#FEEEC9",
+  "theme_color": "#FEEEC9"
 }
