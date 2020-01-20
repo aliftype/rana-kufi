@@ -75,15 +75,15 @@ input[type=checkbox]:checked + label {
 }
 
 #nocolor-dots + label {
-  background-image: url(assets/nocolor-dots.svg);
+  background-image: url(assets/images/nocolor-dots.svg);
 }
 
 #remove-dots + label {
-  background-image: url(assets/remove-dots.svg);
+  background-image: url(assets/images/remove-dots.svg);
 }
 
 #adjust-dots + label {
-  background-image: url(assets/adjust-dots.svg);
+  background-image: url(assets/images/adjust-dots.svg);
 }
 
 .feature {
