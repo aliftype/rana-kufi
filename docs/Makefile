@@ -7,7 +7,8 @@ EM_CFLAGS = \
 	  --llvm-lto 1 \
 	  -s ENVIRONMENT=web \
 	  -s FILESYSTEM=0 \
-	  -s 'EXTRA_EXPORTED_RUNTIME_METHODS=["stackAlloc"]' \
+	  -s RESERVED_FUNCTION_POINTERS=5 \
+	  -s 'EXTRA_EXPORTED_RUNTIME_METHODS=["stackAlloc", "addFunction"]' \
 	  -s 'EXPORTED_FUNCTIONS=[ \
 	      "_hb_blob_create", \
 	      "_hb_blob_get_data", \
@@ -32,10 +33,13 @@ EM_CFLAGS = \
 	      "_hb_ot_color_has_palettes", \
 	      "_hb_ot_color_palette_get_colors", \
 	      "_hb_ot_color_palette_get_count", \
-	      "_hb_ot_glyph_path_create_from_font", \
-	      "_hb_ot_glyph_path_destroy", \
-	      "_hb_ot_glyph_path_get_commands", \
-	      "_hb_ot_glyph_path_get_coords", \
+	      "_hb_ot_glyph_decompose", \
+	      "_hb_ot_glyph_decompose_funcs_create", \
+	      "_hb_ot_glyph_decompose_funcs_set_close_path_func", \
+	      "_hb_ot_glyph_decompose_funcs_set_conic_to_func", \
+	      "_hb_ot_glyph_decompose_funcs_set_cubic_to_func", \
+	      "_hb_ot_glyph_decompose_funcs_set_line_to_func", \
+	      "_hb_ot_glyph_decompose_funcs_set_move_to_func", \
 	      "_hb_shape" ]' \
 	  -DEMSCRIPTEN_HAS_UNBOUND_TYPE_NAMES=0 \
 	  -fno-exceptions -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden \

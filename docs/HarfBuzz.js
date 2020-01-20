@@ -90,6 +90,7 @@ export class Font {
     this._extents = [];
     this._layers = [];
     this._gsub = null;
+    this._decompose_funcs = null;
   }
 
   getGlyphExtents(glyph) {
@@ -180,43 +181,39 @@ export class Font {
   }
 
   getGlyphOutline(glyph) {
-    if (this._outlines[glyph] !== undefined)
-      return this._outlines[glyph];
+    let outlines = this._outlines;
+    if (outlines[glyph] !== undefined)
+      return outlines[glyph];
 
-    let nCommandsPtr = new Pointer(4);
-    let nCoordsPtr = new Pointer(4);
-    let path = _hb_ot_glyph_path_create_from_font(this.ptr, glyph);
-    let commandsPtr = _hb_ot_glyph_path_get_commands(path, nCommandsPtr.ptr);
-    let coordsPtr = _hb_ot_glyph_path_get_coords(path, nCoordsPtr.ptr);
-
-    let cmdPtr = new Pointer(commandsPtr, nCommandsPtr.int32);
-    let cooPtr = new Pointer(coordsPtr, nCoordsPtr.int32 * 4);
-
-    let commands = cmdPtr.asUint8Array();
-    let coords = cooPtr.asInt32Array();
-
-    let ret = "";
-    let i = 0;
-    for (const c of commands) {
-      let command = String.fromCodePoint(c);
-      ret += command;
-      if (command === "C") {
-        ret += `${coords[i++]},${-coords[i++]},`;
-        ret += `${coords[i++]},${-coords[i++]},`;
-        ret += `${coords[i++]},${-coords[i++]}`;
-      } else if (command === "Q") {
-        ret += `${coords[i++]},${-coords[i++]},`;
-        ret += `${coords[i++]},${-coords[i++]}`;
-      } else if (command !== "Z") {
-        ret += `${coords[i++]},${-coords[i++]}`;
-      }
+    if (!this._decompose_funcs) {
+      let funcs = this._decompose_funcs = _hb_ot_glyph_decompose_funcs_create();
+      _hb_ot_glyph_decompose_funcs_set_move_to_func(funcs,
+        addFunction(function(x, y, data) {
+          outlines[data] += `M${x},${-y}`
+        }));
+      _hb_ot_glyph_decompose_funcs_set_line_to_func(funcs,
+        addFunction(function(x, y, data) {
+          outlines[data] += `L${x},${-y}`
+        }));
+      _hb_ot_glyph_decompose_funcs_set_conic_to_func(funcs,
+        addFunction(function(x1, y1, x2, y2, data) {
+          outlines[data] += `Q${x1},${-y1},${x2},${-y2}`
+        }));
+      _hb_ot_glyph_decompose_funcs_set_cubic_to_func(funcs,
+        addFunction(function(x1, y1, x2, y2, x3, y3, data) {
+          outlines[data] += `C${x1},${-y1},${x2},${-y2},${x3},${-y3}`
+        }));
+      _hb_ot_glyph_decompose_funcs_set_close_path_func(funcs,
+        addFunction(function(data) { outlines[data] += `Z` }));
     }
-    ret += "Z";
 
-    _hb_ot_glyph_path_destroy(path);
-    this._outlines[glyph] = ret;
+    outlines[glyph] = "";
+    // I’m abusing pointers here to pass the actual glyph id instead of a user
+    // data pointer, don’t shot me.
+    _hb_ot_glyph_decompose(this.ptr, glyph, this._decompose_funcs, glyph);
+    outlines[glyph] += "Z";
 
-    return this._outlines[glyph];
+    return outlines[glyph];
   }
 
   get GSUB() {
