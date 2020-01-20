@@ -1,7 +1,7 @@
 HBDIR = harfbuzz/src
 FONTDIR = ../..
 
-FONT = assets/RanaKufi.otf
+FONT = assets/fonts/RanaKufi.otf
 
 EM_CFLAGS = \
 	  --llvm-lto 1 \
