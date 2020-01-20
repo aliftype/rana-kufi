@@ -1,6 +1,8 @@
 HBDIR = harfbuzz/src
 FONTDIR = ../..
 
+FONT = assets/RanaKufi.otf
+
 EM_CFLAGS = \
 	  --llvm-lto 1 \
 	  -s ENVIRONMENT=web \
@@ -39,12 +41,12 @@ EM_CFLAGS = \
 	  -fno-exceptions -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden \
 	  -Oz
 
-all: hb.js RanaKufi.otf
+all: hb.js $(FONT)
 
 $(FONTDIR)/RanaKufi.otf: $(FONTDIR)/RanaKufi-Regular.otf $(FONTDIR)/RanaKufi-Short.otf
 	@make -C $(FONTDIR) $(@F)
 
-RanaKufi.otf: $(FONTDIR)/RanaKufi.otf
+$(FONT): $(FONTDIR)/RanaKufi.otf
 	@cp $< $@
 
 hb.js: harfbuzz.o
