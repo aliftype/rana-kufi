@@ -211,7 +211,6 @@ export class Font {
     // I’m abusing pointers here to pass the actual glyph id instead of a user
     // data pointer, don’t shot me.
     _hb_ot_glyph_decompose(this.ptr, glyph, this._decompose_funcs, glyph);
-    outlines[glyph] += "Z";
 
     return outlines[glyph];
   }
