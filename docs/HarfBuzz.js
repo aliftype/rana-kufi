@@ -49,30 +49,19 @@ function TAG(tag) {
 }
 
 class Pointer {
-  constructor(arg1, arg2) {
-    if (arg2 !== undefined) {
-      this.ptr = arg1;
-      this.byteLength = arg2;
-    } else if (arg1 instanceof ArrayBuffer) {
-      this.byteLength = arg1.byteLength;
+  constructor(arg) {
+    if (arg instanceof ArrayBuffer) {
+      this.byteLength = arg.byteLength;
       this.ptr = stackAlloc(this.byteLength);
-      HEAPU8.set(new Uint8Array(arg1), this.ptr);
+      HEAPU8.set(new Uint8Array(arg), this.ptr);
     } else {
-      this.byteLength = arg1;
+      this.byteLength = arg;
       this.ptr = stackAlloc(this.byteLength);
     }
   }
 
-  asInt8Array()   { return HEAP8.slice(this.ptr, this.ptr + this.byteLength); }
-  asUint8Array()  { return HEAPU8.slice(this.ptr, this.ptr + this.byteLength); }
-  asInt32Array()  { return HEAP32.slice(this.ptr / 4, (this.ptr + this.byteLength) / 4); }
-  asUint32Array() { return HEAPU32.slice(this.ptr / 4, (this.ptr + this.byteLength) / 4); }
-
-  set int32(v)  { HEAP32[this.ptr / 4] = v; }
-  get int32()   { return HEAP32[this.ptr / 4]; }
-
-  set uint32(v) { HEAPU32[this.ptr / 4] = v; }
-  get uint32()  { return HEAPU32[this.ptr / 4]; }
+  get int32Array() { return HEAP32.slice(this.ptr / 4, (this.ptr + this.byteLength) / 4); }
+  get uint32()     { return HEAPU32[this.ptr / 4]; }
 }
 
 export class Font {
@@ -102,7 +91,7 @@ export class Font {
     let extentsPtr = new Pointer(4 * 4);
     _hb_font_get_glyph_extents(this.ptr, glyph, extentsPtr.ptr);
 
-    let extents = extentsPtr.asInt32Array();
+    let extents = extentsPtr.int32Array;
     this._extents[glyph] = {
       x_bearing: extents[0],
       y_bearing: extents[1],
@@ -201,7 +190,7 @@ export class Font {
   get extents() {
     let extentsPtr = new Pointer(12 * 4);
     _hb_font_get_h_extents(this.ptr, extentsPtr.ptr);
-    let extents = extentsPtr.asInt32Array();
+    let extents = extentsPtr.int32Array;
     return {
       ascender: extents[0],
       descender: extents[1],
