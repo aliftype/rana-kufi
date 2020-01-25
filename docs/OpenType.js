@@ -82,7 +82,7 @@ class Coverage {
         break;
 
       default:
-        console.log("Unsupported coverage format:", coverageFormat);
+        console.warn("Unsupported coverage format: %d", coverageFormat);
     }
 
     stream.pos = pos;
@@ -130,8 +130,8 @@ class Lookup {
             break;
 
             default:
-              console.log("Unsupported single substitution subtable format:",
-                          substFormat);
+              console.warn("Unsupported single substitution subtable format: %d",
+                           substFormat);
           }
         }
         break;
@@ -153,8 +153,8 @@ class Lookup {
             break;
 
             default:
-              console.log("Unsupported multiple substitution subtable format:",
-                          substFormat);
+              console.warn("Unsupported multiple substitution subtable format: %d",
+                           substFormat);
           }
         }
         break;
@@ -182,14 +182,14 @@ class Lookup {
             break;
 
             default:
-              console.log("Unsupported ligature substitution subtable format:",
-                          substFormat);
+              console.warn("Unsupported ligature substitution subtable format: %d",
+                           substFormat);
           }
         }
         break;
 
         default:
-          console.log("Unsupported lookup type:", this.type);
+          console.warn("Unsupported lookup type: %d", this.type);
       }
     }
 
