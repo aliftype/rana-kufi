@@ -265,3 +265,73 @@ export class GSUB {
     return this._lookups[index];
   }
 }
+
+export class COLR {
+  constructor(data) {
+    let stream = new Stream(data);
+
+    let version = stream.readUInt16();
+    if (version > 0) {
+      console.warn("Unsupported COLR table version: %d", version);
+      return;
+    }
+
+    let numBaseGlyphRecords = stream.readUInt16();
+    let baseGlyphRecordsOffset = stream.readUInt32();
+    let layerRecordsOffset = stream.readUInt32();
+    let numLayerRecords = stream.readUInt16();
+
+    let layerRecords = [];
+    stream.pos = layerRecordsOffset;
+    for (let i = 0; i < numLayerRecords; i++) {
+      let gID = stream.readUInt16();
+      let paletteIndex = stream.readUInt16();
+      layerRecords.push([gID, paletteIndex]);
+    }
+
+    this.layers = {};
+    stream.pos = baseGlyphRecordsOffset;
+    for (let i = 0; i < numBaseGlyphRecords; i++) {
+      let gID = stream.readUInt16();
+      let firstLayerIndex = stream.readUInt16();
+      let numLayers = stream.readUInt16();
+      this.layers[gID] = layerRecords.slice(firstLayerIndex, firstLayerIndex + numLayers);
+    }
+  }
+}
+
+export class CPAL {
+  constructor(data) {
+    let stream = new Stream(data);
+
+    let version = stream.readUInt16();
+    if (version > 1) {
+      console.warn("Unsupported CPAL table version: %d", version);
+      return;
+    }
+
+    let numPaletteEntries = stream.readUInt16();
+    let numPalettes = stream.readUInt16();
+    let numColorRecords = stream.readUInt16();
+
+    let offsetFirstColorRecord = stream.readUInt32();
+    let colorRecordIndices = [];
+    for (let i = 0; i < this.numPalettes; i++)
+      colorRecordIndices.push(stream.readUInt16());
+
+    let colorRecords = [];
+    stream.pos = offsetFirstColorRecord;
+    for (let i = 0; i < numColorRecords; i++) {
+      let b = stream.readByte().toString(16);
+      let g = stream.readByte().toString(16);
+      let r = stream.readByte().toString(16);
+      let a = stream.readByte().toString(16);
+      colorRecords.push(`#${r}${g}${b}${a}`);
+    }
+
+    this.colors = [];
+    for (let i = 0; i < numPalettes; i++)
+      this.colors.push(colorRecords.slice(colorRecordIndices[i],
+                                          numPaletteEntries));
+  }
+}

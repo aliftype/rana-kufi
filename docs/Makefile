@@ -29,10 +29,6 @@ EM_CFLAGS = \
 	      "_hb_font_get_glyph_extents", \
 	      "_hb_font_get_h_extents", \
 	      "_hb_font_set_scale", \
-	      "_hb_ot_color_glyph_get_layers", \
-	      "_hb_ot_color_has_palettes", \
-	      "_hb_ot_color_palette_get_colors", \
-	      "_hb_ot_color_palette_get_count", \
 	      "_hb_ot_glyph_decompose", \
 	      "_hb_ot_glyph_decompose_funcs_create", \
 	      "_hb_ot_glyph_decompose_funcs_set_close_path_func", \
@@ -68,6 +64,7 @@ harfbuzz.o: $(HBDIR)/harfbuzz.cc
 	  -DHB_NO_BITMAP \
 	  -DHB_NO_BUFFER_MESSAGE \
 	  -DHB_NO_BUFFER_SERIALIZE \
+	  -DHB_NO_COLOR \
 	  -DHB_NO_ERRNO \
 	  -DHB_NO_FACE_COLLECT_UNICODES \
 	  -DHB_NO_GETENV \

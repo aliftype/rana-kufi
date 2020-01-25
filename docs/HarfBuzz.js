@@ -37,7 +37,7 @@
  *
  */
 
-import { GSUB } from "./OpenType.js"
+import { GSUB, COLR, CPAL } from "./OpenType.js"
 
 function TAG(tag) {
   tag = tag.padEnd(4, " ");
@@ -89,7 +89,9 @@ export class Font {
     this._outlines = [];
     this._extents = [];
     this._layers = [];
-    this._gsub = null;
+    this._colr = undefined;
+    this._cpal = undefined;
+    this._gsub = undefined;
     this._decompose_funcs = null;
   }
 
@@ -110,73 +112,18 @@ export class Font {
     return this._extents[glyph];
   }
 
-  getColorPalettes() {
-    if (this._palettes !== undefined)
-      return this._palettes;
-
-    let face = this.face;
-
-    if (!_hb_ot_color_has_palettes(face))
-      return [];
-
-    let nPalettes = _hb_ot_color_palette_get_count(face);
-    let ret = [];
-    for (let i = 0; i < nPalettes; i++) {
-      let nColors = _hb_ot_color_palette_get_colors(face, i, 0, 0, 0);
-
-      let lenPtr = new Pointer(4);
-      lenPtr.int32 = nColors;
-      let colorsPtr = new Pointer(nColors * 4);
-
-      _hb_ot_color_palette_get_colors(face, i, 0, lenPtr.ptr, colorsPtr.ptr);
-      let colors = colorsPtr.asInt32Array();
-      let rgbs = [];
-      for (let j = 0; j < nColors; j++) {
-        let color = colors[i];
-        let r = (color >> 8) & 0xFF;
-        let g = (color >> 16) & 0xFF;
-        let b = (color >> 24) & 0xFF;
-        let a = color & 0xFF;
-        let rgb = `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
-        // Inkscape!
-        if (a !== 255)
-          rgb += a.toString(16);
-        rgbs.push(rgb);
-      }
-
-      ret.push(rgbs);
-    }
-    this._palettes = ret;
-
-    return this._palettes;
-  }
-
   getGlyphColorLayers(glyph) {
-    if (this._layers[glyph] !== undefined)
-      return this._layers[glyph];
-
-    let face = this.face;
-
-    let nLayers = _hb_ot_color_glyph_get_layers(face, glyph, 0, 0, 0);
-    if (nLayers === 0)
-      return [];
-
-    let lenPtr = new Pointer(4);
-    lenPtr.uint32 = nLayers;
-
-    let layersPtr = new Pointer(nLayers * 8);
-    _hb_ot_color_glyph_get_layers(face, glyph, 0, lenPtr.ptr, layersPtr.ptr);
-
-    let palettes = this.getColorPalettes();
-    let layers = layersPtr.asUint32Array();
-    let ret = [];
-    for (let i = 0; i < nLayers; ++i) {
-      ret.push({
-        index: layers[i + 0],
-        color: palettes[0][layers[i + 1]],
-      });
+    if (this._layers[glyph] == undefined) {
+      let palettes = this.CPAL ? this.CPAL.colors : [];
+      let layers = this.COLR ? this.COLR.layers[glyph] || []: [];
+      this._layers[glyph] = [];
+      for (const layer of layers) {
+        this._layers[glyph].push({
+          index: layer[0],
+          color: palettes[0][layer[1]],
+        });
+      }
     }
-    this._layers[glyph] = ret;
     return this._layers[glyph];
   }
 
@@ -215,13 +162,27 @@ export class Font {
     return outlines[glyph];
   }
 
+  _getTable(name, klass) {
+    let lenPtr = new Pointer(4);
+    let blob = _hb_face_reference_table(this.face, TAG(name));
+    let data = _hb_blob_get_data(blob, lenPtr.ptr);
+    if (lenPtr.uint32 != 0)
+      return new klass(HEAPU8.slice(data, data + lenPtr.uint32));
+    return null;
+  }
+
+  get COLR() {
+    if (!this._colr) this._colr = this._getTable("COLR", COLR);
+    return this._colr;
+  }
+
+  get CPAL() {
+    if (!this._cpal) this._cpal = this._getTable("CPAL", CPAL);
+    return this._cpal;
+  }
+
   get GSUB() {
-    if (this._gsub == null) {
-      let lenPtr = new Pointer(4);
-      let blob = _hb_face_reference_table(this.face, TAG("GSUB"));
-      let data = _hb_blob_get_data(blob, lenPtr.ptr);
-      this._gsub = new GSUB(HEAPU8.slice(data, data + lenPtr.uint32));
-    }
+    if (!this._gsub) this._gsub = this._getTable("GSUB", GSUB);
     return this._gsub;
   }
 
