@@ -220,20 +220,22 @@ class Layout {
   _pathElement(g, isDot) {
     let x = g.x;
     let y = g.y;
-    let color = g.color
+    let fill = g.color && g.color.slice(0, -2);
+    // Inkscape does not support RGBA colors, opacity must be set separately.
+    let opacity = g.color && parseInt(g.color.slice(-2), 16) / 255;
 
     if (this._adjustDots &&
         g.dy > 0 && g.dy < this._dotMaxY && isDot)
       y += g.dy - this._dotMaxY;
 
-    if (!g.index && color === undefined)
-      color = "red";
+    if (!g.index && !fill)
+      fill = "red";
 
     let ns = this._svg.namespaceURI;
     let path = document.createElementNS(ns, "path");
     path.setAttributeNS(ns, "transform", `translate(${x},${y})`);
-    if (color !== undefined)
-      path.setAttributeNS(ns, "fill", color);
+    if (fill)
+      path.setAttributeNS(ns, "style", `fill:${fill};fill-opacity:${opacity}`);
     path.setAttributeNS(ns, "d", g.outline);
     return path;
   }
