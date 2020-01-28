@@ -15,7 +15,7 @@
 
 import sys
 
-from fontTools.ttLib import TTFont
+from fontTools.ttLib import TTFont, newTable, getTableModule
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.pointPen import PointToSegmentPen
 from fontTools.pens.reverseContourPen import ReverseContourPen
@@ -72,10 +72,6 @@ def draw(layer, layerName, pen=None):
     return pen.pen
 
 
-def gname(glyph):
-    return glyph.name.replace("-", "")
-
-
 def build(instance):
     font = instance.parent
     master = font.masters[0]
@@ -85,21 +81,28 @@ def build(instance):
     advanceWidths = {}
     characterMap = {}
     charStrings = {}
+    colorLayers = {}
     for glyph in font.glyphs:
         if not glyph.export:
             continue
 
+        name = glyph.name.replace("-", "")
         layer = glyph.layers[0]
         for l in glyph.layers:
             if l.name == layerName:
                 layer = l
+            if l.name.startswith("Color "):
+                _, index = l.name.split(" ")
+                if name not in colorLayers:
+                    colorLayers[name] = []
+                colorLayers[name].append((name, int(index)))
 
-        glyphOrder.append(gname(glyph))
+        glyphOrder.append(name)
         if glyph.unicode:
-            characterMap[int(glyph.unicode, 16)] = gname(glyph)
+            characterMap[int(glyph.unicode, 16)] = name
 
-        charStrings[gname(glyph)] = draw(layer, layerName).getCharString()
-        advanceWidths[gname(glyph)] = layer.width
+        charStrings[name] = draw(layer, layerName).getCharString()
+        advanceWidths[name] = layer.width
 
     # XXX
     glyphOrder.pop(glyphOrder.index(".notdef"))
@@ -169,6 +172,28 @@ def build(instance):
                 achVendID=vendor, fsType=fsType, fsSelection=fsSelection)
 
     fb.setupPost()
+
+    palettes = master.customParameters["Color Palettes"]
+    CPAL = newTable("CPAL")
+    CPAL.version = 0
+    CPAL.palettes = []
+    CPAL.numPaletteEntries = len(palettes[0])
+    Color = getTableModule("CPAL").Color
+    for palette in palettes:
+        CPAL.palettes.append([])
+        for c in palette:
+            c = [int(v) for v in c.split(",")]
+            CPAL.palettes[-1].append(Color(red=c[0], green=c[1], blue=c[2], alpha=c[3]))
+    fb.font["CPAL"] = CPAL
+
+    COLR = newTable("COLR")
+    COLR.version = 0
+    COLR.ColorLayers = {}
+    LayerRecord = getTableModule("COLR").LayerRecord
+    for name in colorLayers:
+        layers = colorLayers[name]
+        COLR[name] = [LayerRecord(name=l[0], colorID=l[1]) for l in layers]
+    fb.font["COLR"] = COLR
 
     fb.save(f"test{instance.name}.otf")
     f = TTFont(f"test{instance.name}.otf")
