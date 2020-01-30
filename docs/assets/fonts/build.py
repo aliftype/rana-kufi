@@ -90,22 +90,24 @@ def makeKerning(font, master):
     kerning = font.kerning[master.id]
     pairs = ""
     classes = "";
+    enums = "";
     for left in kerning:
         for right in kerning[left]:
             value = kerning[left][right]
-            if not value:
-                continue
-            code = f"pos {left} {right} <{value} 0 {value} 0>;\n" 
-            if left.startswith("@") or right.startswith("@"):
-                classes += code
+            kern = f"<{value} 0 {value} 0>"
+            if left.startswith("@") and right.startswith("@"):
+                if value:
+                    classes += f"pos {left} {right} {kern};\n"
+            elif left.startswith("@") or right.startswith("@"):
+                enums += f"enum pos {left} {right} {kern};\n"
             else:
-                pairs += code
+                pairs += f"pos {left} {right} {kern};\n"
 
     fea += f"""
 feature kern {{
 lookupflag IgnoreMarks;
 {pairs}
-subtable;
+{enums}
 {classes}
 }} kern;
 """
