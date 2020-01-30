@@ -43,10 +43,11 @@ EM_CFLAGS = \
 
 all: hb.js $(FONT)
 
-$(FONTDIR)/RanaKufi.otf: $(FONTDIR)/RanaKufi-Regular.otf $(FONTDIR)/RanaKufi-Short.otf
+$(FONTDIR)/RanaKufi.otf: $(FONTDIR)/RanaKufi.glyphs
 	@make -C $(FONTDIR) $(@F)
 
 $(FONT): $(FONTDIR)/RanaKufi.otf
+	@echo " CP	$@"
 	@cp $< $@
 
 hb.js: harfbuzz.o
