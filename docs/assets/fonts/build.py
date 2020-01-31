@@ -15,13 +15,15 @@
 
 import sys
 
+from fontTools.designspaceLib import DesignSpaceDocument
 from fontTools.fontBuilder import FontBuilder
+from fontTools.ttLib import TTFont, newTable, getTableModule
+from fontTools.varLib import build as merge
 from fontTools.misc.transform import Transform
 from fontTools.pens.pointPen import PointToSegmentPen
 from fontTools.pens.reverseContourPen import ReverseContourPen
 from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.pens.transformPen import TransformPen
-from fontTools.ttLib import TTFont, newTable, getTableModule
 from glyphsLib import GSFont, GSAnchor
 
 
@@ -248,8 +250,8 @@ table GDEF {{
 }} GDEF;
 """
 
-    with open(f"{instance.fontName}.fea", "w") as f:
-        f.write(fea)
+    #with open(f"{instance.fontName}.fea", "w") as f:
+    #    f.write(fea)
     return fea
 
 
@@ -337,7 +339,8 @@ def build(instance):
         vals = privateDict["BlueValues"] if pos == 0 or size >= 0 else privateDict["OtherBlues"]
         vals.extend(sorted((pos, pos + size)))
 
-    fb.setupCFF(names["psName"], {}, charStrings, privateDict)
+    #fb.setupCFF(names["psName"], {}, charStrings, privateDict)
+    fb.setupCFF2(charStrings, [privateDict])
 
     metrics = {}
     for name, width in advanceWidths.items():
@@ -381,7 +384,52 @@ def build(instance):
         COLR[name] = [LayerRecord(name=l[0], colorID=l[1]) for l in layers]
     fb.font["COLR"] = COLR
 
+    instance.font = fb.font
+    axes = [
+        instance.weightValue,
+        instance.widthValue,
+        instance.customValue,
+        instance.customValue1,
+        instance.customValue2,
+        instance.customValue3,
+    ]
+    instance.axes = {}
+    for i, axis in enumerate(font.customParameters["Axes"]):
+        instance.axes[axis["Tag"]] = axes[i]
+
     return fb.font
+
+
+def buildVF(font):
+    for instance in font.instances:
+        print(f" MASTER\t{instance.name}")
+        build(instance)
+        if instance.name == "Regular":
+            regular = instance
+
+    ds = DesignSpaceDocument()
+
+    for axisDef in font.customParameters["Axes"]:
+        axis = ds.newAxisDescriptor()
+        axis.tag = axisDef["Tag"]
+        axis.name = axisDef["Name"]
+        axis.maximum = max(i.axes[axis.tag] for i in font.instances)
+        axis.minimum = min(i.axes[axis.tag] for i in font.instances)
+        axis.default = regular.axes[axis.tag]
+        ds.addAxis(axis)
+
+    for instance in font.instances:
+        source = ds.newSourceDescriptor()
+        source.font = instance.font
+        source.familyName = instance.familyName
+        source.styleName = instance.name
+        source.name = instance.fullName
+        source.location = {a.name: instance.axes[a.tag] for a in ds.axes}
+        ds.addSource(source)
+
+    print(f" MERGE\t{sys.argv[2]}")
+    otf, _, _ = merge(ds)
+    return otf
 
 
 def propogateAnchors(glyph):
@@ -407,29 +455,10 @@ def prepare(font):
         propogateAnchors(glyph)
 
 
-def rename(otf):
-    import tempfile
-    with tempfile.TemporaryFile() as fp:
-        otf.save(fp)
-        otf = TTFont(fp)
-        otf.setGlyphOrder([n.replace("-", "") for n in otf.getGlyphOrder()])
-        cff = otf["CFF "].cff.topDictIndex[0]
-        char_strings = cff.CharStrings.charStrings
-        cff.CharStrings.charStrings = {
-            n.replace("-", ""): v for n, v in char_strings.items()
-        }
-        cff.charset = [n.replace("-", "") for n in cff.charset]
-    return otf
-
-
 def main():
     font = GSFont(sys.argv[1])
     prepare(font)
-    for instance in font.instances:
-        if instance.active:
-            print(f" FNT\t{instance.fontName}.otf")
-            otf = build(instance)
-            otf = rename(otf)
-            otf.save(f"{instance.fontName}.otf")
+    otf = buildVF(font)
+    otf.save(sys.argv[2])
 
 main()
