@@ -191,6 +191,36 @@ feature mark {{
     return fea
 
 
+def makeAutoFeatures(font):
+    fea = ""
+    features = {}
+    for glyph in font.glyphs:
+        name = glyph.name
+        if name.count(".") >= 2:
+            base, feature, index = name.rsplit(".", 2)
+            try:
+                feature = int(feature)
+                index = int(index)
+            except ValueError:
+                continue
+            tag = f"cv{feature:02d}"
+            if tag not in features:
+                features[tag] = {}
+            if base not in features[tag]:
+                features[tag][base] = []
+                if feature == 1:
+                    features[tag][base].append(base)
+            features[tag][base].append(name)
+
+    for feature, subs in features.items():
+        fea += f"feature {feature} {{\n"
+        for base, alts in subs.items():
+            fea += f"sub {base} from [{' '.join(alts)}];\n"
+        fea += f"}} {feature};\n"
+
+    return fea
+
+
 def makeFeatures(instance, master):
     font = instance.parent
 
@@ -198,6 +228,10 @@ def makeFeatures(instance, master):
     for gclass in font.classes:
         if gclass.disabled:
             continue
+        if gclass.name == "ArabicJoinLeft":
+            glyphs = {g.name for g in font.glyphs if any(s in g.name for s in [".init", ".medi"])}
+            glyphs.add("kashida-ar")
+            gclass.code = " ".join(glyphs)
         fea += f"@{gclass.name} = [{gclass.code}];\n"
 
     for prefix in font.featurePrefixes:
@@ -210,6 +244,8 @@ def makeFeatures(instance, master):
             continue
         if feature.name == "mark":
             fea += makeMark(instance)
+        if feature.name == "dist":
+            fea += makeAutoFeatures(font)
 
         fea += f"""
             feature {feature.name} {{
