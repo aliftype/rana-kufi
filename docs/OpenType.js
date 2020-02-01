@@ -136,14 +136,19 @@ class Lookup {
         }
         break;
 
+        /*
         case 2: {
           let substFormat = stream.readUInt16(subtableOffset);
           switch (substFormat) {
             case 1: {
               let coverage = new Coverage(stream, subtableOffset + stream.readUInt16());
               let sequenceCount = stream.readUInt16();
+              let sequenceOffsets = []
+              for (let i = 0; i < sequenceCount; i++)
+                sequenceOffsets[i] = stream.readUInt16();
+
               for (let i = 0; i < sequenceCount; i++) {
-                let sequenceOffset = subtableOffset + stream.readUInt16(subtableOffset + 4 + (i * 2));
+                let sequenceOffset = subtableOffset + sequenceOffsets[i];
                 let glyphCount = stream.readUInt16(sequenceOffset);
                 this.mapping[coverage.glyphs[i]] = [];
                 for (let j = 0; j < glyphCount; j++)
@@ -158,6 +163,35 @@ class Lookup {
           }
         }
         break;
+        */
+
+        case 3: {
+          let substFormat = stream.readUInt16(subtableOffset);
+          switch (substFormat) {
+            case 1: {
+              let coverage = new Coverage(stream, subtableOffset + stream.readUInt16());
+              let alternateSetCount = stream.readUInt16();
+              let alternateSetOffsets = [];
+              for (let i = 0; i < alternateSetCount; i++)
+                alternateSetOffsets[i] = stream.readUInt16();
+
+              for (let i = 0; i < alternateSetCount; i++) {
+                let alternateSetOffset = subtableOffset + alternateSetOffsets[i];
+                let glyphCount = stream.readUInt16(alternateSetOffset);
+                let alternateGlyphIDs = [];
+                for (let j = 0; j < glyphCount; j++)
+                  alternateGlyphIDs[j] = stream.readUInt16();
+                this.mapping[coverage.glyphs[i]] = alternateGlyphIDs;
+              }
+            }
+            break;
+
+            default:
+              console.warn("Unsupported alternate substitution subtable format: %d",
+                           substFormat);
+          }
+        }
+        break;
 
         case 4: {
           let substFormat = stream.readUInt16(subtableOffset);
@@ -165,11 +199,19 @@ class Lookup {
             case 1: {
               let coverage = new Coverage(stream, subtableOffset + stream.readUInt16());
               let ligatureSetCount = stream.readUInt16();
+              let ligatureSetOffsets = [];
+              for (let i = 0; i < ligatureSetCount; i++)
+                ligatureSetOffsets[i] = stream.readUInt16();
+
               for (let i = 0; i < ligatureSetCount; i++) {
-                let ligatureSetOffset = subtableOffset + stream.readUInt16(subtableOffset + 6 + (i * 2));
+                let ligatureSetOffset = subtableOffset + ligatureSetOffsets[i];
                 let ligatureCount = stream.readUInt16(ligatureSetOffset);
+                let ligatureOffsets = [];
+                for (let j = 0; j < ligatureCount; j++)
+                  ligatureOffsets[j] = stream.readUInt16();
+
                 for (let j = 0; j < ligatureCount; j++) {
-                  let ligatureOffset = ligatureSetOffset + stream.readUInt16(ligatureSetOffset + 2 + (j * 2));
+                  let ligatureOffset = ligatureSetOffset + ligatureOffsets[j];
                   let ligatureGlyph = stream.readUInt16(ligatureOffset);
                   let componentCount = stream.readUInt16();
                   let componentGlyphIDs = [coverage.glyphs[i]];

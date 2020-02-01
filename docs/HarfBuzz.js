@@ -228,7 +228,7 @@ class Glyph {
 
   getSubstitutes(next) {
     if (this._features === null) {
-      let required = ["init", "medi", "fina", "rlig", "dist", "ccmp"];
+      let required = ["isol", "init", "medi", "fina", "rlig", "dist", "ccmp"];
       let features = this.font.GSUB.features;
       let result = new Set();
       for (const [tag, lookups] of Object.entries(features)) {
@@ -241,8 +241,6 @@ class Glyph {
         }
       }
       this._features = result.size && Array.from(result) || undefined;
-      if (this._features)
-        this._features.unshift([null, this.index])
     }
     return this._features;
   }
@@ -261,8 +259,11 @@ export class Buffer {
     for (let i = 0; i < text.length; i++) {
       _hb_buffer_add(this.ptr, text[i].code, i);
       for (const feature of text[i].features || []) {
-        if (useFeatures || feature == "dlig")
-          features.push(TAG(feature), 1, i, i + 1);
+        let [tag, value] = feature.split("=");
+        value = value ? parseInt(value) : 1;
+        if (useFeatures || tag == "dlig") {
+          features.push(TAG(feature), value, i, i + 1);
+        }
       }
     }
 

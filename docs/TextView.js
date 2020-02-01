@@ -418,44 +418,50 @@ export class View {
     for (const [feature, glyph] of features) {
       c.features = c.features || [];
 
-      let button = document.createElement("a");
+      let alts = typeof(glyph) == "number" ? [glyph] : glyph;
 
-      button.href = "#";
-      if (feature) {
-        button.dataset.feature = feature;
-        button.title = feature;
+      let div = document.createElement("div");
+      alternates.appendChild(div);
+      for (let i = 0; i < alts.length; i++) {
+        let alt = alts[i];
+        let button = document.createElement("a");
+        let setting = feature + "=" + (i + 1);
+
+        button.dataset.feature = setting;
+        button.title = setting;
+        button.href = "#";
+
+        let img = document.createElement('img');
+        img.height = 70;
+        img.src = this._layout.getGlyphSVG(alt);
+        button.appendChild(img);
+        div.appendChild(button);
+
+        button.onclick = e => {
+          e.preventDefault();
+
+          let chars = [c];
+          if (feature == "dlig")
+            chars.push(this._text[this._cursor]);
+
+          for (let cc of chars) {
+            cc.features = cc.features || [];
+            if (cc.features.includes("dlig=1"))
+              cc.features = ["dlig=1", setting];
+            else
+              cc.features = [setting];
+          }
+
+          this._invalidate();
+          this.update();
+          if (c.features.includes("dlig=1"))
+            this._updateAlternates();
+          else
+            this._updateFeatureButtons(c.features);
+        };
       }
 
-      let img = document.createElement('img');
-      img.height = 70;
-      img.src = this._layout.getGlyphSVG(glyph);
-      button.appendChild(img);
-
-      alternates.appendChild(button);
       this._updateFeatureButtons(c.features);
-
-      button.onclick = e => {
-        e.preventDefault();
-
-        let chars = [c];
-        if (feature == "dlig")
-          chars.push(this._text[this._cursor]);
-
-        for (let cc of chars) {
-          cc.features = cc.features || [];
-          if (cc.features.includes("dlig"))
-            cc.features = feature && ["dlig", feature] || ["dlig"];
-          else
-            cc.features = feature && [feature] || [];
-        }
-
-        this._invalidate();
-        this.update();
-        if (c.features.includes("dlig"))
-          this._updateAlternates();
-        else
-          this._updateFeatureButtons(c.features);
-      };
     }
   }
 
@@ -465,15 +471,18 @@ export class View {
     let selectbase = false;
     if (features.length == 0)
       selectbase = true;
-    else if (features.length == 1 && features[0] == "dlig")
+    else if (features.length == 1 && features[0] == "dlig=1")
       selectbase = true;
 
-    for (let child of alternates.children)
-      if (features.includes(child.dataset.feature) ||
-          (selectbase && !child.dataset.feature))
-        child.className = "feature selected";
-      else
-        child.className = "feature";
+    for (let div of alternates.children) {
+      for (let button of div.children) {
+        if (features.includes(button.dataset.feature) ||
+            (selectbase && !button.dataset.feature))
+          button.className = "feature selected";
+        else
+          button.className = "feature";
+      }
+    }
   }
 
   _click(e) {
