@@ -19,6 +19,7 @@ all: RanaKufi.otf RanaKufi.ttx
 
 RanaKufi.otf: RanaKufi.glyphs build.py
 	@. env/bin/activate
+	@export SOURCE_DATE_EPOCH=0
 	@python build.py $< $@
 	@echo " SUBR	$@"
 	@tx -cff2 +S +b $@ cff2 &>/dev/null
