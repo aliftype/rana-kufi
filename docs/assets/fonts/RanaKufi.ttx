@@ -518,7 +518,7 @@
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
     <fontRevision value="0.02"/>
-    <checkSumAdjustment value="0x78d75fd2"/>
+    <checkSumAdjustment value="0x76a95202"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00000011"/>
     <unitsPerEm value="1000"/>
@@ -22805,6 +22805,7 @@
         <MultipleSubst index="0" Format="1">
           <Substitution in="glyph00047" out="glyph00047,uni0640,uni0640,uni0640"/>
           <Substitution in="glyph00051" out="glyph00051,uni0640,uni0640,uni0640"/>
+          <Substitution in="glyph00055" out="glyph00055,uni0640,uni0640,uni0640"/>
         </MultipleSubst>
       </Lookup>
       <Lookup index="3">
@@ -25227,6 +25228,7 @@
           <InputCoverage index="0" Format="1">
             <Glyph value="glyph00047"/>
             <Glyph value="glyph00051"/>
+            <Glyph value="glyph00055"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=1 -->
           <LookAheadCoverage index="0" Format="2">
@@ -25312,6 +25314,7 @@
           <InputCoverage index="0" Format="1">
             <Glyph value="glyph00047"/>
             <Glyph value="glyph00051"/>
+            <Glyph value="glyph00055"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=2 -->
           <LookAheadCoverage index="0" Format="2">
@@ -25337,6 +25340,7 @@
           <InputCoverage index="0" Format="1">
             <Glyph value="glyph00047"/>
             <Glyph value="glyph00051"/>
+            <Glyph value="glyph00055"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=3 -->
           <LookAheadCoverage index="0" Format="1">
