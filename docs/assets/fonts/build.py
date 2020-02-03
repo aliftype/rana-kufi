@@ -228,16 +228,21 @@ def makeFeatures(instance, master):
     for gclass in font.classes:
         if gclass.disabled:
             continue
-        if gclass.name == "ArabicJoinLeft":
-            glyphs = {g.name for g in font.glyphs if any(s in g.name for s in [".init", ".medi"])}
-            glyphs.add("kashida-ar")
-            gclass.code = " ".join(glyphs)
+        if not gclass.code:
+            glyphs = None
+            if gclass.name == "ArabicJoinLeft":
+                glyphs = {g.name for g in font.glyphs if any(s in g.name for s in [".init", ".medi"])}
+                glyphs.add("kashida-ar")
+            else:
+                glyphs = {g.name for g in font.glyphs if g.name.startswith(gclass.name)}
+            if glyphs is not None:
+                gclass.code = " ".join(glyphs)
         fea += f"@{gclass.name} = [{gclass.code}];\n"
 
     for prefix in font.featurePrefixes:
         if prefix.disabled:
             continue
-        fea += prefix.code
+        fea += prefix.code + "\n"
 
     for feature in font.features:
         if feature.disabled:
