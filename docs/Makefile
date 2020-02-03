@@ -1,7 +1,22 @@
-HBDIR = harfbuzz/src
-FONTDIR = ../..
+# Copyright (c) 2020 Khaled Hosny
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-FONT = assets/fonts/RanaKufi.otf
+HBDIR = harfbuzz/src
+FONTDIR = assets/fonts
+
+FONT = $(FONTDIR)/RanaKufi.otf
 
 EM_CFLAGS = \
 	  --llvm-lto 1 \
@@ -41,14 +56,12 @@ EM_CFLAGS = \
 	  -fno-exceptions -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden \
 	  -Oz
 
+.PHONY: all $(FONT)
+
 all: hb.js $(FONT)
 
-$(FONTDIR)/RanaKufi.otf: $(FONTDIR)/RanaKufi.glyphs
-	@make -C $(FONTDIR) $(@F)
-
-$(FONT): $(FONTDIR)/RanaKufi.otf
-	@echo " CP	$@"
-	@cp $< $@
+$(FONT):
+	@make -C $(FONTDIR)
 
 hb.js: harfbuzz.o
 	@echo " LINK	$@"
