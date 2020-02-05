@@ -236,7 +236,7 @@ def makeFeatures(instance, master):
             else:
                 glyphs = {g.name for g in font.glyphs if g.name.startswith(gclass.name)}
             if glyphs is not None:
-                gclass.code = " ".join(glyphs)
+                gclass.code = " ".join(sorted(glyphs))
         fea += f"@{gclass.name} = [{gclass.code}];\n"
 
     for prefix in font.featurePrefixes:
