@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import sys
+import argparse
 
 from fontTools.designspaceLib import DesignSpaceDocument
 from fontTools.fontBuilder import FontBuilder
@@ -444,7 +444,7 @@ def buildVF(font):
         source.location = {a.name: instance.axes[a.tag] for a in ds.axes}
         ds.addSource(source)
 
-    print(f" MERGE\t{sys.argv[2]}")
+    print(f" MERGE\t{font.familyName}")
     otf, _, _ = merge(ds)
     return otf
 
@@ -473,9 +473,14 @@ def prepare(font):
 
 
 def main():
-    font = GSFont(sys.argv[1])
+    parser = argparse.ArgumentParser(description="Build Rana Kufi.")
+    parser.add_argument("glyphs", help="input Glyphs source file")
+    parser.add_argument("otf",    help="output OTF file")
+    args = parser.parse_args()
+
+    font = GSFont(args.glyphs)
     prepare(font)
     otf = buildVF(font)
-    otf.save(sys.argv[2])
+    otf.save(args.otf)
 
 main()
