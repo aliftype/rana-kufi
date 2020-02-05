@@ -449,27 +449,29 @@ def buildVF(font):
     return otf
 
 
-def propogateAnchors(glyph):
-    for layer in glyph.layers:
-        for component in layer.components:
-            for anchor in (component.layer or component.component.layers[0]).anchors:
-                name = anchor.name
-                if name.startswith("_") or name in layer.anchors:
-                    continue
-                x, y = anchor.position.x, anchor.position.y
-                if component.transform != DEFAULT_TRANSFORM:
-                    t = Transform(*component.transform.value)
-                    x, y = t.transformPoint((x, y))
-                new = GSAnchor(name)
-                new.position.x, new.position.y = (x, y)
-                layer.anchors[name] = new
+def propogateAnchors(layer):
+    for component in layer.components:
+        clayer = component.layer or component.component.layers[0]
+        for anchor in clayer.anchors:
+            name = anchor.name
+            if name.startswith("_") or name in layer.anchors:
+                continue
+            x, y = anchor.position.x, anchor.position.y
+            if component.transform != DEFAULT_TRANSFORM:
+                t = Transform(*component.transform.value)
+                x, y = t.transformPoint((x, y))
+            new = GSAnchor(name)
+            new.position.x, new.position.y = (x, y)
+            layer.anchors[name] = new
+        propogateAnchors(clayer)
 
 
 def prepare(font):
     for glyph in font.glyphs:
         if not glyph.export:
             continue
-        propogateAnchors(glyph)
+        for layer in glyph.layers:
+            propogateAnchors(layer)
 
 
 def main():
