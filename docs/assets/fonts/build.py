@@ -296,21 +296,6 @@ table GDEF {{
     return fea
 
 
-def calcFsSelection(instance):
-    font = instance.parent
-    fsSelection = 0
-    if font.customParameters["Use Typo Metrics"]:
-        fsSelection |= (1 << 7)
-    if instance.isItalic:
-        fsSelection |= (1 << 1)
-    if instance.isBold:
-        fsSelection |= (1 << 5)
-    if not (instance.isItalic or instance.isBold):
-        fsSelection |= (1 << 6)
-
-    return fsSelection
-
-
 def build(instance):
     font = instance.parent
     master = font.masters[0]
@@ -388,15 +373,6 @@ def build(instance):
         bounds = charStrings[name].calcBounds(None) or [0]
         metrics[name] = (width, bounds[0])
     fb.setupHorizontalMetrics(metrics)
-
-   #fsType = font.customParameters["fsType"] or 0 # XXX
-   #fb.setupOS2(version=4, sTypoAscender=master.ascender,
-   #            sTypoDescender=master.descender,
-   #            sTypoLineGap=master.customParameters['typoLineGap'],
-   #            usWinAscent=master.ascender, usWinDescent=-master.descender,
-   #            sxHeight=master.xHeight, sCapHeight=master.capHeight,
-   #            achVendID=vendor, fsType=fsType,
-   #            fsSelection=calcFsSelection(instance))
 
     fb.setupPost()
 
