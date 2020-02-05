@@ -518,7 +518,7 @@
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
     <fontRevision value="0.02"/>
-    <checkSumAdjustment value="0x37ec14b2"/>
+    <checkSumAdjustment value="0x4d505c0a"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00000011"/>
     <unitsPerEm value="1000"/>
@@ -17341,7 +17341,6 @@
         <CursivePos index="0" Format="1">
           <Coverage Format="2">
             <Glyph value="glyph00034"/>
-            <Glyph value="uni062C"/>
             <Glyph value="uni062D"/>
             <Glyph value="glyph00045"/>
             <Glyph value="glyph00051"/>
@@ -17349,10 +17348,7 @@
             <Glyph value="glyph00053"/>
             <Glyph value="glyph00054"/>
             <Glyph value="glyph00055"/>
-            <Glyph value="uni062E"/>
             <Glyph value="glyph00220"/>
-            <Glyph value="uni0641"/>
-            <Glyph value="uni06A1"/>
             <Glyph value="glyph00226"/>
             <Glyph value="glyph00371"/>
             <Glyph value="glyph00372"/>
@@ -17360,17 +17356,6 @@
             <Glyph value="glyph00374"/>
             <Glyph value="glyph00375"/>
             <Glyph value="glyph00376"/>
-            <Glyph value="glyph00378"/>
-            <Glyph value="glyph00379"/>
-            <Glyph value="glyph00380"/>
-            <Glyph value="glyph00381"/>
-            <Glyph value="glyph00383"/>
-            <Glyph value="glyph00384"/>
-            <Glyph value="glyph00385"/>
-            <Glyph value="glyph00386"/>
-            <Glyph value="glyph00389"/>
-            <Glyph value="glyph00390"/>
-            <Glyph value="glyph00391"/>
             <Glyph value="glyph00392"/>
             <Glyph value="glyph00393"/>
             <Glyph value="glyph00394"/>
@@ -17388,7 +17373,7 @@
             <Glyph value="glyph00481"/>
             <Glyph value="glyph00482"/>
           </Coverage>
-          <!-- EntryExitCount=47 -->
+          <!-- EntryExitCount=32 -->
           <EntryExitRecord index="0">
             <ExitAnchor Format="1">
               <XCoordinate value="-50"/>
@@ -17409,263 +17394,173 @@
           </EntryExitRecord>
           <EntryExitRecord index="3">
             <EntryAnchor Format="1">
-              <XCoordinate value="176"/>
+              <XCoordinate value="150"/>
               <YCoordinate value="150"/>
             </EntryAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="4">
             <EntryAnchor Format="1">
-              <XCoordinate value="150"/>
+              <XCoordinate value="227"/>
               <YCoordinate value="150"/>
             </EntryAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="5">
             <EntryAnchor Format="1">
-              <XCoordinate value="227"/>
+              <XCoordinate value="225"/>
               <YCoordinate value="150"/>
             </EntryAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="6">
             <EntryAnchor Format="1">
-              <XCoordinate value="225"/>
+              <XCoordinate value="107"/>
               <YCoordinate value="150"/>
             </EntryAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="7">
             <EntryAnchor Format="1">
-              <XCoordinate value="107"/>
-              <YCoordinate value="150"/>
-            </EntryAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="8">
-            <EntryAnchor Format="1">
               <XCoordinate value="150"/>
               <YCoordinate value="150"/>
             </EntryAnchor>
           </EntryExitRecord>
+          <EntryExitRecord index="8">
+            <ExitAnchor Format="1">
+              <XCoordinate value="-50"/>
+              <YCoordinate value="0"/>
+            </ExitAnchor>
+          </EntryExitRecord>
           <EntryExitRecord index="9">
-            <EntryAnchor Format="1">
-              <XCoordinate value="176"/>
-              <YCoordinate value="150"/>
-            </EntryAnchor>
+            <ExitAnchor Format="1">
+              <XCoordinate value="-50"/>
+              <YCoordinate value="0"/>
+            </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="10">
             <ExitAnchor Format="1">
               <XCoordinate value="-50"/>
-              <YCoordinate value="0"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="11">
             <ExitAnchor Format="1">
-              <XCoordinate value="450"/>
-              <YCoordinate value="0"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="12">
             <ExitAnchor Format="1">
-              <XCoordinate value="450"/>
-              <YCoordinate value="0"/>
+              <XCoordinate value="0"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="13">
             <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="0"/>
+              <XCoordinate value="0"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="14">
             <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
+              <XCoordinate value="0"/>
               <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="15">
             <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
+              <XCoordinate value="0"/>
               <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="16">
             <ExitAnchor Format="1">
-              <XCoordinate value="110"/>
-              <YCoordinate value="150"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="-2"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="17">
             <ExitAnchor Format="1">
-              <XCoordinate value="110"/>
-              <YCoordinate value="150"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="-2"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="18">
             <ExitAnchor Format="1">
-              <XCoordinate value="0"/>
-              <YCoordinate value="150"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="-2"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="19">
             <ExitAnchor Format="1">
-              <XCoordinate value="0"/>
-              <YCoordinate value="150"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="-2"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="20">
             <ExitAnchor Format="1">
-              <XCoordinate value="150"/>
-              <YCoordinate value="-2"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="21">
             <ExitAnchor Format="1">
-              <XCoordinate value="150"/>
-              <YCoordinate value="-2"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="22">
             <ExitAnchor Format="1">
-              <XCoordinate value="150"/>
-              <YCoordinate value="-2"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="23">
             <ExitAnchor Format="1">
-              <XCoordinate value="150"/>
-              <YCoordinate value="-2"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="24">
             <ExitAnchor Format="1">
-              <XCoordinate value="150"/>
-              <YCoordinate value="-2"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="25">
             <ExitAnchor Format="1">
-              <XCoordinate value="150"/>
-              <YCoordinate value="-2"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="26">
             <ExitAnchor Format="1">
-              <XCoordinate value="150"/>
-              <YCoordinate value="-2"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="27">
             <ExitAnchor Format="1">
-              <XCoordinate value="150"/>
-              <YCoordinate value="-2"/>
+              <XCoordinate value="-50"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="28">
             <ExitAnchor Format="1">
               <XCoordinate value="-50"/>
-              <YCoordinate value="-2"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="29">
             <ExitAnchor Format="1">
               <XCoordinate value="-50"/>
-              <YCoordinate value="-2"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="30">
             <ExitAnchor Format="1">
               <XCoordinate value="-50"/>
-              <YCoordinate value="-2"/>
+              <YCoordinate value="150"/>
             </ExitAnchor>
           </EntryExitRecord>
           <EntryExitRecord index="31">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="-2"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="32">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="-2"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="33">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="-2"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="34">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="-2"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="35">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="150"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="36">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="150"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="37">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="150"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="38">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="150"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="39">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="150"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="40">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="150"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="41">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="150"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="42">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="150"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="43">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="150"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="44">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="150"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="45">
-            <ExitAnchor Format="1">
-              <XCoordinate value="-50"/>
-              <YCoordinate value="150"/>
-            </ExitAnchor>
-          </EntryExitRecord>
-          <EntryExitRecord index="46">
             <ExitAnchor Format="1">
               <XCoordinate value="-50"/>
               <YCoordinate value="150"/>

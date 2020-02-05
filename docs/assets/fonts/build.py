@@ -457,6 +457,8 @@ def propogateAnchors(layer):
             name = anchor.name
             if name.startswith("_") or name in layer.anchors:
                 continue
+            if name in ("entry", "exit"):
+                continue
             x, y = anchor.position.x, anchor.position.y
             if component.transform != DEFAULT_TRANSFORM:
                 t = Transform(*component.transform.value)
