@@ -518,7 +518,7 @@
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
     <fontRevision value="0.02"/>
-    <checkSumAdjustment value="0x3a391166"/>
+    <checkSumAdjustment value="0x21c4f4aa"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00000011"/>
     <unitsPerEm value="1000"/>
@@ -22825,7 +22825,9 @@
         <!-- SubTableCount=1 -->
         <MultipleSubst index="0" Format="1">
           <Substitution in="glyph00047" out="glyph00047,uni0640,uni0640,uni0640"/>
+          <Substitution in="glyph00050" out="glyph00050,uni0640,uni0640,uni0640"/>
           <Substitution in="glyph00051" out="glyph00051,uni0640,uni0640,uni0640"/>
+          <Substitution in="glyph00054" out="glyph00054,uni0640,uni0640,uni0640"/>
           <Substitution in="glyph00055" out="glyph00055,uni0640,uni0640,uni0640"/>
         </MultipleSubst>
       </Lookup>
@@ -25242,13 +25244,15 @@
       <Lookup index="34">
         <LookupType value="6"/>
         <LookupFlag value="8"/>
-        <!-- SubTableCount=1 -->
+        <!-- SubTableCount=2 -->
         <ChainContextSubst index="0" Format="3">
           <!-- BacktrackGlyphCount=0 -->
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
             <Glyph value="glyph00047"/>
+            <Glyph value="glyph00050"/>
             <Glyph value="glyph00051"/>
+            <Glyph value="glyph00054"/>
             <Glyph value="glyph00055"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=1 -->
@@ -25324,6 +25328,32 @@
             <LookupListIndex value="2"/>
           </SubstLookupRecord>
         </ChainContextSubst>
+        <ChainContextSubst index="1" Format="3">
+          <!-- BacktrackGlyphCount=0 -->
+          <!-- InputGlyphCount=1 -->
+          <InputCoverage index="0" Format="1">
+            <Glyph value="glyph00047"/>
+            <Glyph value="glyph00051"/>
+            <Glyph value="glyph00055"/>
+          </InputCoverage>
+          <!-- LookAheadGlyphCount=1 -->
+          <LookAheadCoverage index="0" Format="1">
+            <Glyph value="uni06A1"/>
+            <Glyph value="glyph00224"/>
+            <Glyph value="glyph00225"/>
+            <Glyph value="glyph00226"/>
+            <Glyph value="glyph00226"/>
+            <Glyph value="glyph00227"/>
+            <Glyph value="glyph00227"/>
+            <Glyph value="glyph00228"/>
+            <Glyph value="glyph00228"/>
+          </LookAheadCoverage>
+          <!-- SubstCount=1 -->
+          <SubstLookupRecord index="0">
+            <SequenceIndex value="0"/>
+            <LookupListIndex value="2"/>
+          </SubstLookupRecord>
+        </ChainContextSubst>
       </Lookup>
       <Lookup index="35">
         <LookupType value="6"/>
@@ -25334,7 +25364,9 @@
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
             <Glyph value="glyph00047"/>
+            <Glyph value="glyph00050"/>
             <Glyph value="glyph00051"/>
+            <Glyph value="glyph00054"/>
             <Glyph value="glyph00055"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=2 -->
@@ -25360,7 +25392,9 @@
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
             <Glyph value="glyph00047"/>
+            <Glyph value="glyph00050"/>
             <Glyph value="glyph00051"/>
+            <Glyph value="glyph00054"/>
             <Glyph value="glyph00055"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=3 -->
