@@ -452,6 +452,7 @@ def buildVF(font):
 def propogateAnchors(layer):
     for component in layer.components:
         clayer = component.layer or component.component.layers[0]
+        propogateAnchors(clayer)
         for anchor in clayer.anchors:
             name = anchor.name
             if name.startswith("_") or name in layer.anchors:
@@ -463,7 +464,6 @@ def propogateAnchors(layer):
             new = GSAnchor(name)
             new.position.x, new.position.y = (x, y)
             layer.anchors[name] = new
-        propogateAnchors(clayer)
 
 
 def prepare(font):
