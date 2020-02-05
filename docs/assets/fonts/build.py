@@ -291,8 +291,8 @@ table GDEF {{
 }} GDEF;
 """
 
-    #with open(f"{instance.fontName}.fea", "w") as f:
-    #    f.write(fea)
+    with open(f"{instance.fontName}.fea", "w") as f:
+        f.write(fea)
     return fea
 
 
