@@ -25,6 +25,7 @@ from fontTools.pens.reverseContourPen import ReverseContourPen
 from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.pens.transformPen import TransformPen
 from glyphsLib import GSFont, GSAnchor
+from glyphsLib.glyphdata import get_glyph as getGlyphInfo
 
 
 DEFAULT_TRANSFORM = [1, 0, 0, 1, 0, 0]
@@ -230,7 +231,9 @@ def makeFeatures(instance, master):
             continue
         if not gclass.code:
             glyphs = None
-            if gclass.name == "ArabicJoinLeft":
+            if gclass.name == "AllLetters":
+                glyphs = {g.name for g in font.glyphs if getGlyphInfo(g.name).category == "Letter"}
+            elif gclass.name == "ArabicJoinLeft":
                 glyphs = {g.name for g in font.glyphs if any(s in g.name for s in [".init", ".medi"])}
                 glyphs.add("kashida-ar")
             else:
