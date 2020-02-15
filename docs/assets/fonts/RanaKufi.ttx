@@ -522,7 +522,7 @@
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
     <fontRevision value="0.02"/>
-    <checkSumAdjustment value="0xcf07a6e7"/>
+    <checkSumAdjustment value="0xb203c16b"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00000011"/>
     <unitsPerEm value="1000"/>
@@ -24790,7 +24790,6 @@
             <Alternate glyph="glyph00160"/>
             <Alternate glyph="glyph00161"/>
             <Alternate glyph="glyph00162"/>
-            <Alternate glyph="glyph00163"/>
           </AlternateSet>
           <AlternateSet glyph="glyph00176">
             <Alternate glyph="glyph00176"/>
@@ -25112,6 +25111,9 @@
         <LookupFlag value="0"/>
         <!-- SubTableCount=1 -->
         <AlternateSubst index="0" Format="1">
+          <AlternateSet glyph="glyph00154">
+            <Alternate glyph="glyph00163"/>
+          </AlternateSet>
           <AlternateSet glyph="glyph00286">
             <Alternate glyph="glyph00297"/>
             <Alternate glyph="glyph00298"/>
