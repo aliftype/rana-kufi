@@ -522,7 +522,7 @@
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
     <fontRevision value="0.02"/>
-    <checkSumAdjustment value="0xf47e565"/>
+    <checkSumAdjustment value="0xcf07a6e7"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00000011"/>
     <unitsPerEm value="1000"/>
@@ -711,7 +711,7 @@
     <mtx name="glyph00160" width="450" lsb="-50"/>
     <mtx name="glyph00161" width="450" lsb="-50"/>
     <mtx name="glyph00162" width="450" lsb="-50"/>
-    <mtx name="glyph00163" width="650" lsb="-50"/>
+    <mtx name="glyph00163" width="651" lsb="-50"/>
     <mtx name="glyph00166" width="1000" lsb="0"/>
     <mtx name="glyph00167" width="1000" lsb="0"/>
     <mtx name="glyph00168" width="1000" lsb="0"/>
@@ -4322,16 +4322,16 @@
           -107 callsubr
         </CharString>
         <CharString name="glyph00163">
-          502 87 rmoveto
+          533 87 rmoveto
           127 1 -323 413 -97 -121 rlineto
           0 41 32 30 -41 vhcurveto
           -160 -284 rmoveto
           126 hlineto
           -133 170 -94 -122 rlineto
           0 39 30 31 -39 vhcurveto
-          -139 -126 rmoveto
-          700 100 -700 hlineto
-          360 -13 rmoveto
+          -170 -126 rmoveto
+          701 100 -701 hlineto
+          391 -13 rmoveto
           126 hlineto
           -228 292 -94 -121 rlineto
           0 39 30 30 -39 vhcurveto
@@ -19832,11 +19832,11 @@
             </BaseRecord>
             <BaseRecord index="158">
               <BaseAnchor index="0" Format="1">
-                <XCoordinate value="306"/>
+                <XCoordinate value="337"/>
                 <YCoordinate value="550"/>
               </BaseAnchor>
               <BaseAnchor index="1" Format="1">
-                <XCoordinate value="306"/>
+                <XCoordinate value="337"/>
                 <YCoordinate value="-50"/>
               </BaseAnchor>
               <BaseAnchor index="2" empty="1"/>
