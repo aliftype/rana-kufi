@@ -119,7 +119,7 @@ lookupflag IgnoreMarks;
 
 def getLayer(glyph, instance):
     for layer in glyph.layers:
-        if layer.name == f"{{{instance.weightValue}}}":
+        if layer.name == instance.name:
             return layer
     return glyph.layers[0]
 
