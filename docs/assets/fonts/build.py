@@ -383,26 +383,11 @@ def build(instance):
     fb.addOpenTypeFeatures(fea)
 
     palettes = master.customParameters["Color Palettes"]
-    CPAL = newTable("CPAL")
-    CPAL.version = 0
-    CPAL.palettes = []
-    CPAL.numPaletteEntries = len(palettes[0])
-    Color = getTableModule("CPAL").Color
-    for palette in palettes:
-        CPAL.palettes.append([])
-        for c in palette:
-            c = [int(v) for v in c.split(",")]
-            CPAL.palettes[-1].append(Color(red=c[0], green=c[1], blue=c[2], alpha=c[3]))
-    fb.font["CPAL"] = CPAL
-
-    COLR = newTable("COLR")
-    COLR.version = 0
-    COLR.ColorLayers = {}
-    LayerRecord = getTableModule("COLR").LayerRecord
-    for name in colorLayers:
-        layers = colorLayers[name]
-        COLR[name] = [LayerRecord(name=l[0], colorID=l[1]) for l in layers]
-    fb.font["COLR"] = COLR
+    palettes = [
+        [tuple(int(v)/255 for v in c.split(",")) for c in p] for p in palettes
+    ]
+    fb.setupCPAL(palettes)
+    fb.setupCOLR(colorLayers)
 
     instance.font = fb.font
     axes = [
