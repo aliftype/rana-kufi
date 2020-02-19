@@ -431,13 +431,13 @@
     <GlyphID id="425" name="glyph00425"/>
     <GlyphID id="426" name="glyph00426"/>
     <GlyphID id="427" name="glyph00427"/>
-    <GlyphID id="428" name="uni0629"/>
-    <GlyphID id="429" name="uni0648"/>
-    <GlyphID id="430" name="glyph00430"/>
+    <GlyphID id="428" name="glyph00428"/>
+    <GlyphID id="429" name="uni0629"/>
+    <GlyphID id="430" name="uni0648"/>
     <GlyphID id="431" name="glyph00431"/>
-    <GlyphID id="432" name="uni0624"/>
-    <GlyphID id="433" name="uni0649"/>
-    <GlyphID id="434" name="glyph00434"/>
+    <GlyphID id="432" name="glyph00432"/>
+    <GlyphID id="433" name="uni0624"/>
+    <GlyphID id="434" name="uni0649"/>
     <GlyphID id="435" name="glyph00435"/>
     <GlyphID id="436" name="glyph00436"/>
     <GlyphID id="437" name="glyph00437"/>
@@ -460,11 +460,11 @@
     <GlyphID id="454" name="glyph00454"/>
     <GlyphID id="455" name="glyph00455"/>
     <GlyphID id="456" name="glyph00456"/>
-    <GlyphID id="457" name="uni064A"/>
-    <GlyphID id="458" name="uni0626"/>
-    <GlyphID id="459" name="uni06CC"/>
-    <GlyphID id="460" name="uni0640"/>
-    <GlyphID id="461" name="glyph00461"/>
+    <GlyphID id="457" name="glyph00457"/>
+    <GlyphID id="458" name="uni064A"/>
+    <GlyphID id="459" name="uni0626"/>
+    <GlyphID id="460" name="uni06CC"/>
+    <GlyphID id="461" name="uni0640"/>
     <GlyphID id="462" name="glyph00462"/>
     <GlyphID id="463" name="glyph00463"/>
     <GlyphID id="464" name="glyph00464"/>
@@ -506,23 +506,24 @@
     <GlyphID id="500" name="glyph00500"/>
     <GlyphID id="501" name="glyph00501"/>
     <GlyphID id="502" name="glyph00502"/>
-    <GlyphID id="503" name="uni06DD"/>
-    <GlyphID id="504" name="glyph00504"/>
+    <GlyphID id="503" name="glyph00503"/>
+    <GlyphID id="504" name="uni06DD"/>
     <GlyphID id="505" name="glyph00505"/>
     <GlyphID id="506" name="glyph00506"/>
     <GlyphID id="507" name="glyph00507"/>
     <GlyphID id="508" name="glyph00508"/>
     <GlyphID id="509" name="glyph00509"/>
     <GlyphID id="510" name="glyph00510"/>
-    <GlyphID id="511" name="uni0654"/>
-    <GlyphID id="512" name="uni0655"/>
+    <GlyphID id="511" name="glyph00511"/>
+    <GlyphID id="512" name="uni0654"/>
+    <GlyphID id="513" name="uni0655"/>
   </GlyphOrder>
 
   <head>
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
     <fontRevision value="0.02"/>
-    <checkSumAdjustment value="0xb203c16b"/>
+    <checkSumAdjustment value="0x4c0f9b1b"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00000011"/>
     <unitsPerEm value="1000"/>
@@ -556,12 +557,12 @@
     <reserved2 value="0"/>
     <reserved3 value="0"/>
     <metricDataFormat value="0"/>
-    <numberOfHMetrics value="512"/>
+    <numberOfHMetrics value="513"/>
   </hhea>
 
   <maxp>
     <tableVersion value="0x5000"/>
-    <numGlyphs value="513"/>
+    <numGlyphs value="514"/>
   </maxp>
 
   <hmtx>
@@ -952,87 +953,88 @@
     <mtx name="glyph00418" width="450" lsb="-50"/>
     <mtx name="glyph00419" width="450" lsb="-50"/>
     <mtx name="glyph00420" width="857" lsb="-50"/>
-    <mtx name="glyph00421" width="626" lsb="-50"/>
+    <mtx name="glyph00421" width="550" lsb="-50"/>
     <mtx name="glyph00422" width="626" lsb="-50"/>
     <mtx name="glyph00423" width="626" lsb="-50"/>
     <mtx name="glyph00424" width="626" lsb="-50"/>
-    <mtx name="glyph00425" width="526" lsb="-50"/>
-    <mtx name="glyph00426" width="500" lsb="-50"/>
+    <mtx name="glyph00425" width="626" lsb="-50"/>
+    <mtx name="glyph00426" width="526" lsb="-50"/>
     <mtx name="glyph00427" width="500" lsb="-50"/>
-    <mtx name="glyph00430" width="250" lsb="-50"/>
+    <mtx name="glyph00428" width="500" lsb="-50"/>
     <mtx name="glyph00431" width="250" lsb="-50"/>
-    <mtx name="glyph00434" width="700" lsb="0"/>
+    <mtx name="glyph00432" width="250" lsb="-50"/>
     <mtx name="glyph00435" width="700" lsb="0"/>
-    <mtx name="glyph00436" width="800" lsb="0"/>
-    <mtx name="glyph00437" width="700" lsb="0"/>
+    <mtx name="glyph00436" width="700" lsb="0"/>
+    <mtx name="glyph00437" width="800" lsb="0"/>
     <mtx name="glyph00438" width="700" lsb="0"/>
-    <mtx name="glyph00439" width="350" lsb="-150"/>
-    <mtx name="glyph00440" width="350" lsb="-50"/>
-    <mtx name="glyph00441" width="498" lsb="0"/>
+    <mtx name="glyph00439" width="700" lsb="0"/>
+    <mtx name="glyph00440" width="350" lsb="-150"/>
+    <mtx name="glyph00441" width="350" lsb="-50"/>
     <mtx name="glyph00442" width="498" lsb="0"/>
-    <mtx name="glyph00443" width="586" lsb="0"/>
+    <mtx name="glyph00443" width="498" lsb="0"/>
     <mtx name="glyph00444" width="586" lsb="0"/>
-    <mtx name="glyph00445" width="684" lsb="0"/>
-    <mtx name="glyph00446" width="584" lsb="0"/>
+    <mtx name="glyph00445" width="586" lsb="0"/>
+    <mtx name="glyph00446" width="684" lsb="0"/>
     <mtx name="glyph00447" width="584" lsb="0"/>
-    <mtx name="glyph00448" width="684" lsb="0"/>
-    <mtx name="glyph00449" width="584" lsb="0"/>
+    <mtx name="glyph00448" width="584" lsb="0"/>
+    <mtx name="glyph00449" width="684" lsb="0"/>
     <mtx name="glyph00450" width="584" lsb="0"/>
-    <mtx name="glyph00451" width="300" lsb="-150"/>
-    <mtx name="glyph00452" width="300" lsb="-50"/>
-    <mtx name="glyph00453" width="382" lsb="0"/>
+    <mtx name="glyph00451" width="584" lsb="0"/>
+    <mtx name="glyph00452" width="300" lsb="-150"/>
+    <mtx name="glyph00453" width="300" lsb="-50"/>
     <mtx name="glyph00454" width="382" lsb="0"/>
-    <mtx name="glyph00455" width="470" lsb="0"/>
+    <mtx name="glyph00455" width="382" lsb="0"/>
     <mtx name="glyph00456" width="470" lsb="0"/>
-    <mtx name="glyph00461" width="600" lsb="0"/>
-    <mtx name="glyph00462" width="300" lsb="-80"/>
+    <mtx name="glyph00457" width="470" lsb="0"/>
+    <mtx name="glyph00462" width="600" lsb="0"/>
     <mtx name="glyph00463" width="300" lsb="-80"/>
-    <mtx name="glyph00464" width="450" lsb="-80"/>
-    <mtx name="glyph00465" width="500" lsb="-80"/>
-    <mtx name="glyph00466" width="550" lsb="-80"/>
-    <mtx name="glyph00467" width="450" lsb="-80"/>
+    <mtx name="glyph00464" width="300" lsb="-80"/>
+    <mtx name="glyph00465" width="450" lsb="-80"/>
+    <mtx name="glyph00466" width="500" lsb="-80"/>
+    <mtx name="glyph00467" width="550" lsb="-80"/>
     <mtx name="glyph00468" width="450" lsb="-80"/>
     <mtx name="glyph00469" width="450" lsb="-80"/>
-    <mtx name="glyph00470" width="500" lsb="-80"/>
-    <mtx name="glyph00471" width="550" lsb="-80"/>
-    <mtx name="glyph00472" width="450" lsb="-80"/>
+    <mtx name="glyph00470" width="450" lsb="-80"/>
+    <mtx name="glyph00471" width="500" lsb="-80"/>
+    <mtx name="glyph00472" width="550" lsb="-80"/>
     <mtx name="glyph00473" width="450" lsb="-80"/>
-    <mtx name="glyph00474" width="550" lsb="-258"/>
-    <mtx name="glyph00475" width="300" lsb="-50"/>
+    <mtx name="glyph00474" width="450" lsb="-80"/>
+    <mtx name="glyph00475" width="550" lsb="-258"/>
     <mtx name="glyph00476" width="300" lsb="-50"/>
-    <mtx name="glyph00477" width="450" lsb="-50"/>
-    <mtx name="glyph00478" width="500" lsb="-50"/>
-    <mtx name="glyph00479" width="550" lsb="-50"/>
-    <mtx name="glyph00480" width="450" lsb="-50"/>
+    <mtx name="glyph00477" width="300" lsb="-50"/>
+    <mtx name="glyph00478" width="450" lsb="-50"/>
+    <mtx name="glyph00479" width="500" lsb="-50"/>
+    <mtx name="glyph00480" width="550" lsb="-50"/>
     <mtx name="glyph00481" width="450" lsb="-50"/>
     <mtx name="glyph00482" width="450" lsb="-50"/>
-    <mtx name="glyph00483" width="500" lsb="-50"/>
-    <mtx name="glyph00484" width="550" lsb="-50"/>
-    <mtx name="glyph00485" width="450" lsb="-50"/>
+    <mtx name="glyph00483" width="450" lsb="-50"/>
+    <mtx name="glyph00484" width="500" lsb="-50"/>
+    <mtx name="glyph00485" width="550" lsb="-50"/>
     <mtx name="glyph00486" width="450" lsb="-50"/>
-    <mtx name="glyph00487" width="1828" lsb="0"/>
+    <mtx name="glyph00487" width="450" lsb="-50"/>
     <mtx name="glyph00488" width="1828" lsb="0"/>
-    <mtx name="glyph00489" width="450" lsb="0"/>
-    <mtx name="glyph00490" width="950" lsb="-50"/>
-    <mtx name="glyph00491" width="1300" lsb="0"/>
-    <mtx name="glyph00492" width="1000" lsb="-80"/>
-    <mtx name="glyph00493" width="250" lsb="-50"/>
-    <mtx name="glyph00494" width="350" lsb="0"/>
+    <mtx name="glyph00489" width="1828" lsb="0"/>
+    <mtx name="glyph00490" width="450" lsb="0"/>
+    <mtx name="glyph00491" width="950" lsb="-50"/>
+    <mtx name="glyph00492" width="1300" lsb="0"/>
+    <mtx name="glyph00493" width="1000" lsb="-80"/>
+    <mtx name="glyph00494" width="250" lsb="-50"/>
     <mtx name="glyph00495" width="350" lsb="0"/>
-    <mtx name="glyph00496" width="250" lsb="-50"/>
+    <mtx name="glyph00496" width="350" lsb="0"/>
     <mtx name="glyph00497" width="250" lsb="-50"/>
-    <mtx name="glyph00498" width="400" lsb="0"/>
+    <mtx name="glyph00498" width="250" lsb="-50"/>
     <mtx name="glyph00499" width="400" lsb="0"/>
-    <mtx name="glyph00500" width="250" lsb="-50"/>
-    <mtx name="glyph00501" width="300" lsb="-50"/>
-    <mtx name="glyph00502" width="450" lsb="0"/>
-    <mtx name="glyph00504" width="0" lsb="0"/>
-    <mtx name="glyph00505" width="100" lsb="0"/>
+    <mtx name="glyph00500" width="400" lsb="0"/>
+    <mtx name="glyph00501" width="250" lsb="-50"/>
+    <mtx name="glyph00502" width="300" lsb="-50"/>
+    <mtx name="glyph00503" width="450" lsb="0"/>
+    <mtx name="glyph00505" width="0" lsb="0"/>
     <mtx name="glyph00506" width="100" lsb="0"/>
     <mtx name="glyph00507" width="100" lsb="0"/>
-    <mtx name="glyph00508" width="250" lsb="0"/>
+    <mtx name="glyph00508" width="100" lsb="0"/>
     <mtx name="glyph00509" width="250" lsb="0"/>
     <mtx name="glyph00510" width="250" lsb="0"/>
+    <mtx name="glyph00511" width="250" lsb="0"/>
     <mtx name="space" width="50" lsb="0"/>
     <mtx name="uni0621" width="438" lsb="50"/>
     <mtx name="uni0623" width="100" lsb="-135"/>
@@ -5981,10 +5983,48 @@
           -45 -37 -37 -45 -30 -27 16 24 -14 vhcurveto
         </CharString>
         <CharString name="glyph00421">
+          -50 100 rmoveto
+          -100 104 100 vlineto
+          290 256 rmoveto
+          39 -7 36 -15 31 -22 rrcurveto
+          107 -4 -51 81 -95 hhcurveto
+          -100 vlineto
+          22 15 -14 -30 7 hvcurveto
+          -294 -356 rmoveto
+          120 hlineto
+          101 99 77 98 49 hvcurveto
+          -19 29 -29 22 -35 9 rrcurveto
+          -66 -26 -65 -69 -95 hhcurveto
+          -100 hlineto
+          260 -65 rmoveto
+          -22 37 41 -13 42 hhcurveto
+          120 100 -100 hlineto
+          -22 -20 4 6 -19 hvcurveto
+          -23 -30 -27 -25 -29 -20 rrcurveto
+          -16 147 rmoveto
+          -29 38 -15 45 35 vvcurveto
+          70 18 30 32 vhcurveto
+          100 vlineto
+          -99 -51 -87 -113 -62 25 -63 39 -53 hvcurveto
+          31 12 27 21 22 27 rrcurveto
+          -30 165 rmoveto
+          -3 -12 -1 -16 -19 vvcurveto
+          -16 4 -19 6 -18 vhcurveto
+          2 10 10 1 10 hhcurveto
+          83 67 -67 -83 hvcurveto
+          100 hlineto
+          138 -112 112 -138 -12 -12 -1 -2 -12 vhcurveto
+          -214 -247 rmoveto
+          100 hlineto
+          27 7 26 13 22 vhcurveto
+          -18 39 -11 40 -1 38 rrcurveto
+          -55 -46 -35 -69 -77 vvcurveto
+        </CharString>
+        <CharString name="glyph00422">
           452 -78 callsubr
           -589 500 73 callsubr
         </CharString>
-        <CharString name="glyph00422">
+        <CharString name="glyph00423">
           452 -78 callsubr
           -589 -150 rmoveto
           287 100 -287 hlineto
@@ -6011,25 +6051,25 @@
           115 hlineto
           177 306 -55 105 rlineto
         </CharString>
-        <CharString name="glyph00423">
+        <CharString name="glyph00424">
           452 -78 callsubr
           -470 217 84 callsubr
         </CharString>
-        <CharString name="glyph00424">
+        <CharString name="glyph00425">
           452 -78 callsubr
           -589 -150 rmoveto
           75 callsubr
         </CharString>
-        <CharString name="glyph00425">
+        <CharString name="glyph00426">
           111 callsubr
         </CharString>
-        <CharString name="glyph00426">
+        <CharString name="glyph00427">
           81 callsubr
         </CharString>
-        <CharString name="glyph00427">
+        <CharString name="glyph00428">
           78 callsubr
         </CharString>
-        <CharString name="glyph00430">
+        <CharString name="glyph00431">
           -50 -113 rmoveto
           -29 41 39 -8 39 hhcurveto
           126 55 106 123 103 -45 56 -80 62 hvcurveto
@@ -6042,7 +6082,7 @@
           23 callsubr
           -14 -11 11 14 vhcurveto
         </CharString>
-        <CharString name="glyph00431">
+        <CharString name="glyph00432">
           101 125 rmoveto
           23 callsubr
           -14 -11 11 14 vhcurveto
@@ -6058,17 +6098,17 @@
           -36 -29 21 29 -12 hvcurveto
           -7 -56 -15 -50 -28 -44 rrcurveto
         </CharString>
-        <CharString name="glyph00434">
+        <CharString name="glyph00435">
           526 -78 callsubr
           -463 -150 rmoveto
           114 callsubr
         </CharString>
-        <CharString name="glyph00435">
+        <CharString name="glyph00436">
           526 -78 callsubr
           -463 -150 rmoveto
           113 callsubr
         </CharString>
-        <CharString name="glyph00436">
+        <CharString name="glyph00437">
           626 -78 callsubr
           -262 -150 rmoveto
           7 callsubr
@@ -6077,7 +6117,7 @@
           476 -100 -64 callsubr
           -456 -100 -104 callsubr
         </CharString>
-        <CharString name="glyph00437">
+        <CharString name="glyph00438">
           526 -78 callsubr
           -262 -150 rmoveto
           7 callsubr
@@ -6086,24 +6126,24 @@
           376 -100 -64 callsubr
           -356 -100 -104 callsubr
         </CharString>
-        <CharString name="glyph00438">
+        <CharString name="glyph00439">
           526 -78 callsubr
           -463 -150 rmoveto
           130 callsubr
-        </CharString>
-        <CharString name="glyph00439">
-          201 hmoveto
-          149 150 hlineto
-          -150 -150 rmoveto
-          129 callsubr
         </CharString>
         <CharString name="glyph00440">
           201 hmoveto
           149 150 hlineto
           -150 -150 rmoveto
-          135 callsubr
+          129 callsubr
         </CharString>
         <CharString name="glyph00441">
+          201 hmoveto
+          149 150 hlineto
+          -150 -150 rmoveto
+          135 callsubr
+        </CharString>
+        <CharString name="glyph00442">
           324 -78 callsubr
           -87 -150 rmoveto
           5 callsubr
@@ -6113,7 +6153,7 @@
           58 100 rlineto
           -826 50 -64 callsubr
         </CharString>
-        <CharString name="glyph00442">
+        <CharString name="glyph00443">
           324 -78 callsubr
           -87 -150 rmoveto
           5 callsubr
@@ -6123,32 +6163,32 @@
           58 100 rlineto
           -826 50 -64 callsubr
         </CharString>
-        <CharString name="glyph00443">
+        <CharString name="glyph00444">
           412 -78 callsubr
           -87 -150 rmoveto
           -12 callsubr
           -152 554 rmoveto
           -58 callsubr
         </CharString>
-        <CharString name="glyph00444">
+        <CharString name="glyph00445">
           412 -78 callsubr
           -87 -150 rmoveto
           -12 callsubr
           -52 554 -41 callsubr
         </CharString>
-        <CharString name="glyph00445">
+        <CharString name="glyph00446">
           150 hmoveto
           112 callsubr
         </CharString>
-        <CharString name="glyph00446">
+        <CharString name="glyph00447">
           150 hmoveto
           114 callsubr
         </CharString>
-        <CharString name="glyph00447">
+        <CharString name="glyph00448">
           150 hmoveto
           113 callsubr
         </CharString>
-        <CharString name="glyph00448">
+        <CharString name="glyph00449">
           451 hmoveto
           7 callsubr
           -27 -474 rmoveto
@@ -6156,7 +6196,7 @@
           476 -100 -64 callsubr
           -456 -100 -104 callsubr
         </CharString>
-        <CharString name="glyph00449">
+        <CharString name="glyph00450">
           351 hmoveto
           7 callsubr
           73 -474 rmoveto
@@ -6164,19 +6204,19 @@
           376 -100 -64 callsubr
           -356 -100 -104 callsubr
         </CharString>
-        <CharString name="glyph00450">
+        <CharString name="glyph00451">
           150 hmoveto
           130 callsubr
         </CharString>
-        <CharString name="glyph00451">
+        <CharString name="glyph00452">
           200 hmoveto
           129 callsubr
         </CharString>
-        <CharString name="glyph00452">
+        <CharString name="glyph00453">
           200 hmoveto
           135 callsubr
         </CharString>
-        <CharString name="glyph00453">
+        <CharString name="glyph00454">
           324 hmoveto
           5 callsubr
           180 -280 rmoveto
@@ -6185,7 +6225,7 @@
           58 100 rlineto
           -826 50 -64 callsubr
         </CharString>
-        <CharString name="glyph00454">
+        <CharString name="glyph00455">
           324 hmoveto
           5 callsubr
           276 -280 rmoveto
@@ -6194,32 +6234,32 @@
           58 100 rlineto
           -826 50 -64 callsubr
         </CharString>
-        <CharString name="glyph00455">
+        <CharString name="glyph00456">
           412 hmoveto
           -12 callsubr
           -52 554 -41 callsubr
         </CharString>
-        <CharString name="glyph00456">
+        <CharString name="glyph00457">
           412 hmoveto
           -12 callsubr
           -152 554 rmoveto
           -58 callsubr
         </CharString>
-        <CharString name="glyph00461">
+        <CharString name="glyph00462">
           500 hmoveto
           100 1000 104 callsubr
         </CharString>
-        <CharString name="glyph00462">
+        <CharString name="glyph00463">
           -69 callsubr
           -100 -900 -96 callsubr
           86 584 -83 callsubr
           -274 -316 -96 callsubr
           160 880 -82 callsubr
         </CharString>
-        <CharString name="glyph00463">
+        <CharString name="glyph00464">
           34 callsubr
         </CharString>
-        <CharString name="glyph00464">
+        <CharString name="glyph00465">
           -69 callsubr
           -100 -900 -96 callsubr
           86 584 -83 callsubr
@@ -6227,7 +6267,7 @@
           160 880 -82 callsubr
           230 -80 callsubr
         </CharString>
-        <CharString name="glyph00465">
+        <CharString name="glyph00466">
           -69 callsubr
           300 -900 -37 callsubr
           -400 100 -96 callsubr
@@ -6236,14 +6276,14 @@
           160 880 -82 callsubr
           280 -80 callsubr
         </CharString>
-        <CharString name="glyph00466">
+        <CharString name="glyph00467">
           -69 callsubr
           350 -900 -55 callsubr
           -450 100 -96 callsubr
           86 584 -83 callsubr
           -274 -316 42 callsubr
         </CharString>
-        <CharString name="glyph00467">
+        <CharString name="glyph00468">
           -69 callsubr
           -100 -900 -96 callsubr
           86 584 -83 callsubr
@@ -6252,7 +6292,7 @@
           150 -960 -49 callsubr
           -20 -20 -89 callsubr
         </CharString>
-        <CharString name="glyph00468">
+        <CharString name="glyph00469">
           -69 callsubr
           250 -950 21 callsubr
           -350 100 -96 callsubr
@@ -6261,35 +6301,35 @@
           160 880 -82 callsubr
           230 -80 callsubr
         </CharString>
-        <CharString name="glyph00469">
+        <CharString name="glyph00470">
           34 callsubr
           230 -80 callsubr
         </CharString>
-        <CharString name="glyph00470">
+        <CharString name="glyph00471">
           -69 callsubr
           300 -900 -37 callsubr
           -400 100 36 callsubr
           280 -80 callsubr
         </CharString>
-        <CharString name="glyph00471">
+        <CharString name="glyph00472">
           -69 callsubr
           350 -900 -55 callsubr
           -450 100 -96 callsubr
           86 509 -1 callsubr
           -274 -391 42 callsubr
         </CharString>
-        <CharString name="glyph00472">
+        <CharString name="glyph00473">
           34 callsubr
           150 -960 -49 callsubr
           -20 -20 -89 callsubr
         </CharString>
-        <CharString name="glyph00473">
+        <CharString name="glyph00474">
           -69 callsubr
           250 -950 21 callsubr
           -350 100 36 callsubr
           230 -80 callsubr
         </CharString>
-        <CharString name="glyph00474">
+        <CharString name="glyph00475">
           200 850 rmoveto
           -25 callsubr
           -150 -1000 rmoveto
@@ -6338,24 +6378,24 @@
           205 205 -71 71 -205 -205 rlineto
           -280 -263 42 callsubr
         </CharString>
-        <CharString name="glyph00475">
+        <CharString name="glyph00476">
           147 callsubr
           434 -83 callsubr
           6 564 -82 callsubr
         </CharString>
-        <CharString name="glyph00476">
+        <CharString name="glyph00477">
           147 callsubr
           359 -1 callsubr
           6 489 -82 callsubr
         </CharString>
-        <CharString name="glyph00477">
+        <CharString name="glyph00478">
           -50 callsubr
           -100 -750 -27 callsubr
           289 -83 callsubr
           6 564 -82 callsubr
           230 -80 callsubr
         </CharString>
-        <CharString name="glyph00478">
+        <CharString name="glyph00479">
           -50 callsubr
           300 -900 -37 callsubr
           -400 250 -27 callsubr
@@ -6363,7 +6403,7 @@
           6 564 -82 callsubr
           280 -80 callsubr
         </CharString>
-        <CharString name="glyph00479">
+        <CharString name="glyph00480">
           -50 callsubr
           350 -900 -55 callsubr
           -450 250 -27 callsubr
@@ -6371,7 +6411,7 @@
           6 564 -82 callsubr
           330 -80 callsubr
         </CharString>
-        <CharString name="glyph00480">
+        <CharString name="glyph00481">
           -50 callsubr
           -100 -750 -27 callsubr
           289 -83 callsubr
@@ -6379,7 +6419,7 @@
           150 -960 -49 callsubr
           -20 -20 -89 callsubr
         </CharString>
-        <CharString name="glyph00481">
+        <CharString name="glyph00482">
           -14 callsubr
           -1000 vmoveto
           136 callsubr
@@ -6388,37 +6428,37 @@
           6 564 -82 callsubr
           230 -80 callsubr
         </CharString>
-        <CharString name="glyph00482">
+        <CharString name="glyph00483">
           -50 callsubr
           -100 -750 -23 callsubr
           230 -80 callsubr
         </CharString>
-        <CharString name="glyph00483">
+        <CharString name="glyph00484">
           -50 callsubr
           300 -900 -37 callsubr
           -400 250 -23 callsubr
           280 -80 callsubr
         </CharString>
-        <CharString name="glyph00484">
+        <CharString name="glyph00485">
           -50 callsubr
           350 -900 -55 callsubr
           -450 250 -23 callsubr
           330 -80 callsubr
         </CharString>
-        <CharString name="glyph00485">
+        <CharString name="glyph00486">
           -50 callsubr
           -100 -750 -23 callsubr
           150 -960 -49 callsubr
           -20 -20 -89 callsubr
         </CharString>
-        <CharString name="glyph00486">
+        <CharString name="glyph00487">
           -14 callsubr
           -1000 vmoveto
           136 callsubr
           250 -23 callsubr
           230 -80 callsubr
         </CharString>
-        <CharString name="glyph00487">
+        <CharString name="glyph00488">
           165 callsubr
           350 -100 hlineto
           -150 -300 194 callsubr
@@ -6457,7 +6497,7 @@
           -20 hlineto
           -230 880 -45 callsubr
         </CharString>
-        <CharString name="glyph00488">
+        <CharString name="glyph00489">
           165 callsubr
           250 -100 hlineto
           -150 -200 194 callsubr
@@ -6500,7 +6540,7 @@
           -230 880 -45 callsubr
           -1178 -220 -45 callsubr
         </CharString>
-        <CharString name="glyph00489">
+        <CharString name="glyph00490">
           350 hmoveto
           100 1000 -105 callsubr
           -350 -1200 -106 callsubr
@@ -6511,82 +6551,82 @@
           250 -90 rmoveto
           -79 callsubr
         </CharString>
-        <CharString name="glyph00490">
+        <CharString name="glyph00491">
           150 91 callsubr
         </CharString>
-        <CharString name="glyph00491">
+        <CharString name="glyph00492">
           500 hmoveto
           -93 callsubr
           25 150 -94 callsubr
           -675 -200 rmoveto
           100 800 104 callsubr
         </CharString>
-        <CharString name="glyph00492">
+        <CharString name="glyph00493">
           200 91 callsubr
           -100 -880 -40 callsubr
         </CharString>
-        <CharString name="glyph00493">
-          79 callsubr
-        </CharString>
         <CharString name="glyph00494">
-          74 callsubr
+          79 callsubr
         </CharString>
         <CharString name="glyph00495">
-          72 callsubr
-        </CharString>
-        <CharString name="glyph00496">
-          77 callsubr
-        </CharString>
-        <CharString name="glyph00497">
-          79 callsubr
-        </CharString>
-        <CharString name="glyph00498">
           74 callsubr
         </CharString>
-        <CharString name="glyph00499">
+        <CharString name="glyph00496">
           72 callsubr
         </CharString>
-        <CharString name="glyph00500">
+        <CharString name="glyph00497">
           77 callsubr
         </CharString>
+        <CharString name="glyph00498">
+          79 callsubr
+        </CharString>
+        <CharString name="glyph00499">
+          74 callsubr
+        </CharString>
+        <CharString name="glyph00500">
+          72 callsubr
+        </CharString>
         <CharString name="glyph00501">
+          77 callsubr
+        </CharString>
+        <CharString name="glyph00502">
           -69 callsubr
           -100 -900 -96 callsubr
           86 584 -83 callsubr
           -90 -316 -96 callsubr
           -24 880 -82 callsubr
         </CharString>
-        <CharString name="glyph00502">
+        <CharString name="glyph00503">
           350 151 callsubr
           -340 -100 rmoveto
           3 callsubr
           250 -90 rmoveto
           -79 callsubr
         </CharString>
-        <CharString name="glyph00504">
-        </CharString>
         <CharString name="glyph00505">
-          50 hmoveto
-          -28 callsubr
         </CharString>
         <CharString name="glyph00506">
           50 hmoveto
           -28 callsubr
         </CharString>
         <CharString name="glyph00507">
+          50 hmoveto
+          -28 callsubr
+        </CharString>
+        <CharString name="glyph00508">
           50 -150 -76 callsubr
           150 vmoveto
           28 22 22 28 28 -22 22 -28 -28 -22 -22 -28 -28 22 -22 28 hvcurveto
-        </CharString>
-        <CharString name="glyph00508">
-          50 hmoveto
-          14 callsubr
         </CharString>
         <CharString name="glyph00509">
           50 hmoveto
           14 callsubr
         </CharString>
         <CharString name="glyph00510">
+          50 hmoveto
+          14 callsubr
+        </CharString>
+        <CharString name="glyph00511">
           50 hmoveto
           14 callsubr
           -75 133 -76 callsubr
@@ -6830,9 +6870,6 @@
 
   <COLR>
     <version value="0"/>
-    <ColorGlyph name="glyph00505">
-      <layer colorID="0" name="glyph00505"/>
-    </ColorGlyph>
     <ColorGlyph name="glyph00506">
       <layer colorID="0" name="glyph00506"/>
     </ColorGlyph>
@@ -6848,6 +6885,9 @@
     <ColorGlyph name="glyph00510">
       <layer colorID="0" name="glyph00510"/>
     </ColorGlyph>
+    <ColorGlyph name="glyph00511">
+      <layer colorID="0" name="glyph00511"/>
+    </ColorGlyph>
   </COLR>
 
   <CPAL>
@@ -6861,19 +6901,18 @@
   <GDEF>
     <Version value="0x00010003"/>
     <GlyphClassDef Format="2">
-      <ClassDef glyph="glyph00504" class="3"/>
       <ClassDef glyph="glyph00505" class="3"/>
       <ClassDef glyph="glyph00506" class="3"/>
       <ClassDef glyph="glyph00507" class="3"/>
       <ClassDef glyph="glyph00508" class="3"/>
       <ClassDef glyph="glyph00509" class="3"/>
       <ClassDef glyph="glyph00510" class="3"/>
+      <ClassDef glyph="glyph00511" class="3"/>
       <ClassDef glyph="uni0654" class="3"/>
       <ClassDef glyph="uni0655" class="3"/>
     </GlyphClassDef>
     <LigCaretList>
       <Coverage Format="2">
-        <Glyph value="glyph00461"/>
         <Glyph value="glyph00462"/>
         <Glyph value="glyph00463"/>
         <Glyph value="glyph00464"/>
@@ -6915,6 +6954,7 @@
         <Glyph value="glyph00500"/>
         <Glyph value="glyph00501"/>
         <Glyph value="glyph00502"/>
+        <Glyph value="glyph00503"/>
       </Coverage>
       <!-- LigGlyphCount=42 -->
       <LigGlyph index="0">
@@ -7265,8 +7305,8 @@
             <Glyph value="glyph00148"/>
             <Glyph value="uni0645"/>
             <Glyph value="glyph00382"/>
-            <Glyph value="glyph00439"/>
-            <Glyph value="glyph00451"/>
+            <Glyph value="glyph00440"/>
+            <Glyph value="glyph00452"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=1 -->
           <LookAheadCoverage index="0" Format="2">
@@ -7696,13 +7736,13 @@
             <Glyph value="glyph00425"/>
             <Glyph value="glyph00426"/>
             <Glyph value="glyph00427"/>
+            <Glyph value="glyph00428"/>
             <Glyph value="uni0629"/>
             <Glyph value="uni0648"/>
-            <Glyph value="glyph00430"/>
             <Glyph value="glyph00431"/>
+            <Glyph value="glyph00432"/>
             <Glyph value="uni0624"/>
             <Glyph value="uni0649"/>
-            <Glyph value="glyph00434"/>
             <Glyph value="glyph00435"/>
             <Glyph value="glyph00436"/>
             <Glyph value="glyph00437"/>
@@ -7725,11 +7765,11 @@
             <Glyph value="glyph00454"/>
             <Glyph value="glyph00455"/>
             <Glyph value="glyph00456"/>
+            <Glyph value="glyph00457"/>
             <Glyph value="uni064A"/>
             <Glyph value="uni0626"/>
             <Glyph value="uni06CC"/>
             <Glyph value="uni0640"/>
-            <Glyph value="glyph00461"/>
             <Glyph value="glyph00462"/>
             <Glyph value="glyph00463"/>
             <Glyph value="glyph00464"/>
@@ -7771,6 +7811,7 @@
             <Glyph value="glyph00500"/>
             <Glyph value="glyph00501"/>
             <Glyph value="glyph00502"/>
+            <Glyph value="glyph00503"/>
           </LookAheadCoverage>
           <!-- PosCount=0 -->
         </ChainContextPos>
@@ -7778,8 +7819,8 @@
           <!-- BacktrackGlyphCount=0 -->
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
-            <Glyph value="glyph00439"/>
-            <Glyph value="glyph00451"/>
+            <Glyph value="glyph00440"/>
+            <Glyph value="glyph00452"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=0 -->
           <!-- PosCount=1 -->
@@ -7894,8 +7935,8 @@
             <Glyph value="glyph00148"/>
             <Glyph value="uni0645"/>
             <Glyph value="glyph00382"/>
-            <Glyph value="glyph00439"/>
-            <Glyph value="glyph00451"/>
+            <Glyph value="glyph00440"/>
+            <Glyph value="glyph00452"/>
           </Coverage>
           <ValueFormat value="5"/>
           <!-- ValueCount=6 -->
@@ -8106,22 +8147,22 @@
             <Glyph value="glyph00405"/>
             <Glyph value="glyph00406"/>
             <Glyph value="uni0648"/>
-            <Glyph value="glyph00430"/>
             <Glyph value="glyph00431"/>
-            <Glyph value="glyph00439"/>
-            <Glyph value="glyph00441"/>
+            <Glyph value="glyph00432"/>
+            <Glyph value="glyph00440"/>
             <Glyph value="glyph00442"/>
             <Glyph value="glyph00443"/>
             <Glyph value="glyph00444"/>
-            <Glyph value="glyph00451"/>
-            <Glyph value="glyph00453"/>
+            <Glyph value="glyph00445"/>
+            <Glyph value="glyph00452"/>
             <Glyph value="glyph00454"/>
             <Glyph value="glyph00455"/>
             <Glyph value="glyph00456"/>
-            <Glyph value="glyph00493"/>
-            <Glyph value="glyph00496"/>
+            <Glyph value="glyph00457"/>
+            <Glyph value="glyph00494"/>
             <Glyph value="glyph00497"/>
-            <Glyph value="glyph00500"/>
+            <Glyph value="glyph00498"/>
+            <Glyph value="glyph00501"/>
           </Coverage>
           <ValueFormat1 value="5"/>
           <ValueFormat2 value="0"/>
@@ -9058,51 +9099,51 @@
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
             <PairValueRecord index="23">
-              <SecondGlyph value="glyph00464"/>
-              <Value1 XPlacement="-50" XAdvance="-50"/>
-            </PairValueRecord>
-            <PairValueRecord index="24">
               <SecondGlyph value="glyph00465"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="25">
+            <PairValueRecord index="24">
               <SecondGlyph value="glyph00466"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="26">
-              <SecondGlyph value="glyph00469"/>
+            <PairValueRecord index="25">
+              <SecondGlyph value="glyph00467"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="27">
+            <PairValueRecord index="26">
               <SecondGlyph value="glyph00470"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="28">
+            <PairValueRecord index="27">
               <SecondGlyph value="glyph00471"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="29">
-              <SecondGlyph value="glyph00477"/>
+            <PairValueRecord index="28">
+              <SecondGlyph value="glyph00472"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="30">
+            <PairValueRecord index="29">
               <SecondGlyph value="glyph00478"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="31">
+            <PairValueRecord index="30">
               <SecondGlyph value="glyph00479"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="32">
-              <SecondGlyph value="glyph00482"/>
+            <PairValueRecord index="31">
+              <SecondGlyph value="glyph00480"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="33">
+            <PairValueRecord index="32">
               <SecondGlyph value="glyph00483"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="34">
+            <PairValueRecord index="33">
               <SecondGlyph value="glyph00484"/>
+              <Value1 XPlacement="-50" XAdvance="-50"/>
+            </PairValueRecord>
+            <PairValueRecord index="34">
+              <SecondGlyph value="glyph00485"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
           </PairSet>
@@ -9165,27 +9206,27 @@
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
             <PairValueRecord index="14">
-              <SecondGlyph value="glyph00421"/>
-              <Value1 XPlacement="-60" XAdvance="-60"/>
-            </PairValueRecord>
-            <PairValueRecord index="15">
               <SecondGlyph value="glyph00422"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="16">
+            <PairValueRecord index="15">
               <SecondGlyph value="glyph00423"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="17">
+            <PairValueRecord index="16">
               <SecondGlyph value="glyph00424"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="18">
+            <PairValueRecord index="17">
               <SecondGlyph value="glyph00425"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="19">
+            <PairValueRecord index="18">
               <SecondGlyph value="glyph00426"/>
+              <Value1 XPlacement="-60" XAdvance="-60"/>
+            </PairValueRecord>
+            <PairValueRecord index="19">
+              <SecondGlyph value="glyph00427"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
             <PairValueRecord index="20">
@@ -9193,83 +9234,83 @@
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
             <PairValueRecord index="21">
-              <SecondGlyph value="glyph00434"/>
-              <Value1 XPlacement="-60" XAdvance="-60"/>
-            </PairValueRecord>
-            <PairValueRecord index="22">
               <SecondGlyph value="glyph00435"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="23">
+            <PairValueRecord index="22">
               <SecondGlyph value="glyph00436"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="24">
+            <PairValueRecord index="23">
               <SecondGlyph value="glyph00437"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="25">
+            <PairValueRecord index="24">
               <SecondGlyph value="glyph00438"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="26">
-              <SecondGlyph value="glyph00443"/>
+            <PairValueRecord index="25">
+              <SecondGlyph value="glyph00439"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="27">
+            <PairValueRecord index="26">
               <SecondGlyph value="glyph00444"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="28">
-              <SecondGlyph value="glyph00467"/>
-              <Value1 XPlacement="-100" XAdvance="-100"/>
+            <PairValueRecord index="27">
+              <SecondGlyph value="glyph00445"/>
+              <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="29">
+            <PairValueRecord index="28">
               <SecondGlyph value="glyph00468"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="30">
-              <SecondGlyph value="glyph00472"/>
+            <PairValueRecord index="29">
+              <SecondGlyph value="glyph00469"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="31">
+            <PairValueRecord index="30">
               <SecondGlyph value="glyph00473"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="32">
+            <PairValueRecord index="31">
               <SecondGlyph value="glyph00474"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="33">
-              <SecondGlyph value="glyph00480"/>
+            <PairValueRecord index="32">
+              <SecondGlyph value="glyph00475"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="34">
+            <PairValueRecord index="33">
               <SecondGlyph value="glyph00481"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="35">
-              <SecondGlyph value="glyph00485"/>
+            <PairValueRecord index="34">
+              <SecondGlyph value="glyph00482"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="36">
+            <PairValueRecord index="35">
               <SecondGlyph value="glyph00486"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="37">
+            <PairValueRecord index="36">
               <SecondGlyph value="glyph00487"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="38">
+            <PairValueRecord index="37">
               <SecondGlyph value="glyph00488"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
+            <PairValueRecord index="38">
+              <SecondGlyph value="glyph00489"/>
+              <Value1 XPlacement="-100" XAdvance="-100"/>
+            </PairValueRecord>
             <PairValueRecord index="39">
-              <SecondGlyph value="glyph00498"/>
+              <SecondGlyph value="glyph00499"/>
               <Value1 XPlacement="-20" XAdvance="-20"/>
             </PairValueRecord>
             <PairValueRecord index="40">
-              <SecondGlyph value="glyph00499"/>
+              <SecondGlyph value="glyph00500"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
           </PairSet>
@@ -9352,51 +9393,51 @@
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
             <PairValueRecord index="19">
-              <SecondGlyph value="glyph00464"/>
-              <Value1 XPlacement="-50" XAdvance="-50"/>
-            </PairValueRecord>
-            <PairValueRecord index="20">
               <SecondGlyph value="glyph00465"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="21">
+            <PairValueRecord index="20">
               <SecondGlyph value="glyph00466"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="22">
-              <SecondGlyph value="glyph00469"/>
+            <PairValueRecord index="21">
+              <SecondGlyph value="glyph00467"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="23">
+            <PairValueRecord index="22">
               <SecondGlyph value="glyph00470"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="24">
+            <PairValueRecord index="23">
               <SecondGlyph value="glyph00471"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="25">
-              <SecondGlyph value="glyph00477"/>
+            <PairValueRecord index="24">
+              <SecondGlyph value="glyph00472"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="26">
+            <PairValueRecord index="25">
               <SecondGlyph value="glyph00478"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="27">
+            <PairValueRecord index="26">
               <SecondGlyph value="glyph00479"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="28">
-              <SecondGlyph value="glyph00482"/>
+            <PairValueRecord index="27">
+              <SecondGlyph value="glyph00480"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="29">
+            <PairValueRecord index="28">
               <SecondGlyph value="glyph00483"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
-            <PairValueRecord index="30">
+            <PairValueRecord index="29">
               <SecondGlyph value="glyph00484"/>
+              <Value1 XPlacement="-50" XAdvance="-50"/>
+            </PairValueRecord>
+            <PairValueRecord index="30">
+              <SecondGlyph value="glyph00485"/>
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
           </PairSet>
@@ -9459,27 +9500,27 @@
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
             <PairValueRecord index="14">
-              <SecondGlyph value="glyph00421"/>
-              <Value1 XPlacement="-60" XAdvance="-60"/>
-            </PairValueRecord>
-            <PairValueRecord index="15">
               <SecondGlyph value="glyph00422"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="16">
+            <PairValueRecord index="15">
               <SecondGlyph value="glyph00423"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="17">
+            <PairValueRecord index="16">
               <SecondGlyph value="glyph00424"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="18">
+            <PairValueRecord index="17">
               <SecondGlyph value="glyph00425"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="19">
+            <PairValueRecord index="18">
               <SecondGlyph value="glyph00426"/>
+              <Value1 XPlacement="-60" XAdvance="-60"/>
+            </PairValueRecord>
+            <PairValueRecord index="19">
+              <SecondGlyph value="glyph00427"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
             <PairValueRecord index="20">
@@ -9487,83 +9528,83 @@
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
             <PairValueRecord index="21">
-              <SecondGlyph value="glyph00434"/>
-              <Value1 XPlacement="-60" XAdvance="-60"/>
-            </PairValueRecord>
-            <PairValueRecord index="22">
               <SecondGlyph value="glyph00435"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="23">
+            <PairValueRecord index="22">
               <SecondGlyph value="glyph00436"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="24">
+            <PairValueRecord index="23">
               <SecondGlyph value="glyph00437"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="25">
+            <PairValueRecord index="24">
               <SecondGlyph value="glyph00438"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="26">
-              <SecondGlyph value="glyph00443"/>
+            <PairValueRecord index="25">
+              <SecondGlyph value="glyph00439"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="27">
+            <PairValueRecord index="26">
               <SecondGlyph value="glyph00444"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="28">
-              <SecondGlyph value="glyph00467"/>
-              <Value1 XPlacement="-100" XAdvance="-100"/>
+            <PairValueRecord index="27">
+              <SecondGlyph value="glyph00445"/>
+              <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
-            <PairValueRecord index="29">
+            <PairValueRecord index="28">
               <SecondGlyph value="glyph00468"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="30">
-              <SecondGlyph value="glyph00472"/>
+            <PairValueRecord index="29">
+              <SecondGlyph value="glyph00469"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="31">
+            <PairValueRecord index="30">
               <SecondGlyph value="glyph00473"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="32">
+            <PairValueRecord index="31">
               <SecondGlyph value="glyph00474"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="33">
-              <SecondGlyph value="glyph00480"/>
+            <PairValueRecord index="32">
+              <SecondGlyph value="glyph00475"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="34">
+            <PairValueRecord index="33">
               <SecondGlyph value="glyph00481"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="35">
-              <SecondGlyph value="glyph00485"/>
+            <PairValueRecord index="34">
+              <SecondGlyph value="glyph00482"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="36">
+            <PairValueRecord index="35">
               <SecondGlyph value="glyph00486"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="37">
+            <PairValueRecord index="36">
               <SecondGlyph value="glyph00487"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="38">
+            <PairValueRecord index="37">
               <SecondGlyph value="glyph00488"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
+            <PairValueRecord index="38">
+              <SecondGlyph value="glyph00489"/>
+              <Value1 XPlacement="-100" XAdvance="-100"/>
+            </PairValueRecord>
             <PairValueRecord index="39">
-              <SecondGlyph value="glyph00498"/>
+              <SecondGlyph value="glyph00499"/>
               <Value1 XPlacement="-20" XAdvance="-20"/>
             </PairValueRecord>
             <PairValueRecord index="40">
-              <SecondGlyph value="glyph00499"/>
+              <SecondGlyph value="glyph00500"/>
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
           </PairSet>
@@ -9722,7 +9763,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -9881,7 +9922,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -10040,7 +10081,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -10199,7 +10240,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -10358,7 +10399,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -10517,7 +10558,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -10676,7 +10717,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -10835,7 +10876,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -10994,7 +11035,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -11153,7 +11194,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -11312,7 +11353,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -11471,7 +11512,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -11630,7 +11671,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -11789,7 +11830,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -11887,51 +11928,51 @@
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
             <PairValueRecord index="21">
-              <SecondGlyph value="glyph00464"/>
-              <Value1 XPlacement="-100" XAdvance="-100"/>
-            </PairValueRecord>
-            <PairValueRecord index="22">
               <SecondGlyph value="glyph00465"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="23">
+            <PairValueRecord index="22">
               <SecondGlyph value="glyph00466"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="24">
-              <SecondGlyph value="glyph00469"/>
+            <PairValueRecord index="23">
+              <SecondGlyph value="glyph00467"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="25">
+            <PairValueRecord index="24">
               <SecondGlyph value="glyph00470"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="26">
+            <PairValueRecord index="25">
               <SecondGlyph value="glyph00471"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="27">
-              <SecondGlyph value="glyph00477"/>
+            <PairValueRecord index="26">
+              <SecondGlyph value="glyph00472"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="28">
+            <PairValueRecord index="27">
               <SecondGlyph value="glyph00478"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="29">
+            <PairValueRecord index="28">
               <SecondGlyph value="glyph00479"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="30">
-              <SecondGlyph value="glyph00482"/>
+            <PairValueRecord index="29">
+              <SecondGlyph value="glyph00480"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="31">
+            <PairValueRecord index="30">
               <SecondGlyph value="glyph00483"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="32">
+            <PairValueRecord index="31">
               <SecondGlyph value="glyph00484"/>
+              <Value1 XPlacement="-100" XAdvance="-100"/>
+            </PairValueRecord>
+            <PairValueRecord index="32">
+              <SecondGlyph value="glyph00485"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
           </PairSet>
@@ -13276,55 +13317,55 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="331">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="332">
-              <SecondGlyph value="glyph00431"/>
+              <SecondGlyph value="glyph00432"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
             <PairValueRecord index="333">
-              <SecondGlyph value="glyph00439"/>
-              <Value1 XPlacement="-300" XAdvance="-300"/>
-            </PairValueRecord>
-            <PairValueRecord index="334">
               <SecondGlyph value="glyph00440"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="335">
-              <SecondGlyph value="glyph00461"/>
+            <PairValueRecord index="334">
+              <SecondGlyph value="glyph00441"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="336">
+            <PairValueRecord index="335">
               <SecondGlyph value="glyph00462"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="337">
+            <PairValueRecord index="336">
               <SecondGlyph value="glyph00463"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="338">
-              <SecondGlyph value="glyph00475"/>
+            <PairValueRecord index="337">
+              <SecondGlyph value="glyph00464"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="339">
+            <PairValueRecord index="338">
               <SecondGlyph value="glyph00476"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
+            <PairValueRecord index="339">
+              <SecondGlyph value="glyph00477"/>
+              <Value1 XPlacement="-300" XAdvance="-300"/>
+            </PairValueRecord>
             <PairValueRecord index="340">
-              <SecondGlyph value="glyph00493"/>
+              <SecondGlyph value="glyph00494"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
             <PairValueRecord index="341">
-              <SecondGlyph value="glyph00496"/>
-              <Value1 XPlacement="-300" XAdvance="-300"/>
-            </PairValueRecord>
-            <PairValueRecord index="342">
               <SecondGlyph value="glyph00497"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
+            <PairValueRecord index="342">
+              <SecondGlyph value="glyph00498"/>
+              <Value1 XPlacement="-300" XAdvance="-300"/>
+            </PairValueRecord>
             <PairValueRecord index="343">
-              <SecondGlyph value="glyph00500"/>
+              <SecondGlyph value="glyph00501"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
           </PairSet>
@@ -14655,55 +14696,55 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="331">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="332">
-              <SecondGlyph value="glyph00431"/>
+              <SecondGlyph value="glyph00432"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
             <PairValueRecord index="333">
-              <SecondGlyph value="glyph00439"/>
-              <Value1 XPlacement="-300" XAdvance="-300"/>
-            </PairValueRecord>
-            <PairValueRecord index="334">
               <SecondGlyph value="glyph00440"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="335">
-              <SecondGlyph value="glyph00461"/>
+            <PairValueRecord index="334">
+              <SecondGlyph value="glyph00441"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="336">
+            <PairValueRecord index="335">
               <SecondGlyph value="glyph00462"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="337">
+            <PairValueRecord index="336">
               <SecondGlyph value="glyph00463"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="338">
-              <SecondGlyph value="glyph00475"/>
+            <PairValueRecord index="337">
+              <SecondGlyph value="glyph00464"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="339">
+            <PairValueRecord index="338">
               <SecondGlyph value="glyph00476"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
+            <PairValueRecord index="339">
+              <SecondGlyph value="glyph00477"/>
+              <Value1 XPlacement="-300" XAdvance="-300"/>
+            </PairValueRecord>
             <PairValueRecord index="340">
-              <SecondGlyph value="glyph00493"/>
+              <SecondGlyph value="glyph00494"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
             <PairValueRecord index="341">
-              <SecondGlyph value="glyph00496"/>
-              <Value1 XPlacement="-300" XAdvance="-300"/>
-            </PairValueRecord>
-            <PairValueRecord index="342">
               <SecondGlyph value="glyph00497"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
+            <PairValueRecord index="342">
+              <SecondGlyph value="glyph00498"/>
+              <Value1 XPlacement="-300" XAdvance="-300"/>
+            </PairValueRecord>
             <PairValueRecord index="343">
-              <SecondGlyph value="glyph00500"/>
+              <SecondGlyph value="glyph00501"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
           </PairSet>
@@ -16034,55 +16075,55 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="331">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="332">
-              <SecondGlyph value="glyph00431"/>
+              <SecondGlyph value="glyph00432"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
             <PairValueRecord index="333">
-              <SecondGlyph value="glyph00439"/>
-              <Value1 XPlacement="-300" XAdvance="-300"/>
-            </PairValueRecord>
-            <PairValueRecord index="334">
               <SecondGlyph value="glyph00440"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="335">
-              <SecondGlyph value="glyph00461"/>
+            <PairValueRecord index="334">
+              <SecondGlyph value="glyph00441"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="336">
+            <PairValueRecord index="335">
               <SecondGlyph value="glyph00462"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="337">
+            <PairValueRecord index="336">
               <SecondGlyph value="glyph00463"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="338">
-              <SecondGlyph value="glyph00475"/>
+            <PairValueRecord index="337">
+              <SecondGlyph value="glyph00464"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
-            <PairValueRecord index="339">
+            <PairValueRecord index="338">
               <SecondGlyph value="glyph00476"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
+            <PairValueRecord index="339">
+              <SecondGlyph value="glyph00477"/>
+              <Value1 XPlacement="-300" XAdvance="-300"/>
+            </PairValueRecord>
             <PairValueRecord index="340">
-              <SecondGlyph value="glyph00493"/>
+              <SecondGlyph value="glyph00494"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
             <PairValueRecord index="341">
-              <SecondGlyph value="glyph00496"/>
-              <Value1 XPlacement="-300" XAdvance="-300"/>
-            </PairValueRecord>
-            <PairValueRecord index="342">
               <SecondGlyph value="glyph00497"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
+            <PairValueRecord index="342">
+              <SecondGlyph value="glyph00498"/>
+              <Value1 XPlacement="-300" XAdvance="-300"/>
+            </PairValueRecord>
             <PairValueRecord index="343">
-              <SecondGlyph value="glyph00500"/>
+              <SecondGlyph value="glyph00501"/>
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
           </PairSet>
@@ -16269,7 +16310,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -16456,7 +16497,7 @@
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
             <PairValueRecord index="38">
-              <SecondGlyph value="glyph00430"/>
+              <SecondGlyph value="glyph00431"/>
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
@@ -16585,51 +16626,51 @@
               <Value1 XPlacement="50" XAdvance="50"/>
             </PairValueRecord>
             <PairValueRecord index="13">
-              <SecondGlyph value="glyph00464"/>
-              <Value1 XPlacement="-100" XAdvance="-100"/>
-            </PairValueRecord>
-            <PairValueRecord index="14">
               <SecondGlyph value="glyph00465"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="15">
+            <PairValueRecord index="14">
               <SecondGlyph value="glyph00466"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="16">
-              <SecondGlyph value="glyph00469"/>
+            <PairValueRecord index="15">
+              <SecondGlyph value="glyph00467"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="17">
+            <PairValueRecord index="16">
               <SecondGlyph value="glyph00470"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="18">
+            <PairValueRecord index="17">
               <SecondGlyph value="glyph00471"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="19">
-              <SecondGlyph value="glyph00477"/>
+            <PairValueRecord index="18">
+              <SecondGlyph value="glyph00472"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="20">
+            <PairValueRecord index="19">
               <SecondGlyph value="glyph00478"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="21">
+            <PairValueRecord index="20">
               <SecondGlyph value="glyph00479"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="22">
-              <SecondGlyph value="glyph00482"/>
+            <PairValueRecord index="21">
+              <SecondGlyph value="glyph00480"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="23">
+            <PairValueRecord index="22">
               <SecondGlyph value="glyph00483"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="24">
+            <PairValueRecord index="23">
               <SecondGlyph value="glyph00484"/>
+              <Value1 XPlacement="-100" XAdvance="-100"/>
+            </PairValueRecord>
+            <PairValueRecord index="24">
+              <SecondGlyph value="glyph00485"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
           </PairSet>
@@ -16744,51 +16785,51 @@
               <Value1 XPlacement="50" XAdvance="50"/>
             </PairValueRecord>
             <PairValueRecord index="13">
-              <SecondGlyph value="glyph00464"/>
-              <Value1 XPlacement="-100" XAdvance="-100"/>
-            </PairValueRecord>
-            <PairValueRecord index="14">
               <SecondGlyph value="glyph00465"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="15">
+            <PairValueRecord index="14">
               <SecondGlyph value="glyph00466"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="16">
-              <SecondGlyph value="glyph00469"/>
+            <PairValueRecord index="15">
+              <SecondGlyph value="glyph00467"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="17">
+            <PairValueRecord index="16">
               <SecondGlyph value="glyph00470"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="18">
+            <PairValueRecord index="17">
               <SecondGlyph value="glyph00471"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="19">
-              <SecondGlyph value="glyph00477"/>
+            <PairValueRecord index="18">
+              <SecondGlyph value="glyph00472"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="20">
+            <PairValueRecord index="19">
               <SecondGlyph value="glyph00478"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="21">
+            <PairValueRecord index="20">
               <SecondGlyph value="glyph00479"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="22">
-              <SecondGlyph value="glyph00482"/>
+            <PairValueRecord index="21">
+              <SecondGlyph value="glyph00480"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="23">
+            <PairValueRecord index="22">
               <SecondGlyph value="glyph00483"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="24">
+            <PairValueRecord index="23">
               <SecondGlyph value="glyph00484"/>
+              <Value1 XPlacement="-100" XAdvance="-100"/>
+            </PairValueRecord>
+            <PairValueRecord index="24">
+              <SecondGlyph value="glyph00485"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
           </PairSet>
@@ -16994,20 +17035,20 @@
             <Glyph value="glyph00405"/>
             <Glyph value="glyph00406"/>
             <Glyph value="uni0648"/>
-            <Glyph value="glyph00430"/>
             <Glyph value="glyph00431"/>
-            <Glyph value="glyph00441"/>
+            <Glyph value="glyph00432"/>
             <Glyph value="glyph00442"/>
             <Glyph value="glyph00443"/>
             <Glyph value="glyph00444"/>
-            <Glyph value="glyph00453"/>
+            <Glyph value="glyph00445"/>
             <Glyph value="glyph00454"/>
             <Glyph value="glyph00455"/>
             <Glyph value="glyph00456"/>
-            <Glyph value="glyph00493"/>
-            <Glyph value="glyph00496"/>
+            <Glyph value="glyph00457"/>
+            <Glyph value="glyph00494"/>
             <Glyph value="glyph00497"/>
-            <Glyph value="glyph00500"/>
+            <Glyph value="glyph00498"/>
+            <Glyph value="glyph00501"/>
           </Coverage>
           <ValueFormat1 value="5"/>
           <ValueFormat2 value="0"/>
@@ -17366,31 +17407,31 @@
             <ClassDef glyph="glyph00409" class="1"/>
             <ClassDef glyph="glyph00410" class="1"/>
             <ClassDef glyph="glyph00411" class="1"/>
-            <ClassDef glyph="glyph00430" class="1"/>
             <ClassDef glyph="glyph00431" class="1"/>
-            <ClassDef glyph="glyph00439" class="1"/>
+            <ClassDef glyph="glyph00432" class="1"/>
             <ClassDef glyph="glyph00440" class="1"/>
-            <ClassDef glyph="glyph00461" class="1"/>
+            <ClassDef glyph="glyph00441" class="1"/>
             <ClassDef glyph="glyph00462" class="1"/>
             <ClassDef glyph="glyph00463" class="1"/>
-            <ClassDef glyph="glyph00464" class="2"/>
+            <ClassDef glyph="glyph00464" class="1"/>
             <ClassDef glyph="glyph00465" class="2"/>
             <ClassDef glyph="glyph00466" class="2"/>
-            <ClassDef glyph="glyph00469" class="2"/>
+            <ClassDef glyph="glyph00467" class="2"/>
             <ClassDef glyph="glyph00470" class="2"/>
             <ClassDef glyph="glyph00471" class="2"/>
-            <ClassDef glyph="glyph00475" class="1"/>
+            <ClassDef glyph="glyph00472" class="2"/>
             <ClassDef glyph="glyph00476" class="1"/>
-            <ClassDef glyph="glyph00477" class="2"/>
+            <ClassDef glyph="glyph00477" class="1"/>
             <ClassDef glyph="glyph00478" class="2"/>
             <ClassDef glyph="glyph00479" class="2"/>
-            <ClassDef glyph="glyph00482" class="2"/>
+            <ClassDef glyph="glyph00480" class="2"/>
             <ClassDef glyph="glyph00483" class="2"/>
             <ClassDef glyph="glyph00484" class="2"/>
-            <ClassDef glyph="glyph00493" class="1"/>
-            <ClassDef glyph="glyph00496" class="1"/>
+            <ClassDef glyph="glyph00485" class="2"/>
+            <ClassDef glyph="glyph00494" class="1"/>
             <ClassDef glyph="glyph00497" class="1"/>
-            <ClassDef glyph="glyph00500" class="1"/>
+            <ClassDef glyph="glyph00498" class="1"/>
+            <ClassDef glyph="glyph00501" class="1"/>
             <ClassDef glyph="uni0627" class="1"/>
             <ClassDef glyph="uni062D" class="3"/>
             <ClassDef glyph="uni062F" class="1"/>
@@ -17480,7 +17521,6 @@
             <Glyph value="glyph00393"/>
             <Glyph value="glyph00394"/>
             <Glyph value="glyph00395"/>
-            <Glyph value="glyph00475"/>
             <Glyph value="glyph00476"/>
             <Glyph value="glyph00477"/>
             <Glyph value="glyph00478"/>
@@ -17492,6 +17532,7 @@
             <Glyph value="glyph00484"/>
             <Glyph value="glyph00485"/>
             <Glyph value="glyph00486"/>
+            <Glyph value="glyph00487"/>
           </Coverage>
           <!-- EntryExitCount=32 -->
           <EntryExitRecord index="0">
@@ -17694,12 +17735,12 @@
         <!-- SubTableCount=1 -->
         <MarkBasePos index="0" Format="1">
           <MarkCoverage Format="2">
-            <Glyph value="glyph00505"/>
             <Glyph value="glyph00506"/>
             <Glyph value="glyph00507"/>
             <Glyph value="glyph00508"/>
             <Glyph value="glyph00509"/>
             <Glyph value="glyph00510"/>
+            <Glyph value="glyph00511"/>
             <Glyph value="uni0654"/>
             <Glyph value="uni0655"/>
           </MarkCoverage>
@@ -17983,11 +18024,10 @@
             <Glyph value="glyph00411"/>
             <Glyph value="uni0629"/>
             <Glyph value="uni0648"/>
-            <Glyph value="glyph00430"/>
             <Glyph value="glyph00431"/>
+            <Glyph value="glyph00432"/>
             <Glyph value="uni0624"/>
             <Glyph value="uni0649"/>
-            <Glyph value="glyph00434"/>
             <Glyph value="glyph00435"/>
             <Glyph value="glyph00436"/>
             <Glyph value="glyph00437"/>
@@ -18010,17 +18050,18 @@
             <Glyph value="glyph00454"/>
             <Glyph value="glyph00455"/>
             <Glyph value="glyph00456"/>
+            <Glyph value="glyph00457"/>
             <Glyph value="uni064A"/>
             <Glyph value="uni0626"/>
             <Glyph value="uni06CC"/>
-            <Glyph value="glyph00461"/>
-            <Glyph value="glyph00487"/>
+            <Glyph value="glyph00462"/>
             <Glyph value="glyph00488"/>
             <Glyph value="glyph00489"/>
             <Glyph value="glyph00490"/>
             <Glyph value="glyph00491"/>
             <Glyph value="glyph00492"/>
-            <Glyph value="glyph00502"/>
+            <Glyph value="glyph00493"/>
+            <Glyph value="glyph00503"/>
           </BaseCoverage>
           <!-- ClassCount=3 -->
           <MarkArray>
@@ -21468,16 +21509,15 @@
         <!-- SubTableCount=1 -->
         <MarkLigPos index="0" Format="1">
           <MarkCoverage Format="2">
-            <Glyph value="glyph00505"/>
             <Glyph value="glyph00506"/>
-            <Glyph value="glyph00508"/>
+            <Glyph value="glyph00507"/>
             <Glyph value="glyph00509"/>
             <Glyph value="glyph00510"/>
+            <Glyph value="glyph00511"/>
             <Glyph value="uni0654"/>
             <Glyph value="uni0655"/>
           </MarkCoverage>
           <LigatureCoverage Format="2">
-            <Glyph value="glyph00493"/>
             <Glyph value="glyph00494"/>
             <Glyph value="glyph00495"/>
             <Glyph value="glyph00496"/>
@@ -21485,6 +21525,7 @@
             <Glyph value="glyph00498"/>
             <Glyph value="glyph00499"/>
             <Glyph value="glyph00500"/>
+            <Glyph value="glyph00501"/>
           </LigatureCoverage>
           <!-- ClassCount=2 -->
           <MarkArray>
@@ -21779,8 +21820,8 @@
           </BacktrackCoverage>
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
-            <Glyph value="glyph00506"/>
-            <Glyph value="glyph00509"/>
+            <Glyph value="glyph00507"/>
+            <Glyph value="glyph00510"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=1 -->
           <LookAheadCoverage index="0" Format="2">
@@ -21804,8 +21845,8 @@
           </BacktrackCoverage>
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
-            <Glyph value="glyph00506"/>
-            <Glyph value="glyph00509"/>
+            <Glyph value="glyph00507"/>
+            <Glyph value="glyph00510"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=1 -->
           <LookAheadCoverage index="0" Format="1">
@@ -21825,11 +21866,11 @@
           </BacktrackCoverage>
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
-            <Glyph value="glyph00505"/>
+            <Glyph value="glyph00506"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=2 -->
           <LookAheadCoverage index="0" Format="1">
-            <Glyph value="glyph00504"/>
+            <Glyph value="glyph00505"/>
           </LookAheadCoverage>
           <LookAheadCoverage index="1" Format="2">
             <Glyph value="uni0627"/>
@@ -22188,31 +22229,31 @@
             <Glyph value="glyph00410"/>
             <Glyph value="glyph00411"/>
             <Glyph value="uni0648"/>
-            <Glyph value="glyph00430"/>
             <Glyph value="glyph00431"/>
-            <Glyph value="glyph00439"/>
+            <Glyph value="glyph00432"/>
             <Glyph value="glyph00440"/>
-            <Glyph value="glyph00461"/>
+            <Glyph value="glyph00441"/>
             <Glyph value="glyph00462"/>
             <Glyph value="glyph00463"/>
             <Glyph value="glyph00464"/>
             <Glyph value="glyph00465"/>
             <Glyph value="glyph00466"/>
-            <Glyph value="glyph00469"/>
+            <Glyph value="glyph00467"/>
             <Glyph value="glyph00470"/>
             <Glyph value="glyph00471"/>
-            <Glyph value="glyph00475"/>
+            <Glyph value="glyph00472"/>
             <Glyph value="glyph00476"/>
             <Glyph value="glyph00477"/>
             <Glyph value="glyph00478"/>
             <Glyph value="glyph00479"/>
-            <Glyph value="glyph00482"/>
+            <Glyph value="glyph00480"/>
             <Glyph value="glyph00483"/>
             <Glyph value="glyph00484"/>
-            <Glyph value="glyph00493"/>
-            <Glyph value="glyph00496"/>
+            <Glyph value="glyph00485"/>
+            <Glyph value="glyph00494"/>
             <Glyph value="glyph00497"/>
-            <Glyph value="glyph00500"/>
+            <Glyph value="glyph00498"/>
+            <Glyph value="glyph00501"/>
           </LookAheadCoverage>
           <!-- PosCount=1 -->
           <PosLookupRecord index="0">
@@ -22227,8 +22268,8 @@
           </BacktrackCoverage>
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
-            <Glyph value="glyph00506"/>
-            <Glyph value="glyph00509"/>
+            <Glyph value="glyph00507"/>
+            <Glyph value="glyph00510"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=1 -->
           <LookAheadCoverage index="0" Format="1">
@@ -22248,15 +22289,15 @@
         <!-- SubTableCount=2 -->
         <SinglePos index="0" Format="1">
           <Coverage Format="1">
-            <Glyph value="glyph00506"/>
-            <Glyph value="glyph00509"/>
+            <Glyph value="glyph00507"/>
+            <Glyph value="glyph00510"/>
           </Coverage>
           <ValueFormat value="5"/>
           <Value XPlacement="-75" XAdvance="-75"/>
         </SinglePos>
         <SinglePos index="1" Format="1">
           <Coverage Format="1">
-            <Glyph value="glyph00505"/>
+            <Glyph value="glyph00506"/>
           </Coverage>
           <ValueFormat value="3"/>
           <Value XPlacement="150" YPlacement="350"/>
@@ -22268,8 +22309,8 @@
         <!-- SubTableCount=1 -->
         <SinglePos index="0" Format="1">
           <Coverage Format="1">
-            <Glyph value="glyph00506"/>
-            <Glyph value="glyph00509"/>
+            <Glyph value="glyph00507"/>
+            <Glyph value="glyph00510"/>
           </Coverage>
           <ValueFormat value="2"/>
           <Value YPlacement="-150"/>
@@ -22873,13 +22914,13 @@
             <Glyph value="glyph00425"/>
             <Glyph value="glyph00426"/>
             <Glyph value="glyph00427"/>
+            <Glyph value="glyph00428"/>
             <Glyph value="uni0629"/>
             <Glyph value="uni0648"/>
-            <Glyph value="glyph00430"/>
             <Glyph value="glyph00431"/>
+            <Glyph value="glyph00432"/>
             <Glyph value="uni0624"/>
             <Glyph value="uni0649"/>
-            <Glyph value="glyph00434"/>
             <Glyph value="glyph00435"/>
             <Glyph value="glyph00436"/>
             <Glyph value="glyph00437"/>
@@ -22902,11 +22943,11 @@
             <Glyph value="glyph00454"/>
             <Glyph value="glyph00455"/>
             <Glyph value="glyph00456"/>
+            <Glyph value="glyph00457"/>
             <Glyph value="uni064A"/>
             <Glyph value="uni0626"/>
             <Glyph value="uni06CC"/>
             <Glyph value="uni0640"/>
-            <Glyph value="glyph00461"/>
             <Glyph value="glyph00462"/>
             <Glyph value="glyph00463"/>
             <Glyph value="glyph00464"/>
@@ -22948,11 +22989,12 @@
             <Glyph value="glyph00500"/>
             <Glyph value="glyph00501"/>
             <Glyph value="glyph00502"/>
-            <Glyph value="glyph00504"/>
+            <Glyph value="glyph00503"/>
+            <Glyph value="glyph00505"/>
           </BacktrackCoverage>
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
-            <Glyph value="glyph00508"/>
+            <Glyph value="glyph00509"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=1 -->
           <LookAheadCoverage index="0" Format="1">
@@ -22969,7 +23011,7 @@
           </BacktrackCoverage>
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
-            <Glyph value="glyph00508"/>
+            <Glyph value="glyph00509"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=1 -->
           <LookAheadCoverage index="0" Format="1">
@@ -22989,7 +23031,7 @@
         <LookupFlag value="0"/>
         <!-- SubTableCount=1 -->
         <SingleSubst index="0" Format="1">
-          <Substitution in="glyph00508" out="glyph00507"/>
+          <Substitution in="glyph00509" out="glyph00508"/>
         </SingleSubst>
       </Lookup>
       <Lookup index="2">
@@ -23013,21 +23055,21 @@
           <Substitution in="uni0624" out="uni0648,uni0654"/>
           <Substitution in="uni0625" out="uni0627,uni0655"/>
           <Substitution in="uni0626" out="uni0649,uni0654"/>
-          <Substitution in="uni0628" out="uni066E,glyph00506"/>
-          <Substitution in="uni062A" out="uni066E,glyph00508"/>
-          <Substitution in="uni062B" out="uni066E,glyph00510"/>
-          <Substitution in="uni062C" out="uni062D,glyph00506"/>
-          <Substitution in="uni062E" out="uni062D,glyph00505"/>
-          <Substitution in="uni0630" out="uni062F,glyph00505"/>
-          <Substitution in="uni0632" out="uni0631,glyph00505"/>
-          <Substitution in="uni0634" out="uni0633,glyph00510"/>
-          <Substitution in="uni0636" out="uni0635,glyph00505"/>
-          <Substitution in="uni0638" out="uni0637,glyph00505"/>
-          <Substitution in="uni063A" out="uni0639,glyph00505"/>
-          <Substitution in="uni0641" out="uni06A1,glyph00505"/>
-          <Substitution in="uni0642" out="uni066F,glyph00508"/>
-          <Substitution in="uni0646" out="uni06BA,glyph00505"/>
-          <Substitution in="uni064A" out="uni0649,glyph00509"/>
+          <Substitution in="uni0628" out="uni066E,glyph00507"/>
+          <Substitution in="uni062A" out="uni066E,glyph00509"/>
+          <Substitution in="uni062B" out="uni066E,glyph00511"/>
+          <Substitution in="uni062C" out="uni062D,glyph00507"/>
+          <Substitution in="uni062E" out="uni062D,glyph00506"/>
+          <Substitution in="uni0630" out="uni062F,glyph00506"/>
+          <Substitution in="uni0632" out="uni0631,glyph00506"/>
+          <Substitution in="uni0634" out="uni0633,glyph00511"/>
+          <Substitution in="uni0636" out="uni0635,glyph00506"/>
+          <Substitution in="uni0638" out="uni0637,glyph00506"/>
+          <Substitution in="uni063A" out="uni0639,glyph00506"/>
+          <Substitution in="uni0641" out="uni06A1,glyph00506"/>
+          <Substitution in="uni0642" out="uni066F,glyph00509"/>
+          <Substitution in="uni0646" out="uni06BA,glyph00506"/>
+          <Substitution in="uni064A" out="uni0649,glyph00510"/>
         </MultipleSubst>
       </Lookup>
       <Lookup index="4">
@@ -23035,7 +23077,7 @@
         <LookupFlag value="0"/>
         <!-- SubTableCount=1 -->
         <MultipleSubst index="0" Format="1">
-          <Substitution in="uni0629" out="uni0647,glyph00508"/>
+          <Substitution in="uni0629" out="uni0647,glyph00509"/>
           <Substitution in="uni06CC" out="uni0649"/>
         </MultipleSubst>
       </Lookup>
@@ -23052,13 +23094,13 @@
           <Substitution in="uni0643" out="glyph00286"/>
           <Substitution in="uni0644" out="glyph00353"/>
           <Substitution in="uni0645" out="glyph00392"/>
-          <Substitution in="uni0647" out="glyph00421"/>
+          <Substitution in="uni0647" out="glyph00422"/>
           <Substitution in="uni0649" out="glyph00034"/>
           <Substitution in="uni066E" out="glyph00034"/>
           <Substitution in="uni066F" out="glyph00226"/>
           <Substitution in="uni06A1" out="glyph00226"/>
           <Substitution in="uni06BA" out="glyph00034"/>
-          <Substitution in="uni06CC" out="glyph00034,glyph00509"/>
+          <Substitution in="uni06CC" out="glyph00034,glyph00510"/>
         </MultipleSubst>
       </Lookup>
       <Lookup index="6">
@@ -23080,7 +23122,7 @@
           <Substitution in="uni066F" out="glyph00226"/>
           <Substitution in="uni06A1" out="glyph00226"/>
           <Substitution in="uni06BA" out="glyph00034"/>
-          <Substitution in="uni06CC" out="glyph00034,glyph00509"/>
+          <Substitution in="uni06CC" out="glyph00034,glyph00510"/>
         </MultipleSubst>
       </Lookup>
       <Lookup index="7">
@@ -23088,14 +23130,14 @@
         <LookupFlag value="0"/>
         <!-- SubTableCount=1 -->
         <MultipleSubst index="0" Format="1">
-          <Substitution in="uni0629" out="uni0647,glyph00508"/>
+          <Substitution in="uni0629" out="uni0647,glyph00509"/>
           <Substitution in="uni062D" out="glyph00046"/>
           <Substitution in="uni0631" out="glyph00148"/>
           <Substitution in="uni0639" out="glyph00212"/>
           <Substitution in="uni0645" out="glyph00382"/>
-          <Substitution in="uni0649" out="glyph00445"/>
+          <Substitution in="uni0649" out="glyph00446"/>
           <Substitution in="uni06BA" out="glyph00402"/>
-          <Substitution in="uni06CC" out="glyph00445"/>
+          <Substitution in="uni06CC" out="glyph00446"/>
         </MultipleSubst>
       </Lookup>
       <Lookup index="8">
@@ -23104,7 +23146,7 @@
         <!-- SubTableCount=1 -->
         <LigatureSubst index="0" Format="1">
           <LigatureSet glyph="glyph00353">
-            <Ligature components="uni0627" glyph="glyph00497"/>
+            <Ligature components="uni0627" glyph="glyph00498"/>
           </LigatureSet>
         </LigatureSubst>
       </Lookup>
@@ -23275,8 +23317,8 @@
             <Glyph value="glyph00425"/>
             <Glyph value="glyph00426"/>
             <Glyph value="glyph00427"/>
+            <Glyph value="glyph00428"/>
             <Glyph value="uni0640"/>
-            <Glyph value="glyph00462"/>
             <Glyph value="glyph00463"/>
             <Glyph value="glyph00464"/>
             <Glyph value="glyph00465"/>
@@ -23301,12 +23343,13 @@
             <Glyph value="glyph00484"/>
             <Glyph value="glyph00485"/>
             <Glyph value="glyph00486"/>
-            <Glyph value="glyph00492"/>
-            <Glyph value="glyph00501"/>
+            <Glyph value="glyph00487"/>
+            <Glyph value="glyph00493"/>
+            <Glyph value="glyph00502"/>
           </BacktrackCoverage>
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
-            <Glyph value="glyph00497"/>
+            <Glyph value="glyph00498"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=0 -->
           <!-- SubstCount=1 -->
@@ -23321,7 +23364,7 @@
         <LookupFlag value="8"/>
         <!-- SubTableCount=1 -->
         <SingleSubst index="0" Format="1">
-          <Substitution in="glyph00497" out="glyph00493"/>
+          <Substitution in="glyph00498" out="glyph00494"/>
         </SingleSubst>
       </Lookup>
       <Lookup index="11">
@@ -23330,7 +23373,7 @@
         <!-- SubTableCount=1 -->
         <LigatureSubst index="0" Format="1">
           <LigatureSet glyph="uni0627">
-            <Ligature components="glyph00353,glyph00353,uni0647" glyph="glyph00487"/>
+            <Ligature components="glyph00353,glyph00353,uni0647" glyph="glyph00488"/>
           </LigatureSet>
         </LigatureSubst>
       </Lookup>
@@ -23508,8 +23551,8 @@
             <Glyph value="glyph00425"/>
             <Glyph value="glyph00426"/>
             <Glyph value="glyph00427"/>
+            <Glyph value="glyph00428"/>
             <Glyph value="uni0640"/>
-            <Glyph value="glyph00462"/>
             <Glyph value="glyph00463"/>
             <Glyph value="glyph00464"/>
             <Glyph value="glyph00465"/>
@@ -23534,8 +23577,9 @@
             <Glyph value="glyph00484"/>
             <Glyph value="glyph00485"/>
             <Glyph value="glyph00486"/>
-            <Glyph value="glyph00492"/>
-            <Glyph value="glyph00501"/>
+            <Glyph value="glyph00487"/>
+            <Glyph value="glyph00493"/>
+            <Glyph value="glyph00502"/>
           </BacktrackCoverage>
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
@@ -24009,13 +24053,13 @@
             <Glyph value="glyph00425"/>
             <Glyph value="glyph00426"/>
             <Glyph value="glyph00427"/>
+            <Glyph value="glyph00428"/>
             <Glyph value="uni0629"/>
             <Glyph value="uni0648"/>
-            <Glyph value="glyph00430"/>
             <Glyph value="glyph00431"/>
+            <Glyph value="glyph00432"/>
             <Glyph value="uni0624"/>
             <Glyph value="uni0649"/>
-            <Glyph value="glyph00434"/>
             <Glyph value="glyph00435"/>
             <Glyph value="glyph00436"/>
             <Glyph value="glyph00437"/>
@@ -24038,11 +24082,11 @@
             <Glyph value="glyph00454"/>
             <Glyph value="glyph00455"/>
             <Glyph value="glyph00456"/>
+            <Glyph value="glyph00457"/>
             <Glyph value="uni064A"/>
             <Glyph value="uni0626"/>
             <Glyph value="uni06CC"/>
             <Glyph value="uni0640"/>
-            <Glyph value="glyph00461"/>
             <Glyph value="glyph00462"/>
             <Glyph value="glyph00463"/>
             <Glyph value="glyph00464"/>
@@ -24084,6 +24128,7 @@
             <Glyph value="glyph00500"/>
             <Glyph value="glyph00501"/>
             <Glyph value="glyph00502"/>
+            <Glyph value="glyph00503"/>
             <Glyph value="uni06DD"/>
           </BacktrackCoverage>
           <!-- InputGlyphCount=1 -->
@@ -24518,13 +24563,13 @@
             <Glyph value="glyph00425"/>
             <Glyph value="glyph00426"/>
             <Glyph value="glyph00427"/>
+            <Glyph value="glyph00428"/>
             <Glyph value="uni0629"/>
             <Glyph value="uni0648"/>
-            <Glyph value="glyph00430"/>
             <Glyph value="glyph00431"/>
+            <Glyph value="glyph00432"/>
             <Glyph value="uni0624"/>
             <Glyph value="uni0649"/>
-            <Glyph value="glyph00434"/>
             <Glyph value="glyph00435"/>
             <Glyph value="glyph00436"/>
             <Glyph value="glyph00437"/>
@@ -24547,11 +24592,11 @@
             <Glyph value="glyph00454"/>
             <Glyph value="glyph00455"/>
             <Glyph value="glyph00456"/>
+            <Glyph value="glyph00457"/>
             <Glyph value="uni064A"/>
             <Glyph value="uni0626"/>
             <Glyph value="uni06CC"/>
             <Glyph value="uni0640"/>
-            <Glyph value="glyph00461"/>
             <Glyph value="glyph00462"/>
             <Glyph value="glyph00463"/>
             <Glyph value="glyph00464"/>
@@ -24593,6 +24638,7 @@
             <Glyph value="glyph00500"/>
             <Glyph value="glyph00501"/>
             <Glyph value="glyph00502"/>
+            <Glyph value="glyph00503"/>
             <Glyph value="uni06DD"/>
           </LookAheadCoverage>
           <!-- SubstCount=1 -->
@@ -24607,7 +24653,7 @@
         <LookupFlag value="8"/>
         <!-- SubTableCount=1 -->
         <SingleSubst index="0" Format="1">
-          <Substitution in="space" out="glyph00504"/>
+          <Substitution in="space" out="glyph00505"/>
         </SingleSubst>
       </Lookup>
       <Lookup index="16">
@@ -24741,11 +24787,11 @@
         <!-- SubTableCount=1 -->
         <LigatureSubst index="0" Format="1">
           <LigatureSet glyph="glyph00353">
-            <Ligature components="glyph00353" glyph="glyph00501"/>
+            <Ligature components="glyph00353" glyph="glyph00502"/>
           </LigatureSet>
           <LigatureSet glyph="uni0627">
-            <Ligature components="glyph00353" glyph="glyph00462"/>
-            <Ligature components="glyph00371" glyph="glyph00475"/>
+            <Ligature components="glyph00353" glyph="glyph00463"/>
+            <Ligature components="glyph00371" glyph="glyph00476"/>
           </LigatureSet>
         </LigatureSubst>
       </Lookup>
@@ -24901,18 +24947,18 @@
             <Alternate glyph="glyph00418"/>
             <Alternate glyph="glyph00419"/>
             <Alternate glyph="glyph00420"/>
-          </AlternateSet>
-          <AlternateSet glyph="glyph00421">
             <Alternate glyph="glyph00421"/>
+          </AlternateSet>
+          <AlternateSet glyph="glyph00422">
             <Alternate glyph="glyph00422"/>
             <Alternate glyph="glyph00423"/>
             <Alternate glyph="glyph00424"/>
             <Alternate glyph="glyph00425"/>
             <Alternate glyph="glyph00426"/>
             <Alternate glyph="glyph00427"/>
+            <Alternate glyph="glyph00428"/>
           </AlternateSet>
-          <AlternateSet glyph="glyph00445">
-            <Alternate glyph="glyph00445"/>
+          <AlternateSet glyph="glyph00446">
             <Alternate glyph="glyph00446"/>
             <Alternate glyph="glyph00447"/>
             <Alternate glyph="glyph00448"/>
@@ -24924,9 +24970,9 @@
             <Alternate glyph="glyph00454"/>
             <Alternate glyph="glyph00455"/>
             <Alternate glyph="glyph00456"/>
+            <Alternate glyph="glyph00457"/>
           </AlternateSet>
-          <AlternateSet glyph="glyph00462">
-            <Alternate glyph="glyph00462"/>
+          <AlternateSet glyph="glyph00463">
             <Alternate glyph="glyph00463"/>
             <Alternate glyph="glyph00464"/>
             <Alternate glyph="glyph00465"/>
@@ -24939,9 +24985,9 @@
             <Alternate glyph="glyph00472"/>
             <Alternate glyph="glyph00473"/>
             <Alternate glyph="glyph00474"/>
-          </AlternateSet>
-          <AlternateSet glyph="glyph00475">
             <Alternate glyph="glyph00475"/>
+          </AlternateSet>
+          <AlternateSet glyph="glyph00476">
             <Alternate glyph="glyph00476"/>
             <Alternate glyph="glyph00477"/>
             <Alternate glyph="glyph00478"/>
@@ -24953,22 +24999,23 @@
             <Alternate glyph="glyph00484"/>
             <Alternate glyph="glyph00485"/>
             <Alternate glyph="glyph00486"/>
-          </AlternateSet>
-          <AlternateSet glyph="glyph00487">
             <Alternate glyph="glyph00487"/>
-            <Alternate glyph="glyph00488"/>
           </AlternateSet>
-          <AlternateSet glyph="glyph00493">
-            <Alternate glyph="glyph00493"/>
+          <AlternateSet glyph="glyph00488">
+            <Alternate glyph="glyph00488"/>
+            <Alternate glyph="glyph00489"/>
+          </AlternateSet>
+          <AlternateSet glyph="glyph00494">
             <Alternate glyph="glyph00494"/>
             <Alternate glyph="glyph00495"/>
             <Alternate glyph="glyph00496"/>
-          </AlternateSet>
-          <AlternateSet glyph="glyph00497">
             <Alternate glyph="glyph00497"/>
+          </AlternateSet>
+          <AlternateSet glyph="glyph00498">
             <Alternate glyph="glyph00498"/>
             <Alternate glyph="glyph00499"/>
             <Alternate glyph="glyph00500"/>
+            <Alternate glyph="glyph00501"/>
           </AlternateSet>
           <AlternateSet glyph="uni0621">
             <Alternate glyph="uni0621"/>
@@ -25070,12 +25117,11 @@
           </AlternateSet>
           <AlternateSet glyph="uni0648">
             <Alternate glyph="uni0648"/>
-            <Alternate glyph="glyph00430"/>
             <Alternate glyph="glyph00431"/>
+            <Alternate glyph="glyph00432"/>
           </AlternateSet>
           <AlternateSet glyph="uni0649">
             <Alternate glyph="uni0649"/>
-            <Alternate glyph="glyph00434"/>
             <Alternate glyph="glyph00435"/>
             <Alternate glyph="glyph00436"/>
             <Alternate glyph="glyph00437"/>
@@ -25086,6 +25132,7 @@
             <Alternate glyph="glyph00442"/>
             <Alternate glyph="glyph00443"/>
             <Alternate glyph="glyph00444"/>
+            <Alternate glyph="glyph00445"/>
           </AlternateSet>
           <AlternateSet glyph="uni066E">
             <Alternate glyph="uni066E"/>
@@ -25416,7 +25463,7 @@
           </BacktrackCoverage>
           <!-- InputGlyphCount=1 -->
           <InputCoverage index="0" Format="1">
-            <Glyph value="glyph00508"/>
+            <Glyph value="glyph00509"/>
           </InputCoverage>
           <!-- LookAheadGlyphCount=0 -->
           <!-- SubstCount=1 -->
@@ -25431,7 +25478,7 @@
         <LookupFlag value="0"/>
         <!-- SubTableCount=1 -->
         <SingleSubst index="0" Format="1">
-          <Substitution in="glyph00508" out="glyph00507"/>
+          <Substitution in="glyph00509" out="glyph00508"/>
         </SingleSubst>
       </Lookup>
       <Lookup index="34">
@@ -25510,10 +25557,10 @@
             <Glyph value="glyph00374"/>
             <Glyph value="glyph00375"/>
             <Glyph value="glyph00376"/>
-            <Glyph value="glyph00493"/>
             <Glyph value="glyph00494"/>
             <Glyph value="glyph00495"/>
             <Glyph value="glyph00496"/>
+            <Glyph value="glyph00497"/>
           </LookAheadCoverage>
           <!-- SubstCount=1 -->
           <SubstLookupRecord index="0">
@@ -25572,7 +25619,7 @@
             <Glyph value="glyph00039"/>
           </LookAheadCoverage>
           <LookAheadCoverage index="1" Format="1">
-            <Glyph value="glyph00505"/>
+            <Glyph value="glyph00506"/>
           </LookAheadCoverage>
           <!-- SubstCount=1 -->
           <SubstLookupRecord index="0">
@@ -25592,8 +25639,8 @@
           </InputCoverage>
           <!-- LookAheadGlyphCount=3 -->
           <LookAheadCoverage index="0" Format="1">
-            <Glyph value="glyph00505"/>
             <Glyph value="glyph00506"/>
+            <Glyph value="glyph00507"/>
           </LookAheadCoverage>
           <LookAheadCoverage index="1" Format="2">
             <Glyph value="glyph00034"/>
@@ -25604,7 +25651,7 @@
             <Glyph value="glyph00039"/>
           </LookAheadCoverage>
           <LookAheadCoverage index="2" Format="1">
-            <Glyph value="glyph00505"/>
+            <Glyph value="glyph00506"/>
           </LookAheadCoverage>
           <!-- SubstCount=1 -->
           <SubstLookupRecord index="0">
@@ -26037,9 +26084,9 @@
       <Map glyph="glyph00425" outer="0" inner="2"/>
       <Map glyph="glyph00426" outer="0" inner="2"/>
       <Map glyph="glyph00427" outer="0" inner="2"/>
-      <Map glyph="glyph00430" outer="0" inner="2"/>
+      <Map glyph="glyph00428" outer="0" inner="2"/>
       <Map glyph="glyph00431" outer="0" inner="2"/>
-      <Map glyph="glyph00434" outer="0" inner="2"/>
+      <Map glyph="glyph00432" outer="0" inner="2"/>
       <Map glyph="glyph00435" outer="0" inner="2"/>
       <Map glyph="glyph00436" outer="0" inner="2"/>
       <Map glyph="glyph00437" outer="0" inner="2"/>
@@ -26062,7 +26109,7 @@
       <Map glyph="glyph00454" outer="0" inner="2"/>
       <Map glyph="glyph00455" outer="0" inner="2"/>
       <Map glyph="glyph00456" outer="0" inner="2"/>
-      <Map glyph="glyph00461" outer="0" inner="2"/>
+      <Map glyph="glyph00457" outer="0" inner="2"/>
       <Map glyph="glyph00462" outer="0" inner="2"/>
       <Map glyph="glyph00463" outer="0" inner="2"/>
       <Map glyph="glyph00464" outer="0" inner="2"/>
@@ -26104,13 +26151,14 @@
       <Map glyph="glyph00500" outer="0" inner="2"/>
       <Map glyph="glyph00501" outer="0" inner="2"/>
       <Map glyph="glyph00502" outer="0" inner="2"/>
-      <Map glyph="glyph00504" outer="0" inner="2"/>
+      <Map glyph="glyph00503" outer="0" inner="2"/>
       <Map glyph="glyph00505" outer="0" inner="2"/>
       <Map glyph="glyph00506" outer="0" inner="2"/>
       <Map glyph="glyph00507" outer="0" inner="2"/>
       <Map glyph="glyph00508" outer="0" inner="2"/>
       <Map glyph="glyph00509" outer="0" inner="2"/>
       <Map glyph="glyph00510" outer="0" inner="2"/>
+      <Map glyph="glyph00511" outer="0" inner="2"/>
       <Map glyph="space" outer="0" inner="2"/>
       <Map glyph="uni0621" outer="0" inner="1"/>
       <Map glyph="uni0623" outer="0" inner="2"/>
