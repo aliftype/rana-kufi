@@ -523,7 +523,7 @@
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
     <fontRevision value="0.02"/>
-    <checkSumAdjustment value="0x4c0f9b1b"/>
+    <checkSumAdjustment value="0x14f59e70"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00000011"/>
     <unitsPerEm value="1000"/>
@@ -1239,8 +1239,6 @@
       <FDArray>
         <FontDict index="0">
           <Private>
-            <BlueValues value="-15 0 0 15 400 415 1200 1215"/>
-            <OtherBlues value="-165 -150"/>
             <BlueScale value="0.039625"/>
             <BlueShift value="7"/>
             <BlueFuzz value="1"/>

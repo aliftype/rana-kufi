@@ -361,15 +361,8 @@ def build(instance):
     fb.setupHorizontalHeader(ascent=master.ascender, descent=master.descender,
                              lineGap=master.customParameters['hheaLineGap'])
 
-    privateDict = {"BlueValues": [], "OtherBlues": []}
-    for zone in sorted(master.alignmentZones):
-        pos = zone.position
-        size = zone.size
-        vals = privateDict["BlueValues"] if pos == 0 or size >= 0 else privateDict["OtherBlues"]
-        vals.extend(sorted((pos, pos + size)))
-
-    #fb.setupCFF(names["psName"], {}, charStrings, privateDict)
-    fb.setupCFF2(charStrings, [privateDict])
+    #fb.setupCFF(names["psName"], {}, charStrings, {})
+    fb.setupCFF2(charStrings)
 
     metrics = {}
     for name, width in advanceWidths.items():
