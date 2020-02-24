@@ -13,6 +13,8 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+BUILD_OPTS ?= 
+
 .ONESHELL:
 
 all: RanaKufi.otf RanaKufi.ttx
@@ -20,7 +22,7 @@ all: RanaKufi.otf RanaKufi.ttx
 RanaKufi.otf: RanaKufi.glyphs build.py
 	@. env/bin/activate
 	@export SOURCE_DATE_EPOCH=0
-	@python build.py $< $@
+	@python build.py $< $@ $(BUILD_OPTS)
 	@echo " SUBR	$@"
 	@tx -cff2 +S +b $@ cff2 &>/dev/null
 	@sfntedit -a CFF2=cff2 -d post $@

@@ -222,7 +222,7 @@ def makeAutoFeatures(font):
     return fea
 
 
-def makeFeatures(instance, master):
+def makeFeatures(instance, master, opts):
     font = instance.parent
 
     fea = ""
@@ -294,12 +294,13 @@ table GDEF {{
 }} GDEF;
 """
 
-    with open(f"{instance.fontName}.fea", "w") as f:
-        f.write(fea)
+    if opts.debug:
+        with open(f"{instance.fontName}.fea", "w") as f:
+            f.write(fea)
     return fea
 
 
-def build(instance):
+def build(instance, opts):
     font = instance.parent
     master = font.masters[0]
 
@@ -361,8 +362,10 @@ def build(instance):
     fb.setupHorizontalHeader(ascent=master.ascender, descent=master.descender,
                              lineGap=master.customParameters['hheaLineGap'])
 
-    #fb.setupCFF(names["psName"], {}, charStrings, {})
-    fb.setupCFF2(charStrings)
+    if opts.debug:
+        fb.setupCFF(names["psName"], {}, charStrings, {})
+    else:
+        fb.setupCFF2(charStrings)
 
     metrics = {}
     for name, width in advanceWidths.items():
@@ -372,7 +375,7 @@ def build(instance):
 
     fb.setupPost()
 
-    fea = makeFeatures(instance, master)
+    fea = makeFeatures(instance, master, opts)
     fb.addOpenTypeFeatures(fea)
 
     palettes = master.customParameters["Color Palettes"]
@@ -395,13 +398,17 @@ def build(instance):
     for i, axis in enumerate(font.customParameters["Axes"]):
         instance.axes[axis["Tag"]] = axes[i]
 
+    if opts.debug:
+        fb.font.save(f"{instance.fontName}.otf")
+        fb.font.saveXML(f"{instance.fontName}.ttx")
+
     return fb.font
 
 
-def buildVF(font):
+def buildVF(font, opts):
     for instance in font.instances:
         print(f" MASTER\t{instance.name}")
-        build(instance)
+        build(instance, opts)
         if instance.name == "Regular":
             regular = instance
 
@@ -459,13 +466,14 @@ def prepare(font):
 
 def main():
     parser = argparse.ArgumentParser(description="Build Rana Kufi.")
-    parser.add_argument("glyphs", help="input Glyphs source file")
-    parser.add_argument("otf",    help="output OTF file")
+    parser.add_argument("glyphs",  help="input Glyphs source file")
+    parser.add_argument("otf",     help="output OTF file")
+    parser.add_argument("--debug", help="Save debug files", action="store_true")
     args = parser.parse_args()
 
     font = GSFont(args.glyphs)
     prepare(font)
-    otf = buildVF(font)
+    otf = buildVF(font, args)
     otf.save(args.otf)
 
 main()
