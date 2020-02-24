@@ -19,12 +19,17 @@
 :root {
   --main-color: #4CAF50;
   --disabled-color: #D9D9D9;
+  --bg-color: #FEEEC9;
 }
 
 * {
   font-family: Noto Sans, Arial, sans-serif;
   font-size: 12pt;
   direction: rtl;
+}
+
+body {
+  background-color: var(--bg-color);
 }
 
 canvas {
