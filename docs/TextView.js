@@ -30,7 +30,6 @@ class Layout {
 
     this._svg = null;
     this._width = null;
-    this._height = null;
     this._glyphs = null;
 
     this._svgs = [];
@@ -78,10 +77,10 @@ class Layout {
     return this._width + (this._margin * 2);
   }
 
-  get height() {
-    this._shape();
-    return this._height + (this._margin * 2);
-  }
+  get height() { return this.ascender - this.descender + (this._margin * 2); }
+  get baseline() { return this.ascender + this._margin; }
+  get ascender() { return this._font.extents.ascender; }
+  get descender() { return this._font.extents.descender; }
 
   featuresOfIndex(index) {
     this._shape();
@@ -125,7 +124,7 @@ class Layout {
       svg.setAttributeNS(ns, "width", extents.width);
       svg.setAttributeNS(ns, "height", this.height);
 
-      let x = -extents.x_bearing, y = this._font.extents.ascender;
+      let x = -extents.x_bearing, y = this.ascender;
       let path = document.createElementNS(ns, "path");
       path.setAttributeNS(ns, "transform", `translate(${x},${y})`);
       path.setAttributeNS(ns, "d", this._font.getGlyphOutline(glyph));
@@ -161,7 +160,7 @@ class Layout {
     // Now do the real shaping with requested features.
     glyphs = this._buffer.shape(this._font, this._text, true);
 
-    let x = 0, y = this._font.extents.ascender;
+    let x = 0, y = this.ascender;
     let maxY = Number.NEGATIVE_INFINITY;
     this._width = 0;
     for (const g of glyphs) {
@@ -182,9 +181,7 @@ class Layout {
         c.ax += (g.x + g.ax) - (c.x + c.ax)
     }
 
-    let extents = this._font.extents;
     this._glyphs = glyphs;
-    this._height = extents.ascender - extents.descender;
     this._dotMaxY = maxY;
   }
 
@@ -297,14 +294,12 @@ export class View {
   _draw() {
     let canvas = this._backing;
     let fontSize = document.getElementById("font-size").value;
+    let layout = this._layout;
 
     this._scale = fontSize / this._font.upem;
 
-    let width = this._layout.width;
-    let height = this._layout.height;
-
-    canvas.width = width * this._scale;
-    canvas.height = height * this._scale;
+    canvas.width = layout.width * this._scale;
+    canvas.height = layout.height * this._scale;
     canvas.style.width = `${canvas.width / window.devicePixelRatio}px`;
     canvas.style.height = `${canvas.height / window.devicePixelRatio}px`;
 
@@ -315,8 +310,8 @@ export class View {
     // Draw cursor.
     ctx.save();
     ctx.fillStyle = "#0000003f";
-    let pos = this._layout.posOfIndex(this._cursor - 1);
-    ctx.fillRect(pos, 0, 100, height);
+    let pos = layout.posOfIndex(this._cursor - 1);
+    ctx.fillRect(pos, layout.baseline - layout.descender, 100, layout.descender - layout.ascender);
     ctx.restore();
 
     let mainCanvas = this._canvas;
@@ -335,7 +330,7 @@ export class View {
       let mainCtx = mainCanvas.getContext("2d");
       mainCtx.drawImage(canvas, mainCanvas.width - canvas.width, 0);
     }
-    img.src = this._layout.svg;
+    img.src = layout.svg;
 
   }
 
