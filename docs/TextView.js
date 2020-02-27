@@ -305,8 +305,8 @@ export class View {
 
     canvas.width = width * this._scale;
     canvas.height = height * this._scale;
-    canvas.style.width = canvas.width / window.devicePixelRatio;
-    canvas.style.height = canvas.height / window.devicePixelRatio;
+    canvas.style.width = `${canvas.width / window.devicePixelRatio}px`;
+    canvas.style.height = `${canvas.height / window.devicePixelRatio}px`;
 
     let ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -329,8 +329,8 @@ export class View {
       let width = mainCanvas.parentNode.clientWidth;
       mainCanvas.width = width * window.devicePixelRatio;
       mainCanvas.height = canvas.height;
-      mainCanvas.style.width = width;
-      mainCanvas.style.height = mainCanvas.height / window.devicePixelRatio;
+      mainCanvas.style.width = `${width}px`;
+      mainCanvas.style.height = canvas.style.height;
 
       let mainCtx = mainCanvas.getContext("2d");
       mainCtx.drawImage(canvas, mainCanvas.width - canvas.width, 0);
