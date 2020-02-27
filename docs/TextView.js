@@ -93,9 +93,8 @@ class Layout {
 
   posOfIndex(index) {
     let c = this._text[index];
-    if (c)
-      return c.x + this._margin;
-    return this._width + this._margin;
+    let x = c ? c.x : this._width;
+    return x + this._margin;
   }
 
   indexAtPoint(x) {
