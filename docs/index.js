@@ -16,7 +16,7 @@
  *
  */
 
-import * as TextView from "./TextView.js"
+import { View } from "./TextView.js"
 
 let fontFile = "./assets/fonts/RanaKufi.otf";
 
@@ -25,7 +25,7 @@ window.Module = {
     fetch(fontFile).then(function (res) {
       return res.arrayBuffer();
     }).then(function (blob) {
-      let view = new TextView.View(blob);
+      let view = new View(blob);
       view.update();
 
       document.getElementById("open").addEventListener("click", e => view.open(e.value));

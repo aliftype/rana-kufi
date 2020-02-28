@@ -16,7 +16,7 @@
  *
  */
 
-import * as HarfBuzz from "./HarfBuzz.js"
+import { Font, Buffer } from "./HarfBuzz.js"
 
 class Layout {
   constructor(font, buffer, text) {
@@ -243,8 +243,8 @@ let sample = `
 
 export class View {
   constructor(data) {
-    this._font = new HarfBuzz.Font(data, window.devicePixelRatio);
-    this._buffer = new HarfBuzz.Buffer();
+    this._font = new Font(data, window.devicePixelRatio);
+    this._buffer = new Buffer();
 
     this._canvas = document.getElementById("canvas");
     this._backing = document.createElement('canvas');
