@@ -442,8 +442,9 @@ def propogateAnchors(layer):
         clayer = component.layer or component.component.layers[0]
         propogateAnchors(clayer)
         for anchor in clayer.anchors:
+            names = [a.name for a in layer.anchors]
             name = anchor.name
-            if name.startswith("_") or name in layer.anchors:
+            if name.startswith("_") or name in names:
                 continue
             if name in ("entry", "exit"):
                 continue
