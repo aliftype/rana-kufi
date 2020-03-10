@@ -557,8 +557,8 @@
   <head>
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
-    <fontRevision value="0.03"/>
-    <checkSumAdjustment value="0x8a260804"/>
+    <fontRevision value="0.4"/>
+    <checkSumAdjustment value="0xa1203b1a"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00000011"/>
     <unitsPerEm value="1000"/>
@@ -1264,13 +1264,13 @@
       Regular
     </namerecord>
     <namerecord nameID="3" platformID="3" platEncID="1" langID="0x409">
-      0.030;ALIF;RanaKufi-Regular
+      0.400;ALIF;RanaKufi-Regular
     </namerecord>
     <namerecord nameID="4" platformID="3" platEncID="1" langID="0x409">
       Rana Kufi Regular
     </namerecord>
     <namerecord nameID="5" platformID="3" platEncID="1" langID="0x409">
-      Version 0.030
+      Version 0.400
     </namerecord>
     <namerecord nameID="6" platformID="3" platEncID="1" langID="0x409">
       RanaKufi-Regular
@@ -1288,7 +1288,11 @@
       https://github.com/alif-type
     </namerecord>
     <namerecord nameID="13" platformID="3" platEncID="1" langID="0x409">
-      GNU Affero General Public License v3.0
+      This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;
     </namerecord>
     <namerecord nameID="14" platformID="3" platEncID="1" langID="0x409">
       https://www.gnu.org/licenses/agpl-3.0.html
