@@ -241,6 +241,8 @@ let sample = `
 [{"code":1575,"features":["dlig","cv10"]},{"code":1604,"features":["dlig"]},{"code":1582},{"code":1591,"features":["cv05"]},{"code":32},{"code":1575,"features":[]},{"code":1604,"features":[]},{"code":1603,"features":["cv05"]},{"code":1608,"features":[]},{"code":1601,"features":[]},{"code":1610,"features":["cv06"]},{"code":32},{"code":1575,"features":["dlig","cv01"]},{"code":1604,"features":["dlig"]},{"code":1601,"features":["cv01"]},{"code":1575,"features":[]},{"code":1591,"features":["cv05"]},{"code":1605,"features":[]},{"code":1610,"features":["cv10"]}]
 `;
 
+const STAORAGE_KEY = "ranakufi.text";
+
 export class View {
   constructor(data) {
     this._font = new Font(data, window.devicePixelRatio);
@@ -267,9 +269,9 @@ export class View {
   update() {
     if (this._layout === null) {
       if (this._text === null)
-        this._text = JSON.parse(window.sessionStorage.text || window.localStorage.text || sample);
+        this._text = JSON.parse(window.localStorage.getItem(STAORAGE_KEY) || sample);
       else
-        window.sessionStorage.text = window.localStorage.text = JSON.stringify(this._text);
+        window.localStorage.setItem(STAORAGE_KEY, JSON.stringify(this._text));
 
       this._layout = new Layout(this._font, this._buffer, this._text);
     }
