@@ -386,7 +386,7 @@ export class View {
   }
 
   _keypress(e) {
-    if (e.ctrlKey || e.metaKey)
+    if (e.ctrlKey || e.metaKey || e.key == "Enter")
       return;
     this._insert(e.key);
   }
