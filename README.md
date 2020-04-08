@@ -1,5 +1,22 @@
-Rana Kufi
-=========
+_Rana Kufi_ is a Fatimid [Kufic][1] that follows the Fatimid Kufic rules and
+measurements poineered by the late master of Arabic calligraphy [_Mohammad
+Abdul Qadir_][2].
 
-![ريم على القاع بيسن البان والعلم أحل سفك دمي في الأشهر الحرم](assets/images/sample-1.svg)
-![لما رنا حدثتني النفس قائلة يا ويح جنبك بالسهم المصيب رمي](assets/images/sample-2.svg)
+_Rana Kufi_ is a free and open source project, any one is welcomed to use and
+modify it under the terms of the [version 3 of GNU Affero General Public
+License][4].
+
+The app
+-------
+
+The font provides many alternate shapes for many of its glyphs, which should be
+usable in any OpenType-savvy application. But since many apps have poor
+OpenType support, or bad UI, or don’t allow controlling features for single
+glyphs, _Rana Kufi_ comes with a web application that provides easy access to
+glyph alternates.
+
+
+[1]: https://en.wikipedia.org/wiki/Kufic
+[2]: https://ar.wikipedia.org/wiki/محمد_عبد_القادر_عبد_الله_(خطاط)
+[3]: https://alif-type.github.io/rana-kufi/app/
+[4]: https://github.com/alif-type/rana-kufi/blob/master/LICENSE
