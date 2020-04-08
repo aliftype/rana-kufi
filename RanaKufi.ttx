@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ttFont sfntVersion="OTTO" ttLibVersion="4.4">
+<ttFont sfntVersion="OTTO" ttLibVersion="4.7">
 
   <GlyphOrder>
     <!-- The 'id' attribute is only for humans; it is ignored when parsed. -->
@@ -7917,7 +7917,7 @@ You should have received a copy of the GNU Affero General Public License along w
       <!-- LookupCount=11 -->
       <Lookup index="0">
         <LookupType value="8"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=8 -->
         <ChainContextPos index="0" Format="3">
           <!-- BacktrackGlyphCount=0 -->
@@ -8584,7 +8584,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="1">
         <LookupType value="1"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=2 -->
         <SinglePos index="0" Format="2">
           <Coverage Format="1">
@@ -8619,7 +8619,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="2">
         <LookupType value="1"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <SinglePos index="0" Format="1">
           <Coverage Format="1">
@@ -8631,7 +8631,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="3">
         <LookupType value="1"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <SinglePos index="0" Format="1">
           <Coverage Format="1">
@@ -8643,7 +8643,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="4">
         <LookupType value="2"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=2 -->
         <PairPos index="0" Format="1">
           <Coverage Format="2">
@@ -18454,7 +18454,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="5">
         <LookupType value="3"/>
-        <LookupFlag value="9"/>
+        <LookupFlag value="9"/><!-- rightToLeft ignoreMarks -->
         <!-- SubTableCount=1 -->
         <CursivePos index="0" Format="1">
           <Coverage Format="2">
@@ -24811,7 +24811,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="10">
         <LookupType value="4"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <LigatureSubst index="0" Format="1">
           <LigatureSet glyph="glyph00370">
@@ -24821,7 +24821,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="11">
         <LookupType value="6"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <ChainContextSubst index="0" Format="3">
           <!-- BacktrackGlyphCount=1 -->
@@ -25039,7 +25039,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="12">
         <LookupType value="1"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <SingleSubst index="0" Format="1">
           <Substitution in="glyph00527" out="glyph00517"/>
@@ -25047,7 +25047,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="13">
         <LookupType value="4"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <LigatureSubst index="0" Format="1">
           <LigatureSet glyph="uni0627">
@@ -25057,7 +25057,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="14">
         <LookupType value="6"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=2 -->
         <ChainContextSubst index="0" Format="3">
           <!-- BacktrackGlyphCount=2 -->
@@ -25300,7 +25300,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="15">
         <LookupType value="1"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <SingleSubst index="0" Format="2">
           <Substitution in="glyph00057" out="uni062D"/>
@@ -25309,7 +25309,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="16">
         <LookupType value="6"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <ChainContextSubst index="0" Format="3">
           <!-- BacktrackGlyphCount=1 -->
@@ -26407,7 +26407,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="17">
         <LookupType value="1"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <SingleSubst index="0" Format="1">
           <Substitution in="space" out="glyph00540"/>
@@ -26415,7 +26415,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="18">
         <LookupType value="6"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=2 -->
         <ChainContextSubst index="0" Format="3">
           <!-- BacktrackGlyphCount=0 -->
@@ -26461,7 +26461,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="19">
         <LookupType value="6"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <ChainContextSubst index="0" Format="3">
           <!-- BacktrackGlyphCount=2 -->
@@ -26485,7 +26485,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="20">
         <LookupType value="1"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <SingleSubst index="0" Format="1">
           <Substitution in="glyph00062" out="glyph00066"/>
@@ -26493,7 +26493,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="21">
         <LookupType value="6"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=2 -->
         <ChainContextSubst index="0" Format="3">
           <!-- BacktrackGlyphCount=1 -->
@@ -26535,7 +26535,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="22">
         <LookupType value="1"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <SingleSubst index="0" Format="1">
           <Substitution in="glyph00370" out="glyph00392"/>
@@ -26543,7 +26543,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="23">
         <LookupType value="1"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <SingleSubst index="0" Format="1">
           <Substitution in="glyph00370" out="glyph00390"/>
@@ -27294,7 +27294,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="35">
         <LookupType value="6"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=2 -->
         <ChainContextSubst index="0" Format="3">
           <!-- BacktrackGlyphCount=0 -->
@@ -27496,7 +27496,7 @@ You should have received a copy of the GNU Affero General Public License along w
       </Lookup>
       <Lookup index="37">
         <LookupType value="6"/>
-        <LookupFlag value="8"/>
+        <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=1 -->
         <ChainContextSubst index="0" Format="3">
           <!-- BacktrackGlyphCount=0 -->
