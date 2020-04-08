@@ -1,7 +1,7 @@
 version: 0.4 # Increment only when tagging release, download link uses it.
 title: Rana Kufi
 title_ar: كوفي رنا
-description: Authentic Fatimid Kufi
+description: A Fatimid Kufic typeface
 description_ar: خط كوفي فاطمي
 logo: app/assets/images/icon.svg
 theme: jekyll-theme-minimal
