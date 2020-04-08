@@ -1,4 +1,4 @@
 [submodule "docs/harfbuzz"]
-	path = docs/harfbuzz
+	path = app/harfbuzz
 	url = https://github.com/khaledhosny/harfbuzz.git
 	branch = rana
