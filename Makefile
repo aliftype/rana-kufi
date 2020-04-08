@@ -17,6 +17,8 @@ MAKEFLAGS := -sr
 SHELL = bash
 
 BUILDDIR = build
+CONFIG = _config.yml
+VERSION = $(shell python version.py $(CONFIG))
 
 .SECONDARY:
 .ONESHELL:
@@ -29,10 +31,10 @@ all: RanaKufi.otf RanaKufi.ttx
 export SOURCE_DATE_EPOCH=0
 
 
-$(BUILDDIR)/%.otf: RanaKufi.glyphs build.py
+$(BUILDDIR)/%.otf: RanaKufi.glyphs $(CONFIG) build.py
 	$(info $(space) BUILD $(*F))
 	mkdir -p $(BUILDDIR)
-	python build.py $< $@
+	python build.py $< $(VERSION) $@
 
 $(BUILDDIR)/%.subr.cff: $(BUILDDIR)/%.otf
 	$(info $(space) SUBR  $(*F))

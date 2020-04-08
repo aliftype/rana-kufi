@@ -1,3 +1,4 @@
 afdko==3.2.0
 fonttools==4.7.0
 glyphsLib==5.1.9
+PyYAML==5.3
