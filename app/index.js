@@ -18,7 +18,7 @@
 
 import { View } from "./TextView.js"
 
-let fontFile = "./assets/fonts/RanaKufi.otf";
+let fontFile = "../RanaKufi.otf";
 
 window.Module = {
   "onRuntimeInitialized": function() {
