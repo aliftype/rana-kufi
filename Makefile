@@ -13,17 +13,34 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+MAKEFLAGS := -sr
+SHELL = bash
+
+BUILDDIR = build
+
+.SECONDARY:
+.ONESHELL:
+.PHONY: all
+
+space := $() $()
+
 all: RanaKufi.otf RanaKufi.ttx
 
 export SOURCE_DATE_EPOCH=0
 
-RanaKufi.otf: RanaKufi.glyphs build.py
-	@python build.py $< $@ --debug
-	@echo " SUBR	$@"
-	@tx -cff2 +S +b $@ cff2 &>/dev/null
-	@sfntedit -a CFF2=cff2 -d post $@
-	@rm cff2
+
+$(BUILDDIR)/%.otf: RanaKufi.glyphs build.py
+	$(info $(space) BUILD $(*F))
+	mkdir -p $(BUILDDIR)
+	python build.py $< $@
+
+$(BUILDDIR)/%.subr.cff: $(BUILDDIR)/%.otf
+	$(info $(space) SUBR  $(*F))
+	tx -cff2 +S +b $< $@ 2>/dev/null
+
+%.otf: $(BUILDDIR)/%.subr.cff $(BUILDDIR)/%.otf
+	sfntedit -d post -a CFF2=$+ $@
 
 %.ttx: %.otf
-	@echo " TTX	$@"
-	@ttx -q -o $@ $<
+	$(info $(space) TTX   $(*F))
+	ttx -q -o $@ $<
