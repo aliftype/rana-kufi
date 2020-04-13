@@ -407,7 +407,7 @@ def build(instance, opts):
 
 def buildVF(font, opts):
     for instance in font.instances:
-        print(f" MASTER\t{instance.name}")
+        print(f" MASTER  {instance.name}")
         build(instance, opts)
         if instance.name == "Regular":
             regular = instance
@@ -432,7 +432,7 @@ def buildVF(font, opts):
         source.location = {a.name: instance.axes[a.tag] for a in ds.axes}
         ds.addSource(source)
 
-    print(f" MERGE\t{font.familyName}")
+    print(f" MERGE   {font.familyName}")
     otf, _, _ = merge(ds)
     return otf
 
