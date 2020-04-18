@@ -14,9 +14,6 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 HBDIR = harfbuzz/src
-FONTDIR = assets/fonts
-
-FONT = $(FONTDIR)/RanaKufi.otf
 
 EM_CFLAGS = \
 	  --llvm-lto 1 \
@@ -56,12 +53,9 @@ EM_CFLAGS = \
 	  -fno-exceptions -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden \
 	  -Oz
 
-.PHONY: all $(FONT)
+.PHONY: all
 
-all: hb.js $(FONT)
-
-$(FONT):
-	@make -C $(FONTDIR)
+all: hb.js
 
 hb.js: harfbuzz.o
 	@echo " LINK	$@"
