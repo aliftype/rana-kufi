@@ -41,13 +41,13 @@ EM_CFLAGS = \
 	      "_hb_font_get_glyph_extents", \
 	      "_hb_font_get_h_extents", \
 	      "_hb_font_set_scale", \
-	      "_hb_ot_glyph_decompose", \
-	      "_hb_ot_glyph_decompose_funcs_create", \
-	      "_hb_ot_glyph_decompose_funcs_set_close_path_func", \
-	      "_hb_ot_glyph_decompose_funcs_set_conic_to_func", \
-	      "_hb_ot_glyph_decompose_funcs_set_cubic_to_func", \
-	      "_hb_ot_glyph_decompose_funcs_set_line_to_func", \
-	      "_hb_ot_glyph_decompose_funcs_set_move_to_func", \
+	      "_hb_font_draw_glyph", \
+	      "_hb_draw_funcs_create", \
+	      "_hb_draw_funcs_set_close_path_func", \
+	      "_hb_draw_funcs_set_quadratic_to_func", \
+	      "_hb_draw_funcs_set_cubic_to_func", \
+	      "_hb_draw_funcs_set_line_to_func", \
+	      "_hb_draw_funcs_set_move_to_func", \
 	      "_hb_shape" ]' \
 	  -DEMSCRIPTEN_HAS_UNBOUND_TYPE_NAMES=0 \
 	  -fno-exceptions -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden \
@@ -65,6 +65,7 @@ harfbuzz.o: $(HBDIR)/harfbuzz.cc
 	@echo " C++	$@"
 	@em++ $(EM_CFLAGS) \
 	  -std=c++11 \
+	  -DHB_EXPERIMENTAL_API \
 	  -DHB_DISABLE_DEPRECATED \
 	  -DHB_NDEBUG \
 	  -DHB_MINI \
@@ -76,7 +77,6 @@ harfbuzz.o: $(HBDIR)/harfbuzz.cc
 	  -DHB_NO_ERRNO \
 	  -DHB_NO_FACE_COLLECT_UNICODES \
 	  -DHB_NO_GETENV \
-	  -DHB_NO_GLYF \
 	  -DHB_NO_HINTING \
 	  -DHB_NO_LANGUAGE_PRIVATE_SUBTAG \
 	  -DHB_NO_LAYOUT_COLLECT_GLYPHS \
@@ -86,6 +86,7 @@ harfbuzz.o: $(HBDIR)/harfbuzz.cc
 	  -DHB_NO_META \
 	  -DHB_NO_MMAP \
 	  -DHB_NO_MT \
+	  -DHB_NO_NAME \
 	  -DHB_NO_OPEN \
 	  -DHB_NO_OT_FONT_GLYPH_NAMES \
 	  -DHB_NO_OT_SHAPE_FRACTIONS \
@@ -93,6 +94,7 @@ harfbuzz.o: $(HBDIR)/harfbuzz.cc
 	  -DHB_NO_STAT \
 	  -DHB_NO_SUBSET_LAYOUT \
 	  -DHB_NO_UCD_UNASSIGNED \
+	  -DHB_NO_VAR \
 	  -DHB_USE_INTERNAL_QSORT \
 	  -DHB_OPTIMIZE_SIZE \
 	  -c $<
