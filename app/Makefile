@@ -97,6 +97,7 @@ harfbuzz.o: $(HBDIR)/harfbuzz.cc
 	  -DHB_NO_UCD_UNASSIGNED \
 	  -DHB_NO_UNICODE_FUNCS \
 	  -DHB_NO_VAR \
+	  -DHB_NO_EMOJI_SEQUENCES \
 	  -DHB_USE_INTERNAL_QSORT \
 	  -DHB_OPTIMIZE_SIZE \
 	  -c $<
