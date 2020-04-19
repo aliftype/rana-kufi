@@ -238,10 +238,10 @@ class Layout {
 }
 
 let sample = `
-[{"code":1575,"features":["dlig","cv10"]},{"code":1604,"features":["dlig"]},{"code":1582},{"code":1591,"features":["cv05"]},{"code":32},{"code":1575,"features":[]},{"code":1604,"features":[]},{"code":1603,"features":["cv05"]},{"code":1608,"features":[]},{"code":1601,"features":[]},{"code":1610,"features":["cv06"]},{"code":32},{"code":1575,"features":["dlig","cv01"]},{"code":1604,"features":["dlig"]},{"code":1601,"features":["cv01"]},{"code":1575,"features":[]},{"code":1591,"features":["cv05"]},{"code":1605,"features":[]},{"code":1610,"features":["cv10"]}]
+[{"code":1575,"features":["dlig=1","cv01=6"]},{"code":1604,"features":["dlig=1"]},{"code":1582},{"code":1591,"features":["cv01=2"]},{"code":32},{"code":1575,"features":[]},{"code":1604,"features":[]},{"code":1603,"features":["cv05"]},{"code":1608,"features":[]},{"code":1601,"features":[]},{"code":1610,"features":["cv01=14"]},{"code":32},{"code":1575,"features":["dlig","cv01"]},{"code":1604,"features":["dlig"]},{"code":1601,"features":["cv01"]},{"code":1575,"features":[]},{"code":1591,"features":["cv05"]},{"code":1605,"features":["cv01=2"]},{"code":1610,"features":["cv01=13"]}]
 `;
 
-const STAORAGE_KEY = "ranakufi.text-v2";
+const STAORAGE_KEY = "ranakufi.text-v3";
 
 export class View {
   constructor(data) {
