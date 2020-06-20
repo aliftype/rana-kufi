@@ -1,5 +1,5 @@
 {
-.appVersion = "1300";
+.appVersion = "1340";
 classes = (
 {
 code = "";
@@ -7492,10 +7492,6 @@ name = _dal;
 transform = "{1, 0, 0, 1, 50, 0}";
 },
 {
-name = "kashida-ar";
-transform = "{1, 0, 0, 1, -30, 0}";
-},
-{
 name = _zuluf100;
 transform = "{0, 1, -1, 0, 150, 250}";
 }
@@ -7529,10 +7525,6 @@ name = "kashida-ar";
 {
 name = _dal.cv01;
 transform = "{1, 0, 0, 1, 50, 0}";
-},
-{
-name = "kashida-ar";
-transform = "{1, 0, 0, 1, -30, 0}";
 },
 {
 name = _zuluf100;
@@ -11053,8 +11045,8 @@ closed = 1;
 nodes = (
 "300 0 LINE",
 "300 100 LINE",
-"-25 100 LINE",
-"-25 0 LINE"
+"-50 100 LINE",
+"-50 0 LINE"
 );
 },
 {
