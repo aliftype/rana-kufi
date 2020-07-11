@@ -24306,8 +24306,8 @@ paths = (
 closed = 1;
 nodes = (
 "-50 0 LINE",
-"70 0 LINE",
-"70 100 LINE",
+"50 0 LINE",
+"50 100 LINE",
 "-50 100 LINE"
 );
 }
