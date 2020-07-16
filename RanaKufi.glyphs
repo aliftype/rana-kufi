@@ -37626,7 +37626,6 @@ kerning = {
 };
 "@MMK_L_straight-r" = {
 "@MMK_R_straight-l" = 50;
-"ain-ar" = 50;
 };
 "ain-ar.fina" = {
 "@MMK_R_alef-wide" = -100;
@@ -37666,6 +37665,24 @@ kerning = {
 "@MMK_R_straight-l" = -300;
 "waw-ar" = 0;
 "waw-ar.01.01" = 0;
+};
+"meem-ar" = {
+"ain-ar" = 80;
+};
+"meem-ar.fina" = {
+"ain-ar" = 80;
+};
+"noonghunna-ar.01.03" = {
+"ain-ar" = 50;
+};
+"noonghunna-ar.01.04" = {
+"ain-ar" = 50;
+};
+"noonghunna-ar.fina.01.03" = {
+"ain-ar" = 50;
+};
+"noonghunna-ar.fina.01.04" = {
+"ain-ar" = 50;
 };
 "reh-ar" = {
 "@MMK_R_alef-wide" = -50;

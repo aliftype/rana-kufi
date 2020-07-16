@@ -611,7 +611,7 @@
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
     <fontRevision value="0.4"/>
-    <checkSumAdjustment value="0x8a55a8c3"/>
+    <checkSumAdjustment value="0x88f8199"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00000011"/>
     <unitsPerEm value="1000"/>
@@ -9046,133 +9046,8 @@ You should have received a copy of the GNU Affero General Public License along w
         <LookupFlag value="8"/><!-- ignoreMarks -->
         <!-- SubTableCount=2 -->
         <PairPos index="0" Format="1">
-          <Coverage Format="2">
-            <Glyph value="uni0621"/>
-            <Glyph value="glyph00003"/>
-            <Glyph value="glyph00004"/>
-            <Glyph value="uni0627"/>
-            <Glyph value="glyph00006"/>
-            <Glyph value="glyph00007"/>
-            <Glyph value="glyph00008"/>
-            <Glyph value="glyph00009"/>
-            <Glyph value="glyph00010"/>
-            <Glyph value="glyph00011"/>
-            <Glyph value="glyph00012"/>
-            <Glyph value="glyph00013"/>
-            <Glyph value="glyph00014"/>
-            <Glyph value="glyph00015"/>
-            <Glyph value="glyph00016"/>
-            <Glyph value="glyph00017"/>
-            <Glyph value="glyph00018"/>
-            <Glyph value="glyph00019"/>
-            <Glyph value="glyph00020"/>
-            <Glyph value="glyph00021"/>
-            <Glyph value="glyph00022"/>
-            <Glyph value="glyph00023"/>
-            <Glyph value="glyph00024"/>
-            <Glyph value="glyph00025"/>
-            <Glyph value="glyph00026"/>
-            <Glyph value="glyph00027"/>
-            <Glyph value="glyph00028"/>
-            <Glyph value="glyph00029"/>
-            <Glyph value="glyph00030"/>
-            <Glyph value="glyph00031"/>
-            <Glyph value="glyph00032"/>
-            <Glyph value="glyph00033"/>
-            <Glyph value="glyph00034"/>
-            <Glyph value="glyph00035"/>
+          <Coverage Format="1">
             <Glyph value="glyph00044"/>
-            <Glyph value="uni062D"/>
-            <Glyph value="glyph00056"/>
-            <Glyph value="glyph00057"/>
-            <Glyph value="uni062F"/>
-            <Glyph value="glyph00069"/>
-            <Glyph value="glyph00070"/>
-            <Glyph value="glyph00071"/>
-            <Glyph value="glyph00072"/>
-            <Glyph value="glyph00073"/>
-            <Glyph value="glyph00074"/>
-            <Glyph value="glyph00075"/>
-            <Glyph value="glyph00076"/>
-            <Glyph value="glyph00077"/>
-            <Glyph value="glyph00078"/>
-            <Glyph value="glyph00079"/>
-            <Glyph value="glyph00080"/>
-            <Glyph value="glyph00081"/>
-            <Glyph value="glyph00082"/>
-            <Glyph value="glyph00083"/>
-            <Glyph value="glyph00084"/>
-            <Glyph value="glyph00085"/>
-            <Glyph value="glyph00086"/>
-            <Glyph value="glyph00087"/>
-            <Glyph value="glyph00088"/>
-            <Glyph value="glyph00089"/>
-            <Glyph value="glyph00090"/>
-            <Glyph value="glyph00091"/>
-            <Glyph value="glyph00092"/>
-            <Glyph value="glyph00093"/>
-            <Glyph value="glyph00094"/>
-            <Glyph value="glyph00095"/>
-            <Glyph value="glyph00096"/>
-            <Glyph value="glyph00097"/>
-            <Glyph value="glyph00098"/>
-            <Glyph value="glyph00099"/>
-            <Glyph value="glyph00100"/>
-            <Glyph value="glyph00101"/>
-            <Glyph value="glyph00102"/>
-            <Glyph value="glyph00103"/>
-            <Glyph value="glyph00104"/>
-            <Glyph value="glyph00105"/>
-            <Glyph value="glyph00106"/>
-            <Glyph value="glyph00107"/>
-            <Glyph value="glyph00108"/>
-            <Glyph value="glyph00109"/>
-            <Glyph value="glyph00110"/>
-            <Glyph value="glyph00111"/>
-            <Glyph value="glyph00112"/>
-            <Glyph value="glyph00113"/>
-            <Glyph value="glyph00114"/>
-            <Glyph value="glyph00115"/>
-            <Glyph value="glyph00116"/>
-            <Glyph value="glyph00117"/>
-            <Glyph value="glyph00118"/>
-            <Glyph value="glyph00119"/>
-            <Glyph value="glyph00120"/>
-            <Glyph value="glyph00121"/>
-            <Glyph value="glyph00122"/>
-            <Glyph value="glyph00123"/>
-            <Glyph value="glyph00124"/>
-            <Glyph value="glyph00125"/>
-            <Glyph value="glyph00126"/>
-            <Glyph value="glyph00127"/>
-            <Glyph value="glyph00128"/>
-            <Glyph value="glyph00129"/>
-            <Glyph value="glyph00130"/>
-            <Glyph value="glyph00131"/>
-            <Glyph value="glyph00132"/>
-            <Glyph value="glyph00133"/>
-            <Glyph value="glyph00134"/>
-            <Glyph value="glyph00135"/>
-            <Glyph value="glyph00136"/>
-            <Glyph value="glyph00137"/>
-            <Glyph value="glyph00138"/>
-            <Glyph value="glyph00139"/>
-            <Glyph value="glyph00140"/>
-            <Glyph value="glyph00141"/>
-            <Glyph value="glyph00142"/>
-            <Glyph value="glyph00143"/>
-            <Glyph value="glyph00144"/>
-            <Glyph value="glyph00145"/>
-            <Glyph value="glyph00146"/>
-            <Glyph value="glyph00147"/>
-            <Glyph value="glyph00148"/>
-            <Glyph value="glyph00149"/>
-            <Glyph value="glyph00150"/>
-            <Glyph value="glyph00151"/>
-            <Glyph value="glyph00152"/>
-            <Glyph value="glyph00153"/>
-            <Glyph value="glyph00154"/>
-            <Glyph value="glyph00155"/>
             <Glyph value="uni0631"/>
             <Glyph value="glyph00158"/>
             <Glyph value="glyph00159"/>
@@ -9191,285 +9066,27 @@ You should have received a copy of the GNU Affero General Public License along w
             <Glyph value="glyph00186"/>
             <Glyph value="glyph00187"/>
             <Glyph value="glyph00188"/>
-            <Glyph value="uni0639"/>
             <Glyph value="glyph00247"/>
-            <Glyph value="glyph00248"/>
-            <Glyph value="uni066F"/>
             <Glyph value="uni0644"/>
             <Glyph value="glyph00405"/>
             <Glyph value="glyph00406"/>
             <Glyph value="uni0645"/>
             <Glyph value="glyph00447"/>
-            <Glyph value="uni06BA"/>
-            <Glyph value="glyph00463"/>
             <Glyph value="glyph00464"/>
             <Glyph value="glyph00465"/>
             <Glyph value="glyph00466"/>
-            <Glyph value="glyph00467"/>
-            <Glyph value="glyph00468"/>
             <Glyph value="glyph00469"/>
             <Glyph value="glyph00470"/>
             <Glyph value="glyph00471"/>
-            <Glyph value="uni0648"/>
-            <Glyph value="glyph00497"/>
-            <Glyph value="glyph00498"/>
             <Glyph value="glyph00506"/>
             <Glyph value="glyph00508"/>
-            <Glyph value="glyph00509"/>
-            <Glyph value="glyph00512"/>
-            <Glyph value="glyph00513"/>
             <Glyph value="glyph00520"/>
             <Glyph value="glyph00522"/>
-            <Glyph value="glyph00523"/>
-            <Glyph value="glyph00526"/>
-            <Glyph value="glyph00527"/>
-            <Glyph value="glyph00570"/>
-            <Glyph value="glyph00572"/>
-            <Glyph value="glyph00580"/>
-            <Glyph value="glyph00582"/>
           </Coverage>
           <ValueFormat1 value="5"/>
           <ValueFormat2 value="0"/>
-          <!-- PairSetCount=180 -->
+          <!-- PairSetCount=35 -->
           <PairSet index="0">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="1">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="2">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="3">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="4">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="5">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="6">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="7">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="8">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="9">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="10">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="11">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="12">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="13">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="14">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="15">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="16">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="17">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="18">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="19">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="20">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="21">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="22">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="23">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="24">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="25">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="26">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="27">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="28">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="29">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="30">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="31">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="32">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="33">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="34">
             <!-- PairValueCount=2 -->
             <PairValueRecord index="0">
               <SecondGlyph value="glyph00248"/>
@@ -9480,644 +9097,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-25" XAdvance="-25"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="35">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="36">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="37">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="38">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="39">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="40">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="41">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="42">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="43">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="44">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="45">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="46">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="47">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="48">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="49">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="50">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="51">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="52">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="53">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="54">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="55">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="56">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="57">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="58">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="59">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="60">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="61">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="62">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="63">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="64">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="65">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="66">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="67">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="68">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="69">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="70">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="71">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="72">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="73">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="74">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="75">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="76">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="77">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="78">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="79">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="80">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="81">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="82">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="83">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="84">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="85">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="86">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="87">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="88">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="89">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="90">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="91">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="92">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="93">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="94">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="95">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="96">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="97">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="98">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="99">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="100">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="101">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="102">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="103">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="104">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="105">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="106">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="107">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="108">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="109">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="110">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="111">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="112">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="113">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="114">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="115">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="116">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="117">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="118">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="119">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="120">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="121">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="122">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="123">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="124">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="125">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="126">
+          <PairSet index="1">
             <!-- PairValueCount=41 -->
             <PairValueRecord index="0">
               <SecondGlyph value="glyph00013"/>
@@ -10284,7 +9264,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="127">
+          <PairSet index="2">
             <!-- PairValueCount=40 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -10447,7 +9427,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="128">
+          <PairSet index="3">
             <!-- PairValueCount=37 -->
             <PairValueRecord index="0">
               <SecondGlyph value="glyph00015"/>
@@ -10598,7 +9578,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="129">
+          <PairSet index="4">
             <!-- PairValueCount=40 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -10761,7 +9741,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-60" XAdvance="-60"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="130">
+          <PairSet index="5">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -10920,7 +9900,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="131">
+          <PairSet index="6">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -11079,7 +10059,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="132">
+          <PairSet index="7">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -11238,7 +10218,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="133">
+          <PairSet index="8">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -11397,7 +10377,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="134">
+          <PairSet index="9">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -11556,7 +10536,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="135">
+          <PairSet index="10">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -11715,7 +10695,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="136">
+          <PairSet index="11">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -11874,7 +10854,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="137">
+          <PairSet index="12">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -12033,7 +11013,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="138">
+          <PairSet index="13">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -12192,7 +11172,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="139">
+          <PairSet index="14">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -12351,7 +11331,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="140">
+          <PairSet index="15">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -12510,7 +11490,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="141">
+          <PairSet index="16">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -12669,7 +11649,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="142">
+          <PairSet index="17">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -12828,7 +11808,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="143">
+          <PairSet index="18">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -12987,14 +11967,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="144">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="145">
+          <PairSet index="19">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="glyph00013"/>
@@ -13153,21 +12126,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="146">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="147">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="148">
+          <PairSet index="20">
             <!-- PairValueCount=404 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0627"/>
@@ -14786,7 +13745,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="149">
+          <PairSet index="21">
             <!-- PairValueCount=404 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0627"/>
@@ -16405,7 +15364,7 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="150">
+          <PairSet index="22">
             <!-- PairValueCount=404 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0627"/>
@@ -18024,35 +16983,21 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-300" XAdvance="-300"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="151">
+          <PairSet index="23">
             <!-- PairValueCount=1 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
+              <Value1 XPlacement="80" XAdvance="80"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="152">
+          <PairSet index="24">
             <!-- PairValueCount=1 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
+              <Value1 XPlacement="80" XAdvance="80"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="153">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="154">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="155">
+          <PairSet index="25">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -18211,35 +17156,21 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="156">
+          <PairSet index="26">
             <!-- PairValueCount=1 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0639"/>
               <Value1 XPlacement="50" XAdvance="50"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="157">
+          <PairSet index="27">
             <!-- PairValueCount=1 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0639"/>
               <Value1 XPlacement="50" XAdvance="50"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="158">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="159">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="160">
+          <PairSet index="28">
             <!-- PairValueCount=39 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0621"/>
@@ -18398,42 +17329,21 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="0" XAdvance="0"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="161">
+          <PairSet index="29">
             <!-- PairValueCount=1 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0639"/>
               <Value1 XPlacement="50" XAdvance="50"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="162">
+          <PairSet index="30">
             <!-- PairValueCount=1 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni0639"/>
               <Value1 XPlacement="50" XAdvance="50"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="163">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="164">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="165">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="166">
+          <PairSet index="31">
             <!-- PairValueCount=8 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni062D"/>
@@ -18468,8 +17378,8 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="167">
-            <!-- PairValueCount=31 -->
+          <PairSet index="32">
+            <!-- PairValueCount=30 -->
             <PairValueRecord index="0">
               <SecondGlyph value="glyph00015"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
@@ -18531,92 +17441,67 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
             <PairValueRecord index="15">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-            <PairValueRecord index="16">
               <SecondGlyph value="glyph00534"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="17">
+            <PairValueRecord index="16">
               <SecondGlyph value="glyph00535"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="18">
+            <PairValueRecord index="17">
               <SecondGlyph value="glyph00536"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="19">
+            <PairValueRecord index="18">
               <SecondGlyph value="glyph00540"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="20">
+            <PairValueRecord index="19">
               <SecondGlyph value="glyph00541"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="21">
+            <PairValueRecord index="20">
               <SecondGlyph value="glyph00542"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="22">
+            <PairValueRecord index="21">
               <SecondGlyph value="glyph00546"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="23">
+            <PairValueRecord index="22">
               <SecondGlyph value="glyph00547"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="24">
+            <PairValueRecord index="23">
               <SecondGlyph value="glyph00548"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="25">
+            <PairValueRecord index="24">
               <SecondGlyph value="glyph00552"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="26">
+            <PairValueRecord index="25">
               <SecondGlyph value="glyph00553"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="27">
+            <PairValueRecord index="26">
               <SecondGlyph value="glyph00554"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="28">
+            <PairValueRecord index="27">
               <SecondGlyph value="glyph00558"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="29">
+            <PairValueRecord index="28">
               <SecondGlyph value="glyph00559"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="30">
+            <PairValueRecord index="29">
               <SecondGlyph value="glyph00560"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="168">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="169">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="170">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="171">
+          <PairSet index="33">
             <!-- PairValueCount=8 -->
             <PairValueRecord index="0">
               <SecondGlyph value="uni062D"/>
@@ -18651,8 +17536,8 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-50" XAdvance="-50"/>
             </PairValueRecord>
           </PairSet>
-          <PairSet index="172">
-            <!-- PairValueCount=31 -->
+          <PairSet index="34">
+            <!-- PairValueCount=30 -->
             <PairValueRecord index="0">
               <SecondGlyph value="glyph00015"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
@@ -18714,117 +17599,64 @@ You should have received a copy of the GNU Affero General Public License along w
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
             <PairValueRecord index="15">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-            <PairValueRecord index="16">
               <SecondGlyph value="glyph00534"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="17">
+            <PairValueRecord index="16">
               <SecondGlyph value="glyph00535"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="18">
+            <PairValueRecord index="17">
               <SecondGlyph value="glyph00536"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="19">
+            <PairValueRecord index="18">
               <SecondGlyph value="glyph00540"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="20">
+            <PairValueRecord index="19">
               <SecondGlyph value="glyph00541"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="21">
+            <PairValueRecord index="20">
               <SecondGlyph value="glyph00542"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="22">
+            <PairValueRecord index="21">
               <SecondGlyph value="glyph00546"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="23">
+            <PairValueRecord index="22">
               <SecondGlyph value="glyph00547"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="24">
+            <PairValueRecord index="23">
               <SecondGlyph value="glyph00548"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="25">
+            <PairValueRecord index="24">
               <SecondGlyph value="glyph00552"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="26">
+            <PairValueRecord index="25">
               <SecondGlyph value="glyph00553"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="27">
+            <PairValueRecord index="26">
               <SecondGlyph value="glyph00554"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="28">
+            <PairValueRecord index="27">
               <SecondGlyph value="glyph00558"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="29">
+            <PairValueRecord index="28">
               <SecondGlyph value="glyph00559"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
             </PairValueRecord>
-            <PairValueRecord index="30">
+            <PairValueRecord index="29">
               <SecondGlyph value="glyph00560"/>
               <Value1 XPlacement="-100" XAdvance="-100"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="173">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="174">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="175">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="176">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="177">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="178">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
-            </PairValueRecord>
-          </PairSet>
-          <PairSet index="179">
-            <!-- PairValueCount=1 -->
-            <PairValueRecord index="0">
-              <SecondGlyph value="uni0639"/>
-              <Value1 XPlacement="50" XAdvance="50"/>
             </PairValueRecord>
           </PairSet>
         </PairPos>
