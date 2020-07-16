@@ -22245,6 +22245,7 @@ nodes = (
 width = 556;
 }
 );
+rightKerningGroup = "straight-r";
 },
 {
 glyphname = "alefMaksura-ar.01.12";
@@ -23664,6 +23665,7 @@ nodes = (
 width = 440;
 }
 );
+rightKerningGroup = "straight-r";
 },
 {
 glyphname = "alefMaksura-ar.fina.01.12";
