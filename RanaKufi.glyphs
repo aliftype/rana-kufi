@@ -94,7 +94,8 @@ designerURL = "https://github.com/alif-type";
 familyName = "Rana Kufi";
 featurePrefixes = (
 {
-code = "languagesystem DFLT dflt;";
+code = "languagesystem DFLT dflt;
+languagesystem arab dflt;";
 name = Languagesystems;
 },
 {
