@@ -482,7 +482,6 @@ nodes = (
 width = 374;
 }
 );
-rightKerningGroup = "straight-r";
 unicode = 0621;
 },
 {
@@ -581,7 +580,6 @@ nodes = (
 width = 406;
 }
 );
-rightKerningGroup = "straight-r";
 },
 {
 glyphname = "hamza-ar.01.02";
@@ -620,7 +618,6 @@ nodes = (
 width = 325;
 }
 );
-rightKerningGroup = "straight-r";
 },
 {
 glyphname = "alef-ar";
