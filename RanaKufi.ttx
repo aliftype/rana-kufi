@@ -611,7 +611,7 @@
     <!-- Most of this table will be recalculated by the compiler -->
     <tableVersion value="1.0"/>
     <fontRevision value="0.4"/>
-    <checkSumAdjustment value="0xa56cd8f1"/>
+    <checkSumAdjustment value="0xa8fadca1"/>
     <magicNumber value="0x5f0f3cf5"/>
     <flags value="00000000 00000011"/>
     <unitsPerEm value="1000"/>
@@ -1388,10 +1388,10 @@
       Khaled Hosny
     </namerecord>
     <namerecord nameID="11" platformID="3" platEncID="1" langID="0x409">
-      https://github.com/alif-type
+      https://aliftype.com
     </namerecord>
     <namerecord nameID="12" platformID="3" platEncID="1" langID="0x409">
-      https://github.com/alif-type
+      https://aliftype.com
     </namerecord>
     <namerecord nameID="13" platformID="3" platEncID="1" langID="0x409">
       This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.

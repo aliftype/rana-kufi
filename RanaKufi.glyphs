@@ -1,5 +1,5 @@
 {
-.appVersion = "1348";
+.appVersion = "1350";
 classes = (
 {
 code = "";
@@ -90,7 +90,7 @@ value = 1;
 );
 date = "2020-02-24 14:21:20 +0000";
 designer = "Khaled Hosny";
-designerURL = "https://github.com/alif-type";
+designerURL = "https://aliftype.com";
 familyName = "Rana Kufi";
 featurePrefixes = (
 {
@@ -37699,7 +37699,7 @@ kerning = {
 };
 };
 manufacturer = "Alif Type";
-manufacturerURL = "https://github.com/alif-type";
+manufacturerURL = "https://aliftype.com";
 unitsPerEm = 1000;
 userData = {
 LWPluginVersion = "1429";
