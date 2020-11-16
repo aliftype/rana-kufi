@@ -24,8 +24,8 @@ from fontTools.pens.pointPen import PointToSegmentPen
 from fontTools.pens.reverseContourPen import ReverseContourPen
 from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.pens.transformPen import TransformPen
-from glyphsLib import GSFont, GSAnchor
-from glyphsLib.glyphdata import get_glyph as getGlyphInfo
+from glyphsObj import GSFont, GSAnchor
+from glyphsObj.glyphdata import get_glyph as getGlyphInfo
 
 
 DEFAULT_TRANSFORM = [1, 0, 0, 1, 0, 0]
@@ -386,18 +386,6 @@ def build(instance, opts):
     fb.setupCOLR(colorLayers)
 
     instance.font = fb.font
-    axes = [
-        instance.weightValue,
-        instance.widthValue,
-        instance.customValue,
-        instance.customValue1,
-        instance.customValue2,
-        instance.customValue3,
-    ]
-    instance.axes = {}
-    for i, axis in enumerate(font.customParameters["Axes"]):
-        instance.axes[axis["Tag"]] = axes[i]
-
     if opts.debug:
         fb.font.save(f"{instance.fontName}.otf")
         fb.font.saveXML(f"{instance.fontName}.ttx")
@@ -414,13 +402,13 @@ def buildVF(font, opts):
 
     ds = DesignSpaceDocument()
 
-    for axisDef in font.customParameters["Axes"]:
+    for i, axisDef in enumerate(font.axes):
         axis = ds.newAxisDescriptor()
         axis.tag = axisDef["Tag"]
         axis.name = axisDef["Name"]
-        axis.maximum = max(i.axes[axis.tag] for i in font.instances)
-        axis.minimum = min(i.axes[axis.tag] for i in font.instances)
-        axis.default = regular.axes[axis.tag]
+        axis.maximum = max(x.axes[i] for x in font.instances)
+        axis.minimum = min(x.axes[i] for x in font.instances)
+        axis.default = regular.axes[i]
         ds.addAxis(axis)
 
     for instance in font.instances:
@@ -429,7 +417,7 @@ def buildVF(font, opts):
         source.familyName = instance.familyName
         source.styleName = instance.name
         source.name = instance.fullName
-        source.location = {a.name: instance.axes[a.tag] for a in ds.axes}
+        source.location = {a.name: instance.axes[i] for i, a in enumerate(ds.axes)}
         ds.addSource(source)
 
     print(f" MERGE   {font.familyName}")

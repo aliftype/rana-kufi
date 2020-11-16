@@ -1,4 +1,5 @@
 afdko==3.5.1
 fonttools==4.17.0
 glyphsLib==5.2.0
+git+git://github.com/alif-type/glyphsObj.git@main#egg=glyphsObj
 PyYAML==5.3.1
