@@ -21,5 +21,5 @@ title: رنا كوفي
 
 [1]: https://ar.wikipedia.org/wiki/خط_كوفي
 [2]: https://ar.wikipedia.org/wiki/محمد_عبد_القادر_عبد_الله_(خطاط)
-[3]: https://alif-type.github.io/rana-kufi/app/
+[3]: https://aliftype.com/rana-kufi/app/
 [4]: https://github.com/alif-type/rana-kufi/blob/master/LICENSE
