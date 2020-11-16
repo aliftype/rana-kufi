@@ -27,7 +27,7 @@ DIST = $(NAME)-$(VERSION)
 .ONESHELL:
 .PHONY: all
 
-all: $(NAME).otf $(NAME).ttx
+all: $(NAME).otf
 
 export SOURCE_DATE_EPOCH=0
 
@@ -42,7 +42,3 @@ $(BUILDDIR)/%.subr.cff: $(BUILDDIR)/%.otf
 
 %.otf: $(BUILDDIR)/%.subr.cff $(BUILDDIR)/%.otf
 	sfntedit -d post -a CFF2=$+ $@
-
-%.ttx: %.otf
-	$(info   TTX    $(*F))
-	ttx -q -o $@ $<
