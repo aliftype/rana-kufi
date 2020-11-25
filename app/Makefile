@@ -47,6 +47,7 @@ EM_CFLAGS = \
 	      "_hb_draw_funcs_set_cubic_to_func", \
 	      "_hb_draw_funcs_set_line_to_func", \
 	      "_hb_draw_funcs_set_move_to_func", \
+	      "_hb_ot_metrics_get_position", \
 	      "_hb_shape" ]' \
 	  -DEMSCRIPTEN_HAS_UNBOUND_TYPE_NAMES=0 \
 	  -fno-exceptions -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden \

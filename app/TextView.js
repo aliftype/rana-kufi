@@ -81,6 +81,8 @@ class Layout {
   get baseline() { return this.ascender + this._margin; }
   get ascender() { return this._font.extents.ascender; }
   get descender() { return this._font.extents.descender; }
+  get clipAscender() { return this._font.extents.clipAscender; }
+  get clipDescender() { return this._font.extents.clipDescender; }
 
   featuresOfIndex(index) {
     this._shape();
@@ -121,7 +123,7 @@ class Layout {
       svg.setAttribute("xmlns", ns);
       svg.setAttributeNS(ns, "version", '1.1');
       svg.setAttributeNS(ns, "width", extents.width);
-      svg.setAttributeNS(ns, "height", this.ascender - this.descender);
+      svg.setAttributeNS(ns, "height", this.clipAscender + this.clipDescender);
 
       let x = -extents.x_bearing, y = this.ascender;
       let path = document.createElementNS(ns, "path");

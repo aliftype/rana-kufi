@@ -61,6 +61,7 @@ class Pointer {
   }
 
   get int32Array() { return HEAP32.slice(this.ptr / 4, (this.ptr + this.byteLength) / 4); }
+  get int32()      { return HEAP32[this.ptr / 4]; }
   get uint32()     { return HEAPU32[this.ptr / 4]; }
 }
 
@@ -194,10 +195,20 @@ export class Font {
     let extentsPtr = new Pointer(12 * 4);
     _hb_font_get_h_extents(this.ptr, extentsPtr.ptr);
     let extents = extentsPtr.int32Array;
+    let clipAscender = extents[0];
+    let clipDescender = extents[1];
+    let clipPtr = new Pointer(4);
+    if (_hb_ot_metrics_get_position(this.ptr, TAG("hcla"), clipPtr.ptr))
+      clipAscender = clipPtr.int32;
+    if (_hb_ot_metrics_get_position(this.ptr, TAG("hcld"), clipPtr.ptr))
+      clipDescender = clipPtr.int32;
+
     return {
       ascender: extents[0],
       descender: extents[1],
       line_gap: extents[2],
+      clipAscender: clipAscender,
+      clipDescender: clipDescender,
     };
   }
 }
