@@ -1,0 +1,5 @@
+afdko
+fonttools
+glyphsLib
+git+git://github.com/alif-type/glyphsObj.git@main#egg=glyphsObj
+PyYAML
