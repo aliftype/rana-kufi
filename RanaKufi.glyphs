@@ -29662,6 +29662,10 @@ kerning = {
 "reh-ar.01.01" = 0;
 "waw-ar" = 0;
 "waw-ar.01.01" = 0;
+"noonghunna-ar.01.01" = 0;
+"noonghunna-ar.01.02" = 0;
+"noonghunna-ar.01.03" = 0;
+"noonghunna-ar.01.04" = 0;
 };
 "@MMK_L_reh-alt" = {
 "@MMK_R_alef-wide" = -100;
