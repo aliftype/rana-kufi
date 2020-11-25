@@ -31,6 +31,47 @@ from glyphsObj.glyphdata import get_glyph as getGlyphInfo
 
 DEFAULT_TRANSFORM = [1, 0, 0, 1, 0, 0]
 
+# https://www.microsoft.com/typography/otspec/os2.htm#cpr
+CODEPAGE_RANGES = {
+    1252: 0,
+    1250: 1,
+    1251: 2,
+    1253: 3,
+    1254: 4,
+    1255: 5,
+    1256: 6,
+    1257: 7,
+    1258: 8,
+    # 9-15: Reserved for Alternate ANSI
+    874: 16,
+    932: 17,
+    936: 18,
+    949: 19,
+    950: 20,
+    1361: 21,
+    # 22-28: Reserved for Alternate ANSI and OEM
+    # 29: Macintosh Character Set (US Roman)
+    # 30: OEM Character Set
+    # 31: Symbol Character Set
+    # 32-47: Reserved for OEM
+    869: 48,
+    866: 49,
+    865: 50,
+    864: 51,
+    863: 52,
+    862: 53,
+    861: 54,
+    860: 55,
+    857: 56,
+    855: 57,
+    852: 58,
+    775: 59,
+    737: 60,
+    708: 61,
+    850: 62,
+    437: 63,
+}
+
 
 def draw(layer, instance, pen=None):
     font = layer.parent.parent
@@ -314,6 +355,30 @@ table GDEF {{
     return fea
 
 
+def calcFsSelection(instance):
+    font = instance.parent
+    fsSelection = 0
+    if font.customParameters["Use Typo Metrics"]:
+        fsSelection |= 1 << 7
+    if instance.isItalic:
+        fsSelection |= 1 << 1
+    if instance.isBold:
+        fsSelection |= 1 << 5
+    if not (instance.isItalic or instance.isBold):
+        fsSelection |= 1 << 6
+
+    return fsSelection
+
+
+def calcBits(bits, start, end):
+    b = 0
+    for i in reversed(range(start, end)):
+        b = b << 1
+        if i in bits:
+            b = b | 0x1
+    return b
+
+
 def build(instance, opts, glyphOrder):
     font = instance.parent
     master = font.masters[0]
@@ -389,6 +454,26 @@ def build(instance, opts, glyphOrder):
     fb.setupHorizontalMetrics(metrics)
 
     fb.setupPost()
+
+    # Compile to get font bbox
+    fb.font["head"].compile(fb.font)
+
+    codePages = [CODEPAGE_RANGES[v] for v in font.customParameters["codePageRanges"]]
+    fb.setupOS2(
+        version=4,
+        sTypoAscender=master.ascender,
+        sTypoDescender=master.descender,
+        sTypoLineGap=master.customParameters["typoLineGap"],
+        usWinAscent=fb.font["head"].yMax,
+        usWinDescent=-fb.font["head"].yMin,
+        sxHeight=master.xHeight,
+        sCapHeight=master.capHeight,
+        achVendID=vendor,
+        fsType=calcBits(font.customParameters["fsType"], 0, 16),
+        fsSelection=calcFsSelection(instance),
+        ulUnicodeRange1=calcBits(font.customParameters["unicodeRanges"], 0, 32),
+        ulCodePageRange1=calcBits(codePages, 0, 32),
+    )
 
     fea = makeFeatures(instance, master, opts, glyphOrder)
     fb.addOpenTypeFeatures(fea)
