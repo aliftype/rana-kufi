@@ -23,6 +23,8 @@ CONFIG = _config.yml
 VERSION = $(shell python version.py $(CONFIG))
 DIST = $(NAME)-$(VERSION)
 
+ARGS ?= 
+
 .SECONDARY:
 .ONESHELL:
 .PHONY: all
@@ -34,7 +36,7 @@ export SOURCE_DATE_EPOCH=0
 $(BUILDDIR)/%.otf: $(NAME).glyphs $(CONFIG)
 	$(info   BUILD  $(*F))
 	mkdir -p $(BUILDDIR)
-	python build.py $< $(VERSION) $@
+	python build.py $< $(VERSION) $@ $(ARGS)
 
 %.otf: $(BUILDDIR)/%.otf
 	$(info   SUBR   $(*F))

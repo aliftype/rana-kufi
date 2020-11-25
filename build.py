@@ -444,6 +444,7 @@ def build(instance, opts, glyphOrder):
 
     if opts.debug:
         fb.setupCFF(names["psName"], {}, charStrings, {})
+        fb.font["CFF "].compile(fb.font)
     else:
         fb.setupCFF2(charStrings)
 
@@ -491,7 +492,6 @@ def build(instance, opts, glyphOrder):
     instance.font = fb.font
     if opts.debug:
         fb.font.save(f"{instance.fontName}.otf")
-        fb.font.saveXML(f"{instance.fontName}.ttx")
 
     return fb.font
 
