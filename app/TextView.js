@@ -26,6 +26,7 @@ class Layout {
 
     this._adjustDots = false;
     this._removeDots = false;
+    this._smallDots = false;
     this._nocolorDots = false;
 
     this._svg = null;
@@ -59,6 +60,12 @@ class Layout {
     if (v != this._removeDots)
       this._svg = null;
     this._removeDots = v;
+  }
+
+  set smallDots(v) {
+    if (v != this._smallDots)
+      this._svg = this._glyphs = null;
+    this._smallDots = v;
   }
 
   set nocolorDots(v) {
@@ -142,9 +149,13 @@ class Layout {
     if (this._glyphs !== null)
       return;
 
+    let features = [];
+    if (this._smallDots)
+      features.push("ss02")
+
     // Shape once without features to get the base glyphs, which we use to get
     // list of glyph alternates.
-    let glyphs = this._buffer.shape(this._font, this._text, false);
+    let glyphs = this._buffer.shape(this._font, this._text, false, features);
     for (const g of glyphs) {
       let c = this._text[g.cl];
       // HACK: this assumes when there are multiple glyphs in a cluster, the
@@ -159,7 +170,7 @@ class Layout {
     }
 
     // Now do the real shaping with requested features.
-    glyphs = this._buffer.shape(this._font, this._text, true);
+    glyphs = this._buffer.shape(this._font, this._text, true, features);
 
     let x = 0, y = this.ascender;
     let maxY = Number.NEGATIVE_INFINITY;
@@ -300,11 +311,9 @@ export class View {
       document.getElementById("font-size-number").value = fontSize.value;
     }
 
-    let removeDots = document.getElementById("remove-dots").checked;
-    this._layout.removeDots = removeDots;
-
-    let nocolorDots = document.getElementById("nocolor-dots").checked;
-    this._layout.nocolorDots = nocolorDots;
+    this._layout.removeDots = document.getElementById("remove-dots").checked;
+    this._layout.nocolorDots = document.getElementById("nocolor-dots").checked;
+    this._layout.smallDots = document.getElementById("small-dots").checked;
 
     this._draw();
   }

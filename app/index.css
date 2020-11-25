@@ -108,6 +108,10 @@ input[type=checkbox]:checked + label {
   background-image: url(assets/images/remove-dots.svg);
 }
 
+#small-dots + label {
+  background-image: url(assets/images/small-dots.svg);
+}
+
 #adjust-dots + label {
   background-image: url(assets/images/adjust-dots.svg);
 }
