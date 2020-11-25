@@ -8,6 +8,10 @@ name = AllLetters;
 {
 code = "/.*\\.(medi|init)/ kashida-ar";
 name = ArabicJoinLeft;
+},
+{
+code = "/.*dot.*.-ar$/";
+name = Dots;
 }
 );
 copyright = "Copyright © 2019-2020 by Khaled Hosny. All rights reserved.";
@@ -329,7 +333,12 @@ pos [behDotless-ar.init.01.01 behDotless-ar.init.01.02 behDotless-ar.init.01.03 
 name = mark;
 },
 {
-code = "sub [/.*dot.*-ar$/] by [/.*dot.*-ar.small$/];";
+code = "sub [@Dots hamzaabove-ar hamzabelow-ar] by empty;";
+name = ss01;
+notes = "featureNames {\012	name 3 1 0x409 \"Dot-less Letter Forms\";\012	name 3 1 0xC01 \"حروف مهملة (بلا نقاط)\";\012};\012";
+},
+{
+code = "sub @Dots by [/.*dot.*-ar.small$/];";
 name = ss02;
 notes = "featureNames {\012        name 3 1 0x409 \"Small dots\";\012        name 3 1 0xC01 \"نقاط صغيرة\";\012};";
 }
@@ -29964,6 +29973,18 @@ width = 129;
 }
 );
 unicode = 0655;
+},
+{
+glyphname = empty;
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+width = 0;
+}
+);
+script = arabic;
+category = Mark;
+subCategory = Nonspacing;
 }
 );
 gridLength = 50;

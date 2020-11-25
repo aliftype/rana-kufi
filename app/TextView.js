@@ -58,7 +58,7 @@ class Layout {
 
   set removeDots(v) {
     if (v != this._removeDots)
-      this._svg = null;
+      this._svg = this._glyphs = null;
     this._removeDots = v;
   }
 
@@ -150,6 +150,9 @@ class Layout {
       return;
 
     let features = [];
+    if (this._removeDots)
+      features.push("ss01")
+
     if (this._smallDots)
       features.push("ss02")
 
@@ -212,9 +215,6 @@ class Layout {
     this._svg.setAttributeNS(ns, "viewBox", `${-this._margin} ${-this._margin} ${this.width} ${this.height}`);
 
     for (const g of this._glyphs) {
-      if (this._removeDots && g.isDot)
-        continue;
-
       if (g.layers.length && !(this._nocolorDots && g.isDot))
         for (const l of g.layers)
           this._svg.appendChild(this._pathElement(l, g.isDot));
