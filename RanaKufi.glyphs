@@ -3776,7 +3776,7 @@ name = "dal-ar";
 },
 {
 name = "dotabove-ar";
-transform = "{1, 0, 0, 1, 350, 450}";
+transform = "{1, 0, 0, 1, 300, 350}";
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
@@ -5098,7 +5098,7 @@ name = "sad-ar";
 },
 {
 name = "dotabove-ar";
-transform = "{1, 0, 0, 1, 550, 450}";
+transform = "{1, 0, 0, 1, 500, 350}";
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
@@ -5114,7 +5114,7 @@ layers = (
 anchors = (
 {
 name = top;
-position = "{550, 450}";
+position = "{500, 350}";
 }
 );
 components = (
@@ -5247,7 +5247,7 @@ name = "tah-ar";
 },
 {
 name = "dotabove-ar";
-transform = "{1, 0, 0, 1, 500, 450}";
+transform = "{1, 0, 0, 1, 450, 350}";
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
@@ -21983,7 +21983,7 @@ position = "{400, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22037,11 +22037,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{400, 350}";
 }
 );
 components = (
@@ -22099,7 +22099,7 @@ position = "{400, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22153,11 +22153,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{400, 350}";
 }
 );
 components = (
@@ -22215,7 +22215,7 @@ position = "{400, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22269,11 +22269,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{400, 350}";
 }
 );
 components = (
@@ -22331,7 +22331,7 @@ position = "{400, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22385,11 +22385,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{400, 350}";
 }
 );
 components = (
@@ -22447,7 +22447,7 @@ position = "{400, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{400, 350}";
 }
 );
 components = (
@@ -22492,11 +22492,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22554,11 +22554,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22616,11 +22616,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22678,11 +22678,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22740,11 +22740,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22802,11 +22802,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22864,11 +22864,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22926,11 +22926,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -22988,11 +22988,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -23050,11 +23050,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -23112,11 +23112,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -23174,11 +23174,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -23236,11 +23236,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -23298,11 +23298,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -23360,11 +23360,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -23422,11 +23422,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{350, 350}";
 }
 );
 components = (
@@ -23484,11 +23484,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{400, 350}";
 }
 );
 components = (
@@ -23546,11 +23546,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{400, 350}";
 }
 );
 components = (
@@ -23608,11 +23608,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{400, -50}";
+position = "{350, -50}";
 },
 {
 name = top;
-position = "{400, 450}";
+position = "{400, 350}";
 }
 );
 components = (
