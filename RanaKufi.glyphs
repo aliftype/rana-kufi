@@ -355,6 +355,14 @@ name = hheaLineGap;
 value = 300;
 },
 {
+name = underlinePosition;
+value = 150;
+},
+{
+name = underlineThickness;
+value = 100;
+},
+{
 name = "Color Palettes";
 value = (
 (

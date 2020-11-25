@@ -453,7 +453,10 @@ def build(instance, opts, glyphOrder):
         metrics[name] = (width, bounds[0])
     fb.setupHorizontalMetrics(metrics)
 
-    fb.setupPost()
+    fb.setupPost(
+        underlinePosition=master.customParameters["underlinePosition"],
+        underlineThickness=master.customParameters["underlineThickness"],
+    )
 
     # Compile to get font bbox
     fb.font["head"].compile(fb.font)
