@@ -15,6 +15,7 @@
 
 import argparse
 import copy
+import re
 
 from fontTools.designspaceLib import DesignSpaceDocument
 from fontTools.fontBuilder import FontBuilder
@@ -274,26 +275,26 @@ def makeAutoFeatures(font, glyphOrder):
     return fea
 
 
+RE_DELIM = re.compile(r"(?:/(.*?.)/)")
+
+
 def makeFeatures(instance, master, opts, glyphOrder):
     font = instance.parent
+
+    def repl(match):
+        regex = re.compile(match.group(1))
+        return " ".join(n for n in glyphOrder if regex.match(n))
+
+    for x in list(font.featurePrefixes) + list(font.classes) + list(font.features):
+        x.code = RE_DELIM.sub(repl, x.code)
 
     fea = ""
     for gclass in font.classes:
         if gclass.disabled:
             continue
-        if not gclass.code:
-            glyphs = None
-            if gclass.name == "AllLetters":
-                glyphs = {n for n in glyphOrder if getGlyphInfo(n).category == "Letter"}
-            elif gclass.name == "ArabicJoinLeft":
-                glyphs = {
-                    n for n in glyphOrder if any(s in n for s in [".init", ".medi"])
-                }
-                glyphs.add("kashida-ar")
-            else:
-                glyphs = {n for n in glyphOrder if n.startswith(gclass.name)}
-            if glyphs is not None:
-                gclass.code = " ".join(sorted(glyphs))
+        if not gclass.code and gclass.name == "AllLetters":
+            glyphs = [n for n in glyphOrder if getGlyphInfo(n).category == "Letter"]
+            gclass.code = " ".join(glyphs)
         fea += f"@{gclass.name} = [{gclass.code}];\n"
 
     for prefix in font.featurePrefixes:

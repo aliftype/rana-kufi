@@ -6,32 +6,8 @@ code = "";
 name = AllLetters;
 },
 {
-code = "";
+code = "/.*\\.(medi|init)/ kashida-ar";
 name = ArabicJoinLeft;
-},
-{
-code = "";
-name = "lam-ar";
-},
-{
-code = "";
-name = "alef-ar";
-},
-{
-code = "";
-name = "lam_alef-ar.fina";
-},
-{
-code = "";
-name = "behDotless-ar.init";
-},
-{
-code = "";
-name = "fehDotless-ar";
-},
-{
-code = "";
-name = "fehDotless-ar.init";
 }
 );
 copyright = "Copyright © 2019-2020 by Khaled Hosny. All rights reserved.";
@@ -276,14 +252,14 @@ code = "lookup heh_dots {
 @hah_high = [hah-ar.init hah-ar.medi hah-ar.init.narrow hah-ar.init.01.03 hah-ar.medi.01.03];
 lookup after_hah {
   lookupflag IgnoreMarks;
-  sub @hah_high' lookup hah_high [@lam-ar @alef-ar @lam_alef-ar.fina];
-  sub [hah-ar.init hah-ar.medi hah-ar.init.narrow]' lookup hah_high [@fehDotless-ar @fehDotless-ar.init];
+  sub @hah_high' lookup hah_high [/^lam-ar.*/ /^alef-ar.*/ /^lam_alef-ar.fina.*/];
+  sub [hah-ar.init hah-ar.medi hah-ar.init.narrow]' lookup hah_high [/^fehDotless-ar.*/ /^fehDotless-ar.init.*/];
 } after_hah;
 
 lookup after_hah_dots {
   lookupflag 0;
-  sub @hah_high' lookup hah_high @behDotless-ar.init dotabove-ar;
-  sub @hah_high' lookup hah_high [dotabove-ar dotbelow-ar] @behDotless-ar.init dotabove-ar;
+  sub @hah_high' lookup hah_high [/^behDotless-ar.init.*/] dotabove-ar;
+  sub @hah_high' lookup hah_high [dotabove-ar dotbelow-ar] [/^behDotless-ar.init.*/] dotabove-ar;
 } after_hah_dots;
 
 lookup before_heh {
@@ -324,10 +300,8 @@ ignore
  pos [noonghunna-ar.01.02 noonghunna-ar.fina.01.02]
       dotabove-ar'
       space.mark
-     [fehDotless-ar.01.01 fehDotless-ar.01.02 fehDotless-ar.01.03 fehDotless-ar.01.04
-      fehDotless-ar.init.01.01 fehDotless-ar.init.01.02 fehDotless-ar.init.01.03 fehDotless-ar.init.01.04
-      behDotless-ar.01.01 behDotless-ar.01.02 behDotless-ar.01.03 behDotless-ar.01.04
-      behDotless-ar.init.01.01 behDotless-ar.init.01.02 behDotless-ar.init.01.03 behDotless-ar.init.01.04
+     [/^(feh|beh)Dotless-ar\\.01\\.*/
+      /^(feh|beh)Dotless-ar\\.init\\.01.*/
       dal-ar.01.03 dal-ar.03.01 behDotless-ar.init.01.02 dal-ar.03.03 dal-ar.01.01
       lam-ar lam-ar.01.01 lam-ar.01.02 lam-ar.01.03 lam-ar.01.04 lam-ar.02.00 lam-ar.02.01 lam-ar.02.02 lam-ar.02.03 lam-ar.02.04 lam-ar.03.00 lam-ar.03.01 lam-ar.03.02 lam-ar.03.03 lam-ar.03.04
       lam-ar.init.03.00 lam-ar.init.02.03 lam-ar.init.02.00 lam-ar.init.03.03
