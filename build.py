@@ -14,6 +14,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import argparse
+import copy
 
 from fontTools.designspaceLib import DesignSpaceDocument
 from fontTools.fontBuilder import FontBuilder
@@ -24,7 +25,7 @@ from fontTools.pens.pointPen import PointToSegmentPen
 from fontTools.pens.reverseContourPen import ReverseContourPen
 from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.pens.transformPen import TransformPen
-from glyphsObj import GSFont, GSAnchor
+from glyphsObj import GSFont, GSGlyph, GSLayer, GSComponent, GSAnchor
 from glyphsObj.glyphdata import get_glyph as getGlyphInfo
 
 
@@ -72,21 +73,24 @@ def draw(layer, instance, pen=None):
     return pen.pen
 
 
-def makeKerning(font, master):
+def makeKerning(font, master, glyphOrder):
     fea = ""
 
     groups = {}
-    for glyph in font.glyphs:
+    for name in glyphOrder:
+        glyph = font.glyphs[name]
+        if not glyph.export:
+            continue
         if glyph.leftKerningGroup:
             group = f"@MMK_R_{glyph.leftKerningGroup}"
             if group not in groups:
                 groups[group] = []
-            groups[group].append(glyph.name)
+            groups[group].append(name)
         if glyph.rightKerningGroup:
             group = f"@MMK_L_{glyph.rightKerningGroup}"
             if group not in groups:
                 groups[group] = []
-            groups[group].append(glyph.name)
+            groups[group].append(name)
     for group, glyphs in groups.items():
         fea += f"{group} = [{' '.join(glyphs)}];\n"
 
@@ -95,7 +99,11 @@ def makeKerning(font, master):
     classes = "";
     enums = "";
     for left in kerning:
+        if left in font.glyphs and not font.glyphs[left].export:
+            continue
         for right in kerning[left]:
+            if right in font.glyphs and not font.glyphs[right].export:
+                continue
             value = kerning[left][right]
             kern = f"<{value} 0 {value} 0>"
             if left.startswith("@") and right.startswith("@"):
@@ -125,7 +133,7 @@ def getLayer(glyph, instance):
     return glyph.layers[0]
 
 
-def makeMark(instance):
+def makeMark(instance, glyphOrder):
     font = instance.parent
 
     fea = ""
@@ -137,7 +145,8 @@ def makeMark(instance):
     entry = {}
     lig = {}
 
-    for glyph in font.glyphs:
+    for gname in glyphOrder:
+        glyph = font.glyphs[gname]
         if not glyph.export:
             continue
 
@@ -145,22 +154,22 @@ def makeMark(instance):
         for anchor in layer.anchors:
             name, x, y = anchor.name, anchor.position.x, anchor.position.y
             if name.startswith("_"):
-                fea += f"markClass {glyph.name} <anchor {x} {y}> @mark_{name[1:]};\n"
+                fea += f"markClass {gname} <anchor {x} {y}> @mark_{name[1:]};\n"
             elif name.startswith("caret_"):
                 pass
             elif "_" in name:
                 name, index = name.split("_")
-                if glyph.name not in lig:
-                    lig[glyph.name] = {}
-                if index not in lig[glyph.name]:
-                    lig[glyph.name][index] = []
-                lig[glyph.name][index].append((name, (x, y)))
+                if gname not in lig:
+                    lig[gname] = {}
+                if index not in lig[gname]:
+                    lig[gname][index] = []
+                lig[gname][index].append((name, (x, y)))
             elif name == "exit":
-                exit[glyph.name] = (x, y)
+                exit[gname] = (x, y)
             elif name == "entry":
-                entry[glyph.name] = (x, y)
+                entry[gname] = (x, y)
             else:
-                mark += f"pos base {glyph.name} <anchor {x} {y}> mark @mark_{name};\n"
+                mark += f"pos base {gname} <anchor {x} {y}> mark @mark_{name};\n"
 
     for name, components in lig.items():
         mark += f"pos ligature {name}"
@@ -171,13 +180,13 @@ def makeMark(instance):
                 mark += f" <anchor {x} {y}> mark @mark_{anchor}"
         mark += ";\n"
 
-    for glyph in font.glyphs:
-        if glyph.name in exit or glyph.name in entry:
-            pos1 = entry.get(glyph.name)
-            pos2 = exit.get(glyph.name)
+    for name in glyphOrder:
+        if name in exit or name in entry:
+            pos1 = entry.get(name)
+            pos2 = exit.get(name)
             anchor1 = pos1 and f"{pos1[0]} {pos1[1]}" or "NULL"
             anchor2 = pos2 and f"{pos2[0]} {pos2[1]}" or "NULL"
-            curs += f"pos cursive {glyph.name} <anchor {anchor1}> <anchor {anchor2}>;\n"
+            curs += f"pos cursive {name} <anchor {anchor1}> <anchor {anchor2}>;\n"
 
     fea += f"""
 feature curs {{
@@ -192,11 +201,11 @@ feature mark {{
     return fea
 
 
-def makeAutoFeatures(font):
+def makeAutoFeatures(font, glyphOrder):
     fea = ""
     features = {}
-    for glyph in font.glyphs:
-        name = glyph.name
+    for name in glyphOrder:
+        glyph = font.glyphs[name]
         if name.count(".") >= 2:
             base, feature, index = name.rsplit(".", 2)
             try:
@@ -222,7 +231,7 @@ def makeAutoFeatures(font):
     return fea
 
 
-def makeFeatures(instance, master, opts):
+def makeFeatures(instance, master, opts, glyphOrder):
     font = instance.parent
 
     fea = ""
@@ -232,12 +241,14 @@ def makeFeatures(instance, master, opts):
         if not gclass.code:
             glyphs = None
             if gclass.name == "AllLetters":
-                glyphs = {g.name for g in font.glyphs if getGlyphInfo(g.name).category == "Letter"}
+                glyphs = {n for n in glyphOrder if getGlyphInfo(n).category == "Letter"}
             elif gclass.name == "ArabicJoinLeft":
-                glyphs = {g.name for g in font.glyphs if any(s in g.name for s in [".init", ".medi"])}
+                glyphs = {
+                    n for n in glyphOrder if any(s in n for s in [".init", ".medi"])
+                }
                 glyphs.add("kashida-ar")
             else:
-                glyphs = {g.name for g in font.glyphs if g.name.startswith(gclass.name)}
+                glyphs = {n for n in glyphOrder if n.startswith(gclass.name)}
             if glyphs is not None:
                 gclass.code = " ".join(sorted(glyphs))
         fea += f"@{gclass.name} = [{gclass.code}];\n"
@@ -251,9 +262,9 @@ def makeFeatures(instance, master, opts):
         if feature.disabled:
             continue
         if feature.name == "mark":
-            fea += makeMark(instance)
+            fea += makeMark(instance, glyphOrder)
         if feature.name == "dist":
-            fea += makeAutoFeatures(font)
+            fea += makeAutoFeatures(font, glyphOrder)
 
         fea += f"""
             feature {feature.name} {{
@@ -261,27 +272,28 @@ def makeFeatures(instance, master, opts):
             }} {feature.name};
         """
         if feature.name == "kern":
-            fea += makeKerning(font, master)
+            fea += makeKerning(font, master, glyphOrder)
 
     marks = set()
     carets = ""
-    for glyph in font.glyphs:
+    for name in glyphOrder:
+        glyph = font.glyphs[name]
         if not glyph.export:
             continue
 
         if glyph.category and glyph.subCategory:
             if glyph.category == "Mark" and glyph.subCategory == "Nonspacing":
-                marks.add(glyph.name)
+                marks.add(name)
         else:
             layer = getLayer(glyph, instance)
             caret = ""
             for anchor in layer.anchors:
                 if anchor.name.startswith("_"):
-                    marks.add(glyph.name)
+                    marks.add(name)
                 elif anchor.name.startswith("caret_"):
                     _, index = anchor.name.split("_")
                     if not caret:
-                        caret = f"LigatureCaretByPos {glyph.name}"
+                        caret = f"LigatureCaretByPos {name}"
                     caret += f" {anchor.position.x}"
             if caret:
                 carets += f"{caret};\n"
@@ -300,19 +312,18 @@ table GDEF {{
     return fea
 
 
-def build(instance, opts):
+def build(instance, opts, glyphOrder):
     font = instance.parent
     master = font.masters[0]
 
-    glyphOrder = []
     advanceWidths = {}
     characterMap = {}
     charStrings = {}
     colorLayers = {}
-    for glyph in font.glyphs:
+    for name in glyphOrder:
+        glyph = font.glyphs[name]
         if not glyph.export:
             continue
-        name = glyph.name
         for layer in glyph.layers:
             if layer.name.startswith("Color "):
                 _, index = layer.name.split(" ")
@@ -320,7 +331,6 @@ def build(instance, opts):
                     colorLayers[name] = []
                 colorLayers[name].append((name, int(index)))
 
-        glyphOrder.append(name)
         if glyph.unicode:
             characterMap[int(glyph.unicode, 16)] = name
 
@@ -375,7 +385,7 @@ def build(instance, opts):
 
     fb.setupPost()
 
-    fea = makeFeatures(instance, master, opts)
+    fea = makeFeatures(instance, master, opts, glyphOrder)
     fb.addOpenTypeFeatures(fea)
 
     palettes = master.customParameters["Color Palettes"]
@@ -394,9 +404,12 @@ def build(instance, opts):
 
 
 def buildVF(font, opts):
+    glyphOrder = buildAltGlyphs(font)
+    prepare(font)
+
     for instance in font.instances:
         print(f" MASTER  {instance.name}")
-        build(instance, opts)
+        build(instance, opts, glyphOrder)
         if instance.name == "Regular":
             regular = instance
 
@@ -425,10 +438,10 @@ def buildVF(font, opts):
     return otf
 
 
-def propogateAnchors(layer):
+def propagateAnchors(layer):
     for component in layer.components:
         clayer = component.layer or component.component.layers[0]
-        propogateAnchors(clayer)
+        propagateAnchors(clayer)
         for anchor in clayer.anchors:
             names = [a.name for a in layer.anchors]
             name = anchor.name
@@ -450,7 +463,80 @@ def prepare(font):
         if not glyph.export:
             continue
         for layer in glyph.layers:
-            propogateAnchors(layer)
+            propagateAnchors(layer)
+
+
+def buildAltGlyph(glyph, alternates, componentName):
+    glyphs = []
+    for alternate in alternates:
+        newGlyph = GSGlyph()
+        name = glyph.name
+        if name.endswith(".00"):
+            newGlyph.name = name.rsplit(".", 1)[0]
+        else:
+            newGlyph.name = f"{name}.01"
+        for attr in {
+            "category",
+            "subCategory",
+            "script",
+            "leftKerningGroup",
+            "rightKerningGroup",
+        }:
+            setattr(newGlyph, attr, getattr(glyph, attr))
+
+        for layer in glyph.layers:
+            newLayer = GSLayer()
+            for attr in {"name", "width", "associatedMasterId"}:
+                setattr(newLayer, attr, getattr(layer, attr))
+            newLayer.anchors.setter([copy.copy(a) for a in layer.anchors])
+            newLayer.components.setter([copy.copy(c) for c in layer.components])
+            for component in newLayer.components:
+                if component.componentName == componentName:
+                    component.componentName = alternate
+            newLayer.paths.setter([copy.copy(p) for p in layer.paths])
+            newGlyph.layers.append(newLayer)
+        glyphs.append(newGlyph)
+    return glyphs
+
+
+def updateKerning(font, glyph, alternates):
+    for layer in glyph.layers:
+        kerning = font.kerning[layer.associatedMasterId]
+        for component in layer.components:
+            if component.componentName in alternates:
+                for left in list(kerning):
+                    if left == component.componentName:
+                        assert False # XXX
+                    for right in list(kerning[left]):
+                        if right == component.componentName:
+                            kerning[left][glyph.name] = kerning[left][right]
+
+
+def buildAltGlyphs(font):
+    glyphOrder = [g.name for g in font.glyphs]
+    newOrder = []
+    alts = {}
+    for name in glyphOrder:
+        if name.startswith("-") and not "." in name:
+            alts[name] = [n for n in glyphOrder if n.startswith(name + ".")]
+
+    for name in glyphOrder:
+        glyph = font.glyphs[name]
+        if not glyph.export:
+            continue
+        newOrder.append(name)
+        counter = 1
+        for component in glyph.layers[0].components:
+            if component.componentName in alts:
+                alternates = alts[component.componentName]
+                glyphs = buildAltGlyph(glyph, alternates, component.componentName)
+                for newGlyph in glyphs:
+                    newGlyph.name += f".{counter:02}"
+                    counter += 1
+                    font.glyphs.append(newGlyph)
+                    updateKerning(font, newGlyph, alternates)
+                    newOrder.append(newGlyph.name)
+    return newOrder
 
 
 def main():
@@ -462,7 +548,6 @@ def main():
     args = parser.parse_args()
 
     font = GSFont(args.glyphs)
-    prepare(font)
     otf = buildVF(font, args)
     otf.save(args.otf)
 
