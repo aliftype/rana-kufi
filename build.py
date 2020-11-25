@@ -56,8 +56,10 @@ def draw(layer, instance, pen=None):
                 node_type = node.type
                 if node_type not in ["line", "curve", "qcurve"]:
                     node_type = None
-                pen.addPoint(tuple(node.position), segmentType=node_type, smooth=node.smooth)
-        pen.endPath();
+                pen.addPoint(
+                    tuple(node.position), segmentType=node_type, smooth=node.smooth
+                )
+        pen.endPath()
 
     for component in layer.components:
         componentLayer = getLayer(component.component, instance)
@@ -96,8 +98,8 @@ def makeKerning(font, master, glyphOrder):
 
     kerning = font.kerning[master.id]
     pairs = ""
-    classes = "";
-    enums = "";
+    classes = ""
+    enums = ""
     for left in kerning:
         if left in font.glyphs and not font.glyphs[left].export:
             continue
@@ -369,8 +371,11 @@ def build(instance, opts, glyphOrder):
     fb.setupGlyphOrder(glyphOrder)
     fb.setupCharacterMap(characterMap)
     fb.setupNameTable(names, mac=False)
-    fb.setupHorizontalHeader(ascent=master.ascender, descent=master.descender,
-                             lineGap=master.customParameters['hheaLineGap'])
+    fb.setupHorizontalHeader(
+        ascent=master.ascender,
+        descent=master.descender,
+        lineGap=master.customParameters["hheaLineGap"],
+    )
 
     if opts.debug:
         fb.setupCFF(names["psName"], {}, charStrings, {})
@@ -390,7 +395,7 @@ def build(instance, opts, glyphOrder):
 
     palettes = master.customParameters["Color Palettes"]
     palettes = [
-        [tuple(int(v)/255 for v in c.split(",")) for c in p] for p in palettes
+        [tuple(int(v) / 255 for v in c.split(",")) for c in p] for p in palettes
     ]
     fb.setupCPAL(palettes)
     fb.setupCOLR(colorLayers)
@@ -507,7 +512,7 @@ def updateKerning(font, glyph, alternates):
             if component.componentName in alternates:
                 for left in list(kerning):
                     if left == component.componentName:
-                        assert False # XXX
+                        assert False  # XXX
                     for right in list(kerning[left]):
                         if right == component.componentName:
                             kerning[left][glyph.name] = kerning[left][right]
@@ -542,14 +547,15 @@ def buildAltGlyphs(font):
 
 def main():
     parser = argparse.ArgumentParser(description="Build Rana Kufi.")
-    parser.add_argument("glyphs",  help="input Glyphs source file")
+    parser.add_argument("glyphs", help="input Glyphs source file")
     parser.add_argument("version", help="font version")
-    parser.add_argument("otf",     help="output OTF file")
+    parser.add_argument("otf", help="output OTF file")
     parser.add_argument("--debug", help="Save debug files", action="store_true")
     args = parser.parse_args()
 
     font = GSFont(args.glyphs)
     otf = buildVF(font, args)
     otf.save(args.otf)
+
 
 main()
