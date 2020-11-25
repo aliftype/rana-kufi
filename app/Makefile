@@ -16,7 +16,6 @@
 HBDIR = harfbuzz/src
 
 EM_CFLAGS = \
-	  --llvm-lto 1 \
 	  -s ENVIRONMENT=web \
 	  -s FILESYSTEM=0 \
 	  -s RESERVED_FUNCTION_POINTERS=5 \
@@ -51,6 +50,7 @@ EM_CFLAGS = \
 	      "_hb_shape" ]' \
 	  -DEMSCRIPTEN_HAS_UNBOUND_TYPE_NAMES=0 \
 	  -fno-exceptions -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden \
+	  -flto \
 	  -Oz
 
 .PHONY: all

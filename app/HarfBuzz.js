@@ -123,20 +123,27 @@ export class Font {
 
     if (!this._decompose_funcs) {
       let funcs = this._decompose_funcs = _hb_draw_funcs_create();
-      _hb_draw_funcs_set_move_to_func(funcs,
-        addFunction(function(x, y, g) { outlines[g] += `M${x},${-y}`; }));
-      _hb_draw_funcs_set_line_to_func(funcs,
-        addFunction(function(x, y, g) { outlines[g] += `L${x},${-y}`; }));
-      _hb_draw_funcs_set_quadratic_to_func(funcs,
-        addFunction(function(x1, y1, x2, y2, g) {
-          outlines[g] += `Q${x1},${-y1},${x2},${-y2}`;
-        }));
-      _hb_draw_funcs_set_cubic_to_func(funcs,
-        addFunction(function(x1, y1, x2, y2, x3, y3, g) {
-          outlines[g] += `C${x1},${-y1},${x2},${-y2},${x3},${-y3}`;
-        }));
-      _hb_draw_funcs_set_close_path_func(funcs,
-        addFunction(function(g) { outlines[g] += `Z` }));
+      let move_to = addFunction(function(x, y, g) {
+        outlines[g] += `M${x},${-y}`;
+      }, "viii");
+      let line_to = addFunction(function(x, y, g) {
+        outlines[g] += `L${x},${-y}`;
+      }, "viii");
+      let quadratic_to = addFunction(function(x1, y1, x2, y2, g) {
+        outlines[g] += `Q${x1},${-y1},${x2},${-y2}`;
+      }, "viiiii");
+      let cubic_to = addFunction(function(x1, y1, x2, y2, x3, y3, g) {
+        outlines[g] += `C${x1},${-y1},${x2},${-y2},${x3},${-y3}`;
+      }, "viiiiiii");
+      let close_path = addFunction(function(g) {
+        outlines[g] += `Z`
+      }, "vi");
+
+      _hb_draw_funcs_set_move_to_func(funcs, move_to);
+      _hb_draw_funcs_set_line_to_func(funcs, line_to);
+      _hb_draw_funcs_set_quadratic_to_func(funcs, quadratic_to);
+      _hb_draw_funcs_set_cubic_to_func(funcs, cubic_to);
+      _hb_draw_funcs_set_close_path_func(funcs, close_path);
     }
 
     outlines[glyph] = "";
