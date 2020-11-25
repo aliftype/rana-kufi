@@ -36,9 +36,6 @@ $(BUILDDIR)/%.otf: $(NAME).glyphs $(CONFIG)
 	mkdir -p $(BUILDDIR)
 	python build.py $< $(VERSION) $@
 
-$(BUILDDIR)/%.subr.cff: $(BUILDDIR)/%.otf
+%.otf: $(BUILDDIR)/%.otf
 	$(info   SUBR   $(*F))
-	tx -cff2 +S +b $< $@ 2>/dev/null
-
-%.otf: $(BUILDDIR)/%.subr.cff $(BUILDDIR)/%.otf
-	sfntedit -d post -a CFF2=$+ $@
+	python -m cffsubr -o $@ $<
