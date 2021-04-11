@@ -25,6 +25,10 @@ name = "Disable Last Change";
 value = 1;
 },
 {
+name = "Write DisplayStrings";
+value = 0;
+},
+{
 name = "Virtual Master";
 value = (
 {
