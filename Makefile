@@ -25,13 +25,9 @@ DIST = $(NAME)-$(VERSION)
 
 ARGS ?= 
 
-.SECONDARY:
-.ONESHELL:
 .PHONY: all
 
 all: $(NAME).otf
-
-export SOURCE_DATE_EPOCH=0
 
 %.otf: $(NAME).glyphs $(CONFIG)
 	$(info   BUILD  $(*F))

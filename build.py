@@ -16,10 +16,12 @@
 import argparse
 import copy
 import re
+import datetime
 
 from fontTools.designspaceLib import DesignSpaceDocument
 from fontTools.fontBuilder import FontBuilder
 from fontTools.ttLib import TTFont, newTable, getTableModule
+from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from fontTools.varLib import build as merge
 from fontTools.misc.transform import Transform
 from fontTools.pens.pointPen import PointToSegmentPen
@@ -434,7 +436,13 @@ def build(instance, opts, glyphOrder):
     }
 
     fb = FontBuilder(font.upm, isTTF=False)
-    fb.updateHead(fontRevision=version)
+    date = font.date.replace(tzinfo=datetime.timezone.utc)
+    stat = opts.glyphs.stat()
+    fb.updateHead(
+        fontRevision=version,
+        created=int(date.timestamp()) - mac_epoch_diff,
+        modified=int(stat.st_mtime) - mac_epoch_diff,
+    )
     fb.setupGlyphOrder(glyphOrder)
     fb.setupCharacterMap(characterMap)
     fb.setupNameTable(names, mac=False)
@@ -498,7 +506,8 @@ def build(instance, opts, glyphOrder):
     return fb.font
 
 
-def buildVF(font, opts):
+def buildVF(opts):
+    font = GSFont(opts.glyphs)
     glyphOrder = buildAltGlyphs(font)
     prepare(font)
 
@@ -637,15 +646,16 @@ def buildAltGlyphs(font):
 
 
 def main():
+    from pathlib import Path
+
     parser = argparse.ArgumentParser(description="Build Rana Kufi.")
-    parser.add_argument("glyphs", help="input Glyphs source file")
+    parser.add_argument("glyphs", help="input Glyphs source file", type=Path)
     parser.add_argument("version", help="font version")
-    parser.add_argument("otf", help="output OTF file")
+    parser.add_argument("otf", help="output OTF file", type=Path)
     parser.add_argument("--debug", help="Save debug files", action="store_true")
     args = parser.parse_args()
 
-    font = GSFont(args.glyphs)
-    otf = buildVF(font, args)
+    otf = buildVF(args)
     otf.save(args.otf)
 
 
