@@ -10082,6 +10082,12 @@ leftKerningGroup = "straight-l";
 glyphname = "heh-ar.02.00";
 layers = (
 {
+anchors = (
+{
+name = top;
+position = "{225, 550}";
+}
+);
 components = (
 {
 name = _zuluf100;
