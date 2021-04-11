@@ -1,5 +1,5 @@
 {
-.appVersion = "1350";
+.appVersion = "3076";
 classes = (
 {
 code = "";
@@ -25,19 +25,6 @@ name = "Disable Last Change";
 value = 1;
 },
 {
-name = vendorID;
-value = ALIF;
-},
-{
-name = Axes;
-value = (
-{
-Name = Ascender;
-Tag = ASCD;
-}
-);
-},
-{
 name = "Virtual Master";
 value = (
 {
@@ -45,18 +32,6 @@ Axis = Ascender;
 Location = 8;
 }
 );
-},
-{
-name = sampleText;
-value = "لما رنا حدثتني النفس قائلة يا ويح جنبك بالسهم المصيب رمي";
-},
-{
-name = license;
-value = "This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\012\012This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.\012\012You should have received a copy of the GNU Affero General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>";
-},
-{
-name = licenseURL;
-value = "https://www.gnu.org/licenses/agpl-3.0.html";
 },
 {
 name = "Use Typo Metrics";
@@ -77,6 +52,31 @@ value = (
 name = codePageRanges;
 value = (
 1256
+);
+},
+{
+name = vendorID;
+value = ALIF;
+},
+{
+name = sampleText;
+value = "لما رنا حدثتني النفس قائلة يا ويح جنبك بالسهم المصيب رمي";
+},
+{
+name = license;
+value = "This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\012\012This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.\012\012You should have received a copy of the GNU Affero General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>";
+},
+{
+name = licenseURL;
+value = "https://www.gnu.org/licenses/agpl-3.0.html";
+},
+{
+name = Axes;
+value = (
+{
+Name = Ascender;
+Tag = ASCD;
+}
 );
 }
 );
@@ -340,15 +340,15 @@ notes = "featureNames {\012	name 3 1 0x409 \"Dot-less Letter Forms\";\012	name 3
 {
 code = "sub @Dots by [/.*dot.*-ar.small$/];";
 name = ss02;
-notes = "featureNames {\012        name 3 1 0x409 \"Small dots\";\012        name 3 1 0xC01 \"نقاط صغيرة\";\012};";
+notes = "featureNames {\012	name 3 1 0x409 \"Small dots\";\012	name 3 1 0xC01 \"نقاط صغيرة\";\012};\012";
 }
 );
 fontMaster = (
 {
 alignmentZones = (
 "{1200, 15}",
+"{1200, 15}",
 "{400, 15}",
-"{0, 15}",
 "{0, -15}",
 "{-150, -15}"
 );
@@ -1199,6 +1199,7 @@ layers = (
 {
 components = (
 {
+alignment = -1;
 name = "alef-ar";
 },
 {
@@ -3440,6 +3441,7 @@ position = "{107, 150}";
 );
 components = (
 {
+alignment = -1;
 name = "hah-ar.medi.01.03";
 },
 {
