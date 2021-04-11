@@ -33,11 +33,7 @@ all: $(NAME).otf
 
 export SOURCE_DATE_EPOCH=0
 
-$(BUILDDIR)/%.otf: $(NAME).glyphs $(CONFIG)
+%.otf: $(NAME).glyphs $(CONFIG)
 	$(info   BUILD  $(*F))
 	mkdir -p $(BUILDDIR)
 	python build.py $< $(VERSION) $@ $(ARGS)
-
-%.otf: $(BUILDDIR)/%.otf
-	$(info   SUBR   $(*F))
-	python -m cffsubr -o $@ $<

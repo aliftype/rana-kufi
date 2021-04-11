@@ -28,6 +28,7 @@ from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.pens.transformPen import TransformPen
 from glyphsObj import GSFont, GSGlyph, GSLayer, GSComponent, GSAnchor
 from glyphsObj.glyphdata import get_glyph as getGlyphInfo
+from cffsubr import subroutinize
 
 
 DEFAULT_TRANSFORM = [1, 0, 0, 1, 0, 0]
@@ -529,6 +530,7 @@ def buildVF(font, opts):
 
     print(f" MERGE   {font.familyName}")
     otf, _, _ = merge(ds)
+    subroutinize(otf)
     otf["post"].formatType = 3.0
     return otf
 
