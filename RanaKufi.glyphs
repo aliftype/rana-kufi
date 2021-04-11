@@ -296,7 +296,9 @@ pos [behDotless-ar.init]' <0 0 120 0> [hah-ar];
 pos [behDotless-ar.init]' <0 0 70  0> [hah-ar hah-ar.init];
 pos [lam-ar.init.short lam-ar.init.short.01.01]' <0 0 50 0> [hah-ar hah-ar.init];
 
-pos [behDotless-ar.init]' <0 0 270 0> [hah-ar.01.01];";
+pos [behDotless-ar.init]' <0 0 270 0> [hah-ar.01.01];
+
+pos @ArabicJoinLeft heh-ar.02.00 <-60 0 -60 0>;";
 name = kern;
 },
 {
