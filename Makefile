@@ -18,7 +18,6 @@ NAME = RanaKufi
 MAKEFLAGS := -sr
 SHELL = bash
 
-BUILDDIR = build
 CONFIG = _config.yml
 VERSION = $(shell python version.py $(CONFIG))
 DIST = $(NAME)-$(VERSION)
@@ -31,5 +30,4 @@ all: $(NAME).otf
 
 %.otf: $(NAME).glyphs $(CONFIG)
 	$(info   BUILD  $(*F))
-	mkdir -p $(BUILDDIR)
 	python build.py $< $(VERSION) $@ $(ARGS)
