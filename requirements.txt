@@ -6,7 +6,7 @@
 #
 cffsubr==0.2.8
     # via -r requirements.in
-fonttools[unicode]==4.22.0
+fonttools[unicode]==4.24.0
     # via
     #   -r requirements.in
     #   cffsubr
