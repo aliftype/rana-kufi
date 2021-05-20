@@ -209,7 +209,7 @@ lookup alef_lam_lam_heh {
 
 
 lookup before_hah {
-  @before = [behDotless-ar.init ain-ar.init fehDotless-ar.init lam-ar.init meem-ar.init];
+  @before = [behDotless-ar.init ain-ar.init fehDotless-ar.init lam-ar.init meem-ar.init hah-ar.init];
   @match  = [hah-ar.fina hah-ar.medi];
   @repl   = [hah-ar hah-ar.init];
   ignore sub @ArabicJoinLeft @before @match';
@@ -242,7 +242,8 @@ lookup lam_hah2 {
   sub    lam-ar.init' [hah-ar hah-ar.init.narrow hah-ar.init] by lam-ar.init.short;
 } lam_hah2;
 
-lookup teh_alef_first;";
+lookup teh_alef_first;
+";
 name = rlig;
 },
 {
@@ -2727,7 +2728,7 @@ position = "{228, -50}";
 },
 {
 name = entry;
-position = "{176, 150}";
+position = "{221, 150}";
 },
 {
 name = top;
@@ -3912,11 +3913,11 @@ layers = (
 anchors = (
 {
 name = entry;
-position = "{170, 150}";
+position = "{140, 150}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{-30, 0}";
 }
 );
 components = (
@@ -3960,7 +3961,7 @@ position = "{227, 150}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{-30, 0}";
 },
 {
 name = top;
@@ -4027,7 +4028,7 @@ position = "{225, 150}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{-30, 0}";
 }
 );
 components = (
@@ -4067,7 +4068,7 @@ position = "{107, 150}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{-30, 0}";
 }
 );
 components = (
@@ -4098,7 +4099,7 @@ position = "{107, 150}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{-30, 0}";
 }
 );
 components = (
@@ -4140,7 +4141,7 @@ position = "{107, 150}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{-30, 0}";
 }
 );
 components = (
@@ -4186,7 +4187,7 @@ position = "{150, 150}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{-30, 0}";
 },
 {
 name = top;
