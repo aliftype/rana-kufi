@@ -1,4 +1,4 @@
-_Rana Kufi_ is a Fatimid [Kufic][1] that follows the Fatimid Kufic rules and
+_Rana Kufi_ (كوفي رنا) is a Fatimid [Kufic][1] that follows the Fatimid Kufic rules and
 measurements poineered by the late master of Arabic calligraphy [_Mohammad
 Abdul Qadir_][2].
 
