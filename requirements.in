@@ -1,4 +1,4 @@
 cffsubr
 fonttools
-git+git://github.com/alif-type/glyphsObj.git@main#egg=glyphsObj
+git+git://github.com/aliftype/glyphsObj.git@main#egg=glyphsObj
 PyYAML

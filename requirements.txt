@@ -11,7 +11,7 @@ fonttools[unicode]==4.24.0
     #   -r requirements.in
     #   cffsubr
     #   glyphsobj
-git+git://github.com/alif-type/glyphsObj.git@main#egg=glyphsObj
+git+git://github.com/aliftype/glyphsObj.git@main#egg=glyphsObj
     # via -r requirements.in
 pyyaml==5.4.1
     # via -r requirements.in

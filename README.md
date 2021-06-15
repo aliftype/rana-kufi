@@ -19,4 +19,4 @@ glyph alternates.
 [1]: https://en.wikipedia.org/wiki/Kufic
 [2]: https://ar.wikipedia.org/wiki/محمد_عبد_القادر_عبد_الله_(خطاط)
 [3]: https://aliftype.com/rana-kufi/app/
-[4]: https://github.com/alif-type/rana-kufi/blob/master/LICENSE
+[4]: https://github.com/aliftype/rana-kufi/blob/master/LICENSE
