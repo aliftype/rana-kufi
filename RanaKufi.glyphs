@@ -264,6 +264,11 @@ lookup after_hah {
   sub [hah-ar.init hah-ar.medi hah-ar.init.narrow]' lookup hah_high [/^fehDotless-ar.*/ /^fehDotless-ar.init.*/];
 } after_hah;
 
+lookup before_hah_fix {
+  lookupflag IgnoreMarks;
+  sub behDotless-ar.init hah-ar.init.01.05' by hah-ar.medi.01.05;
+} before_hah_fix;
+
 lookup after_hah_dots {
   lookupflag 0;
   sub @hah_high' lookup hah_high [/^behDotless-ar.init.*/] dotabove-ar;
@@ -281,7 +286,8 @@ lookup after_pyramid_seen {
   sub seen-ar.init.02.00
       [reh-ar.fina reh-ar.fina.01.01]'
    by [reh-ar.fina.seen reh-ar.fina.seen];
-} after_pyramid_seen;";
+} after_pyramid_seen;
+";
 name = dist;
 },
 {
@@ -307,7 +313,9 @@ name = kern;
 },
 {
 code = "# Automatic Code
-";
+
+pos behDotless-ar.init' <0 0 110 0> hah-ar.init.01.04;
+pos behDotless-ar.init' <0 0 43 0> hah-ar.init.01.03;";
 name = curs;
 },
 {
@@ -340,6 +348,10 @@ pos [behDotless-ar.init] [twodotshorizontalbelow-ar dotbelow-ar]' <0 -150 0 0> [
 
 pos [behDotless-ar.01.01 behDotless-ar.01.02 behDotless-ar.01.03 behDotless-ar.01.04]
     [dotbelow-ar twodotshorizontalabove-ar twodotshorizontalbelow-ar]' <-100 0 0 0>;
+
+pos behDotless-ar.init
+    [dotbelow-ar twodotshorizontalbelow-ar]' <0 -150 0 0>
+    [/^hah-ar\\.init.*/];
 ";
 name = mark;
 },
@@ -3404,7 +3416,7 @@ position = "{75, -50}";
 },
 {
 name = top;
-position = "{-7, 983}";
+position = "{-197, 1070}";
 }
 );
 guideLines = (
@@ -3681,11 +3693,12 @@ position = "{148, -50}";
 },
 {
 name = top;
-position = "{66, 983}";
+position = "{-140, 1070}";
 }
 );
 components = (
 {
+alignment = -1;
 name = _hah.part.04;
 transform = "{1, 0, 0, 1, 73, 0}";
 }
@@ -3797,7 +3810,7 @@ position = "{148, -50}";
 },
 {
 name = top;
-position = "{66, 983}";
+position = "{-141, 1070}";
 }
 );
 components = (
@@ -29633,7 +29646,7 @@ nodes = (
 "159 1200 OFFCURVE",
 "-19 1200 CURVE SMOOTH",
 "-183 1200 LINE",
-"-146 1150 OFFCURVE",
+"-141 1160 OFFCURVE",
 "-130 1100 OFFCURVE",
 "-133 1050 CURVE",
 "-125 1066 OFFCURVE",
@@ -29675,7 +29688,7 @@ nodes = (
 "159 1200 OFFCURVE",
 "-19 1200 CURVE SMOOTH",
 "-183 1200 LINE",
-"-146 1150 OFFCURVE",
+"-139 1158 OFFCURVE",
 "-130 1100 OFFCURVE",
 "-133 1050 CURVE",
 "-125 1066 OFFCURVE",
