@@ -162,12 +162,10 @@ def makeKerning(font, master, glyphOrder):
                 pairs += f"pos {left} {right} {kern};\n"
 
     fea += f"""
-feature kern {{
 lookupflag IgnoreMarks;
 {pairs}
 {enums}
 {classes}
-}} kern;
 """
 
     return fea
@@ -180,12 +178,12 @@ def getLayer(glyph, instance):
     return glyph.layers[0]
 
 
-def makeMark(instance, glyphOrder):
+def makeAutoFeatures(instance, glyphOrder):
     font = instance.parent
 
-    fea = ""
+    markClass = ""
     mark = ""
-    curs = ""
+    curs = "lookupflag IgnoreMarks RightToLeft;\n"
     liga = ""
 
     exit = {}
@@ -201,7 +199,7 @@ def makeMark(instance, glyphOrder):
         for anchor in layer.anchors:
             name, x, y = anchor.name, anchor.position.x, anchor.position.y
             if name.startswith("_"):
-                fea += f"markClass {gname} <anchor {x} {y}> @mark_{name[1:]};\n"
+                markClass += f"markClass {gname} <anchor {x} {y}> @mark_{name[1:]};\n"
             elif name.startswith("caret_"):
                 pass
             elif "_" in name:
@@ -235,20 +233,9 @@ def makeMark(instance, glyphOrder):
             anchor2 = pos2 and f"{pos2[0]} {pos2[1]}" or "NULL"
             curs += f"pos cursive {name} <anchor {anchor1}> <anchor {anchor2}>;\n"
 
-    fea += f"""
-feature curs {{
-lookupflag IgnoreMarks RightToLeft;
-{curs}
-}} curs;
-feature mark {{
-{mark}
-}} mark;
-"""
+    return curs, markClass + mark
 
-    return fea
-
-
-def makeAutoFeatures(font, glyphOrder):
+def makeCvFeatures(font, glyphOrder):
     fea = ""
     features = {}
     for name in glyphOrder:
@@ -305,21 +292,29 @@ def makeFeatures(instance, master, opts, glyphOrder):
             continue
         fea += prefix.code + "\n"
 
+    curs, mark = makeAutoFeatures(instance, glyphOrder)
+    kern = makeKerning(font, master, glyphOrder)
+    cvxx = makeCvFeatures(font, glyphOrder)
+
+    marker = "# Automatic Code"
+
     for feature in font.features:
         if feature.disabled:
             continue
         if feature.name == "mark":
-            fea += makeMark(instance, glyphOrder)
+            feature.code = feature.code.replace(marker, mark)
+        if feature.name == "curs":
+            feature.code = feature.code.replace(marker, curs)
+        if feature.name == "kern":
+            feature.code = feature.code.replace(marker, kern)
         if feature.name == "dist":
-            fea += makeAutoFeatures(font, glyphOrder)
+            fea += cvxx
 
         fea += f"""
             feature {feature.name} {{
             {feature.code}
             }} {feature.name};
         """
-        if feature.name == "kern":
-            fea += makeKerning(font, master, glyphOrder)
 
     marks = set()
     carets = ""

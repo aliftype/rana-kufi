@@ -299,11 +299,20 @@ pos [lam-ar.init.short lam-ar.init.short.01.01]' <0 0 50 0> [hah-ar hah-ar.init]
 
 pos [behDotless-ar.init]' <0 0 270 0> [hah-ar.01.01];
 
-pos @ArabicJoinLeft heh-ar.02.00 <-60 0 -60 0>;";
+pos @ArabicJoinLeft heh-ar.02.00 <-60 0 -60 0>;
+
+# Automatic Code
+";
 name = kern;
 },
 {
-code = "pos behDotless-ar.init [dotbelow-ar twodotshorizontalbelow-ar]' <-75   0   -75  0> [alef-ar alef-ar.01.01 alef-ar.01.02 alef-ar.01.03 alef-ar.01.05 alef-ar.01.06];
+code = "# Automatic Code
+";
+name = curs;
+},
+{
+code = "# Automatic Code
+pos behDotless-ar.init [dotbelow-ar twodotshorizontalbelow-ar]' <-75   0   -75  0> [alef-ar alef-ar.01.01 alef-ar.01.02 alef-ar.01.03 alef-ar.01.05 alef-ar.01.06];
 pos behDotless-ar.init [dotbelow-ar twodotshorizontalbelow-ar]' <  0  -150  0   0> hah-ar.init;
 
 ignore
