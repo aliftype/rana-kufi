@@ -1,5 +1,5 @@
 {
-.appVersion = "3083";
+.appVersion = "3091";
 classes = (
 {
 code = "";
@@ -3673,38 +3673,39 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{75, -50}";
+position = "{148, -50}";
 },
 {
 name = top;
-position = "{-7, 983}";
+position = "{66, 983}";
 }
 );
 components = (
 {
 name = _hah.part.04;
+transform = "{1, 0, 0, 1, 73, 0}";
 }
 );
 guideLines = (
 {
 angle = 90;
-position = "{217, 638}";
+position = "{290, 638}";
 },
 {
 angle = 90;
-position = "{117, 638}";
+position = "{190, 638}";
 },
 {
 angle = 90;
-position = "{80, 638}";
+position = "{153, 638}";
 },
 {
 angle = 90;
-position = "{-23, 638}";
+position = "{50, 638}";
 },
 {
 angle = 90;
-position = "{-183, 638}";
+position = "{-110, 638}";
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
@@ -3712,14 +3713,14 @@ paths = (
 {
 closed = 1;
 nodes = (
-"217 0 LINE",
-"217 100 LINE",
+"290 0 LINE",
+"290 100 LINE",
 "-50 100 LINE",
 "-50 0 LINE"
 );
 }
 );
-width = 217;
+width = 290;
 },
 {
 anchors = (
@@ -3788,48 +3789,49 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{75, -50}";
+position = "{148, -50}";
 },
 {
 name = top;
-position = "{-7, 983}";
+position = "{66, 983}";
 }
 );
 components = (
 {
 name = _hah.part.05;
+transform = "{1, 0, 0, 1, 73, 0}";
 }
 );
 guideLines = (
 {
 angle = 90;
-position = "{217, 638}";
+position = "{290, 638}";
 },
 {
 angle = 90;
-position = "{117, 638}";
+position = "{190, 638}";
 },
 {
 angle = 90;
-position = "{79, 638}";
+position = "{152, 638}";
 },
 {
 angle = 90;
-position = "{-23, 638}";
+position = "{50, 638}";
 },
 {
 angle = 90;
-position = "{-183, 638}";
+position = "{-110, 638}";
 },
 {
 angle = 90;
-position = "{317, 638}";
+position = "{390, 638}";
 },
 {
-position = "{217, 450}";
+position = "{290, 450}";
 },
 {
-position = "{217, 575}";
+position = "{290, 575}";
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
@@ -3837,14 +3839,14 @@ paths = (
 {
 closed = 1;
 nodes = (
-"217 0 LINE",
-"217 100 LINE",
+"290 0 LINE",
+"290 100 LINE",
 "-50 100 LINE",
 "-50 0 LINE"
 );
 }
 );
-width = 217;
+width = 290;
 },
 {
 anchors = (
@@ -4095,11 +4097,11 @@ layers = (
 anchors = (
 {
 name = entry;
-position = "{107, 150}";
+position = "{133, 150}";
 },
 {
 name = exit;
-position = "{-30, 0}";
+position = "{0, 0}";
 }
 );
 components = (
@@ -4113,19 +4115,19 @@ paths = (
 {
 closed = 1;
 nodes = (
-"418 0 LINE",
-"360 23 OFFCURVE",
-"318 85 OFFCURVE",
-"318 150 CURVE",
-"318 150 OFFCURVE",
-"282 100 OFFCURVE",
-"217 100 CURVE SMOOTH",
-"148 100 LINE",
-"148 0 LINE"
+"491 0 LINE",
+"433 23 OFFCURVE",
+"391 85 OFFCURVE",
+"391 150 CURVE",
+"391 150 OFFCURVE",
+"355 100 OFFCURVE",
+"290 100 CURVE SMOOTH",
+"221 100 LINE",
+"221 0 LINE"
 );
 }
 );
-width = 418;
+width = 491;
 }
 );
 leftKerningGroup = hah;
@@ -4136,12 +4138,8 @@ layers = (
 {
 anchors = (
 {
-name = entry;
-position = "{107, 150}";
-},
-{
 name = exit;
-position = "{-30, 0}";
+position = "{0, 0}";
 }
 );
 components = (
@@ -4155,19 +4153,19 @@ paths = (
 {
 closed = 1;
 nodes = (
-"418 0 LINE",
-"360 23 OFFCURVE",
-"318 85 OFFCURVE",
-"318 150 CURVE",
-"318 150 OFFCURVE",
-"282 100 OFFCURVE",
-"217 100 CURVE SMOOTH",
-"148 100 LINE",
-"148 0 LINE"
+"491 0 LINE",
+"433 23 OFFCURVE",
+"391 85 OFFCURVE",
+"391 150 CURVE",
+"391 150 OFFCURVE",
+"355 100 OFFCURVE",
+"290 100 CURVE SMOOTH",
+"221 100 LINE",
+"221 0 LINE"
 );
 }
 );
-width = 400;
+width = 491;
 }
 );
 leftKerningGroup = hah;
