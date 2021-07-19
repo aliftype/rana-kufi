@@ -331,12 +331,7 @@ pos [behDotless-ar.init] [twodotshorizontalbelow-ar dotbelow-ar]' <0 -150 0 0> [
 
 pos [behDotless-ar.01.01 behDotless-ar.01.02 behDotless-ar.01.03 behDotless-ar.01.04]
     [dotbelow-ar twodotshorizontalabove-ar twodotshorizontalbelow-ar]' <-100 0 0 0>;
-
-pos [behDotless-ar.init.01.01 behDotless-ar.init.01.02 behDotless-ar.init.01.03 behDotless-ar.init.01.04]
-    [dotbelow-ar]' <-300 0 0 0>;
-
-pos [behDotless-ar.init.01.01 behDotless-ar.init.01.02 behDotless-ar.init.01.03 behDotless-ar.init.01.04]
-    [twodotshorizontalabove-ar twodotshorizontalbelow-ar]' <-350 0 0 0>;";
+";
 name = mark;
 },
 {
