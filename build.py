@@ -28,8 +28,8 @@ from fontTools.pens.pointPen import PointToSegmentPen
 from fontTools.pens.reverseContourPen import ReverseContourPen
 from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.pens.transformPen import TransformPen
-from glyphsObj import GSFont, GSGlyph, GSLayer, GSComponent, GSAnchor
-from glyphsObj.glyphdata import get_glyph as getGlyphInfo
+from glyphsLib import GSFont, GSGlyph, GSLayer, GSComponent, GSAnchor
+from glyphsLib.glyphdata import get_glyph as getGlyphInfo
 from cffsubr import subroutinize
 
 
@@ -516,8 +516,8 @@ def buildVF(opts):
 
     for i, axisDef in enumerate(font.axes):
         axis = ds.newAxisDescriptor()
-        axis.tag = axisDef["Tag"]
-        axis.name = axisDef["Name"]
+        axis.tag = axisDef.axisTag
+        axis.name = axisDef.name
         axis.maximum = max(x.axes[i] for x in font.instances)
         axis.minimum = min(x.axes[i] for x in font.instances)
         axis.default = regular.axes[i]
