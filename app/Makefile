@@ -19,7 +19,7 @@ EM_CFLAGS = \
 	  -s ENVIRONMENT=web \
 	  -s FILESYSTEM=0 \
 	  -s RESERVED_FUNCTION_POINTERS=5 \
-	  -s 'EXTRA_EXPORTED_RUNTIME_METHODS=["stackAlloc", "addFunction"]' \
+	  -s 'EXPORTED_RUNTIME_METHODS=["stackAlloc", "addFunction"]' \
 	  -s 'EXPORTED_FUNCTIONS=[ \
 	      "_hb_blob_create", \
 	      "_hb_blob_get_data", \
