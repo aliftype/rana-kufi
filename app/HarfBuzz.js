@@ -82,7 +82,7 @@ export class Font {
     this._colr = undefined;
     this._cpal = undefined;
     this._gsub = undefined;
-    this._decompose_funcs = null;
+    this._draw_funcs = null;
   }
 
   getGlyphExtents(glyph) {
@@ -122,8 +122,8 @@ export class Font {
     if (outlines[glyph] !== undefined)
       return outlines[glyph];
 
-    if (!this._decompose_funcs) {
-      let funcs = this._decompose_funcs = _hb_draw_funcs_create();
+    if (!this._draw_funcs) {
+      let funcs = this._draw_funcs = _hb_draw_funcs_create();
       let move_to = addFunction(function(x, y, g) {
         outlines[g] += `M${x},${-y}`;
       }, "viii");
@@ -150,7 +150,7 @@ export class Font {
     outlines[glyph] = "";
     // I’m abusing pointers here to pass the actual glyph id instead of a user
     // data pointer, don’t shot me.
-    _hb_font_draw_glyph(this.ptr, glyph, this._decompose_funcs, glyph);
+    _hb_font_draw_glyph(this.ptr, glyph, this._draw_funcs, glyph);
 
     return outlines[glyph];
   }
