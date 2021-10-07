@@ -18,6 +18,7 @@ HBDIR = harfbuzz/src
 EM_CFLAGS = \
 	  -s ENVIRONMENT=web \
 	  -s FILESYSTEM=0 \
+	  -s MODULARIZE=1 -s EXPORT_ES6=1 \
 	  -s RESERVED_FUNCTION_POINTERS=5 \
 	  -s 'EXPORTED_RUNTIME_METHODS=["stackAlloc", "addFunction"]' \
 	  -s 'EXPORTED_FUNCTIONS=[ \
