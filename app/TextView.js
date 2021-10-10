@@ -352,12 +352,9 @@ export class View {
     img.onload = function() {
       ctx.drawImage(img, 0, 0);
 
-      // Use the parent node width for canvas so that it does not overflow
-      // (wrecks havoc on mobile, and not a good idea in general).
-      let width = mainCanvas.parentNode.clientWidth;
-      mainCanvas.width = width * window.devicePixelRatio;
+      mainCanvas.width = canvas.width;
       mainCanvas.height = canvas.height;
-      mainCanvas.style.width = `${width}px`;
+      mainCanvas.style.width = canvas.style.width;
       mainCanvas.style.height = canvas.style.height;
 
       let mainCtx = mainCanvas.getContext("2d");
@@ -561,8 +558,8 @@ export class View {
       return;
     let dpr = window.devicePixelRatio;
     let scale = dpr / this._scale;
-    let offsetX = (this._canvas.width - this._backing.width) / dpr;
-    let x = (e.clientX - this._canvas.offsetLeft - offsetX) * scale;
+    let rect = e.target.getBoundingClientRect();
+    let x = (e.clientX - rect.left) * scale;
 
     let cursor = this._layout.indexAtPoint(x) + 1;
     this._moveCursor(cursor - this._cursor);
