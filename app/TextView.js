@@ -495,7 +495,6 @@ export class View {
         let button = document.createElement("a");
         let setting = feature + "=" + (i + 1);
 
-        button.dataset.feature = setting;
         button.title = setting;
         button.href = "#";
 
@@ -544,8 +543,8 @@ export class View {
 
     for (let div of alternates.children) {
       for (let button of div.children) {
-        if (features.includes(button.dataset.feature) ||
-            (selectbase && !button.dataset.feature))
+        if (features.includes(button.title) ||
+            (selectbase && !button.title))
           button.className = "feature selected";
         else
           button.className = "feature";
