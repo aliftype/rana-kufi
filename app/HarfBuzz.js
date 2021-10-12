@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2020 Khaled Hosny
+ * Copyright (c) 2019-2021 Khaled Hosny
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
@@ -37,16 +37,7 @@
  *
  */
 
-import { GSUB, COLR, CPAL } from "./OpenType.js"
-
-function TAG(tag) {
-  tag = tag.padEnd(4, " ");
-  let c1 = tag.codePointAt(0);
-  let c2 = tag.codePointAt(1);
-  let c3 = tag.codePointAt(2);
-  let c4 = tag.codePointAt(3);
-  return (c1&0xFF) << 24 | (c2&0xFF) << 16 | (c3&0xFF) << 8 | c4&0xFF;
-}
+import { GSUB, COLR, CPAL, TAG } from "./OpenType.js"
 
 class Pointer {
   constructor(arg) {

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2020 Khaled Hosny
+ * Copyright (c) 2019-2021 Khaled Hosny
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
@@ -17,6 +17,8 @@
  */
 
 import { Font, Buffer } from "./HarfBuzz.js"
+import { TAG } from "./OpenType.js"
+import { FontRemapper, PUA_OFFSET } from "./FontRemapper.js"
 
 class Layout {
   constructor(font, buffer, text) {
@@ -29,7 +31,6 @@ class Layout {
     this._smallDots = false;
     this._nocolorDots = false;
 
-    this._svg = null;
     this._width = null;
     this._glyphs = null;
 
@@ -52,36 +53,38 @@ class Layout {
 
   set adjustDots(v) {
     if (v != this._adjustDots)
-      this._svg = null;
+      this._glyphs = null;
     this._adjustDots = v;
   }
 
   set removeDots(v) {
     if (v != this._removeDots)
-      this._svg = this._glyphs = null;
+      this._glyphs = null;
     this._removeDots = v;
   }
 
   set smallDots(v) {
     if (v != this._smallDots)
-      this._svg = this._glyphs = null;
+      this._glyphs = null;
     this._smallDots = v;
   }
 
   set nocolorDots(v) {
-    if (v != this._nocolorDots)
-      this._svg = null;
     this._nocolorDots = v;
   }
 
-  get svg() {
-    this._makeSVG();
-    return this._svgURL;
+  get nocolorDots() {
+    return this._nocolorDots;
+  }
+
+  get glyphs() {
+    this._shape();
+    return this._glyphs;
   }
 
   get width() {
     this._shape();
-    return this._width + (this._margin * 2);
+    return this._width + this._margin;
   }
 
   get height() { return this.ascender - this.descender + (this._margin * 2); }
@@ -90,6 +93,7 @@ class Layout {
   get descender() { return this._font.extents.descender; }
   get clipAscender() { return this._font.extents.clipAscender; }
   get clipDescender() { return this._font.extents.clipDescender; }
+  get start() { return this._margin; }
 
   featuresOfIndex(index) {
     this._shape();
@@ -103,7 +107,7 @@ class Layout {
   posOfIndex(index) {
     let c = this._text[index];
     let x = c ? c.x : this._width;
-    return x + this._margin;
+    return x;
   }
 
   indexAtPoint(x) {
@@ -111,8 +115,8 @@ class Layout {
 
     for (let i = 0; i < this._text.length; i++) {
       let c = this._text[i];
-      let left = c.x + this._margin;
-      let right = c.x + c.ax + this._margin;
+      let left = c.x;
+      let right = c.x + c.ax;
       if (x > left && x < right)
         return i;
     }
@@ -178,10 +182,10 @@ class Layout {
     // Now do the real shaping with requested features.
     glyphs = this._buffer.shape(this._font, this._text, true, features);
 
-    let x = 0, y = this.ascender;
+    let x = this.start, y = this.baseline;
     let maxY = Number.NEGATIVE_INFINITY;
     this._width = 0;
-    for (const g of glyphs) {
+    glyphs.forEach(g => {
       let c = this._text[g.cl];
 
       if (g.dy > 0 && g.isDot)
@@ -197,59 +201,54 @@ class Layout {
       c.x = Math.min(c.x, g.x);
       if (g.x + g.ax > c.x + c.ax)
         c.ax += (g.x + g.ax) - (c.x + c.ax)
-    }
+    });
+
+    glyphs.forEach(g => {
+      if (g.isDot && this._adjustDots && g.dy > 0 && g.dy < maxY)
+        g.y += g.dy - maxY;
+    });
 
     this._glyphs = glyphs;
-    this._dotMaxY = maxY;
   }
 
-  _makeSVG() {
-    if (this._svg !== null)
-      return;
-
+  get svg() {
     this._shape();
 
     let ns = "http://www.w3.org/2000/svg";
-    this._svg = document.createElementNS(ns, "svg");
-    this._svg.setAttribute("xmlns", ns);
-    this._svg.setAttributeNS(ns, "version", '1.1');
-    this._svg.setAttributeNS(ns, "width", this.width);
-    this._svg.setAttributeNS(ns, "height", this.height);
-    this._svg.setAttributeNS(ns, "viewBox", `${-this._margin} ${-this._margin} ${this.width} ${this.height}`);
+    let svg = document.createElementNS(ns, "svg");
+    svg.setAttribute("xmlns", ns);
+    svg.setAttributeNS(ns, "version", '1.1');
+    svg.setAttributeNS(ns, "width", this.width);
+    svg.setAttributeNS(ns, "height", this.height);
+    svg.setAttributeNS(ns, "viewBox", `${-this._margin} ${-this._margin} ${this.width} ${this.height}`);
 
     for (const g of this._glyphs) {
-      if (g.layers.length && !(this._nocolorDots && g.isDot))
+      if (g.layers.length && !this._nocolorDots)
         for (const l of g.layers)
-          this._svg.appendChild(this._pathElement(l, g.isDot));
+          this._appendPathElement(svg, l, g.isDot);
       else
-        this._svg.appendChild(this._pathElement(g, g.isDot));
+        this._appendPathElement(svg, g, g.isDot);
     }
 
-    let blob = new Blob([this._svg.outerHTML], {type: "image/svg+xml"});
-    this._svgURL = window.URL.createObjectURL(blob);
+    let blob = new Blob([svg.outerHTML], {type: "image/svg+xml"});
+    return window.URL.createObjectURL(blob);
   }
 
-  _pathElement(g, isDot) {
-    let x = g.x;
-    let y = g.y;
+  _appendPathElement(svg, g, isDot) {
     let fill = g.color && g.color.slice(0, -2);
     // Inkscape does not support RGBA colors, opacity must be set separately.
     let opacity = g.color && parseInt(g.color.slice(-2), 16) / 255;
 
-    if (this._adjustDots &&
-        g.dy > 0 && g.dy < this._dotMaxY && isDot)
-      y += g.dy - this._dotMaxY;
-
     if (!g.index && !fill)
       fill = "red";
 
-    let ns = this._svg.namespaceURI;
+    let ns = svg.namespaceURI;
     let path = document.createElementNS(ns, "path");
-    path.setAttributeNS(ns, "transform", `translate(${x},${y})`);
+    path.setAttributeNS(ns, "transform", `translate(${g.x},${g.y})`);
     if (fill)
       path.setAttributeNS(ns, "style", `fill:${fill};fill-opacity:${opacity}`);
     path.setAttributeNS(ns, "d", g.outline);
-    return path;
+    svg.appendChild(path);
   }
 }
 
@@ -260,13 +259,17 @@ let sample = `
 const STAORAGE_KEY = "ranakufi.text-v3";
 
 export class View {
-  constructor(data) {
-    this._font = new Font(data, window.devicePixelRatio);
+  constructor(blob) {
+    this._font = new Font(blob, window.devicePixelRatio);
     this._buffer = new Buffer();
+
+    this._blob = blob;
+
+    this._fontFace = null;
+    this._colorFontFace = null;
 
     this._canvas = document.getElementById("canvas");
     this._input = document.getElementById("hiddeninput");
-    this._backing = document.createElement('canvas');
 
     this._cursor = 0;
     this._text = null;
@@ -288,6 +291,22 @@ export class View {
     this._canvas.focus();
   }
 
+  get fontFace() {
+    if (this._layout.nocolorDots) {
+      if (this._fontFace === null) {
+        let remapper = new FontRemapper(this._blob, [TAG("COLR"), TAG("CPAL")]);
+        this._fontFace = new FontFace("TextViewFont", remapper.remap());
+      }
+      return this._fontFace;
+    } else {
+      if (this._colorFontFace === null) {
+        let remapper = new FontRemapper(this._blob);
+        this._colorFontFace = new FontFace("ColorTextViewFont", remapper.remap());
+      }
+      return this._colorFontFace
+    }
+  };
+
   update(manualFontSize) {
     if (manualFontSize)
       this._manualFontSize = true;
@@ -302,9 +321,6 @@ export class View {
       this._updateInput();
     }
 
-    let adjustDots = document.getElementById("adjust-dots").checked;
-    this._layout.adjustDots = adjustDots;
-
     let fontSize = document.getElementById("font-size");
     if (!this._manualFontSize) {
       if (window.screen.width < 700)
@@ -312,6 +328,7 @@ export class View {
       document.getElementById("font-size-number").value = fontSize.value;
     }
 
+    this._layout.adjustDots = document.getElementById("adjust-dots").checked;
     this._layout.removeDots = document.getElementById("remove-dots").checked;
     this._layout.nocolorDots = document.getElementById("nocolor-dots").checked;
     this._layout.smallDots = document.getElementById("small-dots").checked;
@@ -325,7 +342,7 @@ export class View {
   }
 
   _draw() {
-    let canvas = this._backing;
+    let canvas = this._canvas;
     let fontSize = document.getElementById("font-size").value;
     let layout = this._layout;
 
@@ -341,7 +358,6 @@ export class View {
     ctx.scale(this._scale, this._scale);
 
     // Draw cursor.
-
     if (document.hasFocus() && document.activeElement == this._input) {
       ctx.save();
       ctx.fillStyle = "#0000003f";
@@ -350,20 +366,28 @@ export class View {
       ctx.restore();
     }
 
-    let mainCanvas = this._canvas;
-    let img = new Image;
-    img.onload = function() {
-      ctx.drawImage(img, 0, 0);
+    this.fontFace.load().then(fontFace => {
+      // Register the font.
+      document.fonts.add(fontFace)
 
-      mainCanvas.width = canvas.width;
-      mainCanvas.height = canvas.height;
-      mainCanvas.style.width = canvas.style.width;
-      mainCanvas.style.height = canvas.style.height;
+      // Setup context.
+      ctx.font = this._font.upem * window.devicePixelRatio + "px " + fontFace.family;
+      ctx.direction = "ltr";
+      ctx.textAlign = "left";
 
-      let mainCtx = mainCanvas.getContext("2d");
-      mainCtx.drawImage(canvas, mainCanvas.width - canvas.width, 0);
-    }
-    img.src = layout.svg;
+      // Draw glyphs.
+      const glyphs = layout.glyphs;
+      glyphs.forEach(g => {
+        if (g.index) {
+          ctx.fillText(String.fromCodePoint(PUA_OFFSET + g.index), g.x, g.y);
+        } else {
+          ctx.save();
+          ctx.fillStyle = "red";
+          ctx.fillText(String.fromCodePoint(PUA_OFFSET + g.index), g.x, g.y);
+          ctx.restore();
+        }
+      });
+    });
 
   }
 

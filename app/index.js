@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2020 Khaled Hosny
+ * Copyright (c) 2019-2021 Khaled Hosny
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
@@ -29,9 +29,9 @@ let fontFile = "./assets/fonts/RanaKufi.otf";
 
 Module().then(function (m) {
   window.M = m;
-  fetch(fontFile).then(function (res) {
+  fetch(fontFile).then(res => {
     return res.arrayBuffer();
-  }).then(function (blob) {
+  }).then(blob => {
     let view = new View(blob);
     view.update();
 
