@@ -141,7 +141,7 @@ def makeKerning(font, master, glyphOrder):
     for group, glyphs in groups.items():
         fea += f"{group} = [{' '.join(glyphs)}];\n"
 
-    kerning = font.kerning[master.id]
+    kerning = font.kerningRTL[master.id]
     pairs = ""
     classes = ""
     enums = ""
@@ -197,7 +197,9 @@ def makeAutoFeatures(instance, glyphOrder):
 
         layer = getLayer(glyph, instance)
         for anchor in layer.anchors:
-            name, x, y = anchor.name, anchor.position.x, anchor.position.y
+            name = anchor.name
+            x = round(anchor.position.x)
+            y = round(anchor.position.y)
             if name.startswith("_"):
                 markClass += f"markClass {gname} <anchor {x} {y}> @mark_{name[1:]};\n"
             elif name.startswith("caret_"):
@@ -234,6 +236,7 @@ def makeAutoFeatures(instance, glyphOrder):
             curs += f"pos cursive {name} <anchor {anchor1}> <anchor {anchor2}>;\n"
 
     return curs, markClass + mark
+
 
 def makeCvFeatures(font, glyphOrder):
     fea = ""
@@ -378,6 +381,13 @@ def calcBits(bits, start, end):
     return b
 
 
+def get_property(font, key):
+    for prop in font.properties:
+        if key == prop.key:
+            return prop.defaultValue
+    return None
+
+
 def build(instance, opts, glyphOrder):
     font = instance.parent
     master = font.masters[0]
@@ -391,8 +401,8 @@ def build(instance, opts, glyphOrder):
         if not glyph.export:
             continue
         for layer in glyph.layers:
-            if layer.name.startswith("Color "):
-                _, index = layer.name.split(" ")
+            if "colorPalette" in layer.attr:
+                index = layer.attr["colorPalette"]
                 if name not in colorLayers:
                     colorLayers[name] = []
                 colorLayers[name].append((name, int(index)))
@@ -412,7 +422,7 @@ def build(instance, opts, glyphOrder):
 
     version = float(opts.version)
 
-    vendor = font.customParameters["vendorID"]
+    vendor = get_property(font, "vendorID")
     names = {
         "copyright": font.copyright,
         "familyName": instance.familyName,
@@ -425,9 +435,9 @@ def build(instance, opts, glyphOrder):
         "designer": font.designer,
         "vendorURL": font.manufacturerURL,
         "designerURL": font.designerURL,
-        "licenseDescription": font.customParameters["license"],
-        "licenseInfoURL": font.customParameters["licenseURL"],
-        "sampleText": font.customParameters["sampleText"],
+        "licenseDescription": get_property(font, "licenses"),
+        "licenseInfoURL": get_property(font, "licenseURL"),
+        "sampleText": get_property(font, "sampleTexts"),
     }
 
     fb = FontBuilder(font.upm, isTTF=False)
@@ -488,9 +498,7 @@ def build(instance, opts, glyphOrder):
     fb.addOpenTypeFeatures(fea)
 
     palettes = master.customParameters["Color Palettes"]
-    palettes = [
-        [tuple(int(v) / 255 for v in c.split(",")) for c in p] for p in palettes
-    ]
+    palettes = [[tuple(v / 255 for v in c) for c in p] for p in palettes]
     fb.setupCPAL(palettes)
     fb.setupCOLR(colorLayers)
 
@@ -603,7 +611,7 @@ def buildAltGlyph(glyph, alternates, componentName):
 
 def updateKerning(font, glyph, alternates):
     for layer in glyph.layers:
-        kerning = font.kerning[layer.associatedMasterId]
+        kerning = font.kerningRTL[layer.associatedMasterId]
         for component in layer.components:
             if component.componentName in alternates:
                 for left in list(kerning):
