@@ -204,9 +204,11 @@ export class Font {
   }
 }
 
-let REQUIRED_FEATURES = [
-  "isol", "init", "medi", "fina", "rlig", "rclt", "calt", "dist", "ccmp",
-];
+let ALTERNATE_FEATURES = ["salt"].concat(
+  [...Array(100).keys()].map(
+    i => `cv${String(i).padStart(2, '0')}`
+  )
+);
 
 class Glyph {
   constructor(font, info, position) {
@@ -240,7 +242,7 @@ class Glyph {
       let features = this.font.GSUB.features;
       let result = new Set();
       for (const [tag, lookups] of Object.entries(features)) {
-        if (!REQUIRED_FEATURES.includes(tag)) {
+        if (ALTERNATE_FEATURES.includes(tag)) {
           for (const lookup of lookups) {
             let sub = this.font.getSubstitute(lookup, this.index, next && next.index);
             if (sub)

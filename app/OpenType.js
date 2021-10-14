@@ -299,7 +299,8 @@ export class GSUB {
 
       let features = {};
       for (const [featureTag, featureOffset] of featureOffsets) {
-        features[featureTag] = [];
+        if (!(featureTag in features))
+          features[featureTag] = [];
 
         let featureParams = this.stream.readUInt16(featureOffset);
         let lookupIndexCount = this.stream.readUInt16();

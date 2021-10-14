@@ -130,6 +130,14 @@ input[type=checkbox]:checked + label {
   background-image: url(assets/images/adjust-dots.svg);
 }
 
+#onum + label {
+  background-image: url(assets/images/onum.svg);
+}
+
+#round-dots + label {
+  background-image: url(assets/images/round-dots.svg);
+}
+
 .feature {
   background-color: var(--disabled-color);
   border: none;

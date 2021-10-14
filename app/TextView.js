@@ -19,6 +19,7 @@
 import { Font, Buffer } from "./HarfBuzz.js"
 import { TAG } from "./OpenType.js"
 import { FontRemapper, PUA_OFFSET } from "./FontRemapper.js"
+import { SAMPLE_TEXT, STAORAGE_KEY } from "./Config.js"
 
 class Layout {
   constructor(font, buffer, text) {
@@ -29,7 +30,9 @@ class Layout {
     this._adjustDots = false;
     this._removeDots = false;
     this._smallDots = false;
+    this._roundDots = false;
     this._nocolorDots = false;
+    this._onum = false;
 
     this._width = null;
     this._glyphs = null;
@@ -67,6 +70,18 @@ class Layout {
     if (v != this._smallDots)
       this._glyphs = null;
     this._smallDots = v;
+  }
+
+  set roundDots(v) {
+    if (v != this._roundDots)
+      this._glyphs = null;
+    this._roundDots = v;
+  }
+
+  set onum(v) {
+    if (v != this._onum)
+      this._glyphs = null;
+    this._onum = v;
   }
 
   set nocolorDots(v) {
@@ -158,10 +173,13 @@ class Layout {
 
     let features = [];
     if (this._removeDots)
-      features.push("ss01")
+      features.push("ss01");
 
-    if (this._smallDots)
-      features.push("ss02")
+    if (this._smallDots || this._roundDots)
+      features.push("ss02");
+
+    if (this._onum)
+      features.push("onum");
 
     // Shape once without features to get the base glyphs, which we use to get
     // list of glyph alternates.
@@ -252,12 +270,6 @@ class Layout {
   }
 }
 
-let sample = `
-[{"code":1575,"features":["dlig=1","cv01=6"]},{"code":1604,"features":["dlig=1"]},{"code":1582},{"code":1591,"features":["cv01=2"]},{"code":32},{"code":1575,"features":[]},{"code":1604,"features":[]},{"code":1603,"features":["cv05"]},{"code":1608,"features":[]},{"code":1601,"features":[]},{"code":1610,"features":["cv01=14"]},{"code":32},{"code":1575,"features":["dlig","cv01"]},{"code":1604,"features":["dlig"]},{"code":1601,"features":["cv01"]},{"code":1575,"features":[]},{"code":1591,"features":["cv05"]},{"code":1605,"features":["cv01=2"]},{"code":1610,"features":["cv01=13"]}]
-`;
-
-const STAORAGE_KEY = "ranakufi.text-v3";
-
 export class View {
   constructor(blob) {
     this._font = new Font(blob, window.devicePixelRatio);
@@ -313,7 +325,7 @@ export class View {
 
     if (this._layout === null) {
       if (this._text === null)
-        this._text = JSON.parse(window.localStorage.getItem(STAORAGE_KEY) || sample);
+        this._text = JSON.parse(window.localStorage.getItem(STAORAGE_KEY) || SAMPLE_TEXT);
       else
         window.localStorage.setItem(STAORAGE_KEY, JSON.stringify(this._text));
 
@@ -332,6 +344,8 @@ export class View {
     this._layout.removeDots = document.getElementById("remove-dots").checked;
     this._layout.nocolorDots = document.getElementById("nocolor-dots").checked;
     this._layout.smallDots = document.getElementById("small-dots").checked;
+    this._layout.roundDots = document.getElementById("round-dots").checked;
+    this._layout.onum = document.getElementById("onum").checked;
 
     this._draw();
   }

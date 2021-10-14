@@ -22,6 +22,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <meta name="color-scheme" content="only light"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./index.css"/>
+    <link rel="stylesheet" type="text/css" href="./override.css"/>
     <link rel="shortcut icon" href="../assets/images/favicon.svg"/>
     <link rel="apple-touch-icon" href="./assets/images/app-icon.png">
     <link rel="manifest" href="./app.webmanifest">
@@ -40,9 +41,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
             <button type="button" class="link" title="صفحة المشروع"><a href="../arabic" aria-label="صفحة المشروع"><img src="assets/images/app-icon.svg" height="20px"></a></button>
           </div>
           <div class="left">
+            <input type="checkbox" class="opts" id="onum"><label for="onum" title="أرقام نازلة عن السطر"></label>
+            <input type="checkbox" class="opts" id="round-dots"><label for="round-dots" title="نقاط مستديرة"></label>
+            <input type="checkbox" class="opts" id="remove-dots"><label for="remove-dots" title="لا نقاط"></label>
             <input type="checkbox" class="opts" id="nocolor-dots"><label for="nocolor-dots" title="نقاط غير ملونة"></label>
             <input type="checkbox" class="opts" id="small-dots"><label for="small-dots" title="نقاط صغىرة"></label>
-            <input type="checkbox" class="opts" id="remove-dots"><label for="remove-dots" title="احذف النقاط"></label>
             <input type="checkbox" class="opts" id="adjust-dots"><label for="adjust-dots" title="اضبط النقاط"></label>
           </div>
         </div>

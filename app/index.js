@@ -17,6 +17,7 @@
  */
 
 import { View } from "./TextView.js"
+import { FONT_FILE } from "./Config.js"
 import Module from "./hb.js"
 
 if ('serviceWorker' in navigator) {
@@ -25,11 +26,9 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-let fontFile = "./assets/fonts/RanaKufi.otf";
-
 Module().then(function (m) {
   window.M = m;
-  fetch(fontFile).then(res => {
+  fetch(FONT_FILE).then(res => {
     return res.arrayBuffer();
   }).then(blob => {
     let view = new View(blob);
