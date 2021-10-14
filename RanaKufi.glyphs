@@ -30892,7 +30892,8 @@ kerningRTL = {
 "reh-ar" = 0;
 "reh-ar.01.01" = 0;
 "waw-ar" = 0;
-"waw-ar.01.01" = 0;
+"waw-ar.01.01" = -10;
+"waw-ar.01.02" = 0;
 };
 "@MMK_R_reh-alt" = {
 "@MMK_L_alef-wide" = -100;
