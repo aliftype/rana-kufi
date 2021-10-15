@@ -30895,112 +30895,6 @@ kerningRTL = {
 "waw-ar.01.01" = -10;
 "waw-ar.01.02" = 0;
 };
-"@MMK_R_reh-alt" = {
-"@MMK_L_alef-wide" = -100;
-"@MMK_L_hah" = -100;
-"ain-ar" = -20;
-"ain-ar.init" = -100;
-"alef-ar.02.00" = -100;
-"alef-ar.02.01" = -100;
-"alef-ar.02.05" = -100;
-"alef-ar.02.06" = -100;
-"alef-ar.02.10" = -100;
-"alef-ar.02.11" = -100;
-"alefMaksura-ar" = -60;
-"alefMaksura-ar.01.01" = -60;
-"alefMaksura-ar.01.02" = -60;
-"alefMaksura-ar.01.03" = -60;
-"alefMaksura-ar.01.04" = -60;
-"alefMaksura-ar.01.05" = -60;
-"alefMaksura-ar.01.12" = -60;
-"alefMaksura-ar.01.13" = -60;
-"hamza-ar" = -100;
-"hamza-ar.01.01" = -100;
-"heh-ar.init" = -60;
-"heh-ar.init.01.01" = -60;
-"heh-ar.init.01.02" = -60;
-"heh-ar.init.01.03" = -60;
-"heh-ar.init.02.00" = -60;
-"heh-ar.init.02.01" = -60;
-"lam_alef-ar.liga.01.01" = -20;
-"lam_alef-ar.liga.01.03" = -60;
-"meem-ar.01.02" = -50;
-"meem-ar.01.03" = -50;
-"meem-ar.init.01.01" = -50;
-"meem-ar.init.01.02" = -50;
-};
-"@MMK_R_straight-r" = {
-"@MMK_L_straight-l" = 50;
-};
-"ain-ar.fina" = {
-"@MMK_L_alef-wide" = -100;
-"@MMK_L_hah" = -100;
-"alef-ar.02.00" = -100;
-"alef-ar.02.01" = -100;
-};
-"alefMaksura-ar.01.06" = {
-"@MMK_L_hah" = -50;
-"ain-ar.init" = -50;
-};
-"alefMaksura-ar.01.08" = {
-"@MMK_L_alef-wide" = -100;
-};
-"alefMaksura-ar.fina.01.06" = {
-"@MMK_L_hah" = -50;
-"ain-ar.init" = -50;
-};
-"alefMaksura-ar.fina.01.08" = {
-"@MMK_L_alef-wide" = -100;
-};
-"behDotless-ar.init" = {
-"ain-ar.fina.01.01" = -50;
-"ain-ar.medi.01.02" = -25;
-};
-"lam-ar" = {
-"@MMK_L_straight-l" = -300;
-"waw-ar" = 0;
-"waw-ar.01.01" = 0;
-};
-"lam-ar.02.00" = {
-"@MMK_L_straight-l" = -300;
-"waw-ar" = 0;
-"waw-ar.01.01" = 0;
-};
-"lam-ar.03.00" = {
-"@MMK_L_straight-l" = -300;
-"waw-ar" = 0;
-"waw-ar.01.01" = 0;
-};
-"meem-ar" = {
-"ain-ar" = 80;
-};
-"meem-ar.fina" = {
-"ain-ar" = 80;
-};
-"noonghunna-ar.01.03" = {
-"ain-ar" = 50;
-};
-"noonghunna-ar.01.04" = {
-"ain-ar" = 50;
-};
-"noonghunna-ar.fina.01.03" = {
-"ain-ar" = 50;
-};
-"noonghunna-ar.fina.01.04" = {
-"ain-ar" = 50;
-};
-"reh-ar" = {
-"@MMK_L_alef-wide" = -50;
-"@MMK_L_hah" = -50;
-"ain-ar.init" = -50;
-"alef-ar.02.00" = -50;
-"alef-ar.02.01" = -50;
-"meem-ar.01.02" = -50;
-};
-"reh-ar.fina" = {
-"@MMK_L_alef-wide" = -50;
-"@MMK_L_hah" = -50;
-};
 "@MMK_R_hah.alt" = {
 "@MMK_L_alef-wide" = -105;
 "@MMK_L_hah" = -105;
@@ -31125,6 +31019,112 @@ kerningRTL = {
 "reh-ar.01.01" = -50;
 "waw-ar.01.01" = -30;
 "waw-ar.01.02" = -30;
+};
+"@MMK_R_reh-alt" = {
+"@MMK_L_alef-wide" = -100;
+"@MMK_L_hah" = -100;
+"ain-ar" = -20;
+"ain-ar.init" = -100;
+"alef-ar.02.00" = -100;
+"alef-ar.02.01" = -100;
+"alef-ar.02.05" = -100;
+"alef-ar.02.06" = -100;
+"alef-ar.02.10" = -100;
+"alef-ar.02.11" = -100;
+"alefMaksura-ar" = -60;
+"alefMaksura-ar.01.01" = -60;
+"alefMaksura-ar.01.02" = -60;
+"alefMaksura-ar.01.03" = -60;
+"alefMaksura-ar.01.04" = -60;
+"alefMaksura-ar.01.05" = -60;
+"alefMaksura-ar.01.12" = -60;
+"alefMaksura-ar.01.13" = -60;
+"hamza-ar" = -100;
+"hamza-ar.01.01" = -100;
+"heh-ar.init" = -60;
+"heh-ar.init.01.01" = -60;
+"heh-ar.init.01.02" = -60;
+"heh-ar.init.01.03" = -60;
+"heh-ar.init.02.00" = -60;
+"heh-ar.init.02.01" = -60;
+"lam_alef-ar.liga.01.01" = -20;
+"lam_alef-ar.liga.01.03" = -60;
+"meem-ar.01.02" = -50;
+"meem-ar.01.03" = -50;
+"meem-ar.init.01.01" = -50;
+"meem-ar.init.01.02" = -50;
+};
+"@MMK_R_straight-r" = {
+"@MMK_L_straight-l" = 50;
+};
+"ain-ar.fina" = {
+"@MMK_L_alef-wide" = -100;
+"@MMK_L_hah" = -100;
+"alef-ar.02.00" = -100;
+"alef-ar.02.01" = -100;
+};
+"alefMaksura-ar.01.06" = {
+"@MMK_L_hah" = -50;
+"ain-ar.init" = -50;
+};
+"alefMaksura-ar.01.08" = {
+"@MMK_L_alef-wide" = -100;
+};
+"alefMaksura-ar.fina.01.06" = {
+"@MMK_L_hah" = -50;
+"ain-ar.init" = -50;
+};
+"alefMaksura-ar.fina.01.08" = {
+"@MMK_L_alef-wide" = -100;
+};
+"behDotless-ar.init" = {
+"ain-ar.fina.01.01" = -50;
+"ain-ar.medi.01.02" = -25;
+};
+"lam-ar" = {
+"@MMK_L_straight-l" = -300;
+"waw-ar" = 0;
+"waw-ar.01.01" = 0;
+};
+"lam-ar.02.00" = {
+"@MMK_L_straight-l" = -300;
+"waw-ar" = 0;
+"waw-ar.01.01" = 0;
+};
+"lam-ar.03.00" = {
+"@MMK_L_straight-l" = -300;
+"waw-ar" = 0;
+"waw-ar.01.01" = 0;
+};
+"meem-ar" = {
+"ain-ar" = 80;
+};
+"meem-ar.fina" = {
+"ain-ar" = 80;
+};
+"noonghunna-ar.01.03" = {
+"ain-ar" = 50;
+};
+"noonghunna-ar.01.04" = {
+"ain-ar" = 50;
+};
+"noonghunna-ar.fina.01.03" = {
+"ain-ar" = 50;
+};
+"noonghunna-ar.fina.01.04" = {
+"ain-ar" = 50;
+};
+"reh-ar" = {
+"@MMK_L_alef-wide" = -50;
+"@MMK_L_hah" = -50;
+"ain-ar.init" = -50;
+"alef-ar.02.00" = -50;
+"alef-ar.02.01" = -50;
+"meem-ar.01.02" = -50;
+};
+"reh-ar.fina" = {
+"@MMK_L_alef-wide" = -50;
+"@MMK_L_hah" = -50;
 };
 };
 };
