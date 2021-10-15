@@ -30295,7 +30295,7 @@ shapes = (
 ref = "dotabove-ar.small";
 },
 {
-pos = (0,100);
+pos = (0,75);
 ref = "dotabove-ar.small";
 }
 );
@@ -30338,7 +30338,7 @@ layers = (
 anchors = (
 {
 name = _top;
-pos = (75,0);
+pos = (63,0);
 }
 );
 attr = {
@@ -30351,11 +30351,11 @@ shapes = (
 ref = "dotabove-ar.small";
 },
 {
-pos = (100,0);
+pos = (75,0);
 ref = "dotabove-ar.small";
 }
 );
-width = 150;
+width = 125;
 }
 );
 },
@@ -30391,7 +30391,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (75,0);
+pos = (63,0);
 }
 );
 attr = {
@@ -30405,7 +30405,7 @@ pos = (0,-50);
 ref = "twodotshorizontalabove-ar.small";
 }
 );
-width = 150;
+width = 125;
 }
 );
 },
@@ -30444,7 +30444,7 @@ layers = (
 anchors = (
 {
 name = _top;
-pos = (75,0);
+pos = (63,0);
 }
 );
 attr = {
@@ -30457,11 +30457,11 @@ shapes = (
 ref = "twodotshorizontalabove-ar.small";
 },
 {
-pos = (50,83);
+pos = (38,67);
 ref = "dotabove-ar.small";
 }
 );
-width = 150;
+width = 125;
 }
 );
 },
