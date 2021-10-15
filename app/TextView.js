@@ -411,7 +411,7 @@ export class View {
 
   }
 
-  open(file) {
+  open() {
     let input = document.createElement("input");
     input.type = "file";
     input.onchange = e => {
