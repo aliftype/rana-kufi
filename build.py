@@ -405,7 +405,10 @@ def build(instance, opts, glyphOrder):
                 index = layer.attr["colorPalette"]
                 if name not in colorLayers:
                     colorLayers[name] = []
-                colorLayers[name].append((name, int(index)))
+                if layer.layerId == layer.associatedMasterId: # master layer
+                    colorLayers[name].append((name, int(index)))
+                else:
+                    assert False, "can’t handle non-master color layers"
 
         if glyph.unicode:
             characterMap[int(glyph.unicode, 16)] = name
