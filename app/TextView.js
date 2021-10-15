@@ -229,7 +229,7 @@ class Layout {
     this._glyphs = glyphs;
   }
 
-  get svg() {
+  getSvg(text) {
     this._shape();
 
     let ns = "http://www.w3.org/2000/svg";
@@ -238,7 +238,7 @@ class Layout {
     svg.setAttributeNS(ns, "version", '1.1');
     svg.setAttributeNS(ns, "width", this.width);
     svg.setAttributeNS(ns, "height", this.height);
-    svg.setAttributeNS(ns, "viewBox", `${-this._margin} ${-this._margin} ${this.width} ${this.height}`);
+    svg.setAttributeNS(ns, "viewBox", `${this._margin/2} 0 ${this.width} ${this.height}`);
 
     for (const g of this._glyphs) {
       if (g.layers.length && !this._nocolorDots)
@@ -247,6 +247,8 @@ class Layout {
       else
         this._appendPathElement(svg, g, g.isDot);
     }
+
+    svg.dataset.text = JSON.stringify(text);
 
     let blob = new Blob([svg.outerHTML], {type: "image/svg+xml"});
     return window.URL.createObjectURL(blob);
@@ -410,10 +412,17 @@ export class View {
     input.type = "file";
     input.onchange = e => {
       let file = e.target.files[0];
-      file.text().then(text => {
-        this._text = JSON.parse(text);
-        this._invalidate();
-        this.update();
+      file.text().then(xml => {
+        let parser = new DOMParser();
+        let svg = parser.parseFromString(xml, "image/svg+xml").documentElement;
+        let text = svg.dataset.text;
+        if (text) {
+          this._text = JSON.parse(text);
+          this._invalidate();
+          this.update();
+        } else {
+          window.alert("Can’t open this SVG file, doesn’t contain text data");
+        }
       });
     }
     input.click();
@@ -421,15 +430,7 @@ export class View {
 
   save() {
     var link = document.createElement('a');
-    let blob = new Blob([JSON.stringify(this._text)], {type: "application/json"});
-    link.href = window.URL.createObjectURL(blob);
-    link.download = "document.json";
-    link.click();
-  }
-
-  export() {
-    var link = document.createElement('a');
-    link.href = this._layout.svg;
+    link.href = this._layout.getSvg(this._text);
     link.download = "document.svg";
     link.click();
   }
