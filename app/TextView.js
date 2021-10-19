@@ -27,8 +27,7 @@ class Layout {
     this._buffer = buffer;
     this._text = text.map(c => ({...c}));
 
-    let fontSize = document.getElementById("font-size").value;
-    this._scale = fontSize / font.upem;
+    this.fontSize = document.getElementById("font-size").value;
 
     this._adjustDots = false;
     this._removeDots = false;
@@ -43,6 +42,10 @@ class Layout {
     this._imgs = [];
 
     this._margin = 500;
+  }
+
+  set fontSize(v) {
+    this._scale = v / this._font.upem;
   }
 
   get scale() {
@@ -295,7 +298,6 @@ export class View {
     this._cursor = 0;
     this._text = null;
     this._layout = null;
-    this._manualFontSize = false;
 
     this._canvas.addEventListener('click', e => this._click(e));
     this._canvas.addEventListener('focusin', e => this._input.focus({preventScroll: true}));
@@ -329,9 +331,6 @@ export class View {
   };
 
   update(manualFontSize) {
-    if (manualFontSize)
-      this._manualFontSize = true;
-
     if (this._layout === null) {
       if (this._text === null)
         this._text = JSON.parse(window.localStorage.getItem(STAORAGE_KEY) || SAMPLE_TEXT);
@@ -343,11 +342,12 @@ export class View {
     }
 
     let fontSize = document.getElementById("font-size");
-    if (!this._manualFontSize) {
+    if (!manualFontSize) {
       if (window.screen.width < 700)
         fontSize.value = window.screen.width / 7;
       document.getElementById("font-size-number").value = fontSize.value;
     }
+    this._layout.fontSize = fontSize.value;
 
     this._layout.adjustDots = document.getElementById("adjust-dots").checked;
     this._layout.removeDots = document.getElementById("remove-dots").checked;
