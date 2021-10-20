@@ -540,7 +540,7 @@ export class View {
       for (let i = 0; i < alts.length; i++) {
         let alt = alts[i];
         let button = document.createElement("a");
-        let setting = feature + "=" + (i + 1);
+        let setting = feature + "=" + i;
 
         button.title = setting;
         button.href = "#";

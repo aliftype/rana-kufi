@@ -246,7 +246,7 @@ class Glyph {
           for (const lookup of lookups) {
             let alternates = this.font.getAlternates(lookup, this.index, next && next.index);
             if (alternates)
-              result.add([tag, alternates]);
+              result.add([tag, [this.index, ...alternates]]);
           }
         }
       }
