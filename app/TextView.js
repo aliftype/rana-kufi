@@ -39,7 +39,7 @@ class Layout {
     this._width = null;
     this._glyphs = null;
 
-    this._imgs = [];
+    this._svgs = [];
 
     this._margin = 500;
   }
@@ -151,8 +151,8 @@ class Layout {
     return 0;
   }
 
-  getGlyphImg(glyph) {
-    if (this._imgs[glyph] === undefined) {
+  getGlyphSVG(glyph) {
+    if (this._svgs[glyph] === undefined) {
       let extents = this._font.getGlyphExtents(glyph)
       let ns = "http://www.w3.org/2000/svg";
       let svg = document.createElementNS(ns, "svg");
@@ -168,13 +168,10 @@ class Layout {
       svg.appendChild(path);
 
       let blob = new Blob([svg.outerHTML], {type: "image/svg+xml"});
-      let img = document.createElement('img');
-      img.height = 70;
-      img.src = window.URL.createObjectURL(blob)
-      this._imgs[glyph] = img;
+      this._svgs[glyph] = window.URL.createObjectURL(blob);
     }
 
-    return this._imgs[glyph];
+    return this._svgs[glyph];
   }
 
   _shape() {
@@ -545,7 +542,10 @@ export class View {
         button.title = setting;
         button.href = "#";
 
-        button.appendChild(this._layout.getGlyphImg(alt));
+        let img = document.createElement('img');
+        img.height = 70;
+        img.src = this._layout.getGlyphSVG(alt);
+        button.appendChild(img);
         div.appendChild(button);
 
         button.onclick = e => {
