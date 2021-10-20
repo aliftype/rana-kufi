@@ -236,7 +236,7 @@ tag = rlig;
 },
 {
 code = "sub alef-ar lam-ar.init by alef_lam-ar.init.dlig;
-";
+sub alef-ar lam-ar.init.short by alef_lam-ar.init.short.dlig;";
 tag = dlig;
 },
 {
