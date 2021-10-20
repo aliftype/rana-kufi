@@ -204,7 +204,7 @@ export class Font {
   }
 }
 
-let ALTERNATE_FEATURES = ["salt"].concat(
+let ALTERNATE_FEATURES = ["salt", "dlig"].concat(
   [...Array(100).keys()].map(
     i => `cv${String(i).padStart(2, '0')}`
   )

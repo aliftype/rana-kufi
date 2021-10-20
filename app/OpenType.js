@@ -145,7 +145,7 @@ class Lookup {
               let coverage = new Coverage(stream, subtableOffset + stream.readUInt16());
               let deltaGlyphID = stream.readInt16();
               for (let glyphID of coverage.glyphs)
-                this.mapping[glyphID] = glyphID + deltaGlyphID;
+                this.mapping[glyphID] = [glyphID + deltaGlyphID];
             }
             break;
 
@@ -154,7 +154,7 @@ class Lookup {
               let glyphCount = stream.readUInt16();
               let substituteGlyphIDs = [];
               for (let i = 0; i < glyphCount; i++)
-                this.mapping[coverage.glyphs[i]] = stream.readUInt16();
+                this.mapping[coverage.glyphs[i]] = [stream.readUInt16()];
             }
             break;
 
@@ -246,7 +246,7 @@ class Lookup {
                   let componentGlyphIDs = [coverage.glyphs[i]];
                   for (let k = 0; k < componentCount - 1; k++)
                     componentGlyphIDs.push(stream.readUInt16());
-                  this.mapping[componentGlyphIDs] = ligatureGlyph;
+                  this.mapping[componentGlyphIDs] = [ligatureGlyph];
                 }
               }
             }
