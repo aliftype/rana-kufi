@@ -255,8 +255,6 @@ def makeCvFeatures(font, glyphOrder):
                 features[tag] = {}
             if base not in features[tag]:
                 features[tag][base] = []
-                if feature == 1:
-                    features[tag][base].append(base)
             features[tag][base].append(name)
 
     for feature, subs in features.items():
