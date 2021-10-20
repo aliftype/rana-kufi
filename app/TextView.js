@@ -126,7 +126,7 @@ class Layout {
     let p = this._text[index - 1];
     let n = this._text[index + 1];
     if (c && c.baseGlyph)
-      return c.baseGlyph.getSubstitutes(n && n.baseGlyph);
+      return c.baseGlyph.getAlternates(n && n.baseGlyph);
   }
 
   posOfIndex(index) {
@@ -331,13 +331,14 @@ export class View {
   };
 
   update(manualFontSize) {
-    if (this._layout === null) {
+    let layout = this._layout;
+    if (layout === null) {
       if (this._text === null)
         this._text = JSON.parse(window.localStorage.getItem(STAORAGE_KEY) || SAMPLE_TEXT);
       else
         window.localStorage.setItem(STAORAGE_KEY, JSON.stringify(this._text));
 
-      this._layout = new Layout(this._font, this._buffer, this._text);
+      this._layout = layout = new Layout(this._font, this._buffer, this._text);
       this._updateInput();
     }
 
@@ -347,14 +348,14 @@ export class View {
         fontSize.value = window.screen.width / 7;
       document.getElementById("font-size-number").value = fontSize.value;
     }
-    this._layout.fontSize = fontSize.value;
+    layout.fontSize = fontSize.value;
 
-    this._layout.adjustDots = document.getElementById("adjust-dots").checked;
-    this._layout.removeDots = document.getElementById("remove-dots").checked;
-    this._layout.nocolorDots = document.getElementById("nocolor-dots").checked;
-    this._layout.smallDots = document.getElementById("small-dots").checked;
-    this._layout.roundDots = document.getElementById("round-dots").checked;
-    this._layout.onum = document.getElementById("onum").checked;
+    layout.adjustDots = document.getElementById("adjust-dots").checked;
+    layout.removeDots = document.getElementById("remove-dots").checked;
+    layout.nocolorDots = document.getElementById("nocolor-dots").checked;
+    layout.smallDots = document.getElementById("small-dots").checked;
+    layout.roundDots = document.getElementById("round-dots").checked;
+    layout.onum = document.getElementById("onum").checked;
 
     this._draw();
   }

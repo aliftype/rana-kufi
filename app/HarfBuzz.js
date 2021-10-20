@@ -170,7 +170,7 @@ export class Font {
     return this._gsub;
   }
 
-  getSubstitute(lookupIndex, glyph, next) {
+  getAlternates(lookupIndex, glyph, next) {
     let lookup = this.GSUB.lookup(lookupIndex);
 
     if (next) {
@@ -220,7 +220,7 @@ class Glyph {
     this.dx = position[2];
     this.dy = position[3];
 
-    this._features = null;
+    this._alternates = null;
   }
 
   get isDot() {
@@ -237,22 +237,22 @@ class Glyph {
   }
   get outline() { return this.font.getGlyphOutline(this.index); }
 
-  getSubstitutes(next) {
-    if (this._features === null) {
+  getAlternates(next) {
+    if (this._alternates === null) {
       let features = this.font.GSUB.features;
       let result = new Set();
       for (const [tag, lookups] of Object.entries(features)) {
         if (ALTERNATE_FEATURES.includes(tag)) {
           for (const lookup of lookups) {
-            let sub = this.font.getSubstitute(lookup, this.index, next && next.index);
-            if (sub)
-              result.add([tag, sub]);
+            let alternates = this.font.getAlternates(lookup, this.index, next && next.index);
+            if (alternates)
+              result.add([tag, alternates]);
           }
         }
       }
-      this._features = result.size && Array.from(result) || undefined;
+      this._alternates = result.size && Array.from(result) || undefined;
     }
-    return this._features;
+    return this._alternates;
   }
 }
 
