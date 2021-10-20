@@ -19,6 +19,6 @@
 export const FONT_FILE = "./assets/fonts/RanaKufi.otf";
 export const SERVICE_WORKER = "./ServiceWorker.js";
 export const SAMPLE_TEXT = `
-[{"code":1575,"features":["dlig=1","cv01=6"]},{"code":1604,"features":["dlig=1"]},{"code":1582},{"code":1591,"features":["cv01=2"]},{"code":32},{"code":1575,"features":[]},{"code":1604,"features":[]},{"code":1603,"features":["cv05"]},{"code":1608,"features":[]},{"code":1601,"features":[]},{"code":1610,"features":["cv01=14"]},{"code":32},{"code":1575,"features":["dlig","cv01"]},{"code":1604,"features":["dlig"]},{"code":1601,"features":["cv01"]},{"code":1575,"features":[]},{"code":1591,"features":["cv05"]},{"code":1605,"features":["cv01=2"]},{"code":1610,"features":["cv01=13"]}]
+[{"code":1575,"features":["dlig=1","cv05=2"]},{"code":1604,"features":["dlig=1"]},{"code":1582},{"code":1591,"features":["cv01=1"]},{"code":32},{"code":1575,"features":[]},{"code":1604,"features":[]},{"code":1603,"features":["cv05=1"]},{"code":1608,"features":[]},{"code":1601,"features":[]},{"code":1610,"features":["cv01=13"]},{"code":32},{"code":1575,"features":["dlig=1","cv01=1"]},{"code":1604,"features":["dlig=1"]},{"code":1601,"features":["cv01=1"]},{"code":1575,"features":[]},{"code":1591,"features":["cv05=1"]},{"code":1605,"features":["cv01=1"]},{"code":1610,"features":["cv01=12"]}]
 `;
 export const STAORAGE_KEY = "ranakufi.text-v3";
