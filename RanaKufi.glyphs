@@ -1,5 +1,5 @@
 {
-.appVersion = "3099";
+.appVersion = "3111";
 .formatVersion = 3;
 axes = (
 {
@@ -125,13 +125,13 @@ code = "feature ccmp {
   sub ghain-ar by ain-ar dotabove-ar;
   sub feh-ar by fehDotless-ar dotabove-ar;
   sub qaf-ar by qafDotless-ar twodotshorizontalabove-ar;
-  sub noon-ar by noonghunna-ar dotabove-ar;
   sub wawHamzaabove-ar by waw-ar hamzaabove-ar;
   sub yehHamzaabove-ar by alefMaksura-ar hamzaabove-ar;
 } ccmp;
 
 feature isol {
   sub tehMarbuta-ar by heh-ar twodotshorizontalabove-ar;
+  sub noon-ar by noonghunna-ar dotcenter-ar;
   sub [yeh-ar yeh-farsi] by alefMaksura-ar;
 } isol;
 
@@ -146,6 +146,7 @@ feature init {
   sub kaf-ar by kaf-ar.init;
   sub lam-ar by lam-ar.init;
   sub meem-ar by meem-ar.init;
+  sub noon-ar by behDotless-ar.init dotabove-ar;
   sub heh-ar by heh-ar.init;
   sub yeh-ar by behDotless-ar.init twodotshorizontalbelow-ar;
   sub yeh-farsi by behDotless-ar.init twodotshorizontalbelow-ar;
@@ -162,6 +163,7 @@ feature medi {
   sub kaf-ar by kaf-ar.init;
   sub lam-ar by lam-ar.init;
   sub meem-ar by meem-ar.medi;
+  sub noon-ar by behDotless-ar.init dotabove-ar;
   sub heh-ar by heh-ar.medi;
   sub yeh-ar by behDotless-ar.init twodotshorizontalbelow-ar;
   sub yeh-farsi by behDotless-ar.init twodotshorizontalbelow-ar;
@@ -172,10 +174,12 @@ feature fina {
   sub reh-ar by reh-ar.fina;
   sub ain-ar by ain-ar.fina;
   sub meem-ar by meem-ar.fina;
+  sub noon-ar by noonghunna-ar.fina dotcenter-ar;
   sub noonghunna-ar by noonghunna-ar.fina;
   sub tehMarbuta-ar by heh-ar twodotshorizontalabove-ar;
   sub [alefMaksura-ar yeh-ar yeh-farsi] by alefMaksura-ar.fina;
-} fina;";
+} fina;
+";
 name = GSUB;
 }
 );
@@ -10160,8 +10164,8 @@ layers = (
 {
 anchors = (
 {
-name = top;
-pos = (100,-50);
+name = center;
+pos = (100,0);
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
@@ -10206,8 +10210,8 @@ layers = (
 {
 anchors = (
 {
-name = top;
-pos = (125,-38);
+name = center;
+pos = (125,0);
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
@@ -10351,8 +10355,8 @@ layers = (
 {
 anchors = (
 {
-name = top;
-pos = (100,-50);
+name = center;
+pos = (100,0);
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
@@ -10395,8 +10399,8 @@ layers = (
 {
 anchors = (
 {
-name = top;
-pos = (78,-24);
+name = center;
+pos = (78,23);
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
@@ -10453,8 +10457,8 @@ layers = (
 {
 anchors = (
 {
-name = top;
-pos = (75,-24);
+name = center;
+pos = (75,26);
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
@@ -30241,6 +30245,82 @@ shapes = (
 {
 pos = (0,-50);
 ref = "dotabove-ar.small";
+}
+);
+width = 50;
+}
+);
+},
+{
+glyphname = "dotcenter-ar";
+layers = (
+{
+anchors = (
+{
+name = _center;
+pos = (50,50);
+}
+);
+attr = {
+colorPalette = 0;
+};
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+name = Regular;
+shapes = (
+{
+closed = 1;
+nodes = (
+(78,0,o),
+(100,22,o),
+(100,50,cs),
+(100,78,o),
+(78,100,o),
+(50,100,cs),
+(22,100,o),
+(0,78,o),
+(0,50,cs),
+(0,22,o),
+(22,0,o),
+(50,0,cs)
+);
+}
+);
+width = 100;
+}
+);
+},
+{
+glyphname = "dotcenter-ar.small";
+layers = (
+{
+anchors = (
+{
+name = _center;
+pos = (25,25);
+}
+);
+attr = {
+colorPalette = 0;
+};
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+name = Regular;
+shapes = (
+{
+closed = 1;
+nodes = (
+(39,0,o),
+(50,11,o),
+(50,25,cs),
+(50,39,o),
+(39,50,o),
+(25,50,cs),
+(11,50,o),
+(0,39,o),
+(0,25,cs),
+(0,11,o),
+(11,0,o),
+(25,0,cs)
+);
 }
 );
 width = 50;
