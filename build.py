@@ -399,8 +399,8 @@ def build(instance, opts, glyphOrder):
         if not glyph.export:
             continue
         for layer in glyph.layers:
-            if "colorPalette" in layer.attr:
-                index = layer.attr["colorPalette"]
+            if "colorPalette" in layer.attributes:
+                index = layer.attributes["colorPalette"]
                 if name not in colorLayers:
                     colorLayers[name] = []
                 if layer.layerId == layer.associatedMasterId: # master layer
