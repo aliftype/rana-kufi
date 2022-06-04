@@ -41,7 +41,7 @@ EM_CFLAGS = \
 	      "_hb_font_get_glyph_extents", \
 	      "_hb_font_get_h_extents", \
 	      "_hb_font_set_scale", \
-	      "_hb_font_draw_glyph", \
+	      "_hb_font_get_glyph_shape", \
 	      "_hb_draw_funcs_create", \
 	      "_hb_draw_funcs_set_close_path_func", \
 	      "_hb_draw_funcs_set_quadratic_to_func", \
@@ -79,6 +79,7 @@ harfbuzz.o: $(HBDIR)/harfbuzz.cc
 	  -DHB_NO_BITMAP \
 	  -DHB_NO_BUFFER_MESSAGE \
 	  -DHB_NO_BUFFER_SERIALIZE \
+	  -DHB_NO_BUFFER_VERIFY \
 	  -DHB_NO_COLOR \
 	  -DHB_NO_ERRNO \
 	  -DHB_NO_FACE_COLLECT_UNICODES \
