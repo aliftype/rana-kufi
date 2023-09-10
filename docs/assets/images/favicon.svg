@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="480" width="480" viewBox="-60 0 480 480" version="1.1">
-<rect x="-60" y="0" height="480" width="480" style="fill:#feeec9;"/>
-<g transform="matrix(1,0,0,-1,125,290)"><path d="M -50,-135 C 13,-134 63,-72 50,0 45,30 31,68 0,100 36,141 50,189 50,250 109,150 150,95 150,-1 150,-123 31,-178 -50,-135 Z"/></g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480" height="480" version="1.1" viewBox="-60 0 480 480" xmlns="http://www.w3.org/2000/svg">
+ <rect x="-60" width="480" height="480"/>
+ <g transform="matrix(1,0,0,-1,125,290)" fill="#fff">
+  <path d="m-50-135c63 1 113 63 100 135-5 30-19 68-50 100 36 41 50 89 50 150 59-100 100-155 100-251 0-122-119-177-200-134z" fill="#fff"/>
+ </g>
 </svg>
