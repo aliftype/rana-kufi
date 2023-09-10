@@ -1,4 +1,4 @@
 cffsubr
-fonttools
+fonttools[woff]
 glyphsLib >= 6.0.0b1
 PyYAML

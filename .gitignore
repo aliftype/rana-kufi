@@ -1,4 +1,6 @@
 /venv
 /build
+/fonts/*.woff2
+/docs/_site/
 .*.swp
 *.gggls

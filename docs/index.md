@@ -1,5 +1,5 @@
 ---
-layout: arabic
+layout: default
 title: رنا كوفي
 ---
 

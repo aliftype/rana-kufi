@@ -17,17 +17,43 @@ NAME = RanaKufi
 
 MAKEFLAGS := -sr
 SHELL = bash
-
-CONFIG = _config.yml
-VERSION = $(shell python version.py $(CONFIG))
-DIST = $(NAME)-$(VERSION)
-
 ARGS ?= 
 
-.PHONY: all
+CONFIG = docs/_config.yml
+VERSION = $(shell grep "version:" $(CONFIG) | sed -e 's/.*.: "\(.*.\)".*/\1/')
+DIST = $(NAME)-$(VERSION)
 
-all: $(NAME).otf
+SOURCEDIR = sources
+SCRIPTDIR = scripts
+FONTDIR = fonts
+TESTDIR = tests
+BUILDDIR = build
+
+FONTS = $(FONTDIR)/$(NAME).otf
+WOFF2 = $(FONTDIR)/$(NAME).woff2
+
+.SECONDARY:
+.ONESHELL:
+.PHONY: all dist
+
+all: ttf web
+ttf: $(FONTS)
+
+web: $(WOFF2)
+	cp $(WOFF2) docs/assets/fonts/
+	cp $(FONTS) docs/app/assets/fonts/
 
 %.otf: $(NAME).glyphs $(CONFIG)
 	$(info   BUILD  $(*F))
 	python build.py $< $(VERSION) $@ $(ARGS)
+
+%.woff2: %.otf
+	$(info   WOFF2  $(@F))
+	python $(SCRIPTDIR)/buildwoff2.py $< $@
+
+dist: all
+	$(info   DIST   $(DIST).zip)
+	install -Dm644 -t $(DIST) $(FONTS)
+	install -Dm644 -t $(DIST) {README,README-Arabic}.txt
+	install -Dm644 -t $(DIST) LICENSE
+	zip -rq $(DIST).zip $(DIST)
