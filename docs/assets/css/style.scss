@@ -144,6 +144,12 @@ header p {
   margin-block-start: 0;
 }
 
+#logo a,
+#foundry a {
+  text-decoration: none;
+  color: unset;
+}
+
 #title {
   font-size: 80pt;
   font-weight: normal;
