@@ -1,0 +1,913 @@
+{
+.appVersion = "3234";
+.formatVersion = 3;
+axes = (
+{
+name = Ascender;
+tag = ASCD;
+}
+);
+classes = (
+{
+code = "";
+name = AllLetters;
+},
+{
+code = "/.*\\.(medi|init)/ kashida-ar";
+name = ArabicJoinLeft;
+},
+{
+code = "/.*dot.*.-ar$/";
+name = Dots;
+}
+);
+customParameters = (
+{
+name = "Use Line Breaks";
+value = 1;
+},
+{
+name = "Write lastChange";
+value = 0;
+},
+{
+name = "Write DisplayStrings";
+value = 0;
+},
+{
+name = "Virtual Master";
+value = (
+{
+Axis = Ascender;
+Location = 8;
+}
+);
+},
+{
+name = "Use Typo Metrics";
+value = 1;
+},
+{
+name = fsType;
+value = (
+);
+},
+{
+name = unicodeRanges;
+value = (
+13
+);
+},
+{
+name = codePageRanges;
+value = (
+1256
+);
+},
+{
+name = "Don't use Production Names";
+value = 1;
+}
+);
+date = "2020-02-24 14:21:20 +0000";
+familyName = "Rana Kufi";
+featurePrefixes = (
+{
+code = "languagesystem DFLT dflt;
+languagesystem arab dflt;";
+name = Languagesystems;
+},
+{
+code = "lookup teh_alef_first {
+  ignore sub [@AllLetters space space.mark] behDotless-ar.init twodotshorizontalabove-ar' [alef-ar lam-ar lam-ar.init];
+  sub behDotless-ar.init twodotshorizontalabove-ar' [alef-ar lam-ar lam-ar.init] by twodotsverticalabove-ar;
+} teh_alef_first;
+
+lookup hah_high {
+  lookupflag 0;
+  sub hah-ar.init by hah-ar.init kashida-ar kashida-ar kashida-ar;
+  sub hah-ar.medi by hah-ar.medi kashida-ar kashida-ar kashida-ar;
+  sub hah-ar.init.01.03 by hah-ar.init.01.03 kashida-ar kashida-ar kashida-ar kashida-ar.10;
+  sub hah-ar.medi.01.03 by hah-ar.medi.01.03 kashida-ar kashida-ar kashida-ar kashida-ar.10;
+  sub hah-ar.init.narrow by hah-ar.init.narrow kashida-ar kashida-ar kashida-ar;
+} hah_high;
+
+lookup hah_high2 {
+  sub hah-ar.init.01.04 by hah-ar.init.01.04 kashida-ar kashida-ar kashida-ar.10;
+  sub hah-ar.init.01.05 by hah-ar.init.01.05 kashida-ar kashida-ar kashida-ar.10;
+  sub hah-ar.medi.01.04 by hah-ar.medi.01.04 kashida-ar kashida-ar kashida-ar.10;
+  sub hah-ar.medi.01.05 by hah-ar.medi.01.05 kashida-ar kashida-ar kashida-ar.10;
+} hah_high2;
+
+lookup beh_low {
+  sub behDotless-ar      by behDotless-ar.low;
+  sub behDotless-ar.init by behDotless-ar.init.low;
+} beh_low;
+
+lookup beh_heh {
+  sub behDotless-ar.init by behDotless-ar.init.behHeh;
+  sub heh-ar.medi.02.00  by heh-ar.medi.behHeh;
+} beh_heh;
+
+";
+name = Lookups;
+},
+{
+code = "feature ccmp {
+  sub alefHamzaabove-ar by alef-ar hamzaabove-ar;
+  sub alefHamzabelow-ar by alef-ar hamzabelow-ar;
+  sub beh-ar by behDotless-ar dotbelow-ar;
+  sub teh-ar by behDotless-ar twodotshorizontalabove-ar;
+  sub theh-ar by behDotless-ar threedotsupabove-ar;
+  sub jeem-ar by hah-ar dotbelow-ar;
+  sub khah-ar by hah-ar dotabove-ar;
+  sub thal-ar by dal-ar dotabove-ar;
+  sub zain-ar by reh-ar dotabove-ar;
+  sub sheen-ar by seen-ar threedotsupabove-ar;
+  sub dad-ar by sad-ar dotabove-ar;
+  sub zah-ar by tah-ar dotabove-ar;
+  sub ghain-ar by ain-ar dotabove-ar;
+  sub feh-ar by fehDotless-ar dotabove-ar;
+  sub qaf-ar by qafDotless-ar twodotshorizontalabove-ar;
+  sub wawHamzaabove-ar by waw-ar hamzaabove-ar;
+  sub yehHamzaabove-ar by alefMaksura-ar hamzaabove-ar;
+} ccmp;
+
+feature isol {
+  sub tehMarbuta-ar by heh-ar twodotshorizontalabove-ar;
+  sub noon-ar by noonghunna-ar dotcenter-ar;
+  sub [yeh-ar yeh-farsi] by alefMaksura-ar;
+} isol;
+
+feature init {
+  sub [behDotless-ar noonghunna-ar alefMaksura-ar] by behDotless-ar.init;
+  sub hah-ar by hah-ar.init;
+  sub seen-ar by seen-ar.init;
+  sub sad-ar by sad-ar.init;
+  sub tah-ar by tah-ar.init;
+  sub ain-ar by ain-ar.init;
+  sub [fehDotless-ar qafDotless-ar] by fehDotless-ar.init;
+  sub kaf-ar by kaf-ar.init;
+  sub lam-ar by lam-ar.init;
+  sub meem-ar by meem-ar.init;
+  sub noon-ar by behDotless-ar.init dotabove-ar;
+  sub heh-ar by heh-ar.init;
+  sub yeh-ar by behDotless-ar.init twodotshorizontalbelow-ar;
+  sub yeh-farsi by behDotless-ar.init twodotshorizontalbelow-ar;
+} init;
+
+feature medi {
+  sub [behDotless-ar noonghunna-ar alefMaksura-ar] by behDotless-ar.init;
+  sub hah-ar by hah-ar.medi;
+  sub seen-ar by seen-ar.init;
+  sub sad-ar by sad-ar.init;
+  sub tah-ar by tah-ar.init;
+  sub ain-ar by ain-ar.medi;
+  sub [fehDotless-ar qafDotless-ar] by fehDotless-ar.medi;
+  sub kaf-ar by kaf-ar.init;
+  sub lam-ar by lam-ar.init;
+  sub meem-ar by meem-ar.medi;
+  sub noon-ar by behDotless-ar.init dotabove-ar;
+  sub heh-ar by heh-ar.medi;
+  sub yeh-ar by behDotless-ar.init twodotshorizontalbelow-ar;
+  sub yeh-farsi by behDotless-ar.init twodotshorizontalbelow-ar;
+} medi;
+
+feature fina {
+  sub hah-ar by hah-ar.fina;
+  sub reh-ar by reh-ar.fina;
+  sub ain-ar by ain-ar.fina;
+  sub meem-ar by meem-ar.fina;
+  sub noon-ar by noonghunna-ar.fina dotcenter-ar;
+  sub noonghunna-ar by noonghunna-ar.fina;
+  sub tehMarbuta-ar by heh-ar twodotshorizontalabove-ar;
+  sub [alefMaksura-ar yeh-ar yeh-farsi] by alefMaksura-ar.fina;
+} fina;
+";
+name = GSUB;
+}
+);
+features = (
+{
+code = "lookupflag IgnoreMarks;
+
+lookup lam_alef {
+  sub lam-ar.init alef-ar by lam_alef-ar.liga;
+} lam_alef;
+
+lookup kaf_lam_alef {
+  sub @ArabicJoinLeft lam_alef-ar.liga' by lam_alef-ar.fina.liga;
+} kaf_lam_alef;
+
+lookup alef_lam_lam_heh {
+  sub alef-ar lam-ar.init lam-ar.init heh-ar by alef_lam_lam_heh-ar.liga;
+} alef_lam_lam_heh;
+
+
+lookup before_hah {
+  @before = [behDotless-ar.init ain-ar.init fehDotless-ar.init lam-ar.init meem-ar.init hah-ar.init];
+  @match  = [hah-ar.fina hah-ar.medi];
+  @repl   = [hah-ar hah-ar.init];
+  ignore sub @ArabicJoinLeft @before @match';
+  sub        @before @match' by @repl;
+} before_hah;
+
+lookup space {
+  # we want Arabic space to be gone for all intents and purposes,
+  # our spacing is uniform wither word or letter space.
+  sub    [@AllLetters endofayah-ar]
+         space'
+         [@AllLetters endofayah-ar]
+  by     space.mark;
+} space;
+
+lookup teeth {
+  sub    [behDotless-ar.init]' lookup beh_low
+         [behDotless-ar.init]'
+         [behDotless-ar.init behDotless-ar]' lookup beh_low;
+  sub    [behDotless-ar.init]' lookup beh_low
+         [seen-ar.init seen-ar];
+} teeth;
+
+lookup lam_hah1 {
+  sub     alef-ar lam-ar.init hah-ar.init' by hah-ar.init.narrow;
+} lam_hah1;
+
+lookup lam_hah2 {
+  sub    alef-ar lam-ar.init' hah-ar by lam-ar.init.short.wide;
+  sub    lam-ar.init' [hah-ar hah-ar.init.narrow hah-ar.init] by lam-ar.init.short;
+} lam_hah2;
+
+lookup teh_alef_first;
+";
+tag = rlig;
+},
+{
+code = "sub alef-ar lam-ar.init by alef_lam-ar.init.dlig;
+sub alef-ar lam-ar.init.short by alef_lam-ar.init.short.dlig;";
+tag = dlig;
+},
+{
+code = "lookup heh_dots {
+  lookupflag 0;
+  sub [heh-ar.01.01 heh-ar.01.02] twodotshorizontalabove-ar' by twodotsverticalabove-ar;
+} heh_dots;
+
+@hah_high  = [hah-ar.init hah-ar.medi hah-ar.init.narrow hah-ar.init.01.03 hah-ar.medi.01.03];
+@hah_high2 = [hah-ar.init.01.04 hah-ar.init.01.05 hah-ar.medi.01.04 hah-ar.medi.01.05];
+lookup after_hah {
+  lookupflag IgnoreMarks;
+  sub @hah_high' lookup hah_high [/^lam-ar.*/ /^alef-ar.*/ /^lam_alef-ar.fina.*/];
+  sub [hah-ar.init hah-ar.medi hah-ar.init.narrow]' lookup hah_high [/^fehDotless-ar.*/ /^fehDotless-ar.init.*/];
+
+  sub @hah_high2' lookup hah_high2 [/^lam-ar.*/ /^alef-ar.*/ /^lam_alef-ar.fina.*/];
+} after_hah;
+
+lookup before_hah_fix {
+  lookupflag IgnoreMarks;
+  sub behDotless-ar.init hah-ar.init.01.05' by hah-ar.medi.01.05;
+} before_hah_fix;
+
+lookup after_hah_dots {
+  lookupflag 0;
+  sub @hah_high' lookup hah_high [/^behDotless-ar.init.*/] dotabove-ar;
+  sub @hah_high' lookup hah_high [dotabove-ar dotbelow-ar] [/^behDotless-ar.init.*/] dotabove-ar;
+} after_hah_dots;
+
+lookup before_heh {
+  lookupflag IgnoreMarks;
+  sub behDotless-ar.init' lookup beh_heh
+      heh-ar.medi.02.00' lookup beh_heh;
+} before_heh;
+
+lookup after_pyramid_seen {
+  lookupflag IgnoreMarks;
+  sub seen-ar.init.02.00
+      [reh-ar.fina reh-ar.fina.01.01]'
+   by [reh-ar.fina.seen reh-ar.fina.seen];
+} after_pyramid_seen;
+";
+tag = dist;
+},
+{
+code = "lookupflag IgnoreMarks;
+
+ignore pos [reh-ar reh-ar.fina meem-ar meem-ar.fina alefMaksura-ar.01.06 alefMaksura-ar.fina.01.06]' @AllLetters;
+
+pos [alefMaksura-ar.01.06 alefMaksura-ar.fina.01.06]' <150 0 150 0>;
+pos [meem-ar meem-ar.fina]' <100 0 100 0>;
+pos [reh-ar reh-ar.fina]' <50 0 50 0>;
+
+pos [behDotless-ar.init]' <0 0 120 0> [hah-ar];
+pos [behDotless-ar.init]' <0 0 70  0> [hah-ar hah-ar.init];
+pos [lam-ar.init.short lam-ar.init.short.01.01]' <0 0 50 0> [hah-ar hah-ar.init];
+
+pos [behDotless-ar.init]' <0 0 270 0> [hah-ar.01.01];
+
+pos @ArabicJoinLeft heh-ar.02.00 <-60 0 -60 0>;
+
+# Automatic Code
+";
+tag = kern;
+},
+{
+code = "# Automatic Code
+
+pos behDotless-ar.init' <0 0 110 0> hah-ar.init.01.04;
+pos behDotless-ar.init' <0 0 43 0> hah-ar.init.01.03;";
+tag = curs;
+},
+{
+code = "# Automatic Code
+pos behDotless-ar.init [dotbelow-ar twodotshorizontalbelow-ar]' <-75   0   -75  0> [alef-ar alef-ar.01.01 alef-ar.01.02 alef-ar.01.03 alef-ar.01.05 alef-ar.01.06];
+pos behDotless-ar.init [dotbelow-ar twodotshorizontalbelow-ar]' <  0  -150  0   0> hah-ar.init;
+
+ignore
+ pos [noonghunna-ar.01.02 noonghunna-ar.fina.01.02]
+      dotabove-ar'
+      space.mark
+     [/^(feh|beh)Dotless-ar\\.01\\.*/
+      /^(feh|beh)Dotless-ar\\.init\\.01.*/
+      dal-ar.01.03 dal-ar.03.01 behDotless-ar.init.01.02 dal-ar.03.03 dal-ar.01.01
+      lam-ar lam-ar.01.01 lam-ar.01.02 lam-ar.01.03 lam-ar.01.04 lam-ar.02.00 lam-ar.02.01 lam-ar.02.02 lam-ar.02.03 lam-ar.02.04 lam-ar.03.00 lam-ar.03.01 lam-ar.03.02 lam-ar.03.03 lam-ar.03.04
+      lam-ar.init.03.00 lam-ar.init.02.03 lam-ar.init.02.00 lam-ar.init.03.03
+      reh-ar reh-ar.01.01
+      sad-ar.01.01 sad-ar.01.03 sad-ar.init.01.01 sad-ar.init.01.03
+      tah-ar.01.01 tah-ar.01.03 tah-ar.init.01.01 tah-ar.init.01.03
+      waw-ar waw-ar.01.01
+      qafDotless-ar];
+
+pos [noonghunna-ar.01.02 noonghunna-ar.fina.01.02]
+     dotabove-ar' <150 350 0 0>
+     space.mark
+    [alef-ar.01.05 alef-ar.01.06 ain-ar.init hah-ar.init.01.03 meem-ar.01.01 meem-ar.init.01.01
+     @MMK_L_hah @MMK_L_straight-l @MMK_L_alef-wide];
+
+pos [behDotless-ar.init] [twodotshorizontalbelow-ar dotbelow-ar]' <0 -150 0 0> [hah-ar hah-ar.01.01];
+
+pos [behDotless-ar.01.01 behDotless-ar.01.02 behDotless-ar.01.03 behDotless-ar.01.04]
+    [dotbelow-ar twodotshorizontalabove-ar twodotshorizontalbelow-ar]' <-100 0 0 0>;
+
+pos behDotless-ar.init
+    [dotbelow-ar twodotshorizontalbelow-ar]' <0 -150 0 0>
+    [/^hah-ar\\.init.*/];
+";
+tag = mark;
+},
+{
+code = "sub [@Dots hamzaabove-ar hamzabelow-ar] by NULL;
+";
+labels = (
+{
+language = ENG;
+value = "Dot-less Letter Forms";
+},
+{
+language = ARA;
+value = "حروف مهملة (بلا نقاط)";
+}
+);
+tag = ss01;
+},
+{
+code = "sub @Dots by [/.*dot.*-ar.small$/];";
+labels = (
+{
+language = ENG;
+value = "Small dots";
+},
+{
+language = ARA;
+value = "نقاط صغيرة";
+}
+);
+tag = ss02;
+}
+);
+fontMaster = (
+{
+axesValues = (
+12
+);
+customParameters = (
+{
+name = typoLineGap;
+value = 300;
+},
+{
+name = hheaLineGap;
+value = 300;
+},
+{
+name = underlinePosition;
+value = 150;
+},
+{
+name = underlineThickness;
+value = 100;
+},
+{
+name = "Color Palettes";
+value = (
+(
+(210,46,31,255)
+)
+);
+},
+{
+name = "Link Metrics With First Master";
+value = 1;
+},
+{
+name = "Axis Location";
+value = (
+{
+Axis = Ascender;
+Location = 12;
+}
+);
+},
+{
+name = "Master Icon Glyph Name";
+value = "alef-ar";
+}
+);
+guides = (
+{
+pos = (-2141,2303);
+},
+{
+locked = 1;
+name = Short;
+pos = (-392,800);
+}
+);
+iconName = Light_Condensed;
+id = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+metricValues = (
+{
+over = 15;
+pos = 1200;
+},
+{
+over = 15;
+pos = 1200;
+},
+{
+over = 15;
+pos = 400;
+},
+{
+over = -15;
+},
+{
+over = -15;
+pos = -150;
+},
+{
+}
+);
+name = Regular;
+userData = {
+GSOffsetHorizontal = 50;
+GSOffsetMakeStroke = 1;
+GSOffsetProportional = 1;
+GSOffsetVertical = 50;
+};
+visible = 1;
+}
+);
+instances = (
+{
+axesValues = (
+12
+);
+instanceInterpolations = {
+"299DE00D-7BC2-4DFB-A399-2750234EE670" = 1;
+};
+name = Regular;
+},
+{
+axesValues = (
+8
+);
+instanceInterpolations = {
+"299DE00D-7BC2-4DFB-A399-2750234EE670" = 1;
+};
+name = Short;
+}
+);
+kerningRTL = {
+"299DE00D-7BC2-4DFB-A399-2750234EE670" = {
+"@MMK_R_bowel" = {
+"-beh.01" = 0;
+"-beh.02" = 0;
+"-beh.03" = 0;
+"-beh.04" = 0;
+"-dal.01" = 0;
+"-dal.03" = 0;
+"-dal.05" = 0;
+"-dal.07" = 0;
+"-dal.09" = 0;
+"-dal.10" = 0;
+"-dal.11" = 0;
+"-dal.12" = 0;
+"-dal.13" = 0;
+"-dal.14" = 0;
+"-dal.15" = 0;
+"-dal.16" = 0;
+"-dal.17" = 0;
+"-dal.18" = 0;
+"-dal.19" = 0;
+"-dal.20" = 0;
+"-dal.21" = 0;
+"-dal.22" = 0;
+"-dal.23" = 0;
+"-dal.24" = 0;
+"-dal.25" = 0;
+"-dal.26" = 0;
+"-dal.27" = 0;
+"-kaf.01" = 0;
+"-kaf.03" = 0;
+"-kaf.05" = 0;
+"-kaf.07" = 0;
+"-kaf.09" = 0;
+"-kaf.10" = 0;
+"-kaf.11" = 0;
+"-kaf.12" = 0;
+"-kaf.13" = 0;
+"-kaf.14" = 0;
+"-kaf.15" = 0;
+"-kaf.16" = 0;
+"-kaf.17" = 0;
+"-kaf.18" = 0;
+"-kaf.19" = 0;
+"-kaf.20" = 0;
+"-kaf.21" = 0;
+"-kaf.22" = 0;
+"-kaf.23" = 0;
+"-kaf.24" = 0;
+"-kaf.25" = 0;
+"-kaf.26" = 0;
+"-kaf.27" = 0;
+"-lam" = 0;
+"-lam.01" = 0;
+"-lam.02" = 0;
+"-lam.03" = 0;
+"-lam.04" = 0;
+"@MMK_L_alef-wide" = -200;
+"@MMK_L_hah" = -200;
+"@MMK_L_straight-l" = -150;
+"ain-ar.init" = -200;
+"alef-ar.02.00" = -100;
+"alef-ar.02.01" = -150;
+"hah-ar.init.01.03" = -100;
+"hamza-ar" = -200;
+"lam-ar" = 0;
+"lam-ar.02.00" = 0;
+"lam-ar.03.00" = 0;
+"meem-ar.01.02" = -200;
+"meem-ar.init.01.01" = -200;
+"noonghunna-ar.01.01" = 0;
+"noonghunna-ar.01.02" = 0;
+"noonghunna-ar.01.03" = 0;
+"noonghunna-ar.01.04" = 0;
+"qafDotless-ar" = 0;
+"reh-ar" = 0;
+"reh-ar.01.01" = 0;
+"waw-ar" = 0;
+"waw-ar.01.01" = -10;
+"waw-ar.01.02" = 0;
+};
+"@MMK_R_hah.alt" = {
+"@MMK_L_alef-wide" = -105;
+"@MMK_L_hah" = -105;
+"ain-ar" = -105;
+"ain-ar.init" = -105;
+"alef-ar" = 110;
+"alef-ar.01.01" = 110;
+"alef-ar.01.02" = 110;
+"alef-ar.01.03" = 240;
+"alef-ar.01.04" = 260;
+"alef-ar.01.05" = 110;
+"alef-ar.01.06" = 110;
+"alef-ar.01.07" = 110;
+"alef-ar.01.08" = 110;
+"alef-ar.01.09" = 110;
+"alef-ar.02.00" = -40;
+"alef-ar.02.01" = -40;
+"alef-ar.02.02" = -40;
+"alef-ar.02.03" = -90;
+"alef-ar.02.04" = -105;
+"alef-ar.02.05" = -40;
+"alef-ar.02.06" = -40;
+"alef-ar.02.07" = -40;
+"alef-ar.02.08" = -90;
+"alef-ar.02.09" = -105;
+"alef-ar.02.10" = -40;
+"alef-ar.02.11" = -40;
+"alef-ar.02.12" = -40;
+"alef-ar.02.13" = -90;
+"alef-ar.02.14" = -105;
+"alef-ar.02.15" = 90;
+"alef-ar.02.16" = 90;
+"alef-ar.02.17" = 90;
+"alef-ar.02.18" = 40;
+"alef-ar.02.19" = -10;
+"alef-ar.02.20" = -60;
+"alef-ar.02.21" = -90;
+"alef-ar.02.22" = -105;
+"alef-ar.02.23" = 20;
+"alef-ar.02.24" = 70;
+"alef-ar.02.25" = 120;
+"alef-ar.02.26" = 120;
+"alef-ar.02.27" = 120;
+"alefMaksura-ar" = -105;
+"alefMaksura-ar.01.01" = -105;
+"alefMaksura-ar.01.02" = -105;
+"alefMaksura-ar.01.03" = -105;
+"alefMaksura-ar.01.04" = -105;
+"alefMaksura-ar.01.05" = -105;
+"alefMaksura-ar.01.10" = -105;
+"alefMaksura-ar.01.11" = -105;
+"alefMaksura-ar.01.12" = -105;
+"alefMaksura-ar.01.13" = -105;
+"alef_lam-ar.init.dlig" = 110;
+"alef_lam-ar.init.dlig.02.00" = -40;
+"alef_lam-ar.init.dlig.03.00" = -90;
+"alef_lam-ar.init.dlig.04.00" = -105;
+"alef_lam-ar.init.dlig.05.00" = -40;
+"alef_lam-ar.init.dlig.06.00" = -40;
+"alef_lam-ar.init.short.dlig" = 110;
+"alef_lam-ar.init.short.dlig.02.00" = -40;
+"alef_lam-ar.init.short.dlig.03.00" = -90;
+"alef_lam-ar.init.short.dlig.04.00" = -105;
+"alef_lam-ar.init.short.dlig.05.00" = -40;
+"alef_lam-ar.init.short.dlig.06.00" = -40;
+"alef_lam_lam_heh-ar.liga" = -105;
+"alef_lam_lam_heh-ar.liga.01.02" = -40;
+"heh-ar.01.02" = 110;
+"heh-ar.01.03" = 110;
+"heh-ar.01.04" = 110;
+"heh-ar.02.00" = -105;
+"heh-ar.init" = -105;
+"heh-ar.init.01.01" = -105;
+"heh-ar.init.01.02" = -105;
+"heh-ar.init.01.03" = -105;
+"heh-ar.init.02.00" = -105;
+"heh-ar.init.02.01" = -80;
+"heh-ar.init.02.02" = -80;
+"kaf-ar.02.00" = 110;
+"kaf-ar.04.00" = 110;
+"kaf-ar.init.02.00" = 110;
+"kaf-ar.init.04.00" = 110;
+"lam-ar" = 110;
+"lam-ar.02.00" = 110;
+"lam-ar.03.00" = 110;
+"lam-ar.init" = 110;
+"lam-ar.init.02.00" = 110;
+"lam-ar.init.03.00" = 110;
+"lam-ar.init.04.00" = 110;
+"lam-ar.init.05.00" = 110;
+"lam-ar.init.06.00" = 110;
+"lam-ar.init.07.00" = 110;
+"lam-ar.init.08.00" = 110;
+"lam-ar.init.09.00" = 240;
+"lam-ar.init.10.00" = 280;
+"lam-ar.init.short" = 110;
+"lam-ar.init.short.01.01" = 110;
+"lam-ar.init.short.wide" = 110;
+"lam-ar.init.short.wide.01.01" = 110;
+"lam-ar.init.short.wide.01.02" = 110;
+"lam-ar.init.short.wide.01.03" = 110;
+"lam_alef-ar.liga" = 110;
+"lam_alef-ar.liga.01.01" = 35;
+"lam_alef-ar.liga.01.02" = 110;
+"lam_alef-ar.liga.01.03" = 35;
+"lam_alef-ar.liga.01.04" = 185;
+"lam_alef-ar.liga.01.05" = -35;
+"lam_alef-ar.liga.01.06" = 35;
+"lam_alef-ar.liga.01.07" = 135;
+"lam_alef-ar.liga.01.08" = 60;
+"lam_alef-ar.liga.01.09" = -15;
+"meem-ar.01.02" = -70;
+"meem-ar.01.03" = -70;
+"meem-ar.01.04" = -10;
+"meem-ar.init.01.01" = -70;
+"meem-ar.init.01.02" = -70;
+"meem-ar.init.01.03" = -10;
+"noonghunna-ar" = -60;
+"noonghunna-ar.01.01" = -60;
+"noonghunna-ar.01.03" = -30;
+"noonghunna-ar.01.04" = -50;
+"reh-ar.01.01" = -50;
+"waw-ar.01.01" = -30;
+"waw-ar.01.02" = -30;
+};
+"@MMK_R_reh-alt" = {
+"@MMK_L_alef-wide" = -100;
+"@MMK_L_hah" = -100;
+"ain-ar" = -20;
+"ain-ar.init" = -100;
+"alef-ar.02.00" = -100;
+"alef-ar.02.01" = -100;
+"alef-ar.02.05" = -100;
+"alef-ar.02.06" = -100;
+"alef-ar.02.10" = -100;
+"alef-ar.02.11" = -100;
+"alefMaksura-ar" = -60;
+"alefMaksura-ar.01.01" = -60;
+"alefMaksura-ar.01.02" = -60;
+"alefMaksura-ar.01.03" = -60;
+"alefMaksura-ar.01.04" = -60;
+"alefMaksura-ar.01.05" = -60;
+"alefMaksura-ar.01.12" = -60;
+"alefMaksura-ar.01.13" = -60;
+"hamza-ar" = -100;
+"hamza-ar.01.01" = -100;
+"heh-ar.init" = -60;
+"heh-ar.init.01.01" = -60;
+"heh-ar.init.01.02" = -60;
+"heh-ar.init.01.03" = -60;
+"heh-ar.init.02.00" = -60;
+"heh-ar.init.02.01" = -60;
+"lam_alef-ar.liga.01.01" = -20;
+"lam_alef-ar.liga.01.03" = -60;
+"meem-ar.01.02" = -50;
+"meem-ar.01.03" = -50;
+"meem-ar.init.01.01" = -50;
+"meem-ar.init.01.02" = -50;
+};
+"@MMK_R_straight-r" = {
+"@MMK_L_straight-l" = 50;
+};
+"ain-ar.fina" = {
+"@MMK_L_alef-wide" = -100;
+"@MMK_L_hah" = -100;
+"alef-ar.02.00" = -100;
+"alef-ar.02.01" = -100;
+};
+"alefMaksura-ar.01.06" = {
+"@MMK_L_hah" = -50;
+"ain-ar.init" = -50;
+};
+"alefMaksura-ar.01.08" = {
+"@MMK_L_alef-wide" = -100;
+};
+"alefMaksura-ar.fina.01.06" = {
+"@MMK_L_hah" = -50;
+"ain-ar.init" = -50;
+};
+"alefMaksura-ar.fina.01.08" = {
+"@MMK_L_alef-wide" = -100;
+};
+"behDotless-ar.init" = {
+"ain-ar.fina.01.01" = -50;
+"ain-ar.medi.01.02" = -25;
+};
+"lam-ar" = {
+"@MMK_L_straight-l" = -300;
+"waw-ar" = 0;
+"waw-ar.01.01" = 0;
+};
+"lam-ar.02.00" = {
+"@MMK_L_straight-l" = -300;
+"waw-ar" = 0;
+"waw-ar.01.01" = 0;
+};
+"lam-ar.03.00" = {
+"@MMK_L_straight-l" = -300;
+"waw-ar" = 0;
+"waw-ar.01.01" = 0;
+};
+"meem-ar" = {
+"ain-ar" = 80;
+};
+"meem-ar.fina" = {
+"ain-ar" = 80;
+};
+"noonghunna-ar.01.03" = {
+"ain-ar" = 50;
+};
+"noonghunna-ar.01.04" = {
+"ain-ar" = 50;
+};
+"noonghunna-ar.fina.01.03" = {
+"ain-ar" = 50;
+};
+"noonghunna-ar.fina.01.04" = {
+"ain-ar" = 50;
+};
+"reh-ar" = {
+"@MMK_L_alef-wide" = -50;
+"@MMK_L_hah" = -50;
+"ain-ar.init" = -50;
+"alef-ar.02.00" = -50;
+"alef-ar.02.01" = -50;
+"meem-ar.01.02" = -50;
+};
+"reh-ar.fina" = {
+"@MMK_L_alef-wide" = -50;
+"@MMK_L_hah" = -50;
+};
+};
+};
+metrics = (
+{
+type = ascender;
+},
+{
+type = "cap height";
+},
+{
+type = "x-height";
+},
+{
+type = baseline;
+},
+{
+type = descender;
+},
+{
+type = "italic angle";
+}
+);
+properties = (
+{
+key = copyrights;
+values = (
+{
+language = ENG;
+value = "Copyright © 2019-2020 by Khaled Hosny. All rights reserved.";
+}
+);
+},
+{
+key = designers;
+values = (
+{
+language = ENG;
+value = "Khaled Hosny";
+}
+);
+},
+{
+key = designerURL;
+value = "https://aliftype.com";
+},
+{
+key = licenses;
+values = (
+{
+language = ENG;
+value = "This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>";
+}
+);
+},
+{
+key = licenseURL;
+value = "https://www.gnu.org/licenses/agpl-3.0.html";
+},
+{
+key = manufacturers;
+values = (
+{
+language = ENG;
+value = "Alif Type";
+}
+);
+},
+{
+key = manufacturerURL;
+value = "https://aliftype.com";
+},
+{
+key = sampleTexts;
+values = (
+{
+language = ENG;
+value = "لما رنا حدثتني النفس قائلة يا ويح جنبك بالسهم المصيب رمي";
+}
+);
+},
+{
+key = vendorID;
+value = ALIF;
+}
+);
+settings = {
+gridLength = 50;
+gridSubDivision = 50;
+keepAlternatesTogether = 1;
+};
+unitsPerEm = 1000;
+userData = {
+LWPluginVersion = "1429";
+};
+versionMajor = 0;
+versionMinor = 400;
+}

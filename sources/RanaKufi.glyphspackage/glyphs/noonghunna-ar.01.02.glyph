@@ -1,0 +1,44 @@
+{
+glyphname = "noonghunna-ar.01.02";
+kernLeft = bowel;
+kernRight = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = center;
+pos = (100,0);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(233,-150,o),
+(300,-83,o),
+(300,0,cs),
+(300,100,l),
+(200,100,l),
+(200,0,ls),
+(200,-55,o),
+(155,-100,o),
+(100,-100,cs),
+(45,-100,o),
+(0,-55,o),
+(0,0,c),
+(0,-83,o),
+(67,-150,o),
+(150,-150,cs)
+);
+},
+{
+angle = 90;
+pos = (300,100);
+ref = _zuluf100;
+}
+);
+width = 300;
+}
+);
+}

@@ -1,0 +1,49 @@
+{
+category = Symbol;
+export = 0;
+glyphname = _elbow.5;
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(150,-150,l),
+(250,-150,l),
+(250,20,l),
+(150,20,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(0,0,l),
+(100,0,l),
+(100,20,l),
+(0,20,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(150,-150,l),
+(191,-150,o),
+(227,-170,o),
+(250,-200,c),
+(250,-140,l),
+(150,-140,l)
+);
+},
+{
+angle = 90;
+pos = (150,0);
+ref = _elbow.3;
+scale = (-1,1);
+}
+);
+width = 250;
+}
+);
+script = arabic;
+}

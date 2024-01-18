@@ -1,0 +1,51 @@
+{
+glyphname = "alef-ar.01.04";
+kernLeft = "straight-r";
+kernRight = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (50,0);
+},
+{
+name = top;
+pos = (-70,1066);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(100,850,l),
+(100,1000,l),
+(0,1000,l),
+(0,850,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(100,0,l),
+(100,300,l),
+(0,300,l),
+(0,0,l)
+);
+},
+{
+pos = (0,224);
+ref = _deco.04;
+},
+{
+angle = 90;
+pos = (0,1000);
+ref = _zuluf150;
+scale = (1,-1);
+}
+);
+width = 100;
+}
+);
+}

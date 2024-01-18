@@ -1,0 +1,28 @@
+{
+glyphname = "twodotsverticalabove-ar";
+layers = (
+{
+anchors = (
+{
+name = _topV;
+pos = (50,0);
+}
+);
+attr = {
+colorPalette = 0;
+};
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+name = Regular;
+shapes = (
+{
+ref = "dotabove-ar";
+},
+{
+pos = (0,150);
+ref = "dotabove-ar";
+}
+);
+width = 100;
+}
+);
+}

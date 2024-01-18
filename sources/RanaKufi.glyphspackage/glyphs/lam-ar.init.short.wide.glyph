@@ -1,0 +1,31 @@
+{
+glyphname = "lam-ar.init.short.wide";
+kernRight = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = exit;
+pos = (0,150);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(0,150,l),
+(230,150,l),
+(230,250,l),
+(0,250,l)
+);
+},
+{
+pos = (160,0);
+ref = "lam-ar.init.short";
+}
+);
+width = 310;
+}
+);
+}

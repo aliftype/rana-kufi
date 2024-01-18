@@ -1,0 +1,73 @@
+{
+glyphname = "alef-ar";
+kernLeft = "straight-r";
+kernRight = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (50,0);
+},
+{
+name = top;
+pos = (-70,1066);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(100,0,l),
+(100,1000,l),
+(0,1000,l),
+(0,0,l)
+);
+},
+{
+angle = 90;
+pos = (0,1000);
+ref = _zuluf150;
+scale = (1,-1);
+}
+);
+width = 100;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (50,0);
+},
+{
+name = top;
+pos = (-70,666);
+}
+);
+associatedMasterId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+layerId = "651FD329-8EE0-4515-A46D-7544EF3E1AE8";
+name = Short;
+shapes = (
+{
+closed = 1;
+nodes = (
+(100,0,l),
+(100,600,l),
+(0,600,l),
+(0,0,l)
+);
+},
+{
+angle = 90;
+pos = (0,600);
+ref = _zuluf150;
+scale = (1,-1);
+}
+);
+visible = 1;
+width = 100;
+}
+);
+unicode = 1575;
+}

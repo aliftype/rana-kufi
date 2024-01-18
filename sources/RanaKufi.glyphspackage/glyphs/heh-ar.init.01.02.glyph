@@ -1,0 +1,23 @@
+{
+glyphname = "heh-ar.init.01.02";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(626,0,l),
+(539,150,l),
+(452,0,l)
+);
+},
+{
+alignment = -1;
+ref = "heh-ar.medi.01.02";
+}
+);
+width = 626;
+}
+);
+}

@@ -1,0 +1,24 @@
+{
+glyphname = "lam_alef-ar.fina.liga.01.08";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(400,100,l),
+(400,0,l),
+(500,0,l),
+(500,100,l)
+);
+},
+{
+alignment = -1;
+ref = "lam_alef-ar.liga.01.08";
+}
+);
+width = 450;
+}
+);
+}

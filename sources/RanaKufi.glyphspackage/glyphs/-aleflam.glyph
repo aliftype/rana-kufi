@@ -1,0 +1,18 @@
+{
+category = Symbol;
+export = 0;
+glyphname = "-aleflam";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+pos = (50,380);
+ref = _deco.06;
+}
+);
+width = 300;
+}
+);
+script = arabic;
+}

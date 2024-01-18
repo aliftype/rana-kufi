@@ -1,0 +1,88 @@
+{
+category = Symbol;
+export = 0;
+glyphname = _kaf.top3;
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(800,858,l),
+(800,914,l),
+(757,957,l),
+(50,250,l),
+(121,179,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(730,1100,l),
+(730,1200,l),
+(150,1200,l),
+(150,1100,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(800,858,l),
+(800,1200,l),
+(700,1200,l),
+(700,858,l)
+);
+},
+{
+angle = 180;
+pos = (150,1200);
+ref = _zuluf100;
+}
+);
+width = 800;
+},
+{
+associatedMasterId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+layerId = "9BB12C11-6326-4ACC-80F9-895CFC9BBCA3";
+name = Short;
+shapes = (
+{
+closed = 1;
+nodes = (
+(800,558,l),
+(800,599,l),
+(731,633,l),
+(50,250,l),
+(99,163,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(730,700,l),
+(730,800,l),
+(150,800,l),
+(150,700,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(800,558,l),
+(800,800,l),
+(700,800,l),
+(700,558,l)
+);
+},
+{
+angle = 180;
+pos = (150,800);
+ref = _zuluf100;
+}
+);
+width = 800;
+}
+);
+script = arabic;
+}

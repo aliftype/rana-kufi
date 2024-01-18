@@ -1,0 +1,23 @@
+{
+glyphname = "hamzabelow-ar";
+layers = (
+{
+anchors = (
+{
+name = _bottom;
+pos = (65,0);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+alignment = -1;
+pos = (0,-133);
+ref = "hamzaabove-ar";
+}
+);
+width = 129;
+}
+);
+unicode = 1621;
+}

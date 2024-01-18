@@ -1,0 +1,47 @@
+{
+glyphname = "kaf-ar.03.00";
+kernRight = "straight-l";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(291,150,l),
+(713,572,l),
+(610,611,l),
+(150,150,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(713,572,l),
+(392,893,l),
+(321,823,l),
+(604,539,l)
+);
+},
+{
+alignment = -1;
+pos = (100,0);
+ref = "-kaf";
+},
+{
+alignment = -1;
+angle = 135.99994;
+pos = (392,893);
+ref = _zuluf100;
+},
+{
+alignment = -1;
+pos = (150,0);
+ref = _zuluf100;
+scale = (-1,1);
+}
+);
+width = 900;
+}
+);
+}

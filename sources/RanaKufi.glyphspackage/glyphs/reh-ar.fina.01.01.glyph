@@ -1,0 +1,21 @@
+{
+glyphname = "reh-ar.fina.01.01";
+kernLeft = "reh-alt";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+alignment = -1;
+ref = "reh-ar.01.01";
+},
+{
+pos = (155,0);
+ref = "kashida-ar";
+scale = (0.6418,1);
+}
+);
+width = 200;
+}
+);
+}

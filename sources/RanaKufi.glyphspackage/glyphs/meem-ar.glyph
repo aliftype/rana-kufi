@@ -1,0 +1,34 @@
+{
+glyphname = "meem-ar";
+kernLeft = "straight-r";
+kernRight = "straight-l";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(78,-150,o),
+(100,-79,o),
+(100,0,c),
+(100,50,l),
+(0,50,l),
+(0,0,l),
+(1,-42,o),
+(1,-134,o),
+(-100,-135,c),
+(-85,-144,o),
+(-54,-150,o),
+(-31,-150,cs)
+);
+},
+{
+ref = _head;
+}
+);
+width = 250;
+}
+);
+unicode = 1605;
+}

@@ -1,0 +1,56 @@
+{
+glyphname = "behDotless-ar";
+kernRight = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (450,-50);
+},
+{
+name = top;
+pos = (450,350);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(650,0,l),
+(650,100,l),
+(150,100,l),
+(150,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(800,0,l),
+(800,250,l),
+(700,250,l),
+(700,100,l),
+(700,0,l)
+);
+},
+{
+pos = (150,0);
+ref = _zuluf100;
+scale = (-1,1);
+},
+{
+angle = 90;
+pos = (800,250);
+ref = _zuluf100;
+},
+{
+pos = (650,0);
+ref = "-beh";
+}
+);
+width = 800;
+}
+);
+unicode = 1646;
+}

@@ -1,0 +1,31 @@
+{
+glyphname = "tah-ar.init.02.00";
+kernRight = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = top;
+pos = (450,450);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+ref = "kashida-ar";
+},
+{
+alignment = -1;
+pos = (50,0);
+ref = "-dal";
+},
+{
+alignment = -1;
+pos = (50,0);
+ref = "alef-ar.01.05";
+}
+);
+width = 850;
+}
+);
+}

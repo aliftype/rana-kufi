@@ -1,0 +1,76 @@
+{
+glyphname = "alef_lam-ar.init.dlig.02.00";
+kernRight = "alef-wide";
+layers = (
+{
+anchors = (
+{
+name = caret_1;
+pos = (175,0);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(300,705,l),
+(300,1000,l),
+(200,1000,l),
+(200,705,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(150,0,l),
+(150,395,l),
+(50,395,l),
+(50,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(300,0,l),
+(300,395,l),
+(200,395,l),
+(200,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(150,705,l),
+(150,1000,l),
+(50,1000,l),
+(50,705,l)
+);
+},
+{
+alignment = -1;
+ref = "kashida-ar";
+},
+{
+ref = "-aleflam";
+},
+{
+angle = 90;
+pos = (200,1000);
+ref = _zuluf150;
+scale = (1,-1);
+},
+{
+angle = 90;
+pos = (150,1000);
+ref = _zuluf150;
+},
+{
+pos = (300,0);
+ref = _zuluf100;
+}
+);
+width = 450;
+}
+);
+}

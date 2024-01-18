@@ -43,7 +43,7 @@ web: $(WOFF2)
 	cp $(WOFF2) docs/assets/fonts/
 	cp $(FONTS) docs/app/assets/fonts/
 
-%.otf: $(SOURCEDIR)/$(NAME).glyphs $(CONFIG)
+%.otf: $(SOURCEDIR)/$(NAME).glyphspackage $(CONFIG)
 	$(info   BUILD  $(*F))
 	python $(SCRIPTDIR)/build.py $< $(VERSION) $@ $(ARGS)
 

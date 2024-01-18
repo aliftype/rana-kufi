@@ -1,0 +1,20 @@
+{
+color = 0;
+glyphname = "wawHamzaabove-ar";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+ref = "waw-ar";
+},
+{
+pos = (60,300);
+ref = "hamzaabove-ar";
+}
+);
+width = 250;
+}
+);
+unicode = 1572;
+}

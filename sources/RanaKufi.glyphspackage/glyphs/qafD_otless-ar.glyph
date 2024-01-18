@@ -1,0 +1,37 @@
+{
+glyphname = "qafDotless-ar";
+kernLeft = "straight-r";
+kernRight = "straight-l";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(250,50,l),
+(150,50,l),
+(150,0,l),
+(150,-55,o),
+(105,-100,o),
+(50,-100,c),
+(-5,-100,o),
+(-50,-55,o),
+(-50,0,c),
+(-50,-83,o),
+(17,-150,o),
+(100,-150,c),
+(183,-150,o),
+(250,-83,o),
+(250,0,c)
+);
+},
+{
+ref = _head;
+}
+);
+width = 250;
+}
+);
+unicode = 1647;
+}

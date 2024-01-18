@@ -1,0 +1,40 @@
+{
+glyphname = "behDotless-ar.init.behHeh";
+kernRight = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (-125,-50);
+},
+{
+name = top;
+pos = (-146,666);
+},
+{
+name = topV;
+pos = (-146,666);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(-96,246,l),
+(-96,466,l),
+(-196,466,l),
+(-196,316,l)
+);
+},
+{
+angle = 90;
+pos = (-96,466);
+ref = _zuluf100;
+}
+);
+width = 0;
+}
+);
+}

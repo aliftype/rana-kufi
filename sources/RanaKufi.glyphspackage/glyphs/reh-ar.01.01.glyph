@@ -1,0 +1,43 @@
+{
+glyphname = "reh-ar.01.01";
+kernLeft = "reh-alt";
+kernRight = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (100,-200);
+},
+{
+name = top;
+pos = (100,300);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(200,-123,o),
+(200,-1,cs),
+(200,95,o),
+(159,150,o),
+(100,250,c),
+(100,189,o),
+(86,141,o),
+(50,100,c),
+(81,68,o),
+(95,30,o),
+(100,0,cs),
+(113,-72,o),
+(63,-134,o),
+(0,-135,c),
+(81,-178,o)
+);
+}
+);
+width = 200;
+}
+);
+}

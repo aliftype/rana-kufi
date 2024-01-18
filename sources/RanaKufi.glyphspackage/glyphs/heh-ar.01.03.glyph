@@ -1,0 +1,30 @@
+{
+glyphname = "heh-ar.01.03";
+kernRight = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = top;
+pos = (25,400);
+},
+{
+name = topV;
+pos = (100,350);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+ref = "heh-ar";
+},
+{
+alignment = -1;
+pos = (200,0);
+ref = "alef-ar.01.06";
+}
+);
+width = 300;
+}
+);
+}

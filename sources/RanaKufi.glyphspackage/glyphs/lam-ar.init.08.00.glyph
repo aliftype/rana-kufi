@@ -1,0 +1,20 @@
+{
+glyphname = "lam-ar.init.08.00";
+kernRight = "straight-l";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+alignment = -1;
+pos = (50,0);
+ref = "alef-ar.01.02";
+},
+{
+ref = "-beh";
+}
+);
+width = 150;
+}
+);
+}

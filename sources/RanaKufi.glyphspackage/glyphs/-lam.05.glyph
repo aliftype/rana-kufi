@@ -1,0 +1,35 @@
+{
+category = Symbol;
+export = 0;
+glyphname = "-lam.05";
+kernLeft = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = _bottom;
+pos = (100,0);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(450,0,l),
+(450,100,l),
+(150,100,l),
+(150,0,l)
+);
+},
+{
+pos = (150,0);
+ref = _zuluf100;
+scale = (-1,1);
+}
+);
+width = 450;
+}
+);
+script = arabic;
+}

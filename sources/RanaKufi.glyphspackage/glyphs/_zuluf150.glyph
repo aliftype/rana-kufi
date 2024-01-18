@@ -1,0 +1,28 @@
+{
+category = Symbol;
+export = 0;
+glyphname = _zuluf150;
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(200,0,l),
+(132,30,o),
+(80,85,o),
+(50,150,c),
+(50,147,o),
+(49,100,o),
+(0,100,cs),
+(-20,100,l),
+(-20,0,l)
+);
+}
+);
+width = 600;
+}
+);
+script = arabic;
+}

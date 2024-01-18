@@ -1,0 +1,29 @@
+{
+glyphname = "meem-ar.01.02";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(300,0,l),
+(300,100,l),
+(150,100,l),
+(150,0,l)
+);
+},
+{
+pos = (200,0);
+ref = "meem-ar.init.01.01";
+},
+{
+pos = (150,0);
+ref = _zuluf100;
+scale = (-1,1);
+}
+);
+width = 550;
+}
+);
+}

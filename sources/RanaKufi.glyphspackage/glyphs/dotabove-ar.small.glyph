@@ -1,0 +1,38 @@
+{
+glyphname = "dotabove-ar.small";
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (25,0);
+}
+);
+attr = {
+colorPalette = 0;
+};
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+name = Regular;
+shapes = (
+{
+closed = 1;
+nodes = (
+(39,0,o),
+(50,11,o),
+(50,25,cs),
+(50,39,o),
+(39,50,o),
+(25,50,cs),
+(11,50,o),
+(0,39,o),
+(0,25,cs),
+(0,11,o),
+(11,0,o),
+(25,0,cs)
+);
+}
+);
+width = 50;
+}
+);
+}

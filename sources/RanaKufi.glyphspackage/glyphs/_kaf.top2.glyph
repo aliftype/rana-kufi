@@ -1,0 +1,68 @@
+{
+category = Symbol;
+export = 0;
+glyphname = _kaf.top2;
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(161,150,l),
+(800,1200,l),
+(689,1200,l),
+(50,150,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(730,1100,l),
+(730,1200,l),
+(150,1200,l),
+(150,1100,l)
+);
+},
+{
+angle = 180;
+pos = (150,1200);
+ref = _zuluf100;
+}
+);
+width = 800;
+},
+{
+associatedMasterId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+layerId = "A116A62E-5D22-4B28-AA37-A2FDB543B575";
+name = Short;
+shapes = (
+{
+closed = 1;
+nodes = (
+(181,150,l),
+(800,800,l),
+(669,800,l),
+(50,150,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(700,700,l),
+(700,800,l),
+(150,800,l),
+(150,700,l)
+);
+},
+{
+angle = 180;
+pos = (150,800);
+ref = _zuluf100;
+}
+);
+width = 800;
+}
+);
+script = arabic;
+}

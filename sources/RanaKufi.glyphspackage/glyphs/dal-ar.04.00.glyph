@@ -1,0 +1,23 @@
+{
+glyphname = "dal-ar.04.00";
+kernLeft = "straight-r";
+kernRight = "straight-l";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+ref = "-dal";
+},
+{
+ref = _dal.top1;
+},
+{
+angle = -90;
+ref = _zuluf100;
+}
+);
+width = 800;
+}
+);
+}

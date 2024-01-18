@@ -1,0 +1,20 @@
+{
+color = 0;
+glyphname = "alefHamzaabove-ar";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+ref = "alef-ar";
+},
+{
+pos = (-135,1066);
+ref = "hamzaabove-ar";
+}
+);
+width = 100;
+}
+);
+unicode = 1571;
+}

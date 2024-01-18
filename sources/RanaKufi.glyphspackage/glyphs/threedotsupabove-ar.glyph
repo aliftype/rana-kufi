@@ -1,0 +1,28 @@
+{
+glyphname = "threedotsupabove-ar";
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (125,0);
+}
+);
+attr = {
+colorPalette = 0;
+};
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+name = Regular;
+shapes = (
+{
+ref = "twodotshorizontalabove-ar";
+},
+{
+pos = (75,133);
+ref = "dotabove-ar";
+}
+);
+width = 250;
+}
+);
+}

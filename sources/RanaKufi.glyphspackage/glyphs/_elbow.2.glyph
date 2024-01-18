@@ -1,0 +1,29 @@
+{
+category = Symbol;
+export = 0;
+glyphname = _elbow.2;
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(0,-25,l),
+(125,-150,l),
+(250,-25,l),
+(250,70,l),
+(150,70,l),
+(150,17,l),
+(125,-8,l),
+(100,17,l),
+(100,70,l),
+(0,70,l)
+);
+}
+);
+width = 250;
+}
+);
+script = arabic;
+}

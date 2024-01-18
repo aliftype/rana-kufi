@@ -1,0 +1,54 @@
+{
+category = Symbol;
+export = 0;
+glyphname = _head;
+layers = (
+{
+anchors = (
+{
+name = top;
+pos = (125,350);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(250,50,l),
+(250,250,l),
+(150,250,l),
+(150,50,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(250,0,l),
+(250,100,l),
+(0,100,l),
+(0,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(250,240,l),
+(250,300,l),
+(227,270,o),
+(191,250,o),
+(150,250,c),
+(150,240,l)
+);
+},
+{
+pos = (150,100);
+ref = _elbow.3;
+scale = (-1,1);
+}
+);
+width = 250;
+}
+);
+script = arabic;
+}

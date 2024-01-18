@@ -1,0 +1,25 @@
+{
+glyphname = "dotbelow-ar.small";
+layers = (
+{
+anchors = (
+{
+name = _bottom;
+pos = (25,0);
+}
+);
+attr = {
+colorPalette = 0;
+};
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+name = Regular;
+shapes = (
+{
+pos = (0,-50);
+ref = "dotabove-ar.small";
+}
+);
+width = 50;
+}
+);
+}

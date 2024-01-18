@@ -1,0 +1,81 @@
+{
+glyphname = "kaf-ar.init.03.00";
+kernRight = "straight-l";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(191,150,l),
+(613,572,l),
+(510,611,l),
+(50,150,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(613,572,l),
+(292,893,l),
+(221,823,l),
+(504,539,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(-8,0,l),
+(42,0,l),
+(42,100,l),
+(-8,100,l)
+);
+},
+{
+ref = "-kaf";
+},
+{
+angle = 135.99994;
+pos = (292,893);
+ref = _zuluf100;
+}
+);
+width = 800;
+},
+{
+associatedMasterId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+hints = (
+{
+name = _corner.100;
+origin = (0,2);
+type = Corner;
+}
+);
+layerId = "E07AAD0F-C18A-43C2-AC7F-200FA2BAAFFE";
+name = "Oct 21 19, 15:07";
+shapes = (
+{
+closed = 1;
+nodes = (
+(631,412,l),
+(702,483,l),
+(292,893,l),
+(221,823,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(121,80,l),
+(672,631,l),
+(601,702,l),
+(50,150,l)
+);
+}
+);
+visible = 1;
+width = 800;
+}
+);
+}

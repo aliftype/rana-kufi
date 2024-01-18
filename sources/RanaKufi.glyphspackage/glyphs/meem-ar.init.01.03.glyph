@@ -1,0 +1,32 @@
+{
+glyphname = "meem-ar.init.01.03";
+kernRight = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = exit;
+pos = (-50,-2);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(300,0,l),
+(300,100,l),
+(-50,100,l),
+(-50,0,l)
+);
+},
+{
+pos = (50,150);
+ref = _elbow.2;
+scale = (1,-1);
+}
+);
+width = 300;
+}
+);
+}

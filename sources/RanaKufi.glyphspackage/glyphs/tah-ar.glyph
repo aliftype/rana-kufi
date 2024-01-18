@@ -1,0 +1,35 @@
+{
+glyphname = "tah-ar";
+kernRight = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = top;
+pos = (500,350);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+alignment = -1;
+pos = (150,0);
+ref = "-dal";
+},
+{
+alignment = -1;
+pos = (150,0);
+ref = "alef-ar";
+},
+{
+alignment = -1;
+pos = (150,0);
+ref = _zuluf100;
+scale = (-1,1);
+}
+);
+width = 950;
+}
+);
+unicode = 1591;
+}

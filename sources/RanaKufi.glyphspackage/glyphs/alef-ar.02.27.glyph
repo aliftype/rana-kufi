@@ -1,0 +1,27 @@
+{
+glyphname = "alef-ar.02.27";
+kernLeft = "straight-r";
+kernRight = "alef-wide";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (200,0);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+angle = -90;
+ref = _zuluf100;
+},
+{
+ref = "alef-ar.02.25";
+}
+);
+width = 250;
+}
+);
+metricLeft = "alef-ar";
+}

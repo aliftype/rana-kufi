@@ -1,0 +1,33 @@
+{
+glyphname = "sad-ar.init";
+kernRight = "straight-l";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(150,0,l),
+(150,250,l),
+(50,250,l),
+(50,0,l)
+);
+},
+{
+ref = "kashida-ar";
+},
+{
+pos = (50,0);
+ref = "-dal";
+},
+{
+angle = 90;
+pos = (150,250);
+ref = _zuluf100;
+}
+);
+width = 850;
+}
+);
+}

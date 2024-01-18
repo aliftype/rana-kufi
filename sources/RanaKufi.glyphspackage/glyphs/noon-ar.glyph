@@ -1,0 +1,20 @@
+{
+color = 0;
+glyphname = "noon-ar";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+ref = "noonghunna-ar";
+},
+{
+pos = (50,-50);
+ref = "dotabove-ar";
+}
+);
+width = 300;
+}
+);
+unicode = 1606;
+}

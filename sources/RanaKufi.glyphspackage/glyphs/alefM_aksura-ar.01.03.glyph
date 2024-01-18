@@ -1,0 +1,22 @@
+{
+glyphname = "alefMaksura-ar.01.03";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(800,0,l),
+(713,150,l),
+(626,0,l)
+);
+},
+{
+ref = "alefMaksura-ar.fina.01.03";
+}
+);
+width = 800;
+}
+);
+}

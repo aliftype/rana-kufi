@@ -1,0 +1,124 @@
+{
+glyphname = "hah-ar.medi.01.05";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (147,-50);
+},
+{
+name = top;
+pos = (-142,1070);
+}
+);
+guides = (
+{
+angle = 90;
+pos = (289,638);
+},
+{
+angle = 90;
+pos = (189,638);
+},
+{
+angle = 90;
+pos = (151,638);
+},
+{
+angle = 90;
+pos = (50,638);
+},
+{
+angle = 90;
+pos = (-111,638);
+},
+{
+angle = 90;
+pos = (389,638);
+},
+{
+pos = (289,450);
+},
+{
+pos = (289,575);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(289,0,l),
+(289,100,l),
+(-51,100,l),
+(-51,0,l)
+);
+},
+{
+pos = (72,0);
+ref = _hah.part.05;
+}
+);
+width = 289;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (75,-50);
+},
+{
+name = top;
+pos = (-7,983);
+}
+);
+associatedMasterId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+guides = (
+{
+angle = 90;
+pos = (217,638);
+},
+{
+angle = 90;
+pos = (117,638);
+},
+{
+angle = 90;
+pos = (80,638);
+},
+{
+angle = 90;
+pos = (-23,638);
+},
+{
+angle = 90;
+pos = (-183,638);
+}
+);
+layerId = "2DFD3E2E-8CB3-4EE9-9A29-4601F41C19EA";
+name = "19 May 21, 17:25";
+shapes = (
+{
+closed = 1;
+nodes = (
+(292,100,o),
+(354,168,o),
+(354,275,cs),
+(354,382,o),
+(292,450,o),
+(217,450,cs),
+(141,450,o),
+(79,382,o),
+(79,275,cs),
+(79,168,o),
+(141,100,o),
+(217,100,cs)
+);
+}
+);
+visible = 1;
+width = 217;
+}
+);
+}

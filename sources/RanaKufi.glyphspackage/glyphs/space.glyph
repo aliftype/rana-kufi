@@ -1,0 +1,11 @@
+{
+category = Separator;
+glyphname = space;
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+width = 50;
+}
+);
+unicode = 32;
+}

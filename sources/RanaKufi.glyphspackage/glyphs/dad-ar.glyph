@@ -1,0 +1,20 @@
+{
+color = 0;
+glyphname = "dad-ar";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+ref = "sad-ar";
+},
+{
+pos = (500,350);
+ref = "dotabove-ar";
+}
+);
+width = 1000;
+}
+);
+unicode = 1590;
+}

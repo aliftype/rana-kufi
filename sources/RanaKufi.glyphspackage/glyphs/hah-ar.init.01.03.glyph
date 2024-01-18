@@ -1,0 +1,31 @@
+{
+glyphname = "hah-ar.init.01.03";
+kernRight = hah;
+layers = (
+{
+anchors = (
+{
+name = entry;
+pos = (107,150);
+},
+{
+name = exit;
+pos = (-30,0);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+alignment = -1;
+ref = "hah-ar.medi.01.03";
+},
+{
+alignment = -1;
+pos = (250,0);
+ref = _zuluf100;
+}
+);
+width = 400;
+}
+);
+}

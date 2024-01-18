@@ -1,0 +1,24 @@
+{
+category = Symbol;
+export = 0;
+glyphname = "-beh";
+kernLeft = "straight-l";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(150,0,l),
+(150,100,l),
+(-50,100,l),
+(-50,0,l)
+);
+}
+);
+width = 150;
+}
+);
+script = arabic;
+}
