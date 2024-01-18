@@ -13,11 +13,15 @@ code = "";
 name = AllLetters;
 },
 {
-code = "/.*\\.(medi|init)/ kashida-ar";
+code = "$[name LIKE \"*.init*\"]
+$[name LIKE \"*.medi*\"]
+kashida-ar
+";
 name = ArabicJoinLeft;
 },
 {
-code = "/.*dot.*.-ar$/";
+code = "$[name LIKE \"*dot*-ar\"]
+";
 name = Dots;
 }
 );
@@ -261,10 +265,13 @@ code = "lookup heh_dots {
 @hah_high2 = [hah-ar.init.01.04 hah-ar.init.01.05 hah-ar.medi.01.04 hah-ar.medi.01.05];
 lookup after_hah {
   lookupflag IgnoreMarks;
-  sub @hah_high' lookup hah_high [/^lam-ar.*/ /^alef-ar.*/ /^lam_alef-ar.fina.*/];
-  sub [hah-ar.init hah-ar.medi hah-ar.init.narrow]' lookup hah_high [/^fehDotless-ar.*/ /^fehDotless-ar.init.*/];
+  sub @hah_high' lookup hah_high 
+      [$[name LIKE \"lam-ar*\"] $[name LIKE \"alef-ar*\"] $[name LIKE \"lam_alef-ar.fina*\"]];
+  sub [hah-ar.init hah-ar.medi hah-ar.init.narrow]' lookup hah_high
+      [$[name LIKE \"fehDotless-ar*\"] $[name LIKE \"fehDotless-ar.init*\"]];
 
-  sub @hah_high2' lookup hah_high2 [/^lam-ar.*/ /^alef-ar.*/ /^lam_alef-ar.fina.*/];
+  sub @hah_high2' lookup hah_high2 
+      [$[name LIKE \"lam-ar*\"] $[name LIKE \"alef-ar*\"] $[name LIKE \"lam_alef-ar.fina*\"]];
 } after_hah;
 
 lookup before_hah_fix {
@@ -274,8 +281,8 @@ lookup before_hah_fix {
 
 lookup after_hah_dots {
   lookupflag 0;
-  sub @hah_high' lookup hah_high [/^behDotless-ar.init.*/] dotabove-ar;
-  sub @hah_high' lookup hah_high [dotabove-ar dotbelow-ar] [/^behDotless-ar.init.*/] dotabove-ar;
+  sub @hah_high' lookup hah_high [$[name LIKE \"behDotless-ar.init*\"]] dotabove-ar;
+  sub @hah_high' lookup hah_high [dotabove-ar dotbelow-ar] [$[name LIKE \"behDotless-ar.init*\"]] dotabove-ar;
 } after_hah_dots;
 
 lookup before_hah_2 {
@@ -336,8 +343,10 @@ ignore
  pos [noonghunna-ar.01.02 noonghunna-ar.fina.01.02]
       dotabove-ar'
       space.mark
-     [/^(feh|beh)Dotless-ar\\.01\\.*/
-      /^(feh|beh)Dotless-ar\\.init\\.01.*/
+     [$[name LIKE \"behDotless-ar.01.*\"]
+      $[name LIKE \"fehDotless-ar.01.*\"]
+      $[name LIKE \"behDotless-ar.init.01.*\"]
+      $[name LIKE \"fehDotless-ar.init.01.*\"]
       dal-ar.01.03 dal-ar.03.01 behDotless-ar.init.01.02 dal-ar.03.03 dal-ar.01.01
       lam-ar lam-ar.01.01 lam-ar.01.02 lam-ar.01.03 lam-ar.01.04 lam-ar.02.00 lam-ar.02.01 lam-ar.02.02 lam-ar.02.03 lam-ar.02.04 lam-ar.03.00 lam-ar.03.01 lam-ar.03.02 lam-ar.03.03 lam-ar.03.04
       lam-ar.init.03.00 lam-ar.init.02.03 lam-ar.init.02.00 lam-ar.init.03.03
@@ -360,7 +369,7 @@ pos [behDotless-ar.01.01 behDotless-ar.01.02 behDotless-ar.01.03 behDotless-ar.0
 
 pos [behDotless-ar.init behDotless-ar.init.behHah]
     [dotbelow-ar twodotshorizontalbelow-ar]' <0 -150 0 0>
-    [/^hah-ar\\.init.*/];
+    [$[name LIKE \"hah-ar.init*\"]];
 ";
 tag = mark;
 },
@@ -380,7 +389,8 @@ value = "حروف مهملة (بلا نقاط)";
 tag = ss01;
 },
 {
-code = "sub @Dots by [/.*dot.*-ar.small$/];";
+code = "sub @Dots by [$[name LIKE \"*dot*-ar.small\"]];
+";
 labels = (
 {
 language = ENG;

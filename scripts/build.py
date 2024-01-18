@@ -29,6 +29,7 @@ from fontTools.pens.reverseContourPen import ReverseContourPen
 from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.pens.transformPen import TransformPen
 from glyphsLib import GSFont, GSGlyph, GSLayer, GSComponent, GSAnchor
+from glyphsLib.builder.tokens import TokenExpander
 from glyphsLib.glyphdata import get_glyph as getGlyphInfo
 from cffsubr import subroutinize
 
@@ -266,18 +267,12 @@ def makeCvFeatures(font, glyphOrder):
     return fea
 
 
-RE_DELIM = re.compile(r"(?:/(.*?.)/)")
-
-
 def makeFeatures(instance, master, opts, glyphOrder):
     font = instance.parent
-
-    def repl(match):
-        regex = re.compile(match.group(1))
-        return " ".join(n for n in glyphOrder if regex.match(n))
+    expander = TokenExpander(font, master)
 
     for x in list(font.featurePrefixes) + list(font.classes) + list(font.features):
-        x.code = RE_DELIM.sub(repl, x.code)
+        x.code = expander.expand(x.code)
 
     fea = ""
     for gclass in font.classes:
