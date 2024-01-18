@@ -379,11 +379,12 @@ def calcBits(bits, start, end):
     return b
 
 
-def get_property(font, key):
+def getProperty(font, name):
     for prop in font.properties:
-        if key == prop.key:
-            return prop.defaultValue
-    return None
+        if prop.key == name:
+            if prop._localized_values:
+                return {k[:2].lower(): v for (k, v) in prop._localized_values.items()}
+            return prop.value
 
 
 def build(instance, opts, glyphOrder):
@@ -423,7 +424,7 @@ def build(instance, opts, glyphOrder):
 
     version = float(opts.version)
 
-    vendor = get_property(font, "vendorID")
+    vendor = getProperty(font, "vendorID")
     names = {
         "copyright": font.copyright,
         "familyName": instance.familyName,
@@ -436,9 +437,9 @@ def build(instance, opts, glyphOrder):
         "designer": font.designer,
         "vendorURL": font.manufacturerURL,
         "designerURL": font.designerURL,
-        "licenseDescription": get_property(font, "licenses"),
-        "licenseInfoURL": get_property(font, "licenseURL"),
-        "sampleText": get_property(font, "sampleTexts"),
+        "licenseDescription": getProperty(font, "licenses"),
+        "licenseInfoURL": getProperty(font, "licenseURL"),
+        "sampleText": getProperty(font, "sampleTexts"),
     }
 
     fb = FontBuilder(font.upm, isTTF=False)

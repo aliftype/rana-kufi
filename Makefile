@@ -43,9 +43,9 @@ web: $(WOFF2)
 	cp $(WOFF2) docs/assets/fonts/
 	cp $(FONTS) docs/app/assets/fonts/
 
-%.otf: $(NAME).glyphs $(CONFIG)
+%.otf: $(SOURCEDIR)/$(NAME).glyphs $(CONFIG)
 	$(info   BUILD  $(*F))
-	python build.py $< $(VERSION) $@ $(ARGS)
+	python $(SCRIPTDIR)/build.py $< $(VERSION) $@ $(ARGS)
 
 %.woff2: %.otf
 	$(info   WOFF2  $(@F))
