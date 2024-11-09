@@ -20,7 +20,6 @@ import datetime
 
 from fontTools.designspaceLib import DesignSpaceDocument
 from fontTools.fontBuilder import FontBuilder
-from fontTools.ttLib import TTFont, newTable, getTableModule
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from fontTools.varLib import build as merge
 from fontTools.misc.transform import Transform
@@ -28,7 +27,7 @@ from fontTools.pens.pointPen import PointToSegmentPen
 from fontTools.pens.reverseContourPen import ReverseContourPen
 from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.pens.transformPen import TransformPen
-from glyphsLib import GSFont, GSGlyph, GSLayer, GSComponent, GSAnchor
+from glyphsLib import GSFont, GSGlyph, GSLayer, GSAnchor
 from glyphsLib.builder.tokens import TokenExpander
 from glyphsLib.glyphdata import get_glyph as getGlyphInfo
 from cffsubr import subroutinize
@@ -399,7 +398,7 @@ def build(instance, opts, glyphOrder):
                 index = layer.attributes["colorPalette"]
                 if name not in colorLayers:
                     colorLayers[name] = []
-                if layer.layerId == layer.associatedMasterId: # master layer
+                if layer.layerId == layer.associatedMasterId:  # master layer
                     colorLayers[name].append((name, int(index)))
                 else:
                     assert False, "can’t handle non-master color layers"
