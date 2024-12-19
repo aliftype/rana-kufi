@@ -16,7 +16,7 @@
 NAME = RanaKufi
 
 SHELL = bash
-MAKEFLAGS := -sr
+MAKEFLAGS := -srj
 PYTHON := venv/bin/python3
 
 SOURCEDIR = sources
@@ -25,7 +25,7 @@ FONTDIR = fonts
 TESTDIR = tests
 BUILDDIR = build
 
-FONT = ${FONTDIR}/${NAME}.otf
+FONT = ${FONTDIR}/${NAME}.ttf
 
 GLYPHSFILE = ${SOURCEDIR}/${NAME}.glyphspackage
 
@@ -43,9 +43,21 @@ DIST = ${NAME}-${VERSION}
 all: ttf
 ttf: ${FONT}
 
-${FONT}: ${GLYPHSFILE}
+${BUILDDIR}/%.glyphs: ${SOURCEDIR}/%.glyphspackage
+	$(info   PREP   ${@F})
+	mkdir -p ${BUILDDIR}
+	${PYTHON} ${SCRIPTDIR}/prepare.py $< ${VERSION} $@
+
+${FONT}: ${BUILDDIR}/${NAME}.glyphs
 	$(info   BUILD  ${@F})
-	${PYTHON} ${SCRIPTDIR}/build.py $< ${VERSION} $@
+	${PYTHON} -m fontmake $< \
+			      --output-path=$@ \
+			      --output=variable \
+			      --verbose=WARNING \
+			      --flatten-components \
+			      --filter ... \
+			      --filter "alifTools.filters::ClearPlaceholdersFilter()" \
+			      --filter "alifTools.filters::FontVersionFilter(fontVersion=${VERSION})"
 
 dist: ${FONT}
 	$(info   DIST   ${DIST}.zip)

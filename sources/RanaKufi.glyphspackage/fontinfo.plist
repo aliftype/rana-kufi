@@ -423,8 +423,24 @@ axesValues = (
 );
 customParameters = (
 {
+name = typoAscender;
+value = 1200;
+},
+{
+name = typoDescender;
+value = -150;
+},
+{
 name = typoLineGap;
 value = 300;
+},
+{
+name = hheaAscender;
+value = 1200;
+},
+{
+name = hheaDescender;
+value = -150;
 },
 {
 name = hheaLineGap;
@@ -458,10 +474,6 @@ Axis = Ascender;
 Location = 12;
 }
 );
-},
-{
-name = "Master Icon Glyph Name";
-value = "alef-ar";
 }
 );
 guides = (

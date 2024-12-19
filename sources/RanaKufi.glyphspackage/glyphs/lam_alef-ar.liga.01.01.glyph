@@ -190,6 +190,11 @@ pos = (-25,666);
 }
 );
 associatedMasterId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+attr = {
+coordinates = (
+8
+);
+};
 layerId = "6B0A57E9-6AE8-4BB7-8A8F-C7A5E93C1532";
 name = Short;
 shapes = (

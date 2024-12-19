@@ -17,13 +17,10 @@ pos = (-70,1066);
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
 shapes = (
 {
-closed = 1;
-nodes = (
-(100,0,l),
-(100,420,l),
-(0,420,l),
-(0,0,l)
-);
+angle = 90;
+pos = (0,1000);
+ref = _zuluf150;
+scale = (1,-1);
 },
 {
 closed = 1;
@@ -35,14 +32,17 @@ nodes = (
 );
 },
 {
-angle = 90;
-pos = (0,1000);
-ref = _zuluf150;
-scale = (1,-1);
-},
-{
 pos = (0,400);
 ref = _deco.09;
+},
+{
+closed = 1;
+nodes = (
+(100,0,l),
+(100,420,l),
+(0,420,l),
+(0,0,l)
+);
 }
 );
 width = 100;
@@ -59,17 +59,19 @@ pos = (-70,666);
 }
 );
 associatedMasterId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+attr = {
+coordinates = (
+8
+);
+};
 layerId = "651FD329-8EE0-4515-A46D-7544EF3E1AE8";
 name = Short;
 shapes = (
 {
-closed = 1;
-nodes = (
-(100,0,l),
-(100,220,l),
-(0,220,l),
-(0,0,l)
-);
+angle = 90;
+pos = (0,600);
+ref = _zuluf150;
+scale = (1,-1);
 },
 {
 closed = 1;
@@ -81,14 +83,17 @@ nodes = (
 );
 },
 {
-angle = 90;
-pos = (0,600);
-ref = _zuluf150;
-scale = (1,-1);
+pos = (0,200);
+ref = _deco.09;
 },
 {
-pos = (0,200);
-ref = _deco.09.short;
+closed = 1;
+nodes = (
+(100,0,l),
+(100,220,l),
+(0,220,l),
+(0,0,l)
+);
 }
 );
 width = 100;

@@ -34,6 +34,11 @@ width = 800;
 },
 {
 associatedMasterId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+attr = {
+coordinates = (
+8
+);
+};
 layerId = "A116A62E-5D22-4B28-AA37-A2FDB543B575";
 name = Short;
 shapes = (

@@ -80,6 +80,11 @@ width = 0;
 },
 {
 associatedMasterId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+attr = {
+coordinates = (
+8
+);
+};
 layerId = "2469FFED-CD26-41FF-8F10-6E588310CC8C";
 name = Short;
 shapes = (
@@ -103,7 +108,7 @@ nodes = (
 },
 {
 pos = (0,300);
-ref = _deco.09.short;
+ref = _deco.09;
 },
 {
 angle = 90;
