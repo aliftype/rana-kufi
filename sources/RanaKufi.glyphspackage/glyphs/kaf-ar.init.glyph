@@ -24,7 +24,7 @@ nodes = (
 );
 },
 {
-ref = "-kaf";
+ref = _alt.kaf;
 },
 {
 pos = (375,0);

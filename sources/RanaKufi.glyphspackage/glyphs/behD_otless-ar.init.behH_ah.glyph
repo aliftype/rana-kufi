@@ -40,7 +40,7 @@ ref = _zuluf100;
 },
 {
 pos = (-43,0);
-ref = "-beh";
+ref = _alt.beh;
 }
 );
 width = 150;

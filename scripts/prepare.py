@@ -49,6 +49,7 @@ def addCvFeatures(font, glyphOrder):
             code += f"sub {base} from [{' '.join(alts)}];\n"
         feature = GSFeature(tag, code)
         font.features.insert(index, feature)
+        index += 1
 
     return fea
 
@@ -115,7 +116,7 @@ def buildAltGlyphs(font):
     newOrder = []
     alts = {}
     for name in glyphOrder:
-        if name.startswith("-") and not "." in name:
+        if name.startswith("_alt.") and not "." in name[len("_alt.") :]:
             alts[name] = [n for n in glyphOrder if n.startswith(name + ".")]
 
     for name in glyphOrder:

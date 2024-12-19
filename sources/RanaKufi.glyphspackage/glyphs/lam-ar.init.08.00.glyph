@@ -11,7 +11,7 @@ pos = (50,0);
 ref = "alef-ar.01.02";
 },
 {
-ref = "-beh";
+ref = _alt.beh;
 }
 );
 width = 150;

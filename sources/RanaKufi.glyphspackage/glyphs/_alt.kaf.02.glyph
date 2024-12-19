@@ -1,0 +1,46 @@
+{
+category = Symbol;
+glyphname = _alt.kaf.02;
+kernLeft = "straight-l";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(800,0,l),
+(800,100,l),
+(0,100,l),
+(0,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(800,0,l),
+(800,250,l),
+(700,250,l),
+(700,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(650,150,l),
+(650,250,l),
+(150,250,l),
+(150,150,l)
+);
+},
+{
+pos = (550,250);
+ref = _elbow.2;
+scale = (1,-1);
+}
+);
+width = 800;
+}
+);
+script = arabic;
+}

@@ -12,7 +12,7 @@ ref = "alef-ar.01.06";
 },
 {
 alignment = -1;
-ref = "-lam";
+ref = _alt.lam;
 }
 );
 width = 450;

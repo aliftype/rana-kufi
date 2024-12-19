@@ -15,7 +15,7 @@ nodes = (
 );
 },
 {
-ref = "-kaf";
+ref = _alt.kaf;
 },
 {
 ref = _kaf.top2;

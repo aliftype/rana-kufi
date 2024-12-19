@@ -33,7 +33,7 @@ nodes = (
 );
 },
 {
-ref = "-kaf";
+ref = _alt.kaf;
 },
 {
 angle = 135.99994;

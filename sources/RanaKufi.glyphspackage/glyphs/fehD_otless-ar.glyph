@@ -35,7 +35,7 @@ scale = (-1,1);
 },
 {
 pos = (650,0);
-ref = "-beh";
+ref = _alt.beh;
 }
 );
 width = 800;

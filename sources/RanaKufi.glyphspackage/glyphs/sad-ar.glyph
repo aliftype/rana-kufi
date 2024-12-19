@@ -28,7 +28,7 @@ nodes = (
 },
 {
 pos = (200,0);
-ref = "-dal";
+ref = _alt.dal;
 },
 {
 angle = 90;

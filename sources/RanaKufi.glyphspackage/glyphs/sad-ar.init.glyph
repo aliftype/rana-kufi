@@ -19,7 +19,7 @@ ref = "kashida-ar";
 },
 {
 pos = (50,0);
-ref = "-dal";
+ref = _alt.dal;
 },
 {
 angle = 90;

@@ -1,0 +1,39 @@
+{
+category = Symbol;
+glyphname = _alt.lam.01;
+kernLeft = "straight-l";
+layers = (
+{
+anchors = (
+{
+name = _bottom;
+pos = (50,0);
+}
+);
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+closed = 1;
+nodes = (
+(300,0,l),
+(300,100,l),
+(150,100,l),
+(150,0,l)
+);
+},
+{
+alignment = -1;
+pos = (200,0);
+ref = _elbow.1;
+},
+{
+pos = (150,0);
+ref = _zuluf100;
+scale = (-1,1);
+}
+);
+width = 450;
+}
+);
+script = arabic;
+}

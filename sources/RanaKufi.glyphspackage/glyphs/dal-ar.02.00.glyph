@@ -16,7 +16,7 @@ nodes = (
 );
 },
 {
-ref = "-dal";
+ref = _alt.dal;
 },
 {
 angle = -90;

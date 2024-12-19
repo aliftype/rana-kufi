@@ -14,7 +14,7 @@ shapes = (
 {
 alignment = -1;
 pos = (150,0);
-ref = "-dal";
+ref = _alt.dal;
 },
 {
 alignment = -1;

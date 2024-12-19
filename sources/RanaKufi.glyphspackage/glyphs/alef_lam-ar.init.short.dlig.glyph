@@ -61,7 +61,7 @@ nodes = (
 );
 },
 {
-ref = "-aleflam";
+ref = _alt.aleflam;
 },
 {
 angle = 90;

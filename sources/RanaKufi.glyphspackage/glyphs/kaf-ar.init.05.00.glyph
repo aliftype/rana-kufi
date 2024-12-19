@@ -52,7 +52,7 @@ nodes = (
 );
 },
 {
-ref = "-kaf";
+ref = _alt.kaf;
 }
 );
 width = 800;
