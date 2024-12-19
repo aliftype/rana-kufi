@@ -277,7 +277,7 @@ def makeFeatures(instance, master, opts, glyphOrder):
     for gclass in font.classes:
         if gclass.disabled:
             continue
-        if not gclass.code and gclass.name == "AllLetters":
+        if gclass.name == "AllLetters" and gclass.automatic:
             glyphs = [n for n in glyphOrder if getGlyphInfo(n).category == "Letter"]
             gclass.code = " ".join(glyphs)
         fea += f"@{gclass.name} = [{gclass.code}];\n"
