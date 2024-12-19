@@ -1,5 +1,5 @@
 {
-.appVersion = "3234";
+.appVersion = "3335";
 .formatVersion = 3;
 axes = (
 {
@@ -71,6 +71,13 @@ value = (
 {
 name = "Don't use Production Names";
 value = 1;
+},
+{
+name = glyphOrder;
+value = (
+.notdef,
+space
+);
 }
 );
 date = "2020-02-24 14:21:20 +0000";

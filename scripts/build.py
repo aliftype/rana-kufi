@@ -410,12 +410,6 @@ def build(instance, opts, glyphOrder):
         charStrings[name] = draw(layer, instance).getCharString()
         advanceWidths[name] = layer.width
 
-    # XXX
-    glyphOrder.pop(glyphOrder.index(".notdef"))
-    glyphOrder.pop(glyphOrder.index("space"))
-    glyphOrder.insert(0, ".notdef")
-    glyphOrder.insert(1, "space")
-
     version = float(opts.version)
 
     vendor = getProperty(font, "vendorID")

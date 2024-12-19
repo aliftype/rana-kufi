@@ -1,4 +1,6 @@
 (
+.notdef,
+space,
 "hamza-ar",
 "hamza-ar.01.01",
 "hamza-ar.01.02",
@@ -287,8 +289,6 @@
 "lam_alef-ar.liga.01.07",
 "lam_alef-ar.liga.01.08",
 "lam_alef-ar.liga.01.09",
-space,
-.notdef,
 "endofayah-ar",
 "-aleflam",
 "-aleflam.01",
