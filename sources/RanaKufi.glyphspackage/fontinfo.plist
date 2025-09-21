@@ -1,5 +1,5 @@
 {
-.appVersion = "3335";
+.appVersion = "3428";
 .formatVersion = 3;
 axes = (
 {
@@ -544,6 +544,9 @@ name = Short;
 kerningRTL = {
 "299DE00D-7BC2-4DFB-A399-2750234EE670" = {
 "@MMK_R_bowel" = {
+"@MMK_L_alef-wide" = -200;
+"@MMK_L_hah" = -200;
+"@MMK_L_straight-l" = -150;
 _alt.beh.01 = 0;
 _alt.beh.02 = 0;
 _alt.beh.03 = 0;
@@ -599,9 +602,6 @@ _alt.lam.01 = 0;
 _alt.lam.02 = 0;
 _alt.lam.03 = 0;
 _alt.lam.04 = 0;
-"@MMK_L_alef-wide" = -200;
-"@MMK_L_hah" = -200;
-"@MMK_L_straight-l" = -150;
 "ain-ar.init" = -200;
 "alef-ar.02.00" = -100;
 "alef-ar.02.01" = -150;
@@ -892,12 +892,16 @@ values = (
 {
 language = ENG;
 value = "Khaled Hosny";
+},
+{
+language = ARA;
+value = "خالد حسني";
 }
 );
 },
 {
 key = designerURL;
-value = "https://aliftype.com";
+value = "https://khaledhosny.com";
 },
 {
 key = licenses;
@@ -922,6 +926,10 @@ values = (
 {
 language = ENG;
 value = "Alif Type";
+},
+{
+language = ARA;
+value = "حروف ألف";
 }
 );
 },
