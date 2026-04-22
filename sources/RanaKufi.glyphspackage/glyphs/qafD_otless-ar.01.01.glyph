@@ -1,5 +1,5 @@
 {
-glyphname = "waw-ar.01.02";
+glyphname = "qafDotless-ar.01.01";
 kernLeft = "straight-r";
 kernRight = "straight-l";
 layers = (
@@ -7,7 +7,7 @@ layers = (
 anchors = (
 {
 name = top;
-pos = (75,300);
+pos = (125,350);
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
