@@ -58,18 +58,6 @@ value = (
 );
 },
 {
-name = unicodeRanges;
-value = (
-13
-);
-},
-{
-name = codePageRanges;
-value = (
-1256
-);
-},
-{
 name = "Don't use Production Names";
 value = 1;
 }
