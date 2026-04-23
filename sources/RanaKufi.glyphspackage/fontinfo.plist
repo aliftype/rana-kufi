@@ -438,15 +438,6 @@ value = 100;
 {
 name = "Link Metrics With First Master";
 value = 1;
-},
-{
-name = "Axis Location";
-value = (
-{
-Axis = Ascender;
-Location = 12;
-}
-);
 }
 );
 guides = (
