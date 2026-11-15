@@ -10,7 +10,7 @@ ref = _alt.beh;
 },
 {
 pos = (50,0);
-ref = "alef-ar.01.08";
+ref = "alef-ar.isol.01.08";
 }
 );
 width = 150;

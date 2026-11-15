@@ -97,7 +97,7 @@ ref = _elbow.1;
 scale = (-1,1);
 },
 {
-ref = "heh-ar";
+ref = "heh-ar.isol";
 },
 {
 angle = 90;

@@ -10,7 +10,7 @@ tag = ASCD;
 classes = (
 {
 automatic = 1;
-code = "hamza-ar hamza-ar.01.01 hamza-ar.01.02 alef-ar alef-ar.02.00 alef-ar.01.01 alef-ar.01.02 alef-ar.01.03 alef-ar.01.04 alef-ar.01.05 alef-ar.01.06 alef-ar.01.07 alef-ar.01.08 alef-ar.01.09 alef-ar.02.01 alef-ar.02.02 alef-ar.02.03 alef-ar.02.04 alef-ar.02.05 alef-ar.02.06 alef-ar.02.07 alef-ar.02.08 alef-ar.02.09 alef-ar.02.10 alef-ar.02.11 alef-ar.02.12 alef-ar.02.13 alef-ar.02.14 alef-ar.02.15 alef-ar.02.16 alef-ar.02.17 alef-ar.02.18 alef-ar.02.19 alef-ar.02.20 alef-ar.02.21 alef-ar.02.22 alef-ar.02.23 alef-ar.02.24 alef-ar.02.25 alef-ar.02.26 alef-ar.02.27 alef-ar.fina alef-ar.fina.01.01 alef-ar.fina.01.02 alef-ar.fina.01.03 alef-ar.fina.01.04 alef-ar.fina.01.05 alef-ar.fina.01.06 alef-ar.fina.01.07 alef-ar.fina.01.08 alef-ar.fina.01.09 behDotless-ar behDotless-ar.low behDotless-ar.init behDotless-ar.init.behHah behDotless-ar.init.behHeh behDotless-ar.init.low hah-ar hah-ar.01.01 hah-ar.01.02 hah-ar.01.03 hah-ar.fina hah-ar.medi hah-ar.medi.01.01 hah-ar.medi.01.02 hah-ar.medi.01.03 hah-ar.medi.01.04 hah-ar.medi.01.05 hah-ar.init hah-ar.init.01.01 hah-ar.init.01.02 hah-ar.init.01.03 hah-ar.init.01.04 hah-ar.init.01.05 hah-ar.init.narrow dal-ar dal-ar.02.00 dal-ar.03.00 dal-ar.04.00 dal-ar.05.00 dal-ar.06.00 dal-ar.07.00 dal-ar.08.00 reh-ar reh-ar.01.01 reh-ar.fina reh-ar.fina.01.01 reh-ar.fina.seen seen-ar seen-ar.01.01 seen-ar.01.02 seen-ar.01.3 seen-ar.init seen-ar.init.02.00 seen-ar.init.01.01 seen-ar.init.01.02 seen-ar.init.01.03 seen-ar.init.01.04 seen-ar.init.01.05 seen-ar.init.01.06 seen-ar.init.01.07 seen-ar.init.01.08 sad-ar sad-ar.init tah-ar tah-ar.02.00 tah-ar.init tah-ar.init.02.00 ain-ar ain-ar.fina ain-ar.fina.01.01 ain-ar.medi ain-ar.medi.01.01 ain-ar.medi.01.02 ain-ar.medi.01.03 ain-ar.medi.01.04 ain-ar.medi.01.05 ain-ar.init fehDotless-ar fehDotless-ar.medi fehDotless-ar.medi.01.91 fehDotless-ar.medi.01.92 fehDotless-ar.medi.01.93 fehDotless-ar.init qafDotless-ar qafDotless-ar.01.01 kaf-ar kaf-ar.02.00 kaf-ar.03.00 kaf-ar.04.00 kaf-ar.05.00 kaf-ar.06.00 kaf-ar.init kaf-ar.init.02.00 kaf-ar.init.03.00 kaf-ar.init.04.00 kaf-ar.init.05.00 kaf-ar.init.06.00 lam-ar lam-ar.02.00 lam-ar.03.00 lam-ar.init lam-ar.init.02.00 lam-ar.init.03.00 lam-ar.init.04.00 lam-ar.init.05.00 lam-ar.init.06.00 lam-ar.init.07.00 lam-ar.init.08.00 lam-ar.init.09.00 lam-ar.init.10.00 lam-ar.init.short lam-ar.init.short.01.01 lam-ar.init.short.wide lam-ar.init.short.wide.01.01 lam-ar.init.short.wide.01.02 lam-ar.init.short.wide.01.03 meem-ar meem-ar.01.01 meem-ar.01.02 meem-ar.01.03 meem-ar.01.04 meem-ar.fina meem-ar.fina.01.01 meem-ar.fina.01.02 meem-ar.fina.01.03 meem-ar.fina.01.04 meem-ar.medi meem-ar.medi.01.01 meem-ar.medi.01.02 meem-ar.medi.01.03 meem-ar.medi.01.04 meem-ar.init meem-ar.init.01.01 meem-ar.init.01.02 meem-ar.init.01.03 noonghunna-ar noonghunna-ar.01.01 noonghunna-ar.01.02 noonghunna-ar.01.03 noonghunna-ar.01.04 noonghunna-ar.fina noonghunna-ar.fina.01.01 noonghunna-ar.fina.01.02 noonghunna-ar.fina.01.03 noonghunna-ar.fina.01.04 heh-ar heh-ar.02.00 heh-ar.01.01 heh-ar.01.02 heh-ar.01.03 heh-ar.01.04 heh-ar.medi heh-ar.medi.02.00 heh-ar.medi.01.01 heh-ar.medi.01.02 heh-ar.medi.01.03 heh-ar.medi.02.01 heh-ar.medi.02.02 heh-ar.medi.02.03 heh-ar.medi.02.04 heh-ar.medi.02.05 heh-ar.medi.behHeh heh-ar.init heh-ar.init.02.00 heh-ar.init.01.01 heh-ar.init.01.02 heh-ar.init.01.03 heh-ar.init.02.01 heh-ar.init.02.02 waw-ar waw-ar.01.01 alefMaksura-ar alefMaksura-ar.01.01 alefMaksura-ar.01.02 alefMaksura-ar.01.03 alefMaksura-ar.01.04 alefMaksura-ar.01.05 alefMaksura-ar.01.06 alefMaksura-ar.01.07 alefMaksura-ar.01.08 alefMaksura-ar.01.09 alefMaksura-ar.01.10 alefMaksura-ar.01.11 alefMaksura-ar.01.12 alefMaksura-ar.01.13 alefMaksura-ar.fina alefMaksura-ar.fina.01.01 alefMaksura-ar.fina.01.02 alefMaksura-ar.fina.01.03 alefMaksura-ar.fina.01.04 alefMaksura-ar.fina.01.05 alefMaksura-ar.fina.01.06 alefMaksura-ar.fina.01.07 alefMaksura-ar.fina.01.08 alefMaksura-ar.fina.01.09 alefMaksura-ar.fina.01.10 alefMaksura-ar.fina.01.11 alefMaksura-ar.fina.01.12 alefMaksura-ar.fina.01.13 kashida-ar kashida-ar.10 alef_lam-ar.init.dlig alef_lam-ar.init.dlig.02.00 alef_lam-ar.init.dlig.03.00 alef_lam-ar.init.dlig.04.00 alef_lam-ar.init.dlig.05.00 alef_lam-ar.init.dlig.06.00 alef_lam-ar.init.short.dlig alef_lam-ar.init.short.dlig.02.00 alef_lam-ar.init.short.dlig.03.00 alef_lam-ar.init.short.dlig.04.00 alef_lam-ar.init.short.dlig.05.00 alef_lam-ar.init.short.dlig.06.00 alef_lam-ar.medi.dlig alef_lam-ar.medi.short.dlig alef_lam_lam_heh-ar.liga alef_lam_lam_heh-ar.liga.01.01 alef_lam_lam_heh-ar.liga.01.02 lam_alef-ar.liga lam_alef-ar.fina.liga lam_alef-ar.fina.liga.01.01 lam_alef-ar.fina.liga.01.02 lam_alef-ar.fina.liga.01.03 lam_alef-ar.fina.liga.01.04 lam_alef-ar.fina.liga.01.05 lam_alef-ar.fina.liga.01.06 lam_alef-ar.fina.liga.01.07 lam_alef-ar.fina.liga.01.08 lam_alef-ar.fina.liga.01.09 lam_alef-ar.liga.01.01 lam_alef-ar.liga.01.02 lam_alef-ar.liga.01.03 lam_alef-ar.liga.01.04 lam_alef-ar.liga.01.05 lam_alef-ar.liga.01.06 lam_alef-ar.liga.01.07 lam_alef-ar.liga.01.08 lam_alef-ar.liga.01.09";
+code = "hamza-ar hamza-ar.01.01 hamza-ar.01.02 alef-ar.isol alef-ar.isol.02.00 alef-ar.isol.01.01 alef-ar.isol.01.02 alef-ar.isol.01.03 alef-ar.isol.01.04 alef-ar.isol.01.05 alef-ar.isol.01.06 alef-ar.isol.01.07 alef-ar.isol.01.08 alef-ar.isol.01.09 alef-ar.isol.02.01 alef-ar.isol.02.02 alef-ar.isol.02.03 alef-ar.isol.02.04 alef-ar.isol.02.05 alef-ar.isol.02.06 alef-ar.isol.02.07 alef-ar.isol.02.08 alef-ar.isol.02.09 alef-ar.isol.02.10 alef-ar.isol.02.11 alef-ar.isol.02.12 alef-ar.isol.02.13 alef-ar.isol.02.14 alef-ar.isol.02.15 alef-ar.isol.02.16 alef-ar.isol.02.17 alef-ar.isol.02.18 alef-ar.isol.02.19 alef-ar.isol.02.20 alef-ar.isol.02.21 alef-ar.isol.02.22 alef-ar.isol.02.23 alef-ar.isol.02.24 alef-ar.isol.02.25 alef-ar.isol.02.26 alef-ar.isol.02.27 alef-ar.fina alef-ar.fina.01.01 alef-ar.fina.01.02 alef-ar.fina.01.03 alef-ar.fina.01.04 alef-ar.fina.01.05 alef-ar.fina.01.06 alef-ar.fina.01.07 alef-ar.fina.01.08 alef-ar.fina.01.09 behDotless-ar.isol behDotless-ar.isol.low behDotless-ar.init behDotless-ar.init.behHah behDotless-ar.init.behHeh behDotless-ar.init.low hah-ar.isol hah-ar.isol.01.01 hah-ar.isol.01.02 hah-ar.isol.01.03 hah-ar.fina hah-ar.medi hah-ar.medi.01.01 hah-ar.medi.01.02 hah-ar.medi.01.03 hah-ar.medi.01.04 hah-ar.medi.01.05 hah-ar.init hah-ar.init.01.01 hah-ar.init.01.02 hah-ar.init.01.03 hah-ar.init.01.04 hah-ar.init.01.05 hah-ar.init.narrow dal-ar.isol dal-ar.isol.02.00 dal-ar.isol.03.00 dal-ar.isol.04.00 dal-ar.isol.05.00 dal-ar.isol.06.00 dal-ar.isol.07.00 dal-ar.isol.08.00 reh-ar.isol reh-ar.isol.01.01 reh-ar.fina reh-ar.fina.01.01 reh-ar.fina.seen seen-ar.isol seen-ar.isol.01.01 seen-ar.isol.01.02 seen-ar.isol.01.3 seen-ar.init seen-ar.init.02.00 seen-ar.init.01.01 seen-ar.init.01.02 seen-ar.init.01.03 seen-ar.init.01.04 seen-ar.init.01.05 seen-ar.init.01.06 seen-ar.init.01.07 seen-ar.init.01.08 sad-ar.isol sad-ar.init tah-ar.isol tah-ar.isol.02.00 tah-ar.init tah-ar.init.02.00 ain-ar.isol ain-ar.fina ain-ar.fina.01.01 ain-ar.medi ain-ar.medi.01.01 ain-ar.medi.01.02 ain-ar.medi.01.03 ain-ar.medi.01.04 ain-ar.medi.01.05 ain-ar.init fehDotless-ar.isol fehDotless-ar.medi fehDotless-ar.medi.01.91 fehDotless-ar.medi.01.92 fehDotless-ar.medi.01.93 fehDotless-ar.init qafDotless-ar.isol qafDotless-ar.isol.01.01 kaf-ar.isol kaf-ar.isol.02.00 kaf-ar.isol.03.00 kaf-ar.isol.04.00 kaf-ar.isol.05.00 kaf-ar.isol.06.00 kaf-ar.init kaf-ar.init.02.00 kaf-ar.init.03.00 kaf-ar.init.04.00 kaf-ar.init.05.00 kaf-ar.init.06.00 lam-ar.isol lam-ar.isol.02.00 lam-ar.isol.03.00 lam-ar.init lam-ar.init.02.00 lam-ar.init.03.00 lam-ar.init.04.00 lam-ar.init.05.00 lam-ar.init.06.00 lam-ar.init.07.00 lam-ar.init.08.00 lam-ar.init.09.00 lam-ar.init.10.00 lam-ar.init.short lam-ar.init.short.01.01 lam-ar.init.short.wide lam-ar.init.short.wide.01.01 lam-ar.init.short.wide.01.02 lam-ar.init.short.wide.01.03 meem-ar.isol meem-ar.isol.01.01 meem-ar.isol.01.02 meem-ar.isol.01.03 meem-ar.isol.01.04 meem-ar.fina meem-ar.fina.01.01 meem-ar.fina.01.02 meem-ar.fina.01.03 meem-ar.fina.01.04 meem-ar.medi meem-ar.medi.01.01 meem-ar.medi.01.02 meem-ar.medi.01.03 meem-ar.medi.01.04 meem-ar.init meem-ar.init.01.01 meem-ar.init.01.02 meem-ar.init.01.03 noonghunna-ar.isol noonghunna-ar.isol.01.01 noonghunna-ar.isol.01.02 noonghunna-ar.isol.01.03 noonghunna-ar.isol.01.04 noonghunna-ar.fina noonghunna-ar.fina.01.01 noonghunna-ar.fina.01.02 noonghunna-ar.fina.01.03 noonghunna-ar.fina.01.04 heh-ar.isol heh-ar.isol.02.00 heh-ar.isol.01.01 heh-ar.isol.01.02 heh-ar.isol.01.03 heh-ar.isol.01.04 heh-ar.medi heh-ar.medi.02.00 heh-ar.medi.01.01 heh-ar.medi.01.02 heh-ar.medi.01.03 heh-ar.medi.02.01 heh-ar.medi.02.02 heh-ar.medi.02.03 heh-ar.medi.02.04 heh-ar.medi.02.05 heh-ar.medi.behHeh heh-ar.init heh-ar.init.02.00 heh-ar.init.01.01 heh-ar.init.01.02 heh-ar.init.01.03 heh-ar.init.02.01 heh-ar.init.02.02 waw-ar.isol waw-ar.isol.01.01 alefMaksura-ar.isol alefMaksura-ar.isol.01.01 alefMaksura-ar.isol.01.02 alefMaksura-ar.isol.01.03 alefMaksura-ar.isol.01.04 alefMaksura-ar.isol.01.05 alefMaksura-ar.isol.01.06 alefMaksura-ar.isol.01.07 alefMaksura-ar.isol.01.08 alefMaksura-ar.isol.01.09 alefMaksura-ar.isol.01.10 alefMaksura-ar.isol.01.11 alefMaksura-ar.isol.01.12 alefMaksura-ar.isol.01.13 alefMaksura-ar.fina alefMaksura-ar.fina.01.01 alefMaksura-ar.fina.01.02 alefMaksura-ar.fina.01.03 alefMaksura-ar.fina.01.04 alefMaksura-ar.fina.01.05 alefMaksura-ar.fina.01.06 alefMaksura-ar.fina.01.07 alefMaksura-ar.fina.01.08 alefMaksura-ar.fina.01.09 alefMaksura-ar.fina.01.10 alefMaksura-ar.fina.01.11 alefMaksura-ar.fina.01.12 alefMaksura-ar.fina.01.13 kashida-ar kashida-ar.10 alef_lam-ar.init.dlig alef_lam-ar.init.dlig.02.00 alef_lam-ar.init.dlig.03.00 alef_lam-ar.init.dlig.04.00 alef_lam-ar.init.dlig.05.00 alef_lam-ar.init.dlig.06.00 alef_lam-ar.init.short.dlig alef_lam-ar.init.short.dlig.02.00 alef_lam-ar.init.short.dlig.03.00 alef_lam-ar.init.short.dlig.04.00 alef_lam-ar.init.short.dlig.05.00 alef_lam-ar.init.short.dlig.06.00 alef_lam-ar.medi.dlig alef_lam-ar.medi.short.dlig alef_lam_lam_heh-ar.liga alef_lam_lam_heh-ar.liga.01.01 alef_lam_lam_heh-ar.liga.01.02 lam_alef-ar.liga lam_alef-ar.fina.liga lam_alef-ar.fina.liga.01.01 lam_alef-ar.fina.liga.01.02 lam_alef-ar.fina.liga.01.03 lam_alef-ar.fina.liga.01.04 lam_alef-ar.fina.liga.01.05 lam_alef-ar.fina.liga.01.06 lam_alef-ar.fina.liga.01.07 lam_alef-ar.fina.liga.01.08 lam_alef-ar.fina.liga.01.09 lam_alef-ar.liga.01.01 lam_alef-ar.liga.01.02 lam_alef-ar.liga.01.03 lam_alef-ar.liga.01.04 lam_alef-ar.liga.01.05 lam_alef-ar.liga.01.06 lam_alef-ar.liga.01.07 lam_alef-ar.liga.01.08 lam_alef-ar.liga.01.09";
 name = AllLetters;
 },
 {
@@ -72,8 +72,8 @@ name = Languagesystems;
 },
 {
 code = "lookup teh_alef_first {
-  ignore sub [@AllLetters space space.mark] behDotless-ar.init twodotshorizontalabove-ar' [alef-ar.fina lam-ar lam-ar.init];
-  sub behDotless-ar.init twodotshorizontalabove-ar' [alef-ar.fina lam-ar lam-ar.init] by twodotsverticalabove-ar;
+  ignore sub [@AllLetters space space.mark] behDotless-ar.init twodotshorizontalabove-ar' [alef-ar.fina lam-ar.isol lam-ar.init];
+  sub behDotless-ar.init twodotshorizontalabove-ar' [alef-ar.fina lam-ar.isol lam-ar.init] by twodotsverticalabove-ar;
 } teh_alef_first;
 
 lookup hah_high {
@@ -93,7 +93,7 @@ lookup hah_high2 {
 } hah_high2;
 
 lookup beh_low {
-  sub behDotless-ar      by behDotless-ar.low;
+  sub behDotless-ar.isol by behDotless-ar.isol.low;
   sub behDotless-ar.init by behDotless-ar.init.low;
 } beh_low;
 
@@ -111,75 +111,75 @@ name = Lookups;
 },
 {
 code = "feature ccmp {
-  sub alefHamzaabove-ar by alef-ar hamzaabove-ar;
-  sub alefHamzabelow-ar by alef-ar hamzabelow-ar;
-  sub beh-ar by behDotless-ar dotbelow-ar;
-  sub teh-ar by behDotless-ar twodotshorizontalabove-ar;
-  sub theh-ar by behDotless-ar threedotsupabove-ar;
-  sub jeem-ar by hah-ar dotbelow-ar;
-  sub khah-ar by hah-ar dotabove-ar;
-  sub thal-ar by dal-ar dotabove-ar;
-  sub zain-ar by reh-ar dotabove-ar;
-  sub sheen-ar by seen-ar threedotsupabove-ar;
-  sub dad-ar by sad-ar dotabove-ar;
-  sub zah-ar by tah-ar dotabove-ar;
-  sub ghain-ar by ain-ar dotabove-ar;
-  sub feh-ar by fehDotless-ar dotabove-ar;
-  sub qaf-ar by qafDotless-ar twodotshorizontalabove-ar;
-  sub wawHamzaabove-ar by waw-ar hamzaabove-ar;
-  sub yehHamzaabove-ar by alefMaksura-ar hamzaabove-ar;
+  sub alefHamzaabove-ar by alef-ar.isol hamzaabove-ar;
+  sub alefHamzabelow-ar by alef-ar.isol hamzabelow-ar;
+  sub beh-ar by behDotless-ar.isol dotbelow-ar;
+  sub teh-ar by behDotless-ar.isol twodotshorizontalabove-ar;
+  sub theh-ar by behDotless-ar.isol threedotsupabove-ar;
+  sub jeem-ar by hah-ar.isol dotbelow-ar;
+  sub khah-ar by hah-ar.isol dotabove-ar;
+  sub thal-ar by dal-ar.isol dotabove-ar;
+  sub zain-ar by reh-ar.isol dotabove-ar;
+  sub sheen-ar by seen-ar.isol threedotsupabove-ar;
+  sub dad-ar by sad-ar.isol dotabove-ar;
+  sub zah-ar by tah-ar.isol dotabove-ar;
+  sub ghain-ar by ain-ar.isol dotabove-ar;
+  sub feh-ar by fehDotless-ar.isol dotabove-ar;
+  sub qaf-ar by qafDotless-ar.isol twodotshorizontalabove-ar;
+  sub wawHamzaabove-ar by waw-ar.isol hamzaabove-ar;
+  sub yehHamzaabove-ar by alefMaksura-ar.isol hamzaabove-ar;
 } ccmp;
 
 feature isol {
-  sub tehMarbuta-ar by heh-ar twodotshorizontalabove-ar;
-  sub noon-ar by noonghunna-ar dotcenter-ar;
-  sub [yeh-ar yeh-farsi] by alefMaksura-ar;
+  sub tehMarbuta-ar by heh-ar.isol twodotshorizontalabove-ar;
+  sub noon-ar by noonghunna-ar.isol dotcenter-ar;
+  sub [yeh-ar yeh-farsi] by alefMaksura-ar.isol;
 } isol;
 
 feature init {
-  sub [behDotless-ar noonghunna-ar alefMaksura-ar] by behDotless-ar.init;
-  sub hah-ar by hah-ar.init;
-  sub seen-ar by seen-ar.init;
-  sub sad-ar by sad-ar.init;
-  sub tah-ar by tah-ar.init;
-  sub ain-ar by ain-ar.init;
-  sub [fehDotless-ar qafDotless-ar] by fehDotless-ar.init;
-  sub kaf-ar by kaf-ar.init;
-  sub lam-ar by lam-ar.init;
-  sub meem-ar by meem-ar.init;
+  sub [behDotless-ar.isol noonghunna-ar.isol alefMaksura-ar.isol] by behDotless-ar.init;
+  sub hah-ar.isol by hah-ar.init;
+  sub seen-ar.isol by seen-ar.init;
+  sub sad-ar.isol by sad-ar.init;
+  sub tah-ar.isol by tah-ar.init;
+  sub ain-ar.isol by ain-ar.init;
+  sub [fehDotless-ar.isol qafDotless-ar.isol] by fehDotless-ar.init;
+  sub kaf-ar.isol by kaf-ar.init;
+  sub lam-ar.isol by lam-ar.init;
+  sub meem-ar.isol by meem-ar.init;
   sub noon-ar by behDotless-ar.init dotabove-ar;
-  sub heh-ar by heh-ar.init;
+  sub heh-ar.isol by heh-ar.init;
   sub yeh-ar by behDotless-ar.init twodotshorizontalbelow-ar;
   sub yeh-farsi by behDotless-ar.init twodotshorizontalbelow-ar;
 } init;
 
 feature medi {
-  sub [behDotless-ar noonghunna-ar alefMaksura-ar] by behDotless-ar.init;
-  sub hah-ar by hah-ar.medi;
-  sub seen-ar by seen-ar.init;
-  sub sad-ar by sad-ar.init;
-  sub tah-ar by tah-ar.init;
-  sub ain-ar by ain-ar.medi;
-  sub [fehDotless-ar qafDotless-ar] by fehDotless-ar.medi;
-  sub kaf-ar by kaf-ar.init;
-  sub lam-ar by lam-ar.init;
-  sub meem-ar by meem-ar.medi;
+  sub [behDotless-ar.isol noonghunna-ar.isol alefMaksura-ar.isol] by behDotless-ar.init;
+  sub hah-ar.isol by hah-ar.medi;
+  sub seen-ar.isol by seen-ar.init;
+  sub sad-ar.isol by sad-ar.init;
+  sub tah-ar.isol by tah-ar.init;
+  sub ain-ar.isol by ain-ar.medi;
+  sub [fehDotless-ar.isol qafDotless-ar.isol] by fehDotless-ar.medi;
+  sub kaf-ar.isol by kaf-ar.init;
+  sub lam-ar.isol by lam-ar.init;
+  sub meem-ar.isol by meem-ar.medi;
   sub noon-ar by behDotless-ar.init dotabove-ar;
-  sub heh-ar by heh-ar.medi;
+  sub heh-ar.isol by heh-ar.medi;
   sub yeh-ar by behDotless-ar.init twodotshorizontalbelow-ar;
   sub yeh-farsi by behDotless-ar.init twodotshorizontalbelow-ar;
 } medi;
 
 feature fina {
-  sub alef-ar by alef-ar.fina;
-  sub hah-ar by hah-ar.fina;
-  sub reh-ar by reh-ar.fina;
-  sub ain-ar by ain-ar.fina;
-  sub meem-ar by meem-ar.fina;
+  sub alef-ar.isol by alef-ar.fina;
+  sub hah-ar.isol by hah-ar.fina;
+  sub reh-ar.isol by reh-ar.fina;
+  sub ain-ar.isol by ain-ar.fina;
+  sub meem-ar.isol by meem-ar.fina;
   sub noon-ar by noonghunna-ar.fina dotcenter-ar;
-  sub noonghunna-ar by noonghunna-ar.fina;
-  sub tehMarbuta-ar by heh-ar twodotshorizontalabove-ar;
-  sub [alefMaksura-ar yeh-ar yeh-farsi] by alefMaksura-ar.fina;
+  sub noonghunna-ar.isol by noonghunna-ar.fina;
+  sub tehMarbuta-ar by heh-ar.isol twodotshorizontalabove-ar;
+  sub [alefMaksura-ar.isol yeh-ar yeh-farsi] by alefMaksura-ar.fina;
 } fina;
 ";
 name = GSUB;
@@ -198,14 +198,14 @@ lookup kaf_lam_alef {
 } kaf_lam_alef;
 
 lookup alef_lam_lam_heh {
-  sub alef-ar lam-ar.init lam-ar.init heh-ar by alef_lam_lam_heh-ar.liga;
+  sub alef-ar.isol lam-ar.init lam-ar.init heh-ar.isol by alef_lam_lam_heh-ar.liga;
 } alef_lam_lam_heh;
 
 
 lookup before_hah {
   @before = [behDotless-ar.init ain-ar.init fehDotless-ar.init lam-ar.init meem-ar.init hah-ar.init];
   @match  = [hah-ar.fina hah-ar.medi];
-  @repl   = [hah-ar hah-ar.init];
+  @repl   = [hah-ar.isol hah-ar.init];
   ignore sub @ArabicJoinLeft @before @match';
   sub        @before @match' by @repl;
 } before_hah;
@@ -222,18 +222,18 @@ lookup space {
 lookup teeth {
   sub    [behDotless-ar.init]' lookup beh_low
          [behDotless-ar.init]'
-         [behDotless-ar.init behDotless-ar]' lookup beh_low;
+         [behDotless-ar.init behDotless-ar.isol]' lookup beh_low;
   sub    [behDotless-ar.init]' lookup beh_low
-         [seen-ar.init seen-ar];
+         [seen-ar.init seen-ar.isol];
 } teeth;
 
 lookup lam_hah1 {
-  sub     [alef-ar alef-ar.fina] lam-ar.init hah-ar.init' by hah-ar.init.narrow;
+  sub     [alef-ar.isol alef-ar.fina] lam-ar.init hah-ar.init' by hah-ar.init.narrow;
 } lam_hah1;
 
 lookup lam_hah2 {
-  sub    [alef-ar alef-ar.fina] lam-ar.init' hah-ar by lam-ar.init.short.wide;
-  sub    lam-ar.init' [hah-ar hah-ar.init.narrow hah-ar.init] by lam-ar.init.short;
+  sub    [alef-ar.isol alef-ar.fina] lam-ar.init' hah-ar.isol by lam-ar.init.short.wide;
+  sub    lam-ar.init' [hah-ar.isol hah-ar.init.narrow hah-ar.init] by lam-ar.init.short;
 } lam_hah2;
 
 lookup teh_alef_first;
@@ -241,16 +241,16 @@ lookup teh_alef_first;
 tag = rlig;
 },
 {
-code = "sub alef-ar lam-ar.init by alef_lam-ar.init.dlig;
+code = "sub alef-ar.isol lam-ar.init by alef_lam-ar.init.dlig;
 sub alef-ar.fina lam-ar.init by alef_lam-ar.medi.dlig;
-sub alef-ar lam-ar.init.short by alef_lam-ar.init.short.dlig;
+sub alef-ar.isol lam-ar.init.short by alef_lam-ar.init.short.dlig;
 sub alef-ar.fina lam-ar.init.short by alef_lam-ar.medi.short.dlig;";
 tag = dlig;
 },
 {
 code = "lookup heh_dots {
   lookupflag 0;
-  sub [heh-ar.01.01 heh-ar.01.02] twodotshorizontalabove-ar' by twodotsverticalabove-ar;
+  sub [heh-ar.isol.01.01 heh-ar.isol.01.02] twodotshorizontalabove-ar' by twodotsverticalabove-ar;
 } heh_dots;
 
 @hah_high  = [hah-ar.init hah-ar.medi hah-ar.init.narrow hah-ar.init.01.03 hah-ar.medi.01.03];
@@ -301,19 +301,19 @@ tag = dist;
 {
 code = "lookupflag IgnoreMarks;
 
-ignore pos [reh-ar reh-ar.fina meem-ar meem-ar.fina alefMaksura-ar.01.06 alefMaksura-ar.fina.01.06]' @AllLetters;
+ignore pos [reh-ar.isol reh-ar.fina meem-ar.isol meem-ar.fina alefMaksura-ar.isol.01.06 alefMaksura-ar.fina.01.06]' @AllLetters;
 
-pos [alefMaksura-ar.01.06 alefMaksura-ar.fina.01.06]' <150 0 150 0>;
-pos [meem-ar meem-ar.fina]' <100 0 100 0>;
-pos [reh-ar reh-ar.fina]' <50 0 50 0>;
+pos [alefMaksura-ar.isol.01.06 alefMaksura-ar.fina.01.06]' <150 0 150 0>;
+pos [meem-ar.isol meem-ar.fina]' <100 0 100 0>;
+pos [reh-ar.isol reh-ar.fina]' <50 0 50 0>;
 
-pos [behDotless-ar.init]' <0 0 120 0> [hah-ar];
-pos [behDotless-ar.init]' <0 0 70  0> [hah-ar hah-ar.init];
-pos [lam-ar.init.short lam-ar.init.short.01.01]' <0 0 50 0> [hah-ar hah-ar.init];
+pos [behDotless-ar.init]' <0 0 120 0> [hah-ar.isol];
+pos [behDotless-ar.init]' <0 0 70  0> [hah-ar.isol hah-ar.init];
+pos [lam-ar.init.short lam-ar.init.short.01.01]' <0 0 50 0> [hah-ar.isol hah-ar.init];
 
-pos [behDotless-ar.init]' <0 0 270 0> [hah-ar.01.01];
+pos [behDotless-ar.init]' <0 0 270 0> [hah-ar.isol.01.01];
 
-pos @ArabicJoinLeft heh-ar.02.00 <-60 0 -60 0>;
+pos @ArabicJoinLeft heh-ar.isol.02.00 <-60 0 -60 0>;
 
 # Automatic Code
 ";
@@ -332,35 +332,35 @@ pos behDotless-ar.init [dotbelow-ar twodotshorizontalbelow-ar]' <-75   0   -75  
 pos behDotless-ar.init.behHah [dotbelow-ar twodotshorizontalbelow-ar]' <  0  -150  0   0> hah-ar.init;
 
 ignore
- pos [noonghunna-ar.01.02 noonghunna-ar.fina.01.02]
+ pos [noonghunna-ar.isol.01.02 noonghunna-ar.fina.01.02]
       dotabove-ar'
       space.mark
-     [$[name LIKE \"behDotless-ar.01.*\"]
-      $[name LIKE \"fehDotless-ar.01.*\"]
+     [$[name LIKE \"behDotless-ar.isol.01.*\"]
+      $[name LIKE \"fehDotless-ar.isol.01.*\"]
       $[name LIKE \"behDotless-ar.init.01.*\"]
       $[name LIKE \"fehDotless-ar.init.01.*\"]
-      dal-ar.01.03 dal-ar.03.01 behDotless-ar.init.01.02 dal-ar.03.03 dal-ar.01.01
-      lam-ar lam-ar.01.01 lam-ar.01.02 lam-ar.01.03 lam-ar.01.04 lam-ar.02.00 lam-ar.02.01 lam-ar.02.02 lam-ar.02.03 lam-ar.02.04 lam-ar.03.00 lam-ar.03.01 lam-ar.03.02 lam-ar.03.03 lam-ar.03.04
+      dal-ar.isol.01.03 dal-ar.isol.03.01 behDotless-ar.init.01.02 dal-ar.isol.03.03 dal-ar.isol.01.01
+      lam-ar.isol lam-ar.isol.01.01 lam-ar.isol.01.02 lam-ar.isol.01.03 lam-ar.isol.01.04 lam-ar.isol.02.00 lam-ar.isol.02.01 lam-ar.isol.02.02 lam-ar.isol.02.03 lam-ar.isol.02.04 lam-ar.isol.03.00 lam-ar.isol.03.01 lam-ar.isol.03.02 lam-ar.isol.03.03 lam-ar.isol.03.04
       lam-ar.init.03.00 lam-ar.init.02.03 lam-ar.init.02.00 lam-ar.init.03.03
-      reh-ar reh-ar.01.01
-      sad-ar.01.01 sad-ar.01.03 sad-ar.init.01.01 sad-ar.init.01.03
-      tah-ar.01.01 tah-ar.01.03 tah-ar.init.01.01 tah-ar.init.01.03
-      waw-ar waw-ar.01.01
-      qafDotless-ar];
+      reh-ar.isol reh-ar.isol.01.01
+      sad-ar.isol.01.01 sad-ar.isol.01.03 sad-ar.init.01.01 sad-ar.init.01.03
+      tah-ar.isol.01.01 tah-ar.isol.01.03 tah-ar.init.01.01 tah-ar.init.01.03
+      waw-ar.isol waw-ar.isol.01.01
+      qafDotless-ar.isol];
 
 @hah = [$[rightKerningGroup = \"hah\"]];
 @straight-l = [$[rightKerningGroup = \"straight-l\"]];
 @alef-wide = [$[rightKerningGroup = \"alef-wide\"]];
 
-pos [noonghunna-ar.01.02 noonghunna-ar.fina.01.02]
+pos [noonghunna-ar.isol.01.02 noonghunna-ar.fina.01.02]
      dotabove-ar' <150 350 0 0>
      space.mark
-    [alef-ar.01.05 alef-ar.01.06 ain-ar.init hah-ar.init.01.03 meem-ar.01.01 meem-ar.init.01.01
+    [alef-ar.isol.01.05 alef-ar.isol.01.06 ain-ar.init hah-ar.init.01.03 meem-ar.isol.01.01 meem-ar.init.01.01
      @hah @straight-l @alef-wide];
 
-pos [behDotless-ar.init] [twodotshorizontalbelow-ar dotbelow-ar]' <0 -150 0 0> [hah-ar hah-ar.01.01];
+pos [behDotless-ar.init] [twodotshorizontalbelow-ar dotbelow-ar]' <0 -150 0 0> [hah-ar.isol hah-ar.isol.01.01];
 
-pos [behDotless-ar.01.01 behDotless-ar.01.02 behDotless-ar.01.03 behDotless-ar.01.04]
+pos [behDotless-ar.isol.01.01 behDotless-ar.isol.01.02 behDotless-ar.isol.01.03 behDotless-ar.isol.01.04]
     [dotbelow-ar twodotshorizontalabove-ar twodotshorizontalbelow-ar]' <-100 0 0 0>;
 
 pos [behDotless-ar.init behDotless-ar.init.behHah]
@@ -570,79 +570,79 @@ _alt.lam.02 = 0;
 _alt.lam.03 = 0;
 _alt.lam.04 = 0;
 "ain-ar.init" = -200;
-"alef-ar.02.00" = -100;
-"alef-ar.02.01" = -150;
+"alef-ar.isol.02.00" = -100;
+"alef-ar.isol.02.01" = -150;
 "hah-ar.init.01.03" = -100;
 "hamza-ar" = -200;
-"lam-ar" = 0;
-"lam-ar.02.00" = 0;
-"lam-ar.03.00" = 0;
-"meem-ar.01.02" = -200;
+"lam-ar.isol" = 0;
+"lam-ar.isol.02.00" = 0;
+"lam-ar.isol.03.00" = 0;
 "meem-ar.init.01.01" = -200;
-"noonghunna-ar.01.01" = 0;
-"noonghunna-ar.01.02" = 0;
-"noonghunna-ar.01.03" = 0;
-"noonghunna-ar.01.04" = 0;
-"qafDotless-ar" = 0;
-"qafDotless-ar.01.01" = 0;
-"reh-ar" = 0;
-"reh-ar.01.01" = 0;
-"waw-ar" = 0;
-"waw-ar.01.01" = -10;
+"meem-ar.isol.01.02" = -200;
+"noonghunna-ar.isol.01.01" = 0;
+"noonghunna-ar.isol.01.02" = 0;
+"noonghunna-ar.isol.01.03" = 0;
+"noonghunna-ar.isol.01.04" = 0;
+"qafDotless-ar.isol" = 0;
+"qafDotless-ar.isol.01.01" = 0;
+"reh-ar.isol" = 0;
+"reh-ar.isol.01.01" = 0;
+"waw-ar.isol" = 0;
+"waw-ar.isol.01.01" = -10;
 };
 "@MMK_R_hah.alt" = {
 "@MMK_L_alef-wide" = -105;
 "@MMK_L_hah" = -105;
-"ain-ar" = -105;
 "ain-ar.init" = -105;
-"alef-ar" = 110;
-"alef-ar.01.01" = 110;
-"alef-ar.01.02" = 110;
-"alef-ar.01.03" = 240;
-"alef-ar.01.04" = 260;
-"alef-ar.01.05" = 110;
-"alef-ar.01.06" = 110;
-"alef-ar.01.07" = 110;
-"alef-ar.01.08" = 110;
-"alef-ar.01.09" = 110;
-"alef-ar.02.00" = -40;
-"alef-ar.02.01" = -40;
-"alef-ar.02.02" = -40;
-"alef-ar.02.03" = -90;
-"alef-ar.02.04" = -105;
-"alef-ar.02.05" = -40;
-"alef-ar.02.06" = -40;
-"alef-ar.02.07" = -40;
-"alef-ar.02.08" = -90;
-"alef-ar.02.09" = -105;
-"alef-ar.02.10" = -40;
-"alef-ar.02.11" = -40;
-"alef-ar.02.12" = -40;
-"alef-ar.02.13" = -90;
-"alef-ar.02.14" = -105;
-"alef-ar.02.15" = 90;
-"alef-ar.02.16" = 90;
-"alef-ar.02.17" = 90;
-"alef-ar.02.18" = 40;
-"alef-ar.02.19" = -10;
-"alef-ar.02.20" = -60;
-"alef-ar.02.21" = -90;
-"alef-ar.02.22" = -105;
-"alef-ar.02.23" = 20;
-"alef-ar.02.24" = 70;
-"alef-ar.02.25" = 120;
-"alef-ar.02.26" = 120;
-"alef-ar.02.27" = 120;
-"alefMaksura-ar" = -105;
-"alefMaksura-ar.01.01" = -105;
-"alefMaksura-ar.01.02" = -105;
-"alefMaksura-ar.01.03" = -105;
-"alefMaksura-ar.01.04" = -105;
-"alefMaksura-ar.01.05" = -105;
-"alefMaksura-ar.01.10" = -105;
-"alefMaksura-ar.01.11" = -105;
-"alefMaksura-ar.01.12" = -105;
-"alefMaksura-ar.01.13" = -105;
+"ain-ar.isol" = -105;
+"alef-ar.isol" = 110;
+"alef-ar.isol.01.01" = 110;
+"alef-ar.isol.01.02" = 110;
+"alef-ar.isol.01.03" = 240;
+"alef-ar.isol.01.04" = 260;
+"alef-ar.isol.01.05" = 110;
+"alef-ar.isol.01.06" = 110;
+"alef-ar.isol.01.07" = 110;
+"alef-ar.isol.01.08" = 110;
+"alef-ar.isol.01.09" = 110;
+"alef-ar.isol.02.00" = -40;
+"alef-ar.isol.02.01" = -40;
+"alef-ar.isol.02.02" = -40;
+"alef-ar.isol.02.03" = -90;
+"alef-ar.isol.02.04" = -105;
+"alef-ar.isol.02.05" = -40;
+"alef-ar.isol.02.06" = -40;
+"alef-ar.isol.02.07" = -40;
+"alef-ar.isol.02.08" = -90;
+"alef-ar.isol.02.09" = -105;
+"alef-ar.isol.02.10" = -40;
+"alef-ar.isol.02.11" = -40;
+"alef-ar.isol.02.12" = -40;
+"alef-ar.isol.02.13" = -90;
+"alef-ar.isol.02.14" = -105;
+"alef-ar.isol.02.15" = 90;
+"alef-ar.isol.02.16" = 90;
+"alef-ar.isol.02.17" = 90;
+"alef-ar.isol.02.18" = 40;
+"alef-ar.isol.02.19" = -10;
+"alef-ar.isol.02.20" = -60;
+"alef-ar.isol.02.21" = -90;
+"alef-ar.isol.02.22" = -105;
+"alef-ar.isol.02.23" = 20;
+"alef-ar.isol.02.24" = 70;
+"alef-ar.isol.02.25" = 120;
+"alef-ar.isol.02.26" = 120;
+"alef-ar.isol.02.27" = 120;
+"alefMaksura-ar.isol" = -105;
+"alefMaksura-ar.isol.01.01" = -105;
+"alefMaksura-ar.isol.01.02" = -105;
+"alefMaksura-ar.isol.01.03" = -105;
+"alefMaksura-ar.isol.01.04" = -105;
+"alefMaksura-ar.isol.01.05" = -105;
+"alefMaksura-ar.isol.01.10" = -105;
+"alefMaksura-ar.isol.01.11" = -105;
+"alefMaksura-ar.isol.01.12" = -105;
+"alefMaksura-ar.isol.01.13" = -105;
 "alef_lam-ar.init.dlig" = 110;
 "alef_lam-ar.init.dlig.02.00" = -40;
 "alef_lam-ar.init.dlig.03.00" = -90;
@@ -657,10 +657,6 @@ _alt.lam.04 = 0;
 "alef_lam-ar.init.short.dlig.06.00" = -40;
 "alef_lam_lam_heh-ar.liga" = -105;
 "alef_lam_lam_heh-ar.liga.01.02" = -40;
-"heh-ar.01.02" = 110;
-"heh-ar.01.03" = 110;
-"heh-ar.01.04" = 110;
-"heh-ar.02.00" = -105;
 "heh-ar.init" = -105;
 "heh-ar.init.01.01" = -105;
 "heh-ar.init.01.02" = -105;
@@ -668,13 +664,14 @@ _alt.lam.04 = 0;
 "heh-ar.init.02.00" = -105;
 "heh-ar.init.02.01" = -80;
 "heh-ar.init.02.02" = -80;
-"kaf-ar.02.00" = 110;
-"kaf-ar.04.00" = 110;
+"heh-ar.isol.01.02" = 110;
+"heh-ar.isol.01.03" = 110;
+"heh-ar.isol.01.04" = 110;
+"heh-ar.isol.02.00" = -105;
 "kaf-ar.init.02.00" = 110;
 "kaf-ar.init.04.00" = 110;
-"lam-ar" = 110;
-"lam-ar.02.00" = 110;
-"lam-ar.03.00" = 110;
+"kaf-ar.isol.02.00" = 110;
+"kaf-ar.isol.04.00" = 110;
 "lam-ar.init" = 110;
 "lam-ar.init.02.00" = 110;
 "lam-ar.init.03.00" = 110;
@@ -691,6 +688,9 @@ _alt.lam.04 = 0;
 "lam-ar.init.short.wide.01.01" = 110;
 "lam-ar.init.short.wide.01.02" = 110;
 "lam-ar.init.short.wide.01.03" = 110;
+"lam-ar.isol" = 110;
+"lam-ar.isol.02.00" = 110;
+"lam-ar.isol.03.00" = 110;
 "lam_alef-ar.liga" = 110;
 "lam_alef-ar.liga.01.01" = 35;
 "lam_alef-ar.liga.01.02" = 110;
@@ -701,19 +701,19 @@ _alt.lam.04 = 0;
 "lam_alef-ar.liga.01.07" = 135;
 "lam_alef-ar.liga.01.08" = 60;
 "lam_alef-ar.liga.01.09" = -15;
-"meem-ar.01.02" = -70;
-"meem-ar.01.03" = -70;
-"meem-ar.01.04" = -10;
 "meem-ar.init.01.01" = -70;
 "meem-ar.init.01.02" = -70;
 "meem-ar.init.01.03" = -10;
-"noonghunna-ar" = -60;
-"noonghunna-ar.01.01" = -60;
-"noonghunna-ar.01.03" = -30;
-"noonghunna-ar.01.04" = -50;
-"qafDotless-ar.01.01" = -30;
-"reh-ar.01.01" = -50;
-"waw-ar.01.01" = -30;
+"meem-ar.isol.01.02" = -70;
+"meem-ar.isol.01.03" = -70;
+"meem-ar.isol.01.04" = -10;
+"noonghunna-ar.isol" = -60;
+"noonghunna-ar.isol.01.01" = -60;
+"noonghunna-ar.isol.01.03" = -30;
+"noonghunna-ar.isol.01.04" = -50;
+"qafDotless-ar.isol.01.01" = -30;
+"reh-ar.isol.01.01" = -50;
+"waw-ar.isol.01.01" = -30;
 };
 "@MMK_R_lam" = {
 "@MMK_L_alef-wide" = -300;
@@ -722,14 +722,14 @@ _alt.lam.04 = 0;
 "@MMK_L_straight-l" = -300;
 "@MMK_L_yeh.isol" = -300;
 "ain-ar.init" = -300;
-"alefMaksura-ar.01.06" = -250;
-"alefMaksura-ar.01.07" = -250;
-"hah-ar" = -100;
-"hah-ar.01.01" = -250;
-"hah-ar.01.02" = -140;
-"hah-ar.01.03" = -140;
+"alefMaksura-ar.isol.01.06" = -250;
+"alefMaksura-ar.isol.01.07" = -250;
 "hah-ar.init.01.02" = -120;
 "hah-ar.init.01.03" = -100;
+"hah-ar.isol" = -100;
+"hah-ar.isol.01.01" = -250;
+"hah-ar.isol.01.02" = -140;
+"hah-ar.isol.01.03" = -140;
 "hamza-ar" = -300;
 "hamza-ar.01.01" = -300;
 "hamza-ar.01.02" = -300;
@@ -737,51 +737,51 @@ _alt.lam.04 = 0;
 "heh-ar.init.01.03" = -300;
 "heh-ar.init.02.01" = -250;
 "heh-ar.init.02.02" = -250;
-"lam-ar" = 0;
-"lam-ar.02.00" = 0;
-"lam-ar.03.00" = 0;
-"meem-ar" = -200;
-"meem-ar.01.02" = -350;
-"meem-ar.01.03" = -350;
+"lam-ar.isol" = 0;
+"lam-ar.isol.02.00" = 0;
+"lam-ar.isol.03.00" = 0;
 "meem-ar.init.01.01" = -350;
 "meem-ar.init.01.02" = -300;
-"noonghunna-ar" = -50;
-"noonghunna-ar.01.01" = -50;
-"noonghunna-ar.01.02" = -50;
-"noonghunna-ar.01.03" = 0;
-"noonghunna-ar.01.04" = -50;
-"qafDotless-ar" = -50;
-"qafDotless-ar.01.01" = -50;
-"reh-ar" = 0;
-"reh-ar.01.01" = 0;
+"meem-ar.isol" = -200;
+"meem-ar.isol.01.02" = -350;
+"meem-ar.isol.01.03" = -350;
+"noonghunna-ar.isol" = -50;
+"noonghunna-ar.isol.01.01" = -50;
+"noonghunna-ar.isol.01.02" = -50;
+"noonghunna-ar.isol.01.03" = 0;
+"noonghunna-ar.isol.01.04" = -50;
+"qafDotless-ar.isol" = -50;
+"qafDotless-ar.isol.01.01" = -50;
+"reh-ar.isol" = 0;
+"reh-ar.isol.01.01" = 0;
 "seen-ar.init.01.03" = -50;
 "seen-ar.init.01.04" = -50;
 "seen-ar.init.01.05" = -50;
 "seen-ar.init.01.06" = -200;
 "seen-ar.init.01.07" = -200;
 "seen-ar.init.01.08" = -200;
-"waw-ar" = -50;
-"waw-ar.01.01" = -50;
+"waw-ar.isol" = -50;
+"waw-ar.isol.01.01" = -50;
 };
 "@MMK_R_reh-alt" = {
 "@MMK_L_alef-wide" = -100;
 "@MMK_L_hah" = -100;
-"ain-ar" = -20;
 "ain-ar.init" = -100;
-"alef-ar.02.00" = -100;
-"alef-ar.02.01" = -100;
-"alef-ar.02.05" = -100;
-"alef-ar.02.06" = -100;
-"alef-ar.02.10" = -100;
-"alef-ar.02.11" = -100;
-"alefMaksura-ar" = -60;
-"alefMaksura-ar.01.01" = -60;
-"alefMaksura-ar.01.02" = -60;
-"alefMaksura-ar.01.03" = -60;
-"alefMaksura-ar.01.04" = -60;
-"alefMaksura-ar.01.05" = -60;
-"alefMaksura-ar.01.12" = -60;
-"alefMaksura-ar.01.13" = -60;
+"ain-ar.isol" = -20;
+"alef-ar.isol.02.00" = -100;
+"alef-ar.isol.02.01" = -100;
+"alef-ar.isol.02.05" = -100;
+"alef-ar.isol.02.06" = -100;
+"alef-ar.isol.02.10" = -100;
+"alef-ar.isol.02.11" = -100;
+"alefMaksura-ar.isol" = -60;
+"alefMaksura-ar.isol.01.01" = -60;
+"alefMaksura-ar.isol.01.02" = -60;
+"alefMaksura-ar.isol.01.03" = -60;
+"alefMaksura-ar.isol.01.04" = -60;
+"alefMaksura-ar.isol.01.05" = -60;
+"alefMaksura-ar.isol.01.12" = -60;
+"alefMaksura-ar.isol.01.13" = -60;
 "hamza-ar" = -100;
 "hamza-ar.01.01" = -100;
 "heh-ar.init" = -60;
@@ -792,10 +792,10 @@ _alt.lam.04 = 0;
 "heh-ar.init.02.01" = -60;
 "lam_alef-ar.liga.01.01" = -20;
 "lam_alef-ar.liga.01.03" = -60;
-"meem-ar.01.02" = -50;
-"meem-ar.01.03" = -50;
 "meem-ar.init.01.01" = -50;
 "meem-ar.init.01.02" = -50;
+"meem-ar.isol.01.02" = -50;
+"meem-ar.isol.01.03" = -50;
 };
 "@MMK_R_straight-r" = {
 "@MMK_L_straight-l" = 50;
@@ -803,15 +803,8 @@ _alt.lam.04 = 0;
 "ain-ar.fina" = {
 "@MMK_L_alef-wide" = -100;
 "@MMK_L_hah" = -100;
-"alef-ar.02.00" = -100;
-"alef-ar.02.01" = -100;
-};
-"alefMaksura-ar.01.06" = {
-"@MMK_L_hah" = -50;
-"ain-ar.init" = -50;
-};
-"alefMaksura-ar.01.08" = {
-"@MMK_L_alef-wide" = -100;
+"alef-ar.isol.02.00" = -100;
+"alef-ar.isol.02.01" = -100;
 };
 "alefMaksura-ar.fina.01.06" = {
 "@MMK_L_hah" = -50;
@@ -820,39 +813,46 @@ _alt.lam.04 = 0;
 "alefMaksura-ar.fina.01.08" = {
 "@MMK_L_alef-wide" = -100;
 };
+"alefMaksura-ar.isol.01.06" = {
+"@MMK_L_hah" = -50;
+"ain-ar.init" = -50;
+};
+"alefMaksura-ar.isol.01.08" = {
+"@MMK_L_alef-wide" = -100;
+};
 "behDotless-ar.init" = {
 "ain-ar.fina.01.01" = -50;
 "ain-ar.medi.01.02" = -25;
 };
-"meem-ar" = {
-"ain-ar" = 80;
-};
 "meem-ar.fina" = {
-"ain-ar" = 80;
+"ain-ar.isol" = 80;
 };
-"noonghunna-ar.01.03" = {
-"ain-ar" = 50;
-};
-"noonghunna-ar.01.04" = {
-"ain-ar" = 50;
+"meem-ar.isol" = {
+"ain-ar.isol" = 80;
 };
 "noonghunna-ar.fina.01.03" = {
-"ain-ar" = 50;
+"ain-ar.isol" = 50;
 };
 "noonghunna-ar.fina.01.04" = {
-"ain-ar" = 50;
+"ain-ar.isol" = 50;
 };
-"reh-ar" = {
-"@MMK_L_alef-wide" = -50;
-"@MMK_L_hah" = -50;
-"ain-ar.init" = -50;
-"alef-ar.02.00" = -50;
-"alef-ar.02.01" = -50;
-"meem-ar.01.02" = -50;
+"noonghunna-ar.isol.01.03" = {
+"ain-ar.isol" = 50;
+};
+"noonghunna-ar.isol.01.04" = {
+"ain-ar.isol" = 50;
 };
 "reh-ar.fina" = {
 "@MMK_L_alef-wide" = -50;
 "@MMK_L_hah" = -50;
+};
+"reh-ar.isol" = {
+"@MMK_L_alef-wide" = -50;
+"@MMK_L_hah" = -50;
+"ain-ar.init" = -50;
+"alef-ar.isol.02.00" = -50;
+"alef-ar.isol.02.01" = -50;
+"meem-ar.isol.01.02" = -50;
 };
 };
 };

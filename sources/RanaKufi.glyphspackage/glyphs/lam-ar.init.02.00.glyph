@@ -8,7 +8,7 @@ shapes = (
 {
 alignment = -1;
 pos = (50,0);
-ref = "alef-ar.01.06";
+ref = "alef-ar.isol.01.06";
 },
 {
 ref = _alt.beh;

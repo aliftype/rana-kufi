@@ -277,11 +277,11 @@ nodes = (
 {
 alignment = -1;
 pos = (150,0);
-ref = "alef-ar";
+ref = "alef-ar.isol";
 },
 {
 pos = (100,0);
-ref = "alef-ar";
+ref = "alef-ar.isol";
 scale = (-1,1);
 }
 );

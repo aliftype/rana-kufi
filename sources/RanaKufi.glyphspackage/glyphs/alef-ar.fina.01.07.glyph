@@ -6,7 +6,7 @@ layers = (
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
 shapes = (
 {
-ref = "alef-ar.01.07";
+ref = "alef-ar.isol.01.07";
 }
 );
 width = 100;

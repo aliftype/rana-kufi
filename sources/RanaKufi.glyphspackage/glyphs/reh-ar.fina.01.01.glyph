@@ -7,7 +7,7 @@ layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
 shapes = (
 {
 alignment = -1;
-ref = "reh-ar.01.01";
+ref = "reh-ar.isol.01.01";
 },
 {
 pos = (155,0);
