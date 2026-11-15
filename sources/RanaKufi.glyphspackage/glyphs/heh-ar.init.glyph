@@ -1,5 +1,6 @@
 {
 glyphname = "heh-ar.init";
+kernRight = heh.init;
 layers = (
 {
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";

@@ -1,5 +1,6 @@
 {
 glyphname = "lam-ar.02.00";
+kernLeft = lam;
 kernRight = "straight-l";
 layers = (
 {

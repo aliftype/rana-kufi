@@ -1,5 +1,5 @@
 {
-.appVersion = "3436";
+.appVersion = "3536";
 .formatVersion = 3;
 axes = (
 {
@@ -712,6 +712,54 @@ _alt.lam.04 = 0;
 "reh-ar.01.01" = -50;
 "waw-ar.01.01" = -30;
 };
+"@MMK_R_lam" = {
+"@MMK_L_alef-wide" = -300;
+"@MMK_L_hah" = -300;
+"@MMK_L_heh.init" = -300;
+"@MMK_L_straight-l" = -300;
+"@MMK_L_yeh.isol" = -300;
+"ain-ar.init" = -300;
+"alefMaksura-ar.01.06" = -250;
+"alefMaksura-ar.01.07" = -250;
+"hah-ar" = -100;
+"hah-ar.01.01" = -250;
+"hah-ar.01.02" = -140;
+"hah-ar.01.03" = -140;
+"hah-ar.init.01.02" = -120;
+"hah-ar.init.01.03" = -100;
+"hamza-ar" = -300;
+"hamza-ar.01.01" = -300;
+"hamza-ar.01.02" = -300;
+"heh-ar.init.01.01" = -170;
+"heh-ar.init.01.03" = -300;
+"heh-ar.init.02.01" = -250;
+"heh-ar.init.02.02" = -250;
+"lam-ar" = 0;
+"lam-ar.02.00" = 0;
+"lam-ar.03.00" = 0;
+"meem-ar" = -200;
+"meem-ar.01.02" = -350;
+"meem-ar.01.03" = -350;
+"meem-ar.init.01.01" = -350;
+"meem-ar.init.01.02" = -300;
+"noonghunna-ar" = -50;
+"noonghunna-ar.01.01" = -50;
+"noonghunna-ar.01.02" = -50;
+"noonghunna-ar.01.03" = 0;
+"noonghunna-ar.01.04" = -50;
+"qafDotless-ar" = -50;
+"qafDotless-ar.01.01" = -50;
+"reh-ar" = 0;
+"reh-ar.01.01" = 0;
+"seen-ar.init.01.03" = -50;
+"seen-ar.init.01.04" = -50;
+"seen-ar.init.01.05" = -50;
+"seen-ar.init.01.06" = -200;
+"seen-ar.init.01.07" = -200;
+"seen-ar.init.01.08" = -200;
+"waw-ar" = -50;
+"waw-ar.01.01" = -50;
+};
 "@MMK_R_reh-alt" = {
 "@MMK_L_alef-wide" = -100;
 "@MMK_L_hah" = -100;
@@ -772,21 +820,6 @@ _alt.lam.04 = 0;
 "behDotless-ar.init" = {
 "ain-ar.fina.01.01" = -50;
 "ain-ar.medi.01.02" = -25;
-};
-"lam-ar" = {
-"@MMK_L_straight-l" = -300;
-"waw-ar" = 0;
-"waw-ar.01.01" = 0;
-};
-"lam-ar.02.00" = {
-"@MMK_L_straight-l" = -300;
-"waw-ar" = 0;
-"waw-ar.01.01" = 0;
-};
-"lam-ar.03.00" = {
-"@MMK_L_straight-l" = -300;
-"waw-ar" = 0;
-"waw-ar.01.01" = 0;
 };
 "meem-ar" = {
 "ain-ar" = 80;

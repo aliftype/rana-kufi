@@ -1,7 +1,6 @@
 {
 glyphname = "alef-ar.02.27";
 kernLeft = "straight-r";
-kernRight = "alef-wide";
 layers = (
 {
 anchors = (
