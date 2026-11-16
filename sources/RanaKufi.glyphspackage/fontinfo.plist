@@ -142,7 +142,7 @@ code = "feature ccmp {
   sub meem-ar by meem-ar.isol;
   sub noonghunna-ar by noonghunna-ar.isol;
   sub heh-ar by heh-ar.isol;
-  sub tehMarbuta-ar by heh-ar.isol twodotshorizontalabove-ar;
+  sub tehMarbuta-ar by heh-ar.isol twodotsverticalabove-ar;
   sub waw-ar by waw-ar.isol;
   sub wawHamzaabove-ar by waw-ar.isol hamzaabove-ar;
   sub alefMaksura-ar by alefMaksura-ar.isol;
@@ -314,6 +314,13 @@ lookup after_pyramid_seen {
 } after_pyramid_seen;
 ";
 tag = dist;
+},
+{
+code = "lookup teh_marbuta {
+  lookupflag UseMarkFilteringSet [twodotsverticalabove-ar];
+  sub heh-ar.isol.01.01 twodotsverticalabove-ar' by twodotshorizontalabove-ar;
+} teh_marbuta;";
+tag = rclt;
 },
 {
 code = "lookupflag IgnoreMarks;
