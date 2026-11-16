@@ -1,5 +1,5 @@
 {
-color = 0;
+category = Placeholder;
 glyphname = "sheen-ar";
 layers = (
 {
@@ -16,5 +16,7 @@ ref = "threedotsupabove-ar";
 width = 600;
 }
 );
+script = arabic;
+subCategory = Base;
 unicode = 1588;
 }

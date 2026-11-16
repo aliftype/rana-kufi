@@ -1,5 +1,5 @@
 {
-color = 0;
+category = Placeholder;
 glyphname = "zain-ar";
 layers = (
 {
@@ -16,5 +16,7 @@ ref = "dotabove-ar";
 width = 150;
 }
 );
+script = arabic;
+subCategory = Base;
 unicode = 1586;
 }

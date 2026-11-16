@@ -1,5 +1,5 @@
 {
-color = 0;
+category = Placeholder;
 glyphname = "wawHamzaabove-ar";
 layers = (
 {
@@ -16,5 +16,7 @@ ref = "hamzaabove-ar";
 width = 250;
 }
 );
+script = arabic;
+subCategory = Base;
 unicode = 1572;
 }

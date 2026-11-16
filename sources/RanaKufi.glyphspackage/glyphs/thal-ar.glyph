@@ -1,5 +1,5 @@
 {
-color = 0;
+category = Placeholder;
 glyphname = "thal-ar";
 layers = (
 {
@@ -16,5 +16,7 @@ ref = "dotabove-ar";
 width = 800;
 }
 );
+script = arabic;
+subCategory = Base;
 unicode = 1584;
 }
