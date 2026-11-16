@@ -1,5 +1,5 @@
 {
-glyphname = "lam_alef-ar.liga.01.02";
+glyphname = "lam_alef-ar.isol.liga.01.02";
 kernLeft = "straight-r";
 kernRight = "straight-l";
 layers = (

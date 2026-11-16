@@ -15,7 +15,7 @@ nodes = (
 },
 {
 alignment = -1;
-ref = "lam_alef-ar.liga.01.08";
+ref = "lam_alef-ar.isol.liga.01.08";
 }
 );
 width = 450;
