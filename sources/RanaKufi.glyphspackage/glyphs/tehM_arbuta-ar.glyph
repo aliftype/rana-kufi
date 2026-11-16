@@ -9,8 +9,8 @@ shapes = (
 ref = "heh-ar.isol";
 },
 {
-pos = (50,450);
-ref = "twodotshorizontalabove-ar";
+pos = (50,250);
+ref = "twodotsverticalabove-ar";
 }
 );
 width = 300;

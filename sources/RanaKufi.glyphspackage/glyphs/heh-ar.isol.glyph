@@ -6,7 +6,11 @@ layers = (
 anchors = (
 {
 name = top;
-pos = (175,450);
+pos = (25,300);
+},
+{
+name = topV;
+pos = (100,250);
 }
 );
 layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
@@ -14,17 +18,19 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(60,0,l),
-(60,100,l),
-(50,100,l),
-(50,59,o),
-(30,23,o),
-(0,0,c)
+(300,0,l),
+(300,400,l),
+(200,400,l),
+(200,0,l)
 );
 },
 {
-pos = (50,0);
-ref = _head;
+ref = "heh-ar.isol.01.01";
+},
+{
+angle = 90;
+pos = (300,400);
+ref = _zuluf100;
 }
 );
 width = 300;

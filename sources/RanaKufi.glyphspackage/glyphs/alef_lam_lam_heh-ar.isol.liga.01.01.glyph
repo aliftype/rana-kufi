@@ -182,7 +182,7 @@ ref = _elbow.1;
 scale = (-1,1);
 },
 {
-ref = "heh-ar.isol";
+ref = "heh-ar.isol.01.01";
 },
 {
 pos = (1328,455);
