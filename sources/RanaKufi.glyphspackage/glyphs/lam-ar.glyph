@@ -1,0 +1,18 @@
+{
+category = Placeholder;
+glyphname = "lam-ar";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+ref = "lam-ar.isol";
+}
+);
+width = 450;
+}
+);
+script = arabic;
+subCategory = Base;
+unicode = 1604;
+}

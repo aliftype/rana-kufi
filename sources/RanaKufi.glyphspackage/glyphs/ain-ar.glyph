@@ -1,0 +1,18 @@
+{
+category = Placeholder;
+glyphname = "ain-ar";
+layers = (
+{
+layerId = "299DE00D-7BC2-4DFB-A399-2750234EE670";
+shapes = (
+{
+ref = "ain-ar.isol";
+}
+);
+width = 500;
+}
+);
+script = arabic;
+subCategory = Base;
+unicode = 1593;
+}
