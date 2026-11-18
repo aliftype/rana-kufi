@@ -16,6 +16,12 @@ nodes = (
 },
 {
 alignment = -1;
+pos = (150,0);
+ref = _zuluf100;
+scale = (-1,1);
+},
+{
+alignment = -1;
 pos = (100,0);
 ref = _alt.kaf;
 },
@@ -23,12 +29,6 @@ ref = _alt.kaf;
 alignment = -1;
 pos = (100,0);
 ref = _kaf.top3;
-},
-{
-alignment = -1;
-pos = (150,0);
-ref = _zuluf100;
-scale = (-1,1);
 }
 );
 width = 900;

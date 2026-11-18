@@ -15,13 +15,10 @@ nodes = (
 );
 },
 {
-closed = 1;
-nodes = (
-(713,572,l),
-(392,893,l),
-(321,823,l),
-(604,539,l)
-);
+alignment = -1;
+pos = (150,0);
+ref = _zuluf100;
+scale = (-1,1);
 },
 {
 alignment = -1;
@@ -35,10 +32,13 @@ pos = (392,893);
 ref = _zuluf100;
 },
 {
-alignment = -1;
-pos = (150,0);
-ref = _zuluf100;
-scale = (-1,1);
+closed = 1;
+nodes = (
+(713,572,l),
+(392,893,l),
+(321,823,l),
+(604,539,l)
+);
 }
 );
 width = 900;

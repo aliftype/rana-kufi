@@ -9,20 +9,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(0,200,l),
 (100,200,l),
 (100,400,l),
-(0,400,l)
+(0,400,l),
+(0,200,l)
 );
-},
-{
-ref = _alt.dal;
 },
 {
 angle = 90;
 pos = (0,400);
 ref = _zuluf100;
 scale = (1,-1);
+},
+{
+ref = _alt.dal;
 }
 );
 width = 800;

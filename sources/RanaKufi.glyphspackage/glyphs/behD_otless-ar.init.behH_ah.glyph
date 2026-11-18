@@ -34,13 +34,13 @@ nodes = (
 );
 },
 {
+pos = (-43,0);
+ref = _alt.beh;
+},
+{
 angle = 90;
 pos = (150,250);
 ref = _zuluf100;
-},
-{
-pos = (-43,0);
-ref = _alt.beh;
 }
 );
 width = 150;

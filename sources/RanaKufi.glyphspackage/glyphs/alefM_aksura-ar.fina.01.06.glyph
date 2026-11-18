@@ -39,6 +39,10 @@ nodes = (
 );
 },
 {
+angle = -90;
+ref = _elbow.3;
+},
+{
 closed = 1;
 nodes = (
 (150,0,l),
@@ -46,6 +50,11 @@ nodes = (
 (50,500,l),
 (50,0,l)
 );
+},
+{
+angle = 90;
+pos = (200,500);
+ref = _elbow.3;
 },
 {
 closed = 1;
@@ -57,15 +66,6 @@ nodes = (
 (200,650,c),
 (200,640,l)
 );
-},
-{
-angle = 90;
-pos = (200,500);
-ref = _elbow.3;
-},
-{
-angle = -90;
-ref = _elbow.3;
 }
 );
 width = 300;

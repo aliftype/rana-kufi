@@ -22,14 +22,14 @@ nodes = (
 );
 },
 {
-alignment = -1;
-pos = (200,0);
-ref = _elbow.1;
-},
-{
 pos = (150,0);
 ref = _zuluf100;
 scale = (-1,1);
+},
+{
+alignment = -1;
+pos = (200,0);
+ref = _elbow.1;
 }
 );
 width = 450;

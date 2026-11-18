@@ -25,6 +25,15 @@ nodes = (
 );
 },
 {
+pos = (150,0);
+ref = _zuluf100;
+scale = (-1,1);
+},
+{
+pos = (650,0);
+ref = _alt.beh;
+},
+{
 closed = 1;
 nodes = (
 (800,0,l),
@@ -35,18 +44,9 @@ nodes = (
 );
 },
 {
-pos = (150,0);
-ref = _zuluf100;
-scale = (-1,1);
-},
-{
 angle = 90;
 pos = (800,250);
 ref = _zuluf100;
-},
-{
-pos = (650,0);
-ref = _alt.beh;
 }
 );
 width = 800;

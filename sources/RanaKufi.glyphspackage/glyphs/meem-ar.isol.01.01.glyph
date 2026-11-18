@@ -15,13 +15,13 @@ nodes = (
 );
 },
 {
-pos = (200,0);
-ref = "meem-ar.init";
-},
-{
 pos = (150,0);
 ref = _zuluf100;
 scale = (-1,1);
+},
+{
+pos = (200,0);
+ref = "meem-ar.init";
 }
 );
 width = 500;

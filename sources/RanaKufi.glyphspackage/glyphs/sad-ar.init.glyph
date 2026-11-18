@@ -18,13 +18,13 @@ nodes = (
 ref = "kashida-ar";
 },
 {
-pos = (50,0);
-ref = _alt.dal;
-},
-{
 angle = 90;
 pos = (150,250);
 ref = _zuluf100;
+},
+{
+pos = (50,0);
+ref = _alt.dal;
 }
 );
 width = 850;
