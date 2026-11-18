@@ -25,7 +25,7 @@ FONTDIR = fonts
 TESTDIR = tests
 BUILDDIR = build
 
-FONT = ${FONTDIR}/${NAME}.otf
+FONT = ${FONTDIR}/${NAME}.ttf
 
 GLYPHSFILE = ${SOURCEDIR}/${NAME}.glyphspackage
 
@@ -52,7 +52,7 @@ ${FONT}: ${BUILDDIR}/${NAME}.glyphs
 	$(info   BUILD  ${@F})
 	${PYTHON} -m fontmake $< \
 			      --output-path=$@ \
-			      --output=variable-cff2 \
+			      --output=variable \
 			      --verbose=WARNING \
 			      --filter ... \
 			      --filter "alifTools.filters::ClearPlaceholdersFilter()" \
