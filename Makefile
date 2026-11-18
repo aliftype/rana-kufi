@@ -55,6 +55,7 @@ ${FONT}: ${BUILDDIR}/${NAME}.glyphs
 			      --output=variable \
 			      --verbose=WARNING \
 			      --filter ... \
+			      --filter "DecomposeTransformedComponentsFilter" \
 			      --filter "alifTools.filters::ClearPlaceholdersFilter()" \
 			      --filter "alifTools.filters::FontVersionFilter(fontVersion=${VERSION})"
 
